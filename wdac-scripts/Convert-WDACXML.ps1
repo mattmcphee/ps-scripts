@@ -1,25 +1,25 @@
-function mass-convert-policies {
+function Convert-WDACXML {
     param (
         # folder path
         [Parameter(Mandatory=$true)]
         [ValidateScript({ Test-Path -Path $_})]
         [string]
-        $FolderPath,
+        $XmlFolderPath,
         # output path
         [Parameter(Mandatory=$false)]
         [ValidateScript({ Test-Path -Path $_})]
         [string]
-        $OutputPath = $FolderPath
+        $CipOutputPath = $XmlFolderPath
     )
-    $xmlFiles = Get-ChildItem -Path $FolderPath -Filter '*.xml'
+    $xmlFiles = Get-ChildItem -Path $XmlFolderPath -Filter '*.xml'
     foreach ($xmlFile in $xmlFiles) {
         $xmlContent = [xml](Get-Content $xmlFile)
         $policyID = $xmlContent.SiPolicy.PolicyID
-        $binaryFilePath = $OutputPath + $policyID + '.cip'
+        $binaryFilePath = $CipOutputPath + $policyID + '.cip'
         ConvertFrom-CIPolicy -XmlFilePath $xmlFile.FullName `
             -BinaryFilePath $binaryFilePath
         $null = New-Item -ItemType File `
-            -Path $OutputPath `
+            -Path $CipOutputPath `
             -Name ($PolicyID + '-' + $xmlFile.BaseName + '.info')
     }
 }
