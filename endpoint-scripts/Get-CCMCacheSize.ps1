@@ -1,0 +1,1 @@
+$ccmCacheSize = (New-Object -ComObject UIResource.UIResourceMgr).GetCacheInfo().TotalSize = 100000
