@@ -4,14 +4,14 @@ function Convert-WDACXML {
         [Parameter(Mandatory=$true)]
         [ValidateScript({ Test-Path -Path $_})]
         [string]
-        $XmlFolderPath,
+        $XmlFilePath,
         # output path
         [Parameter(Mandatory=$false)]
         [ValidateScript({ Test-Path -Path $_})]
         [string]
-        $CipOutputPath = $XmlFolderPath
+        $CipOutputPath = $XmlFilePath
     )
-    $xmlFiles = Get-ChildItem -Path $XmlFolderPath -Filter '*.xml'
+    $xmlFiles = Get-ChildItem -Path $XmlFilePath -Filter '*.xml'
     foreach ($xmlFile in $xmlFiles) {
         $xmlContent = [xml](Get-Content $xmlFile)
         $policyID = $xmlContent.SiPolicy.PolicyID
