@@ -1,81 +1,30 @@
-<# 
-.SYNOPSIS 
-    Overwriting or Merge with current Managed Installer (MI) AppLocker Rules
-.DESCRIPTION 
-    Configure AppLocker xml to add Intune and SCCM as a managed installer, sets EnforcementMode="Enabled"
-    Include Dll, EXE benign Deny rules for %OSDRIVE%
-    Use -Merge to merge with existing rules, otherwise it will overwrite.
-.PARAMETER Set
-    -Set this will merge the policies. If not used default behaviour will be to merge
-.PARAMETER Mode
-    -Mode (AuditOnly or Enabled) configures the managed installer enforcement mode. Defaults to AuditOnly
-.OUTPUTS 
-    C:\Windows\Temp\AppLockerBeforeScript.xml
-    C:\Windows\Temp\AppLockerMIPolicy.xml (gets deleted)
-    C:\Windows\Temp\AppLockerAfterScript.xml
-.EXAMPLE
-    Set-ManagedInstaller-Intune_SCCM_AppLocker_BenignDeny-Signed.ps1
-    Will Merge these settings to the current AppLocker settings 
-.EXAMPLE
-    Set-ManagedInstaller-Intune_SCCM_AppLocker_BenignDeny-Signed.ps1 -Mode AuditOnly -Set
-    This will overwrite the current settings and Managed installer Enforcement Mode to AuditOnly
-.NOTES
-       Name:            Set-ManagedInstaller-Intune_SCCM_AppLocker_BenignDeny-Signed.ps1
-       Version:         1.0
-       Author:          Victor Rodriguez
-       Creation Date:   1.0 - 18/07/2024
-                        1.1 - 19/08/2024 - MM - ManagedInstaller ccm version max changed to any maximum
-                        1.2 - 21/08/2024 - MM - IntuneWindowsAgent.exe max version changed to any maximum
-#>     
-
-[CmdletBinding(DefaultParameterSetName="Default")]
-param (
-    # Mode - whether to set the managedinstaller setting to auditonly or enabled
-    [Parameter(Mandatory=$true)]
-    [ValidateSet("Enabled","AuditOnly")]
-    [string]
-    $Mode,
-    # Set - whether to overwrite or merge
-    [Parameter(Mandatory=$true)]
-    [ValidateSet("Merge","Overwrite")]
-    [string]
-    $Set
-)
-Write-Host "Setting ManagedInstaller EnforcementMode to $Mode"
-
-# Configure new managed installer xml
-$AppLockerMIPolicy = `
-@"
-<AppLockerPolicy Version="1"></AppLockerPolicy>
-"@
-
-# Document current settings
-Get-AppLockerPolicy -Effective -XML > C:\Windows\Temp\AppLockerBeforeScript.xml
-
-# Create the new xml
-$AppLockerMIPolicy | Out-File -FilePath C:\Windows\Temp\AppLockerMIPolicy.xml
-
-if ($Set -eq "Overwrite") {
-    Set-AppLockerPolicy -XmlPolicy C:\Windows\Temp\AppLockerMIPolicy.xml `
-        -ErrorAction SilentlyContinue
-    Write-Host "Overwriting MI AppLocker Rules"
-} else {
-    Set-AppLockerPolicy -XmlPolicy C:\Windows\Temp\AppLockerMIPolicy.xml `
-        -Merge -ErrorAction SilentlyContinue
-    Write-Host "Merging MI AppLocker Rules"
+function Add-CodeSigningCert {
+    [CmdletBinding()]
+    param (
+        # Path to a script or folder containing scripts you wish to sign
+        [Parameter(Mandatory=$true)]
+        [ValidateScript({ Test-Path -Path $_ })]
+        [string]
+        $Path
+    )
+    $scripts = Get-ChildItem -Path $Path -Filter '*.ps1'
+    foreach ($script in $scripts) {
+        $cert = (Get-ChildItem -Path 'Cert:\CurrentUser\My' -CodeSigningCert)
+        Set-AuthenticodeSignature -Certificate $cert `
+            -FilePath $script.FullName `
+            -HashAlgorithm "SHA256" `
+            -IncludeChain notroot `
+            -TimestampServer 'http://timestamp.digicert.com'
+        Write-Host "Signed: $($script.FullName)"
+        Start-Sleep 5
+    }
 }
 
-Start-Process -FilePath "$env:windir\System32\appidtel.exe" `
-    -ArgumentList "start -mionly" | Wait-Process
-Remove-Item -Path C:\Windows\Temp\AppLockerMIPolicy.xml
-Start-Sleep -Seconds 10
-Get-AppLockerPolicy -Effective -XML > C:\Windows\Temp\AppLockerAfterScript.xml
-Write-Host "Before and After Applocker xml can be found here C:\Windows\Temp\"
 # SIG # Begin signature block
 # MIIl0QYJKoZIhvcNAQcCoIIlwjCCJb4CAQExDzANBglghkgBZQMEAgEFADB5Bgor
 # BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG
-# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCA6unsJhqX+9/tv
-# KgmIO8lhGWh9KyiDqwsmHDlq++jlo6CCH94wggWNMIIEdaADAgECAhAOmxiO+dAt
+# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCB6S6tF83Q/BCAH
+# N9GY0L/QyR1Y6fDGJiSLMRqGNJq/gaCCH94wggWNMIIEdaADAgECAhAOmxiO+dAt
 # 5+/bUOIIQBhaMA0GCSqGSIb3DQEBDAUAMGUxCzAJBgNVBAYTAlVTMRUwEwYDVQQK
 # EwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xJDAiBgNV
 # BAMTG0RpZ2lDZXJ0IEFzc3VyZWQgSUQgUm9vdCBDQTAeFw0yMjA4MDEwMDAwMDBa
@@ -250,28 +199,28 @@ Write-Host "Before and After Applocker xml can be found here C:\Windows\Temp\"
 # FgNibWQxHDAaBgNVBAMTE0JNRCBJc3N1aW5nIENBIDEgRzQCEyAAAATWLpbTf7FJ
 # F9oAAAAABNYwDQYJYIZIAWUDBAIBBQCggYQwGAYKKwYBBAGCNwIBDDEKMAigAoAA
 # oQKAADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgorBgEEAYI3AgELMQ4w
-# DAYKKwYBBAGCNwIBFTAvBgkqhkiG9w0BCQQxIgQgJKxlw2lldnq6/HNkrsjDZ2lN
-# G4sFUhNeJNFRIOMK66AwDQYJKoZIhvcNAQEBBQAEggEAJHTF5yy94asC2os45waG
-# eySVBmjYAUcMZe1SW9WlMqAaZbKZMaVT4ijE1JeOuJ/fZX45jkOT5nfeSbDOhhTZ
-# hXZ0VZsLX/U/SHWTaMpWMill+go+gia5o+qYDTffrXveP2/sH/F9AHG99pG0hCG9
-# iG2AwR5O+WGylMcF6XP++TCFey+mzDmQgRR7o2zILGuwooAZhJE0v0LjfmN7VuT0
-# jWDQiGa3cyQv7FjUsbX60OreiL97VrttNNNsTpJSC6QJG38GhnN7mWhLpMxJ+4p6
-# 2wF4m4D1yv/8mgaCxxaQZ0wsCrFiBM4Hb2YJJiLtLvp4PTk7d6+SWquDbxoMIJzr
-# 2aGCAyAwggMcBgkqhkiG9w0BCQYxggMNMIIDCQIBATB3MGMxCzAJBgNVBAYTAlVT
+# DAYKKwYBBAGCNwIBFTAvBgkqhkiG9w0BCQQxIgQghWWIkU9LOuwtYYDKWbnCOEMm
+# nhoDshBJwyAoZx9blJgwDQYJKoZIhvcNAQEBBQAEggEALCT60JWg8ozveNsZO3iV
+# 0vbxJ+tzJUyzEn6LILwutTOuCMnj8XB7FK3Hm4rIuCLFBauB78V0X1Xpuus6n0uF
+# 9IshRvYi6Lk2ApM4Euhb8guOyjwgZUS7wlDv9weknc2tvnrZpcmFY1BMeAAWSqqU
+# mIkHos+u8lhLKC1DiE7jDgMi6nFfsQxseqbQ1/YGxOEthoOwC1ef7OaITz/r7N4t
+# uvXnm0QMgVgsCooPh7GWeQU0q1r0Tm5WFcj+6DkFjxQEJLqymyrCeNHkBcTgYmLt
+# oOv0Odj/koIifhPDnKlpws/DyNlzF+3zfeMJdCkqw5pFYlPhUQ88aa58nqTa3QXb
+# yaGCAyAwggMcBgkqhkiG9w0BCQYxggMNMIIDCQIBATB3MGMxCzAJBgNVBAYTAlVT
 # MRcwFQYDVQQKEw5EaWdpQ2VydCwgSW5jLjE7MDkGA1UEAxMyRGlnaUNlcnQgVHJ1
 # c3RlZCBHNCBSU0E0MDk2IFNIQTI1NiBUaW1lU3RhbXBpbmcgQ0ECEAuuZrxaun+V
 # h8b56QTjMwQwDQYJYIZIAWUDBAIBBQCgaTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcN
-# AQcBMBwGCSqGSIb3DQEJBTEPFw0yNDExMTUwMjE3MTdaMC8GCSqGSIb3DQEJBDEi
-# BCCq1VNtgEbnAFKt1j4GQE4nNen9QLEvIzBja1U1ISWrpTANBgkqhkiG9w0BAQEF
-# AASCAgBQ/J2zw4y0nIScho/TaANzImA2qoRGDhhXYioqVne5reHj2uBzbopvTqWK
-# QXZDghnfzqLmKjnOyFDwsmEepSTDujVw079E6kYmJkIou4OwpQdJGgppn1poAtAI
-# mBYg+RQ6+kY6sAuk6BNid6Dw9zBss64eGtvpn7lEhhtcTBlIpnIF0nANwBW0q6bv
-# dV6QNor8ECnkrFE4gkRrCRD3D62idUkXjmbSkTlMsz5mmHeYYw2hiVO+tO9QE4FL
-# UuGmShMOV2VQujTicrVoqmz4HoLtnjfDeJpUj+37VxxTAvCtCCHPATqgGO6GAlW2
-# uDPQ3ZgaJx9G/lNJiA+jHI4VZzEZvRml8/1DWaKUWtoDduHL6D0U0MFeaZTv1uzs
-# mPeTgLqcvL5mEDAIK8A+EcCXB5adnnatadR8c2CJtqw5zldQKwfe7jxP+4SdE8Mu
-# uDZzUXrKCqpr9SDiWBCIxwVwIDiB/FNiPyQlaoJcYK+W+bgW58EaaEQ2KvlblWGv
-# TBOWtKNAWwyKSxzYpJjT5sPu7+CJYY8Py58i1Aisqj+gPUC9HxaRlQOw5T3QMo3f
-# 1Wc5Zc+OM6p/5JWALIBypQM48YAcHpqo5Q2pf+NTcqKx2mz9ltdMxq5n3lwWp41v
-# bZiBQUHx14/pdhoZ0kwv2iSgp2NSP8EEaJp/vGg30xJdmWVNmA==
+# AQcBMBwGCSqGSIb3DQEJBTEPFw0yNDExMTUwMjE2NTZaMC8GCSqGSIb3DQEJBDEi
+# BCC7QGp+HCXZDxZJ7Sbh/7tS3eE4ZeUUJimV+xhL71MfMzANBgkqhkiG9w0BAQEF
+# AASCAgBtfYVBGavUK4vS/gIiS04OWdtINwErub3u2m4SsZAUNQp54z3Jkvn510+D
+# JT5dbHXMIq6UTEhB0mH/rqyd96HW1ZIbLW10twFkn9PxvBEOV6eAxfHdM9mfQlAr
+# vnIkGuEIvgFtJ8/F1FrMh9J6OlGPRIE/P+Dl1QBmY3WlFxidZY3Xxf2ji6w52jpC
+# gQi1nVUZmy+G5Gum7MMy+BJI0tPBfBl0D+VEf5tmUt2AUddBgqqppgGb6aGgXb0V
+# 1rLJK3P/jxWqJdOrGopoo0yF2R1tLHbyRn5t27mpmDmMorgqZ8FJf7ThdydJ4pTf
+# kvcJRwa/o2MiHDR4/Ft0ycKRaX42OBQCTi0n2aAHtxYNStqRKII2Vp8kPnPnJ4LU
+# 71lDiuyEpqWe9rRNH7cc/2wJW8eccKq5bpAx1IPeTt3Ns/J2d9/8TRKpKCo20Ag+
+# KJkz5kt4M8hOGHpqjce6EuE11AT8vj2nqWd6/Cxsnqr6XCJIWVNaovUhaojk2lQc
+# vkaKdq2bQQ4NpxxBWrTXYQEqed8q9DlqtVKTaZKFLYO9CaBAqPgK7J8eshJbPYAB
+# vv8/F9Ijr4bLBHZtMWxCflMOiE/OIT1VgGqmqchtI4+z+zzOmMEbOVK4l5k2PvGF
+# fSoGVVk5IH+UyB/yNbZxDmMVEv6QD4fOZnsiGAEZAQIhzW0ERA==
 # SIG # End signature block

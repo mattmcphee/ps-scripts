@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SiPolicy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" PolicyType="Supplemental Policy" xmlns="urn:schemas-microsoft-com:sipolicy">
+  <VersionEx>10.0.0.0</VersionEx>
+  <PlatformID>{2E07F7E4-194C-4D20-B7C9-6F44A6C5A234}</PlatformID>
+  <PolicyID>{8CE642D9-5A48-4E76-B59D-846482DC9CEE}</PolicyID>
+  <BasePolicyID>{488E7D72-DA1E-4219-BB58-22EEBCBB2CFE}</BasePolicyID>
+  <Rules>
+    <Rule>
+      <Option>Enabled:Unsigned System Integrity Policy</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:Audit Mode</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:Advanced Boot Options Menu</Option>
+    </Rule>
+    <Rule>
+      <Option>Required:Enforce Store Applications</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:UMCI</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:Inherit Default Policy</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:Managed Installer</Option>
+    </Rule>
+  </Rules>
+  <EKUs />
+  <FileRules>
+    <Allow ID="ID_ALLOW_A_15_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.WebServices.WCF.dll Hash Sha1" Hash="785B7766302C14923D1B7CE2DC174D0E8B886ECE" />
+    <Allow ID="ID_ALLOW_A_16_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.WebServices.WCF.dll Hash Sha256" Hash="F149658A048D92222D84AD92FDB1E5C0D79063A51F19C9C95189A1092D38CDE7" />
+    <Allow ID="ID_ALLOW_A_17_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.WebServices.WCF.dll Hash Page Sha1" Hash="4CA2EC529BF749FAF521ABF8903C6321F1FE5EF4" />
+    <Allow ID="ID_ALLOW_A_18_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.WebServices.WCF.dll Hash Page Sha256" Hash="17BC09502BD0839DE31CCABC1052039A8BE0CA9A1B37FACCD07913A751B65978" />
+    <Allow ID="ID_ALLOW_A_1_0_0" FriendlyName="C:\Program Files\7-Zip\7-zip.dll Hash Sha1" Hash="AD4BC7D9C83ED7212574D2DCAEB83C9F13F5397D" />
+    <Allow ID="ID_ALLOW_A_2_0_0" FriendlyName="C:\Program Files\7-Zip\7-zip.dll Hash Sha256" Hash="F4B6ACAAAB94BF2F7DAB502D91B3A3831CC531A0E3EB5E0AFDCCE76FBF8F0101" />
+    <Allow ID="ID_ALLOW_A_3_0_0" FriendlyName="C:\Program Files\7-Zip\7-zip.dll Hash Page Sha1" Hash="AB5CB6F3FC3A25F44F4B775DF5B4AF87F06E85E0" />
+    <Allow ID="ID_ALLOW_A_4_0_0" FriendlyName="C:\Program Files\7-Zip\7-zip.dll Hash Page Sha256" Hash="58A49D5F17AA40D30F3628A3F61517507D50B13590A4EEE2AEAF49D8997528C8" />
+    <Allow ID="ID_ALLOW_A_5_0_0" FriendlyName="C:\Program Files\7-Zip\7-zip32.dll Hash Sha1" Hash="8058B8E1E7455355E559628859E33C680B8B5318" />
+    <Allow ID="ID_ALLOW_A_6_0_0" FriendlyName="C:\Program Files\7-Zip\7-zip32.dll Hash Sha256" Hash="13E72877B7514FFE879FA5E0D029CC3A1967517E48BBB2D7AE2844E1DCD659A7" />
+    <Allow ID="ID_ALLOW_A_7_0_0" FriendlyName="C:\Program Files\7-Zip\7-zip32.dll Hash Page Sha1" Hash="64CD891C5C3D6AD94EDF7B1F95B6D707BD5354B0" />
+    <Allow ID="ID_ALLOW_A_8_0_0" FriendlyName="C:\Program Files\7-Zip\7-zip32.dll Hash Page Sha256" Hash="539A6BC1C6AAAEA415C73421D4871B4F54A61F13794157A95BE7719B80ACBC7E" />
+    <Allow ID="ID_ALLOW_A_9_0_0" FriendlyName="C:\Program Files\7-Zip\7z.dll Hash Sha1" Hash="735F6E8E081BC451D7BEF5E48ECCA73B775CB5A1" />
+    <Allow ID="ID_ALLOW_A_A_0_0" FriendlyName="C:\Program Files\7-Zip\7z.dll Hash Sha256" Hash="67BE9555B729EB7B9B029026BF39AE775D4A91198C29289A4433B15404C38D62" />
+    <Allow ID="ID_ALLOW_A_B_0_0" FriendlyName="C:\Program Files\7-Zip\7z.dll Hash Page Sha1" Hash="A001C9EA329B4AC99433DA49BC85DF5DC3C84B9D" />
+    <Allow ID="ID_ALLOW_A_C_0_0" FriendlyName="C:\Program Files\7-Zip\7z.dll Hash Page Sha256" Hash="84B5F512CF576540888B0FF3FDF5E32E1AC31CB2E6A59A658754523F2FDC9731" />
+    <Allow ID="ID_ALLOW_A_D_0_0" FriendlyName="C:\Program Files\7-Zip\7z.exe Hash Sha1" Hash="D580E6ABC1691A4150E012F01A7D7B3CA31435EB" />
+    <Allow ID="ID_ALLOW_A_E_0_0" FriendlyName="C:\Program Files\7-Zip\7z.exe Hash Sha256" Hash="FBFFA5CF0C7B1AB8EBABB4805AE63A83C4836D86CBA52AD6C0ECDE189D0734BF" />
+    <Allow ID="ID_ALLOW_A_F_0_0" FriendlyName="C:\Program Files\7-Zip\7z.exe Hash Page Sha1" Hash="FA2A33B40A64C69FBD9181CAD8595715536A84B2" />
+    <Allow ID="ID_ALLOW_A_10_0_0" FriendlyName="C:\Program Files\7-Zip\7z.exe Hash Page Sha256" Hash="A358A1D255CCE837219D613E9F17597A1A298D7A0D40CF227E933D776620758C" />
+    <Allow ID="ID_ALLOW_A_11_0_0" FriendlyName="C:\Program Files\7-Zip\7z.sfx Hash Sha1" Hash="564FC4B91BD4174E5A5A6563639B49774AFD59F3" />
+    <Allow ID="ID_ALLOW_A_12_0_0" FriendlyName="C:\Program Files\7-Zip\7z.sfx Hash Sha256" Hash="93FF7E023823EB59954601362404E70C12A2BE0952459E88242EC0399968EB69" />
+    <Allow ID="ID_ALLOW_A_13_0_0" FriendlyName="C:\Program Files\7-Zip\7z.sfx Hash Page Sha1" Hash="63F2A8A1BF4F5C6B4556644C05554279F195DA99" />
+    <Allow ID="ID_ALLOW_A_14_0_0" FriendlyName="C:\Program Files\7-Zip\7z.sfx Hash Page Sha256" Hash="D70272EF4CB787B519E32A6CBE92A15432DD37F69FB9CBE743C2E776FE0B5AF1" />
+    <Allow ID="ID_ALLOW_A_15_0_0" FriendlyName="C:\Program Files\7-Zip\7zCon.sfx Hash Sha1" Hash="BE6FEF8929BFEE0AB6CB5CCF4C9FA5F1A30260FD" />
+    <Allow ID="ID_ALLOW_A_16_0_0" FriendlyName="C:\Program Files\7-Zip\7zCon.sfx Hash Sha256" Hash="155CDF760CA27AC6C94A90591AC08A1BE60BA804018C98627BE923BEFC00F342" />
+    <Allow ID="ID_ALLOW_A_17_0_0" FriendlyName="C:\Program Files\7-Zip\7zCon.sfx Hash Page Sha1" Hash="AE7493670B43E118A5B74464101E42CC9BA88A20" />
+    <Allow ID="ID_ALLOW_A_18_0_0" FriendlyName="C:\Program Files\7-Zip\7zCon.sfx Hash Page Sha256" Hash="6E7B154890A8EC736AFCE206158C8AF7F6D756B7CCB207DE74ACCB736FCC9987" />
+    <Allow ID="ID_ALLOW_A_19_0_0" FriendlyName="C:\Program Files\7-Zip\7zFM.exe Hash Sha1" Hash="BD274E3F384185C0EDF3D81D19FB0CEAC78F6E26" />
+    <Allow ID="ID_ALLOW_A_1A_0_0" FriendlyName="C:\Program Files\7-Zip\7zFM.exe Hash Sha256" Hash="A12F2CEFF3EDCD6D0C115BEAC607B86B54B9B86DB4566619B722BAD9709B2FA5" />
+    <Allow ID="ID_ALLOW_A_1B_0_0" FriendlyName="C:\Program Files\7-Zip\7zFM.exe Hash Page Sha1" Hash="FB3657C646C5AD380633911D5C2906A713610891" />
+    <Allow ID="ID_ALLOW_A_1C_0_0" FriendlyName="C:\Program Files\7-Zip\7zFM.exe Hash Page Sha256" Hash="A09EEFB11E2511E8F52476F79B297770B1BFCB98610AF0CCA51A5A7D8B34CA7B" />
+    <Allow ID="ID_ALLOW_A_1D_0_0" FriendlyName="C:\Program Files\7-Zip\7zG.exe Hash Sha1" Hash="7BE55C7F1557C6B1C36255E17CA91339BB436C5F" />
+    <Allow ID="ID_ALLOW_A_1E_0_0" FriendlyName="C:\Program Files\7-Zip\7zG.exe Hash Sha256" Hash="5D1917C6120DDB7B41D79836F1EDA8B3DC02819ED3018F8508ED2A4441F9282E" />
+    <Allow ID="ID_ALLOW_A_1F_0_0" FriendlyName="C:\Program Files\7-Zip\7zG.exe Hash Page Sha1" Hash="EAF1D4FF104A9B1C5AF72EFA80F9F272A757B25E" />
+    <Allow ID="ID_ALLOW_A_20_0_0" FriendlyName="C:\Program Files\7-Zip\7zG.exe Hash Page Sha256" Hash="8A9C931C4CDF4292FE8D86701E6F94D90350CDA56A95FC3BBFF271675202BD3C" />
+    <Allow ID="ID_ALLOW_A_1_1_0" FriendlyName="C:\Program Files (x86)\The BMD Group\BMD EMail Signature\BMDEMailSignature.exe Hash Sha1" Hash="8A79093574B199CD4F7358CACED29DEA69D23832" />
+    <Allow ID="ID_ALLOW_A_2_1_0" FriendlyName="C:\Program Files (x86)\The BMD Group\BMD EMail Signature\BMDEMailSignature.exe Hash Sha256" Hash="777C7E0366338FFA0DD3236886D235D761E64BBF030E3422D9A350D11482C6E4" />
+    <Allow ID="ID_ALLOW_A_3_1_0" FriendlyName="C:\Program Files (x86)\The BMD Group\BMD EMail Signature\BMDEMailSignature.exe Hash Page Sha1" Hash="7633177F6E75867E7C0F4B94B5FCCFB7969F06F4" />
+    <Allow ID="ID_ALLOW_A_4_1_0" FriendlyName="C:\Program Files (x86)\The BMD Group\BMD EMail Signature\BMDEMailSignature.exe Hash Page Sha256" Hash="443317172F83125519D2C867EAF2BE2C45A85B6E870C4677B70FDB2008D6DF01" />
+    <Allow ID="ID_ALLOW_A_5_1_0" FriendlyName="C:\Program Files (x86)\The BMD Group\BMD EMail Signature\InstallHelper.dll Hash Sha1" Hash="9C6799FFD3777C94812E650CA5186B867C090803" />
+    <Allow ID="ID_ALLOW_A_6_1_0" FriendlyName="C:\Program Files (x86)\The BMD Group\BMD EMail Signature\InstallHelper.dll Hash Sha256" Hash="5369F0BA2F50C448E9A06D472DA07FD9EE508B71DC7507EE49E9CD48490EB3C7" />
+    <Allow ID="ID_ALLOW_A_7_1_0" FriendlyName="C:\Program Files (x86)\The BMD Group\BMD EMail Signature\InstallHelper.dll Hash Page Sha1" Hash="5A68F8BE3E92EED808376479E1A4C141D8E688DE" />
+    <Allow ID="ID_ALLOW_A_8_1_0" FriendlyName="C:\Program Files (x86)\The BMD Group\BMD EMail Signature\InstallHelper.dll Hash Page Sha256" Hash="71F7802189716A2F0C4CB365271742C3527B287AA77DA4F6CE918223BF30C3E1" />
+    <Allow ID="ID_ALLOW_A_1_0_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\SSMPropEditor.exe Hash Sha1" Hash="008E4737252AF37FC6BE4BF8F82068F128338F50" />
+    <Allow ID="ID_ALLOW_A_2_2_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\SSMPropEditor.exe Hash Sha256" Hash="C90267E429168001E3B2EBF9DCFDD6480A16176AC118879DCAD8B3E70A3EF898" />
+    <Allow ID="ID_ALLOW_A_3_3_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\SSMPropEditor.exe Hash Page Sha1" Hash="C4A7ECAC37E0CA944DD06178D54B09FD10ACD8A2" />
+    <Allow ID="ID_ALLOW_A_4_4_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\SSMPropEditor.exe Hash Page Sha256" Hash="3459690CE3D0C479CEBC46519C98B27FBDFF90F1473A0A916237FB35A83100AD" />
+    <Allow ID="ID_ALLOW_A_1_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\AdskLicensingSDK_3.dll Hash Sha1" Hash="4B18E5044380BFE10647E6F008B2D9B9DA56E903" />
+    <Allow ID="ID_ALLOW_A_2_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\AdskLicensingSDK_3.dll Hash Sha256" Hash="6DDF1AAD8F8C838ED3AEA3DDA5B8CF0E5E80A4302AF23A32E93AC2B3F9AB56FA" />
+    <Allow ID="ID_ALLOW_A_3_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\AdskLicensingSDK_3.dll Hash Page Sha1" Hash="86893632D65DE6BB483AAF5C2CB2304E2541CF49" />
+    <Allow ID="ID_ALLOW_A_4_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\AdskLicensingSDK_3.dll Hash Page Sha256" Hash="A5860E0DE0FC63D599C4FE8FB313CC432B2A269B1BE5A46D4C9692D3FD35F8D0" />
+    <Allow ID="ID_ALLOW_A_5_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.Explorer.ExtensibilityTools.dll Hash Sha1" Hash="E1EF679F49A37AC7AE7A09AC5B697C1B274BFF05" />
+    <Allow ID="ID_ALLOW_A_6_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.Explorer.ExtensibilityTools.dll Hash Sha256" Hash="BA5712BAA3E73F6800C16957D8D152401B775D17236458FD832D4467AEF6B218" />
+    <Allow ID="ID_ALLOW_A_7_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.Explorer.ExtensibilityTools.dll Hash Page Sha1" Hash="352CC219B9541C3B7FF5510254CA39ABC44730D9" />
+    <Allow ID="ID_ALLOW_A_8_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.Explorer.ExtensibilityTools.dll Hash Page Sha256" Hash="CF7CD8FCDD08C55EB705E4543E0AB9849AE97AF01205991EBE19D3300D75F062" />
+    <Allow ID="ID_ALLOW_A_9_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.Extensibility.Framework.dll Hash Sha1" Hash="044AB37B386316045546A614EAAE54FCE1A6C51C" />
+    <Allow ID="ID_ALLOW_A_A_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.Extensibility.Framework.dll Hash Sha256" Hash="79E56E27F98C0CACDAAA3D78F9F27CC8E4BCB8677568204C145511F71CBC5FC0" />
+    <Allow ID="ID_ALLOW_A_B_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.Extensibility.Framework.dll Hash Page Sha1" Hash="B4299C12748E217C61C2F9A0D7FB80298ACCA75E" />
+    <Allow ID="ID_ALLOW_A_C_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.Extensibility.Framework.dll Hash Page Sha256" Hash="EBAD47BA35B18D567C4F54811A79942A503EBC52E7F2BAE104C187BE57F0BB35" />
+    <Allow ID="ID_ALLOW_A_D_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.LicenseWrapper.dll Hash Sha1" Hash="75DCAE988B522183DB28A386CD52F724DD674778" />
+    <Allow ID="ID_ALLOW_A_E_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.LicenseWrapper.dll Hash Sha256" Hash="822AF5660D498E40E2004BEE407E0537E51377897BB8EAB18A7867B5779C6CEF" />
+    <Allow ID="ID_ALLOW_A_F_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.LicenseWrapper.dll Hash Page Sha1" Hash="5170E7B06583BFEEAA9E7569084E81DBF416E00E" />
+    <Allow ID="ID_ALLOW_A_10_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.LicenseWrapper.dll Hash Page Sha256" Hash="86EDC3B6A8262994302DDECCA8CB6719FEB85AF4990490B0DAD09A13734CA21A" />
+    <Allow ID="ID_ALLOW_A_11_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.WebServices.dll Hash Sha1" Hash="050AF5CA3B7D5F91DB72063E2A70F1485F495AF6" />
+    <Allow ID="ID_ALLOW_A_12_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.WebServices.dll Hash Sha256" Hash="5F97F2D00D8318DF2F17D04254111E9640C4C6DD37FF3ADB711EE232F0ECE96F" />
+    <Allow ID="ID_ALLOW_A_13_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.WebServices.dll Hash Page Sha1" Hash="21FD36567BB215835857B31B63B1A204FE34D3E9" />
+    <Allow ID="ID_ALLOW_A_14_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.WebServices.dll Hash Page Sha256" Hash="7EA4D9E6CA0CB74357FD419E29148EA3E48B9FAF6FF7B9B87DD3536B1C10B625" />
+    <Allow ID="ID_ALLOW_A_19_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.WebServices.WCF.dll Hash Sha1" Hash="785B7766302C14923D1B7CE2DC174D0E8B886ECE" />
+    <Allow ID="ID_ALLOW_A_1A_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.WebServices.WCF.dll Hash Sha256" Hash="F149658A048D92222D84AD92FDB1E5C0D79063A51F19C9C95189A1092D38CDE7" />
+    <Allow ID="ID_ALLOW_A_1B_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.WebServices.WCF.dll Hash Page Sha1" Hash="4CA2EC529BF749FAF521ABF8903C6321F1FE5EF4" />
+    <Allow ID="ID_ALLOW_A_1C_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.Connectivity.WebServices.WCF.dll Hash Page Sha256" Hash="17BC09502BD0839DE31CCABC1052039A8BE0CA9A1B37FACCD07913A751B65978" />
+    <Allow ID="ID_ALLOW_A_1D_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.DataManagement.Client.Framework.dll Hash Sha1" Hash="33A5A0EDFC7187CB52B1DAB8EF769D65534E277A" />
+    <Allow ID="ID_ALLOW_A_1E_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.DataManagement.Client.Framework.dll Hash Sha256" Hash="8136AA018AFE56AF67E397DB141B564B8F17B87E63B00D7EEAE3DC68F99A3B97" />
+    <Allow ID="ID_ALLOW_A_1F_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.DataManagement.Client.Framework.dll Hash Page Sha1" Hash="FD5F1BB961EAEE168692BFF848726340350A8F1A" />
+    <Allow ID="ID_ALLOW_A_20_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.DataManagement.Client.Framework.dll Hash Page Sha256" Hash="3C8EE43FD0DC219316B526945EF13F2D55C039DC68F6F6B927550485280F5A5E" />
+    <Allow ID="ID_ALLOW_A_21_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.DataManagement.Client.Framework.Forms.dll Hash Sha1" Hash="3FEF20A1D86175C76CDD1EBFF3B3243BBBD0068F" />
+    <Allow ID="ID_ALLOW_A_22_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.DataManagement.Client.Framework.Forms.dll Hash Sha256" Hash="0EB29A7A089798AB989B57269BF75727CA707B4089C25597184477EB2D1C0183" />
+    <Allow ID="ID_ALLOW_A_23_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.DataManagement.Client.Framework.Forms.dll Hash Page Sha1" Hash="91AEBCA32FDB12B0D46B70DF7BDE2ED3FCE6B84C" />
+    <Allow ID="ID_ALLOW_A_24_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.DataManagement.Client.Framework.Forms.dll Hash Page Sha256" Hash="A1D9DE7E875D3F76262D939F19E4082A1EC379E956B633AD706CFB4D19A48DC4" />
+    <Allow ID="ID_ALLOW_A_25_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.DataManagement.Client.Framework.Vault.dll Hash Sha1" Hash="F483FDE022FEB04D90FF40F5B6B7E3652627F4EE" />
+    <Allow ID="ID_ALLOW_A_26_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.DataManagement.Client.Framework.Vault.dll Hash Sha256" Hash="D13CA1AEFF520637463882D8E887BA95EC61D6E139E606574724EF90C0009B1B" />
+    <Allow ID="ID_ALLOW_A_27_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.DataManagement.Client.Framework.Vault.dll Hash Page Sha1" Hash="0FB34BF0EE6725620530769E9812A1025192663D" />
+    <Allow ID="ID_ALLOW_A_28_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.DataManagement.Client.Framework.Vault.dll Hash Page Sha256" Hash="B26ADA0F219D09390C5EAF9E9590468CA5E937B3537C30D20D6957D596A33D5B" />
+    <Allow ID="ID_ALLOW_A_29_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.DataManagement.Client.Framework.Vault.Forms.dll Hash Sha1" Hash="F9C2552E01E70176A7F10BBE78886651851DCBDF" />
+    <Allow ID="ID_ALLOW_A_2A_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.DataManagement.Client.Framework.Vault.Forms.dll Hash Sha256" Hash="5282A3B3214439B923B2A2C5E02A38878F2B572102B9609E2DC616FD78CC38BA" />
+    <Allow ID="ID_ALLOW_A_2B_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.DataManagement.Client.Framework.Vault.Forms.dll Hash Page Sha1" Hash="ACF6889A0C0452A2BFA6B848CB13BD0B4B0802C5" />
+    <Allow ID="ID_ALLOW_A_2C_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Autodesk.DataManagement.Client.Framework.Vault.Forms.dll Hash Page Sha256" Hash="64CF3F070BBCF0DAA9CF1C2062E3B5DAAF8B15DEF08CDA74E3F2111EEC9BBB38" />
+    <Allow ID="ID_ALLOW_A_2D_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\DevComponents.DotNetBar2.dll Hash Sha1" Hash="B94FB26698268056943F5C5FF793CCDDDE9C6255" />
+    <Allow ID="ID_ALLOW_A_2E_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\DevComponents.DotNetBar2.dll Hash Sha256" Hash="BCB517956550A1D3C70C8290FA6D8982B1DF778720796DC361041C1391476B98" />
+    <Allow ID="ID_ALLOW_A_2F_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\DevComponents.DotNetBar2.dll Hash Page Sha1" Hash="00F605240AFE6F21192CFBD93216F97567995170" />
+    <Allow ID="ID_ALLOW_A_30_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\DevComponents.DotNetBar2.dll Hash Page Sha256" Hash="B9F370208804C8ADBC13505B020D776B1E2B5828A676CC1D1A50B9431CF2F16F" />
+    <Allow ID="ID_ALLOW_A_31_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\DevComponents.Instrumentation.dll Hash Sha1" Hash="9437F5648977BB978DECF862DA30C9EE765B7BB7" />
+    <Allow ID="ID_ALLOW_A_32_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\DevComponents.Instrumentation.dll Hash Sha256" Hash="2E26CD7BABC8987655CA805731E3818DFB89203802B65F44ED4D10CA50125AF9" />
+    <Allow ID="ID_ALLOW_A_33_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\DevComponents.Instrumentation.dll Hash Page Sha1" Hash="D1AEAB6C6F9AF90705494FC112A77BBD824938C0" />
+    <Allow ID="ID_ALLOW_A_34_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\DevComponents.Instrumentation.dll Hash Page Sha256" Hash="915104C487B79B82D25312E7DF8F9C8E8EE113C43328257B98EC089526B5E3C7" />
+    <Allow ID="ID_ALLOW_A_35_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\EPPlus.dll Hash Sha1" Hash="D6C40FC3A8958EA45E3355ECB5B4BB068CE01773" />
+    <Allow ID="ID_ALLOW_A_36_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\EPPlus.dll Hash Sha256" Hash="BB3CB0AFA218FB04DDEC76C54AA0EB02F761BF6FE3041440AA55CCB99F13D1CD" />
+    <Allow ID="ID_ALLOW_A_37_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\EPPlus.dll Hash Page Sha1" Hash="A3BA918CAAE24CE9054FB9B7E4FB2E1C6F93C8F0" />
+    <Allow ID="ID_ALLOW_A_38_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\EPPlus.dll Hash Page Sha256" Hash="EA7573466766054883C8302D6C629864F6B62B07130F8906D5EF2BBCF00FBE84" />
+    <Allow ID="ID_ALLOW_A_39_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\JTBWAccoreQuery.dll Hash Sha1" Hash="AC63D2302F41B9A23A9E7A5A5959299F92F50376" />
+    <Allow ID="ID_ALLOW_A_3A_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\JTBWAccoreQuery.dll Hash Sha256" Hash="A592CB927007A94074C0302EB6EEE8EAD5475F2AD7159D2FE3F8E8D16F9AB5F4" />
+    <Allow ID="ID_ALLOW_A_3B_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\JTBWAccoreQuery.dll Hash Page Sha1" Hash="72ED5690AF8EFC1377A6927D3BC1605F368EEF7E" />
+    <Allow ID="ID_ALLOW_A_3C_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\JTBWAccoreQuery.dll Hash Page Sha256" Hash="DA239F36201CA9E13D8E5FAA9E313C3E75009626644E0B9B0760E25724B1F084" />
+    <Allow ID="ID_ALLOW_A_3D_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\License for Apps.exe Hash Sha1" Hash="06AF7E39AB82546CF65DA7BD622BAA2D7D6BF793" />
+    <Allow ID="ID_ALLOW_A_3E_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\License for Apps.exe Hash Sha256" Hash="CAA74023495C4FD206ABDC26FCB5B74D62FDA9B7236E9C85C88D7068260A23BB" />
+    <Allow ID="ID_ALLOW_A_3F_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\License for Apps.exe Hash Page Sha1" Hash="7EB2323E6931F61A882852E74B61EEC31497B70A" />
+    <Allow ID="ID_ALLOW_A_40_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\License for Apps.exe Hash Page Sha256" Hash="77CA045E5D2FF94C0A9AD54050F11725412EB4637ADF4C63F4D1DD4F3C5CCEEC" />
+    <Allow ID="ID_ALLOW_A_41_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\License V4.dll Hash Sha1" Hash="2E3A59FDB0222C591990555BE91FDF572FBF47E6" />
+    <Allow ID="ID_ALLOW_A_42_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\License V4.dll Hash Sha256" Hash="933E5DFF94E48D2EDB30723425D985D922AEFE74DBD0E566337482826495E7FA" />
+    <Allow ID="ID_ALLOW_A_43_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\License V4.dll Hash Page Sha1" Hash="245795601E45B8D671F3D7334E6E073B476A3602" />
+    <Allow ID="ID_ALLOW_A_44_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\License V4.dll Hash Page Sha256" Hash="3AE1D7397F6F33DCA5E41BBB567A9F180B2216E4F8863D861041D77001F4F4BD" />
+    <Allow ID="ID_ALLOW_A_45_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\LoadSharedAssemblies.dll Hash Sha1" Hash="8810988425E750885D120CCECB3D61287B86A4B0" />
+    <Allow ID="ID_ALLOW_A_46_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\LoadSharedAssemblies.dll Hash Sha256" Hash="A5EFAB8B8F0C6AC2C251959F7BF1D4EDB0B94BB47BCB75006DCD80C2934225E2" />
+    <Allow ID="ID_ALLOW_A_47_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\LoadSharedAssemblies.dll Hash Page Sha1" Hash="477307FA106F618E8062089A5DCC0EA973F3A2FC" />
+    <Allow ID="ID_ALLOW_A_48_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\LoadSharedAssemblies.dll Hash Page Sha256" Hash="F5159D7F493F02737FD85283B499D1F361372CBC945AB3639D700638B6682174" />
+    <Allow ID="ID_ALLOW_A_49_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Microsoft.Web.Services3.dll Hash Sha1" Hash="84B461E1B6B171B794FD41E1D87F510F889C7A5E" />
+    <Allow ID="ID_ALLOW_A_4A_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Microsoft.Web.Services3.dll Hash Sha256" Hash="40059F80C4459077C903CAA73B327FA7CDF3E8C6E8B8E23CC30C87C48373860A" />
+    <Allow ID="ID_ALLOW_A_4B_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Microsoft.Web.Services3.dll Hash Page Sha1" Hash="015D03476D1C33945EC6AF9E33F5CBF44E4368DB" />
+    <Allow ID="ID_ALLOW_A_4C_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Microsoft.Web.Services3.dll Hash Page Sha256" Hash="8BC40C89AF6F739774FAF038B847DFE9A02CA28A8F2EE20DB0058981D8D0C15D" />
+    <Allow ID="ID_ALLOW_A_4D_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\OfficeOpenXml.Core.ExcelPackage.dll Hash Sha1" Hash="8B9FFCD1B6F9237BC334CAC5F0A7D029E8D32B47" />
+    <Allow ID="ID_ALLOW_A_4E_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\OfficeOpenXml.Core.ExcelPackage.dll Hash Sha256" Hash="27FF017B276476393E12D59095ED99240F59C4450C75C9AB795900C731D2CE5D" />
+    <Allow ID="ID_ALLOW_A_4F_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\OfficeOpenXml.Core.ExcelPackage.dll Hash Page Sha1" Hash="E406A8136926E631E9300488CBD524169696B216" />
+    <Allow ID="ID_ALLOW_A_50_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\OfficeOpenXml.Core.ExcelPackage.dll Hash Page Sha256" Hash="5DA650CFFACD6D1244B335081615AD4E9C5C01E5F7959BC4CDE154FD06A8EF67" />
+    <Allow ID="ID_ALLOW_A_51_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\OfficeOpenXml.Extends.dll Hash Sha1" Hash="2395594834D16A21ADE79C24BED265CC0711DD13" />
+    <Allow ID="ID_ALLOW_A_52_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\OfficeOpenXml.Extends.dll Hash Sha256" Hash="84692B6B41994BF5EEE3C8A84B21785CD2213F4573FAE5B00E22B4B180FA3745" />
+    <Allow ID="ID_ALLOW_A_53_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\OfficeOpenXml.Extends.dll Hash Page Sha1" Hash="5FE4BEC64B9D6A40808E37948D21C94B19D54612" />
+    <Allow ID="ID_ALLOW_A_54_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\OfficeOpenXml.Extends.dll Hash Page Sha256" Hash="9ABF2D48097B706DCDC827AE522C1D30FB2C3C01C6467931D8E1DE0EB81DE273" />
+    <Allow ID="ID_ALLOW_A_55_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Ookii.Dialogs.dll Hash Sha1" Hash="12AEC7FD8C3872D8243B41E1602D9B5DCA657B95" />
+    <Allow ID="ID_ALLOW_A_56_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Ookii.Dialogs.dll Hash Sha256" Hash="F2B19838DF1DAF5FB9F6CA3D23F18BB0A9D57AFB4120FD606E521E91FE0ADD2B" />
+    <Allow ID="ID_ALLOW_A_57_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Ookii.Dialogs.dll Hash Page Sha1" Hash="2D285EA3333CA14BE730E9001C1F50414149238D" />
+    <Allow ID="ID_ALLOW_A_58_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Ookii.Dialogs.dll Hash Page Sha256" Hash="B394C5BC84AEEE926F3BA2911E222C8F7D6FFF37ED538BD3C3FA793DC1EC78DE" />
+    <Allow ID="ID_ALLOW_A_59_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\RenameLayout.dll Hash Sha1" Hash="95AD77026EF365046773056CA1F0415E2D9028C7" />
+    <Allow ID="ID_ALLOW_A_5A_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\RenameLayout.dll Hash Sha256" Hash="57276FECA33BA027841715E57C5256D79A62F0ECBBB1751357DAA7A6C7CD781D" />
+    <Allow ID="ID_ALLOW_A_5B_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\RenameLayout.dll Hash Page Sha1" Hash="E98841D3CF2A6728F4132579244D3BD8105C169C" />
+    <Allow ID="ID_ALLOW_A_5C_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\RenameLayout.dll Hash Page Sha256" Hash="58DBCBC97C80C9F7F57C04792433E0DA52F514A63DF15135DB19FF19874CB95C" />
+    <Allow ID="ID_ALLOW_A_61_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\System.IO.Packaging.dll Hash Sha1" Hash="BC796F196B6DA2B8570EC3E7868CD2069DB50B9A" />
+    <Allow ID="ID_ALLOW_A_62_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\System.IO.Packaging.dll Hash Sha256" Hash="D81C7DB71B4FADEAF5D0C698689321FAE8FDA3090847B2359BF3B7CBA667066C" />
+    <Allow ID="ID_ALLOW_A_63_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\System.IO.Packaging.dll Hash Page Sha1" Hash="56B823C9E81748783C30DB6F1980EE2E17BDFCA1" />
+    <Allow ID="ID_ALLOW_A_64_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\System.IO.Packaging.dll Hash Page Sha256" Hash="545E3B7ACF24FCF003FFFA2379F707DD9C5526E944A0D2C707B666F58F42A1A3" />
+    <Allow ID="ID_ALLOW_A_65_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\unins000.exe Hash Sha1" Hash="7D13B72102FBC8119D0C2695FFBF612F5B2B5264" />
+    <Allow ID="ID_ALLOW_A_66_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\unins000.exe Hash Sha256" Hash="DB9CCFAACEC025F71B377AE0E7578D698C590ED1EE0D0578E3BAF0C52A016118" />
+    <Allow ID="ID_ALLOW_A_67_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\unins000.exe Hash Page Sha1" Hash="6890E9D0B5FC131D9531E3621357F84E8A61F0BB" />
+    <Allow ID="ID_ALLOW_A_68_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\unins000.exe Hash Page Sha256" Hash="DE1B2CC917169682A7CA5C687532369CC60CF6DA546161BB53B8BC37D8C31314" />
+    <Allow ID="ID_ALLOW_A_69_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.Editors.v2.6.dll Hash Sha1" Hash="C21305E91A6E1F371853A58AA4FBE946599A4993" />
+    <Allow ID="ID_ALLOW_A_6A_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.Editors.v2.6.dll Hash Sha256" Hash="43B95BA39055E58D3CE5AA52B5C107F79F1640C26704D4B996393F53B238566D" />
+    <Allow ID="ID_ALLOW_A_6B_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.Editors.v2.6.dll Hash Page Sha1" Hash="1ABA607E8237DEA40B3236E37B9047CD6B6693AA" />
+    <Allow ID="ID_ALLOW_A_6C_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.Editors.v2.6.dll Hash Page Sha256" Hash="B5221184CA6D8528EDC28263F40D7AC43038B8EC2D6BEA16352CAFD6117E75FB" />
+    <Allow ID="ID_ALLOW_A_6D_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.Grid.Reporting.v3.9.dll Hash Sha1" Hash="47581D60B9028CE6CAF06FD81CDC400153AEEA40" />
+    <Allow ID="ID_ALLOW_A_6E_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.Grid.Reporting.v3.9.dll Hash Sha256" Hash="14AC1F00EA420178E96492607DE562AD8CFE1FFF138940BC73395718F6B14995" />
+    <Allow ID="ID_ALLOW_A_6F_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.Grid.Reporting.v3.9.dll Hash Page Sha1" Hash="964BCB1AF89431E3AAAAC8B0EF24E16375129DE4" />
+    <Allow ID="ID_ALLOW_A_70_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.Grid.Reporting.v3.9.dll Hash Page Sha256" Hash="4D5C2381CDD56B483C0054AE0051C6D7D556B6826B3445863F11DBA135BB6A46" />
+    <Allow ID="ID_ALLOW_A_71_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.Grid.v3.9.dll Hash Sha1" Hash="8EE67FCE33DD4D711A2571D5607486B75FA0BD39" />
+    <Allow ID="ID_ALLOW_A_72_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.Grid.v3.9.dll Hash Sha256" Hash="521F9D264E71301AD8AFEE3DFA63BB8FC852FCCCE48ADC687ADED784CF340A27" />
+    <Allow ID="ID_ALLOW_A_73_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.Grid.v3.9.dll Hash Page Sha1" Hash="204BAF4CD568CCB45A1FA82E23E3F44208D57CAC" />
+    <Allow ID="ID_ALLOW_A_74_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.Grid.v3.9.dll Hash Page Sha256" Hash="A28CC28C39D2AE3B21689A6B86DFA27FEFBB55B9DB12651941A53074E2D48D11" />
+    <Allow ID="ID_ALLOW_A_75_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.UI.v1.4.dll Hash Sha1" Hash="E1DEFB6B235963AC4BD336B1E913903E51970A31" />
+    <Allow ID="ID_ALLOW_A_76_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.UI.v1.4.dll Hash Sha256" Hash="62854D29C0C070B95E0824CA1D337F343FA4FB08D3749473801D6D0B1C40B92E" />
+    <Allow ID="ID_ALLOW_A_77_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.UI.v1.4.dll Hash Page Sha1" Hash="67B79316B7FD696AB029ACD479D0EB92AF6251B5" />
+    <Allow ID="ID_ALLOW_A_78_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.UI.v1.4.dll Hash Page Sha256" Hash="D6E829A4AF94FD37BEAA9138C839F59E66951EBAD31BAD11D1CCB527BB34A09F" />
+    <Allow ID="ID_ALLOW_A_79_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.Validation.v1.3.dll Hash Sha1" Hash="78093DB1CBA686D95A8D46B38DEAE3E29C51A545" />
+    <Allow ID="ID_ALLOW_A_7A_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.Validation.v1.3.dll Hash Sha256" Hash="03BBC088641178F885C93E704ECCECF813C39F221CF28D1FF5853ADB45A8253F" />
+    <Allow ID="ID_ALLOW_A_7B_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.Validation.v1.3.dll Hash Page Sha1" Hash="3E5B75AF00C1728F85E5CD0840936399AF098D90" />
+    <Allow ID="ID_ALLOW_A_7C_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\Xceed.Validation.v1.3.dll Hash Page Sha256" Hash="DE20A6510A45FF41652BC4B04172A44A48A5410101FBE3C3680AB970B9B9CD57" />
+    <Allow ID="ID_ALLOW_A_7D_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\zh\SSMPropEditor.resources.dll Hash Sha1" Hash="3C84C33E47FB388B54E7FF0CC50C7D23099F7B18" />
+    <Allow ID="ID_ALLOW_A_7E_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\zh\SSMPropEditor.resources.dll Hash Sha256" Hash="EA0BE615ABCFB7C81F5E02F904226DBD8068878E82DAD3A5DF091EDD46EE0B77" />
+    <Allow ID="ID_ALLOW_A_7F_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\zh\SSMPropEditor.resources.dll Hash Page Sha1" Hash="0E81F11963DBBADCC46A11DE902A42FCABE3D1EE" />
+    <Allow ID="ID_ALLOW_A_80_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\zh\SSMPropEditor.resources.dll Hash Page Sha256" Hash="3C034739598AA37770B1015CE0A3C658C6765CF9D72E3C32CD6B7CCA6BECCD40" />
+    <Allow ID="ID_ALLOW_A_81_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\pl\SSMPropEditor.resources.dll Hash Sha1" Hash="BE72F048DD2DDF59E1D5734429873FC0552F55E9" />
+    <Allow ID="ID_ALLOW_A_82_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\pl\SSMPropEditor.resources.dll Hash Sha256" Hash="107EC23ED6CCB432FED275C8EA1F376AEE3A29F57F66EED7B22E20CAFFD01BC7" />
+    <Allow ID="ID_ALLOW_A_83_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\pl\SSMPropEditor.resources.dll Hash Page Sha1" Hash="602C7FAFADCC563A144446484E6B672A27F08969" />
+    <Allow ID="ID_ALLOW_A_84_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\pl\SSMPropEditor.resources.dll Hash Page Sha256" Hash="4E95D41F11B59616CAE298B67151FB86FC71A5E2404E45123F646990991A5415" />
+    <Allow ID="ID_ALLOW_A_85_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\it\SSMPropEditor.resources.dll Hash Sha1" Hash="B0EFDC32DAF2C36E4402064207BDF05DC1C1CE06" />
+    <Allow ID="ID_ALLOW_A_86_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\it\SSMPropEditor.resources.dll Hash Sha256" Hash="1BB9D1C6D63C3F21B317468D09C4AECBC798A93E0B3553E09F4E64BB26CEE4F7" />
+    <Allow ID="ID_ALLOW_A_87_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\it\SSMPropEditor.resources.dll Hash Page Sha1" Hash="BCAD3793C4875222F9EBC4D24FE7A0C615F9AB64" />
+    <Allow ID="ID_ALLOW_A_88_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\it\SSMPropEditor.resources.dll Hash Page Sha256" Hash="E0D4FAEAC6CAB3E794FEFFBC0BBA9C1F0AC9F5755FA3B6B5077D24FEB50C07A1" />
+    <Allow ID="ID_ALLOW_A_89_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\fr\SSMPropEditor.resources.dll Hash Sha1" Hash="79C700E09B0AEC9D9EB9C3F27550E0D379BADB4C" />
+    <Allow ID="ID_ALLOW_A_8A_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\fr\SSMPropEditor.resources.dll Hash Sha256" Hash="01967D5395C2473A83D2C54202D4C9E14D6A773E74450A02DC2A84D232A885D6" />
+    <Allow ID="ID_ALLOW_A_8B_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\fr\SSMPropEditor.resources.dll Hash Page Sha1" Hash="5D599132A95A9BBEE3CA04EBA922BB7BF31BBB90" />
+    <Allow ID="ID_ALLOW_A_8C_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\fr\SSMPropEditor.resources.dll Hash Page Sha256" Hash="C362FC3FE1625094BFC9E83533E7D4E4A8BCE8D61806186C3FCCBB062940ACD3" />
+    <Allow ID="ID_ALLOW_A_8D_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\es\SSMPropEditor.resources.dll Hash Sha1" Hash="E0B243098CB281F3CCED56F73DCD7CDBC2AD6A5F" />
+    <Allow ID="ID_ALLOW_A_8E_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\es\SSMPropEditor.resources.dll Hash Sha256" Hash="220443A591975C594C3694D7D40A2B468CED82B2A82FE094298CF3E8086CDD27" />
+    <Allow ID="ID_ALLOW_A_8F_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\es\SSMPropEditor.resources.dll Hash Page Sha1" Hash="EF61B542F8D788C8C203C8535FE5C4278CF48BAA" />
+    <Allow ID="ID_ALLOW_A_90_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\es\SSMPropEditor.resources.dll Hash Page Sha256" Hash="BFD8300D8C302EFB2B9CE09B20865536CD169F52D8DABF47BD134DEE15472838" />
+    <Allow ID="ID_ALLOW_A_91_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\en-US\SSMPropEditor.resources.dll Hash Sha1" Hash="D8E1F5FC63A73841EC4BC0C3E09E1983E58C4371" />
+    <Allow ID="ID_ALLOW_A_92_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\en-US\SSMPropEditor.resources.dll Hash Sha256" Hash="98E6365F4EC42936865C470E6FAF5BAC0760673C93AB3AD51E6C2AE9CDA88B7E" />
+    <Allow ID="ID_ALLOW_A_93_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\en-US\SSMPropEditor.resources.dll Hash Page Sha1" Hash="FB00B3B921655342F9D0D0BAE239A1B2C2FE4E19" />
+    <Allow ID="ID_ALLOW_A_94_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\en-US\SSMPropEditor.resources.dll Hash Page Sha256" Hash="1A025A5799AF70BEF8E58C7188BA2F86B4310A32F802A75470A9B3EEA42808A2" />
+    <Allow ID="ID_ALLOW_A_95_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\de\SSMPropEditor.resources.dll Hash Sha1" Hash="526BE17E9268D4CE7FB49A8F1708BFA24A3F52CF" />
+    <Allow ID="ID_ALLOW_A_96_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\de\SSMPropEditor.resources.dll Hash Sha256" Hash="C0DC0152B5501ECCE4E87B7064AF1ECE6ADE3C009B51C45C8A2BA39A90772206" />
+    <Allow ID="ID_ALLOW_A_97_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\de\SSMPropEditor.resources.dll Hash Page Sha1" Hash="DE14D274C07A59A863219DA64431538E5B45D477" />
+    <Allow ID="ID_ALLOW_A_98_1_2_0" FriendlyName="C:\Program Files\JTB World\SSMPropEditor\de\SSMPropEditor.resources.dll Hash Page Sha256" Hash="2E8865E62309DF309C0C940887A05737C5181CB59AEBCCF345F88D8246EAD44C" />
+    <Allow ID="ID_ALLOW_A_1_1" FriendlyName="C:\Program Files\7-Zip\7-zip.dll Hash Sha1" Hash="A87ABF375D2C049BCC7AA67A6D334A3855611B0A" />
+    <Allow ID="ID_ALLOW_A_2_1" FriendlyName="C:\Program Files\7-Zip\7-zip.dll Hash Sha256" Hash="4CBC3A1A9CC9999A9C905E252F6BF0EA21A306270DD39ECDE706A8BBB3B01FFA" />
+    <Allow ID="ID_ALLOW_A_3_1" FriendlyName="C:\Program Files\7-Zip\7-zip.dll Hash Page Sha1" Hash="DE79A66D12509295C82834556BC34D31BC2852C6" />
+    <Allow ID="ID_ALLOW_A_4_1" FriendlyName="C:\Program Files\7-Zip\7-zip.dll Hash Page Sha256" Hash="B339AEE444577A9407E5EA3D507D69C3B4C4A003A8341990F665B29EBE05FF58" />
+    <Allow ID="ID_ALLOW_A_5_1" FriendlyName="C:\Program Files\7-Zip\7-zip32.dll Hash Sha1" Hash="81ADD44D2173E1D1223A80741A3F48DE78A06478" />
+    <Allow ID="ID_ALLOW_A_6_1" FriendlyName="C:\Program Files\7-Zip\7-zip32.dll Hash Sha256" Hash="A660B30C011D4449D2C761DF3728EBB78D53B055A72FE60967987B60D941F849" />
+    <Allow ID="ID_ALLOW_A_7_1" FriendlyName="C:\Program Files\7-Zip\7-zip32.dll Hash Page Sha1" Hash="C679ACA70251D3B9B5359D27603D8F429CBB0DFE" />
+    <Allow ID="ID_ALLOW_A_8_1" FriendlyName="C:\Program Files\7-Zip\7-zip32.dll Hash Page Sha256" Hash="4B1086194DE735AFB9D6B7105D1C44516594B1E9C0BB9B90A0A35C1E1C28CC3D" />
+    <Allow ID="ID_ALLOW_A_9_1" FriendlyName="C:\Program Files\7-Zip\7z.dll Hash Sha1" Hash="413DFCD3DF4C51AADFB60C81F093C9CCF3DF1C19" />
+    <Allow ID="ID_ALLOW_A_A_1" FriendlyName="C:\Program Files\7-Zip\7z.dll Hash Sha256" Hash="D7CCE30179E3C2FA0D15EDE0B9631B24A274D056EE6EBFD71F848D9F26B846D7" />
+    <Allow ID="ID_ALLOW_A_B_1" FriendlyName="C:\Program Files\7-Zip\7z.dll Hash Page Sha1" Hash="F7A02764D8242F9D8F626C99716F5F89D6E77427" />
+    <Allow ID="ID_ALLOW_A_C_1" FriendlyName="C:\Program Files\7-Zip\7z.dll Hash Page Sha256" Hash="1C1BEBC3A7E46B9FE2B2CB54570F8C6AFF0BDAE904C61B76AFC2F8A04457FE9F" />
+    <Allow ID="ID_ALLOW_A_D_1" FriendlyName="C:\Program Files\7-Zip\7z.exe Hash Sha1" Hash="EC28835618483CC9F503C9BE4FA8AFED6C6F1749" />
+    <Allow ID="ID_ALLOW_A_E_1" FriendlyName="C:\Program Files\7-Zip\7z.exe Hash Sha256" Hash="6714172027669E7C8C133736F0667FE52D7F8D714C766ADC2EB730D20E7291A7" />
+    <Allow ID="ID_ALLOW_A_F_1" FriendlyName="C:\Program Files\7-Zip\7z.exe Hash Page Sha1" Hash="764B2C461E3242830401832B3C11333FBEAEBF14" />
+    <Allow ID="ID_ALLOW_A_10_1" FriendlyName="C:\Program Files\7-Zip\7z.exe Hash Page Sha256" Hash="182B363CF1B98D7D53C4A1A9C6ACF245F229C294EF3FBB14D257858F98178385" />
+    <Allow ID="ID_ALLOW_A_11_1" FriendlyName="C:\Program Files\7-Zip\7z.sfx Hash Sha1" Hash="D0822870A9C2C1C96F980DA4041D4A5118324B33" />
+    <Allow ID="ID_ALLOW_A_12_1" FriendlyName="C:\Program Files\7-Zip\7z.sfx Hash Sha256" Hash="1C88BD6E98BEB148259B984A1952C52C17224DC76FF8E078E517632F12AFE68A" />
+    <Allow ID="ID_ALLOW_A_13_1" FriendlyName="C:\Program Files\7-Zip\7z.sfx Hash Page Sha1" Hash="4A46005C53E710B91CE027B38B5E940D10E84F57" />
+    <Allow ID="ID_ALLOW_A_14_1" FriendlyName="C:\Program Files\7-Zip\7z.sfx Hash Page Sha256" Hash="4C92BF37B60157AAAD13D776ED73A2A401A5B4C0679AEEE847F90A9C3DF79EEA" />
+    <Allow ID="ID_ALLOW_A_15_1" FriendlyName="C:\Program Files\7-Zip\7zCon.sfx Hash Sha1" Hash="BFC213111B8678BD5D597ABACF387A00A059CEF6" />
+    <Allow ID="ID_ALLOW_A_16_1" FriendlyName="C:\Program Files\7-Zip\7zCon.sfx Hash Sha256" Hash="E662BA6CE927F84C5859614B0B719DA747331EA6FCA7EC2FB0C2882BE9201B49" />
+    <Allow ID="ID_ALLOW_A_17_1" FriendlyName="C:\Program Files\7-Zip\7zCon.sfx Hash Page Sha1" Hash="1412A73280B510DA0355E6D8319D5D159D1CF107" />
+    <Allow ID="ID_ALLOW_A_18_1" FriendlyName="C:\Program Files\7-Zip\7zCon.sfx Hash Page Sha256" Hash="06055ED3D33B22C765D31CE7DF118EA9A44B8939C602FE14E8CEC50DA8C5F647" />
+    <Allow ID="ID_ALLOW_A_19_1" FriendlyName="C:\Program Files\7-Zip\7zFM.exe Hash Sha1" Hash="4893979987CAD22A63B1BFE8EA67E146AE24A0D6" />
+    <Allow ID="ID_ALLOW_A_1A_1" FriendlyName="C:\Program Files\7-Zip\7zFM.exe Hash Sha256" Hash="B93E596D4414455528417F928ED65824A0EDA3EE86F410729FAE3D3744434E21" />
+    <Allow ID="ID_ALLOW_A_1B_1" FriendlyName="C:\Program Files\7-Zip\7zFM.exe Hash Page Sha1" Hash="3847811353BE886B6C88ADC83241209C46875916" />
+    <Allow ID="ID_ALLOW_A_1C_1" FriendlyName="C:\Program Files\7-Zip\7zFM.exe Hash Page Sha256" Hash="3269E0D5E68A0CDE5FC4ED64979421F008B1A103BE14F6D2D5242ED1A903AC5E" />
+    <Allow ID="ID_ALLOW_A_1D_1" FriendlyName="C:\Program Files\7-Zip\7zG.exe Hash Sha1" Hash="43418670A71AEBF708AF2118B138D620B32424B1" />
+    <Allow ID="ID_ALLOW_A_1E_1" FriendlyName="C:\Program Files\7-Zip\7zG.exe Hash Sha256" Hash="4BD3445509C31F2CDC8E4EC9FF7C0EDB0AA23DF1843458DE5AF9C12066037E43" />
+    <Allow ID="ID_ALLOW_A_1F_1" FriendlyName="C:\Program Files\7-Zip\7zG.exe Hash Page Sha1" Hash="DA7C1803FC8F070E71C622680F33749DB7978129" />
+    <Allow ID="ID_ALLOW_A_20_1" FriendlyName="C:\Program Files\7-Zip\7zG.exe Hash Page Sha256" Hash="83838294AFE4680C170D43FA7FF06921DDDAEDBC8638AB2A025A7C13E846D4C6" />
+  </FileRules>
+  <Signers />
+  <SigningScenarios>
+    <SigningScenario ID="ID_SIGNINGSCENARIO_DRIVERS_1" FriendlyName="Auto generated policy on 07-31-2024" Value="131">
+      <ProductSigners>
+        <FileRulesRef>
+          <FileRuleRef RuleID="ID_ALLOW_A_15_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_16_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_17_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_18_1_2_0" />
+        </FileRulesRef>
+      </ProductSigners>
+    </SigningScenario>
+    <SigningScenario ID="ID_SIGNINGSCENARIO_WINDOWS" FriendlyName="Auto generated policy on 07-31-2024" Value="12">
+      <ProductSigners>
+        <FileRulesRef>
+          <FileRuleRef RuleID="ID_ALLOW_A_1_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_2_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_5_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_6_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_9_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_B_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_C_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_D_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_E_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_F_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_10_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_11_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_12_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_13_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_14_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_15_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_16_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_17_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_18_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_19_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1A_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1B_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1C_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1D_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1E_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1F_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_20_0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_2_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_5_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_6_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1_0_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_2_2_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3_3_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4_4_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_2_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_5_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_6_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_9_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_B_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_C_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_D_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_E_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_F_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_10_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_11_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_12_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_13_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_14_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_19_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1A_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1B_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1C_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1D_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1E_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1F_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_20_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_21_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_22_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_23_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_24_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_25_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_26_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_27_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_28_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_29_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_2A_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_2B_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_2C_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_2D_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_2E_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_2F_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_30_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_31_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_32_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_33_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_34_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_35_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_36_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_37_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_38_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_39_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3A_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3B_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3C_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3D_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3E_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3F_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_40_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_41_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_42_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_43_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_44_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_45_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_46_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_47_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_48_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_49_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4A_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4B_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4C_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4D_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4E_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4F_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_50_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_51_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_52_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_53_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_54_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_55_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_56_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_57_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_58_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_59_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_5A_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_5B_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_5C_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_61_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_62_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_63_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_64_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_65_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_66_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_67_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_68_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_69_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_6A_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_6B_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_6C_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_6D_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_6E_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_6F_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_70_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_71_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_72_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_73_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_74_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_75_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_76_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_77_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_78_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_79_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7A_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7B_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7C_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7D_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7E_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7F_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_80_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_81_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_82_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_83_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_84_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_85_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_86_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_87_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_88_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_89_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8A_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8B_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8C_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8D_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8E_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8F_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_90_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_91_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_92_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_93_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_94_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_95_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_96_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_97_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_98_1_2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_2_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_5_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_6_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_9_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_B_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_C_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_D_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_E_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_F_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_10_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_11_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_12_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_13_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_14_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_15_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_16_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_17_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_18_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_19_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1A_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1B_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1C_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1D_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1E_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1F_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_20_1" />
+        </FileRulesRef>
+      </ProductSigners>
+    </SigningScenario>
+  </SigningScenarios>
+  <UpdatePolicySigners />
+  <CiSigners />
+  <HvciOptions>0</HvciOptions>
+  <Settings>
+    <Setting Provider="PolicyInfo" Key="Information" ValueName="Id">
+      <Value>
+        <String>2024-03-21</String>
+      </Value>
+    </Setting>
+    <Setting Provider="PolicyInfo" Key="Information" ValueName="Name">
+      <Value>
+        <String>Allow-Hash-Rules-A03</String>
+      </Value>
+    </Setting>
+  </Settings>
+</SiPolicy>
