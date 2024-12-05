@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SiPolicy xmlns="urn:schemas-microsoft-com:sipolicy" PolicyType="Supplemental Policy">
+  <VersionEx>1.0.0.0</VersionEx>
+  <PlatformID>{2E07F7E4-194C-4D20-B7C9-6F44A6C5A234}</PlatformID>
+  <Rules>
+    <Rule>
+      <Option>Enabled:Unsigned System Integrity Policy</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:Managed Installer</Option>
+    </Rule>
+  </Rules>
+  <!--EKUS-->
+  <EKUs />
+  <!--File Rules-->
+  <FileRules>
+    <FileAttrib ID="ID_FILEATTRIB_F_19_1_0" FriendlyName="C:\Program Files (x86)\GoTo Opener\GoTo Opener.exe FileAttribute" FileName="GoToOpener.exe" MinimumFileVersion="1.0.0.568" />
+    <FileAttrib ID="ID_FILEATTRIB_A_A38D8816D062454D822A1DF9BC5970C6_0_0" FriendlyName="qschannelbackend.dll" FileName="qschannelbackend.dll" MinimumFileVersion="6.4.0.0" FileDescription="C++ Application Development Framework" ProductName="Qt6" />
+    <FileAttrib ID="ID_FILEATTRIB_A_6C47669CBB8048B2ADB72C0DDBCD88EF_0_0" FriendlyName="qt6core.dll" FileName="Qt6Core.dll" MinimumFileVersion="6.4.0.0" FileDescription="C++ Application Development Framework" ProductName="Qt6" />
+    <FileAttrib ID="ID_FILEATTRIB_A_FFD822889CB3486E924D52178FF3A7B4_0_0" FriendlyName="qt6network.dll" FileName="Qt6Network.dll" MinimumFileVersion="6.4.0.0" FileDescription="C++ Application Development Framework" ProductName="Qt6" />
+    <FileAttrib ID="ID_FILEATTRIB_A_A02786E416094EE58C1595698D85997E_0_0" FriendlyName="GoTo.exe" MinimumFileVersion="4.12.0.1" InternalName="GoTo" FileDescription="GoTo" ProductName="GoTo" />
+    <FileAttrib ID="ID_FILEATTRIB_A_3BE88F509BB6431298DBD4D6A075D89A_0_0" FriendlyName="vk_swiftshader.dll" FileName="vk_swiftshader.dll" MinimumFileVersion="5.0.0.1" InternalName="Vulkan" FileDescription="SwiftShader Vulkan 32-bit Dynamic Link Library" ProductName="SwiftShader Vulkan Dynamic Link Library" />
+    <FileAttrib ID="ID_FILEATTRIB_A_ECA94AAFDFFA48A59D748B12A4C5A2E3_0_0" FriendlyName="vulkan-1.dll" MinimumFileVersion="1.3.284.0" FileDescription="1.3.284.Dev Build" ProductName="Vulkan Runtime" />
+    <FileAttrib ID="ID_FILEATTRIB_A_80070534F80B48A99839FD3ED63E1E13_0_0" FriendlyName="libEGL.dll" FileName="libEGL.dll" MinimumFileVersion="2.1.23107.0" InternalName="libEGL" FileDescription="ANGLE libEGL Dynamic Link Library" ProductName="ANGLE libEGL Dynamic Link Library" />
+    <FileAttrib ID="ID_FILEATTRIB_A_1DD4E9860EF141AE9C382AFCCB813AA1_0_0" FriendlyName="libGLESv2.dll" FileName="libGLESv2.dll" MinimumFileVersion="2.1.23107.0" InternalName="libGLESv2" FileDescription="ANGLE libGLESv2 Dynamic Link Library" ProductName="ANGLE libGLESv2 Dynamic Link Library" />
+    <FileAttrib ID="ID_FILEATTRIB_F_1B_1_0" FriendlyName="C:\Program Files (x86)\GoTo Opener\GoToSetup.exe FileAttribute" MinimumFileVersion="4.12.0.1" FileDescription="GoTo desktop app" />
+    <Allow ID="ID_ALLOW_A_1D_1_0" FriendlyName="C:\Program Files (x86)\GoTo Opener\Unicode\StdUtils.dll Hash Sha1" Hash="7F4239B7C8CA5B57B85B93D0097FBF7B13AF4BDF" />
+    <Allow ID="ID_ALLOW_A_1E_1_0" FriendlyName="C:\Program Files (x86)\GoTo Opener\Unicode\StdUtils.dll Hash Sha256" Hash="30C6EBE96BD2A624BC1912401C69735553B380B63AFE3DE77CCCC8FFCA01B09A" />
+    <Allow ID="ID_ALLOW_A_1F_1_0" FriendlyName="C:\Program Files (x86)\GoTo Opener\Unicode\StdUtils.dll Hash Page Sha1" Hash="9B1CFA40E77AC1B6999837249DBAFB7466DBBEE2" />
+    <Allow ID="ID_ALLOW_A_20_1_0" FriendlyName="C:\Program Files (x86)\GoTo Opener\Unicode\StdUtils.dll Hash Page Sha256" Hash="ECFAADD818FB6FE321B8A2F18927D894B988EA69C28730B97F8EFD331B0FB939" />
+    <Allow ID="ID_ALLOW_A_21_1_0" FriendlyName="C:\Program Files (x86)\GoTo Opener\Tiny\StdUtils.dll Hash Sha1" Hash="74E954F4A9F7B886A4FA19852FD7D489A8E3F965" />
+    <Allow ID="ID_ALLOW_A_22_1_0" FriendlyName="C:\Program Files (x86)\GoTo Opener\Tiny\StdUtils.dll Hash Sha256" Hash="21E43E889C3A89D6662F43FAFCF65CD42407CCACC87403C814A1435A4A798DE1" />
+    <Allow ID="ID_ALLOW_A_23_1_0" FriendlyName="C:\Program Files (x86)\GoTo Opener\Tiny\StdUtils.dll Hash Page Sha1" Hash="CFC5119599774CE35A2D749F924858F4B7BC9DF2" />
+    <Allow ID="ID_ALLOW_A_24_1_0" FriendlyName="C:\Program Files (x86)\GoTo Opener\Tiny\StdUtils.dll Hash Page Sha256" Hash="F7F79DF4AFAF96109D804A17CA648329E183BFFDBF9187DDC2A208C9BC37C581" />
+    <Allow ID="ID_ALLOW_A_25_1_0" FriendlyName="C:\Program Files (x86)\GoTo Opener\ANSI\StdUtils.dll Hash Sha1" Hash="06416B7D8D42EC8AE91C7312CBF29A8E341EA924" />
+    <Allow ID="ID_ALLOW_A_26_1_0" FriendlyName="C:\Program Files (x86)\GoTo Opener\ANSI\StdUtils.dll Hash Sha256" Hash="4A32F03BACAC27B82EE142EA0878229D1B3FC1FCE0838614E3954126EB42E69A" />
+    <Allow ID="ID_ALLOW_A_27_1_0" FriendlyName="C:\Program Files (x86)\GoTo Opener\ANSI\StdUtils.dll Hash Page Sha1" Hash="47B7BE41065A6777FC1161617A02A546CB0CD6B8" />
+    <Allow ID="ID_ALLOW_A_28_1_0" FriendlyName="C:\Program Files (x86)\GoTo Opener\ANSI\StdUtils.dll Hash Page Sha256" Hash="B346C51061FA25216969ACE7D41384272E7A4C9A90B656C2FA4480BED3CFACE9" />
+    <Allow ID="ID_ALLOW_A_8F556B75A8184922A43F2204196FE769_0_1" FriendlyName="nsProcess.dll Hash Sha256" Hash="6A40647ECFB4159E4C19DC39A4AD7A287BD70AE8A01FBB062E9C29EF1255892D" />
+    <Allow ID="ID_ALLOW_B_8F556B75A8184922A43F2204196FE769_0_1" FriendlyName="nsProcess.dll Hash Sha1" Hash="62AE1761E57409AF8FE4FCAF3A56433D23F8C5D1" />
+	<Allow ID="ID_ALLOW_A_35_0" FriendlyName="System.dll Hash Sha1" Hash="ADFB9711D4933A4FB7F884CF2CE6746271CE6530" />
+	<Allow ID="ID_ALLOW_A_36_0" FriendlyName="System.dll Hash Sha256" Hash="E1DB4238659AD3E6F0690C6C93D2CE7B24C5EE54023149E6E92781DDA33AD87A" />
+  </FileRules>
+  <!--Signers-->
+  <Signers>
+    <Signer ID="ID_SIGNER_F_1_1_0" Name="DigiCert Trusted Root G4">
+      <CertRoot Type="TBS" Value="11533EFD6B326A4E065A936DE300FE0586A479F93D569D2403BD62C7AD35F1B2199DAEE3ADB510F429C4FC97B4B024E3" />
+      <CertPublisher Value="LogMeIn, Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_19_1_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_2_1_0" Name="DigiCert Trusted Root G4">
+      <CertRoot Type="TBS" Value="11533EFD6B326A4E065A936DE300FE0586A479F93D569D2403BD62C7AD35F1B2199DAEE3ADB510F429C4FC97B4B024E3" />
+      <CertPublisher Value="LogMeIn, Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_19_1_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_A_1D77A72D0E034D6193F5B3240ACD1C8B_0_0" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="GoTo Technologies USA, LLC" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_A_A02786E416094EE58C1595698D85997E_0_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_A_3BE88F509BB6431298DBD4D6A075D89A_0_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_A_ECA94AAFDFFA48A59D748B12A4C5A2E3_0_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_A_80070534F80B48A99839FD3ED63E1E13_0_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_A_1DD4E9860EF141AE9C382AFCCB813AA1_0_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_1B_1_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_A_58EE8A3E16CC481EB5EF4BFE30AEC73E_0_0" Name="Entrust Extended Validation Code Signing CA - EVCS2">
+      <CertRoot Type="TBS" Value="F3A88B3AF739B6D92E4EB0B0971747A7B742ECBD82A83F9C7706776A3DC8ECE0176B32B1225CAB1287B84B3598AF5EAFDFF55D86C288AF4168D3FAE76D286E99" />
+      <CertPublisher Value="The Qt Company Oy" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_A_A38D8816D062454D822A1DF9BC5970C6_0_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_A_6C47669CBB8048B2ADB72C0DDBCD88EF_0_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_A_FFD822889CB3486E924D52178FF3A7B4_0_0" />
+    </Signer>
+  </Signers>
+  <!--Driver Signing Scenarios-->
+  <SigningScenarios>
+    <SigningScenario Value="131" ID="ID_SIGNINGSCENARIO_DRIVERS_1" FriendlyName="Auto generated policy on 11-26-2024">
+      <ProductSigners>
+        <AllowedSigners>
+          <AllowedSigner SignerId="ID_SIGNER_F_1_1_0" />
+        </AllowedSigners>
+      </ProductSigners>
+    </SigningScenario>
+    <SigningScenario Value="12" ID="ID_SIGNINGSCENARIO_WINDOWS" FriendlyName="Auto generated policy on 11-26-2024">
+      <ProductSigners>
+        <AllowedSigners>
+          <AllowedSigner SignerId="ID_SIGNER_F_2_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_A_1D77A72D0E034D6193F5B3240ACD1C8B_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_A_58EE8A3E16CC481EB5EF4BFE30AEC73E_0_0" />
+        </AllowedSigners>
+        <FileRulesRef>
+          <FileRuleRef RuleID="ID_ALLOW_A_1D_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1E_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1F_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_20_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_21_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_22_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_23_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_24_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_25_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_26_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_27_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_28_1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8F556B75A8184922A43F2204196FE769_0_1" />
+          <FileRuleRef RuleID="ID_ALLOW_B_8F556B75A8184922A43F2204196FE769_0_1" />
+		  <FileRuleRef RuleID="ID_ALLOW_A_35_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_36_0" />
+        </FileRulesRef>
+      </ProductSigners>
+    </SigningScenario>
+  </SigningScenarios>
+  <UpdatePolicySigners />
+  <CiSigners>
+    <CiSigner SignerId="ID_SIGNER_F_2_1_0" />
+    <CiSigner SignerId="ID_SIGNER_A_1D77A72D0E034D6193F5B3240ACD1C8B_0_0" />
+    <CiSigner SignerId="ID_SIGNER_A_58EE8A3E16CC481EB5EF4BFE30AEC73E_0_0" />
+  </CiSigners>
+  <HvciOptions>0</HvciOptions>
+  <BasePolicyID>{488E7D72-DA1E-4219-BB58-22EEBCBB2CFE}</BasePolicyID>
+  <PolicyID>{98BB643E-CD50-4A0C-B9E8-43CB19756077}</PolicyID>
+  <Settings>
+    <Setting Provider="AllHostIds" Key="AllKeys" ValueName="EnterpriseDefinedClsId">
+      <Value>
+        <Boolean>true</Boolean>
+      </Value>
+    </Setting>
+    <Setting Provider="PolicyInfo" Key="Information" ValueName="Name">
+      <Value>
+        <String>GoToOpenerMultiUser-10564-V05 - 11-26-2024</String>
+      </Value>
+    </Setting>
+    <Setting Provider="PolicyInfo" Key="Information" ValueName="Id">
+      <Value>
+        <String>022422</String>
+      </Value>
+    </Setting>
+  </Settings>
+</SiPolicy>

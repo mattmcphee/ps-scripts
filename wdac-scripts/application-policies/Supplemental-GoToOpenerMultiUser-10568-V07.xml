@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SiPolicy xmlns="urn:schemas-microsoft-com:sipolicy" PolicyType="Supplemental Policy">
+  <VersionEx>1.0.0.0</VersionEx>
+  <PlatformID>{2E07F7E4-194C-4D20-B7C9-6F44A6C5A234}</PlatformID>
+  <Rules>
+    <Rule>
+      <Option>Enabled:Unsigned System Integrity Policy</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:Managed Installer</Option>
+    </Rule>
+  </Rules>
+  <!--EKUS-->
+  <EKUs />
+  <!--File Rules-->
+  <FileRules>
+    <FileAttrib ID="ID_FILEATTRIB_F_28_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\d3dcompiler_47.dll FileAttribute" FileName="d3dcompiler_47.dll" MinimumFileVersion="10.0.22621.1778" />
+    <FileAttrib ID="ID_FILEATTRIB_F_29_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\GoTo.exe FileAttribute" MinimumFileVersion="4.12.0.1" InternalName="GoTo" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\libEGL.dll FileAttribute" FileName="libEGL.dll" MinimumFileVersion="2.1.23107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\libGLESv2.dll FileAttribute" FileName="libGLESv2.dll" MinimumFileVersion="2.1.23107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\Uninstall GoTo.exe FileAttribute" MinimumFileVersion="4.12.0.1" FileDescription="GoTo desktop app" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\vk_swiftshader.dll FileAttribute" FileName="vk_swiftshader.dll" MinimumFileVersion="5.0.0.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2E_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\vulkan-1.dll FileAttribute" MinimumFileVersion="1.3.284.0" FileDescription="1.3.284.Dev Build" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\elevate.exe FileAttribute" FileName="Elevate.exe" MinimumFileVersion="1.0.0.2894" />
+    <FileAttrib ID="ID_FILEATTRIB_F_30_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\lib\Release\concrt140.dll FileAttribute" FileName="concrt140.dll" MinimumFileVersion="14.29.30139.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_31_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\lib\Release\msvcp140.dll FileAttribute" FileName="msvcp140.dll" MinimumFileVersion="14.29.30139.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_32_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\lib\Release\msvcp140_1.dll FileAttribute" FileName="msvcp140_1.dll" MinimumFileVersion="14.29.30139.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_33_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\lib\Release\msvcp140_2.dll FileAttribute" FileName="msvcp140_2.dll" MinimumFileVersion="14.29.30139.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_34_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\lib\Release\msvcp140_atomic_wait.dll FileAttribute" FileName="msvcp140_atomic_wait.dll" MinimumFileVersion="14.29.30139.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_35_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\lib\Release\msvcp140_codecvt_ids.dll FileAttribute" FileName="msvcp140_codecvt_ids.dll" MinimumFileVersion="14.29.30139.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_38_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\lib\Release\vcruntime140.dll FileAttribute" FileName="vcruntime140.dll" MinimumFileVersion="14.29.30139.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_39_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\lib\Release\vcruntime140_1.dll FileAttribute" FileName="vcruntime140_1.dll" MinimumFileVersion="14.29.30139.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_36_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\lib\Release\qt6core.dll FileAttribute" FileName="Qt6Core.dll" MinimumFileVersion="6.4.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_37_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\lib\Release\qt6network.dll FileAttribute" FileName="Qt6Network.dll" MinimumFileVersion="6.4.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\lib\Release\qt-plugins\tls\qschannelbackend.dll FileAttribute" FileName="qschannelbackend.dll" MinimumFileVersion="6.4.0.0" />
+    <Allow ID="ID_ALLOW_A_3B_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\ffmpeg.dll Hash Sha1" Hash="1DAEB0C9F7727C1D16154C0A266A865946CAB964" />
+    <Allow ID="ID_ALLOW_A_3C_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\ffmpeg.dll Hash Sha256" Hash="CE431A11C0B08F954BADDEF1EE2E72B4E0457EEAAEDAFFE218F4CF48962B8A40" />
+    <Allow ID="ID_ALLOW_A_3D_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\ffmpeg.dll Hash Page Sha1" Hash="13FE59605BD51E37338FCE8D7D537CE431162B85" />
+    <Allow ID="ID_ALLOW_A_3E_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\ffmpeg.dll Hash Page Sha256" Hash="7B4B4955B13E5717DAF5623AB4756027532135826E0CA5044B1170BF65618AB7" />
+    <Allow ID="ID_ALLOW_A_3F_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\GoToScreenCapture.dll Hash Sha1" Hash="50D426DAB8D850632C45E13CAC2A57E9438C86C1" />
+    <Allow ID="ID_ALLOW_A_40_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\GoToScreenCapture.dll Hash Sha256" Hash="B209522F047CD73754E05181D376391D4CFC4BEB3E3435674C7539A645F7B511" />
+    <Allow ID="ID_ALLOW_A_41_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\GoToScreenCapture.dll Hash Page Sha1" Hash="0B6C80D77583F61592DE2A9DD24355BA8FF27DF7" />
+    <Allow ID="ID_ALLOW_A_42_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\GoToScreenCapture.dll Hash Page Sha256" Hash="C3D4197C36AF96DD230C727B752A44D57F87BAB31FBC88F3C49593053616EEA4" />
+    <Allow ID="ID_ALLOW_A_43_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\GoToScrUtils.exe Hash Sha1" Hash="55E9A36D3878C66E1EBB524D6AEACF8E2C782182" />
+    <Allow ID="ID_ALLOW_A_44_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\GoToScrUtils.exe Hash Sha256" Hash="3BA05439640CFE454A0A29D44937F23621CB95466C20D30E9C8DFC744FE655D4" />
+    <Allow ID="ID_ALLOW_A_45_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\GoToScrUtils.exe Hash Page Sha1" Hash="C387341CFC01ADA7A8172479795D76F94C037AEC" />
+    <Allow ID="ID_ALLOW_A_46_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\GoToScrUtils.exe Hash Page Sha256" Hash="4E6FD1AC1EF46D6DD8488DE09F6461CB926F357893E2B608CC3A1935330D299C" />
+    <Allow ID="ID_ALLOW_A_47_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\win-verify-signature\build\Release\win-verify-signature.node Hash Sha1" Hash="023DFDAE074E8739F70F35B3845987EC399E1D99" />
+    <Allow ID="ID_ALLOW_A_48_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\win-verify-signature\build\Release\win-verify-signature.node Hash Sha256" Hash="44A38AE5C3F20A8C34BDD2AAA2E54AA540B7A3548CDA8989111C2A3226DA0D33" />
+    <Allow ID="ID_ALLOW_A_49_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\win-verify-signature\build\Release\win-verify-signature.node Hash Page Sha1" Hash="68782DD48E4EC9E7555D19401CEA782D529AD817" />
+    <Allow ID="ID_ALLOW_A_4A_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\win-verify-signature\build\Release\win-verify-signature.node Hash Page Sha256" Hash="C9917F953B3ED93C192D44C15B0295545205681A3913BB1569E375A7CBD0E679" />
+    <Allow ID="ID_ALLOW_A_4B_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\registry-js\build\Release\registry.node Hash Sha1" Hash="89E945E61C405D7DD2ADFE1C1D494D29D8476209" />
+    <Allow ID="ID_ALLOW_A_4C_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\registry-js\build\Release\registry.node Hash Sha256" Hash="AEC079BE3573684C2BF9871BC7E0F133C582647B1C261B0CF62F29BED4E327A2" />
+    <Allow ID="ID_ALLOW_A_4D_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\registry-js\build\Release\registry.node Hash Page Sha1" Hash="47B9EEE870160F6C6012664D863A3ABA536B91E3" />
+    <Allow ID="ID_ALLOW_A_4E_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\registry-js\build\Release\registry.node Hash Page Sha256" Hash="B90F92C8C895B6740DC0A8CCF6797C642AE9C042E51798E720C9884B42EEFD7E" />
+    <Allow ID="ID_ALLOW_A_4F_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\native-reg\prebuilds\win32-x64\node.napi.node Hash Sha1" Hash="CDA43539490A5C8B83FE02BAFD154F9B4EF44BBD" />
+    <Allow ID="ID_ALLOW_A_50_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\native-reg\prebuilds\win32-x64\node.napi.node Hash Sha256" Hash="F0B9F9CA8C73C071EBEC857A8B28654CA6D3898137F3FFCD1C174BE13BD05387" />
+    <Allow ID="ID_ALLOW_A_51_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\native-reg\prebuilds\win32-x64\node.napi.node Hash Page Sha1" Hash="227DF2395EF4C9766AE39FC5575BE49D7545F546" />
+    <Allow ID="ID_ALLOW_A_52_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\native-reg\prebuilds\win32-x64\node.napi.node Hash Page Sha256" Hash="59B2BF7FC9E3181453DF1D2E27A58D601443EE773EDA39C947E62313BD082093" />
+    <Allow ID="ID_ALLOW_A_53_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\native-reg\prebuilds\win32-ia32\node.napi.node Hash Sha1" Hash="41E5E6E08AC87C581CA487883C80BC292AC94149" />
+    <Allow ID="ID_ALLOW_A_54_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\native-reg\prebuilds\win32-ia32\node.napi.node Hash Sha256" Hash="47CD05D0DE4DB28592DBEEF0F176DDC2CD0FBFF9A65100D551A7F9E5ED567210" />
+    <Allow ID="ID_ALLOW_A_55_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\native-reg\prebuilds\win32-ia32\node.napi.node Hash Page Sha1" Hash="3B38933538B8E5AD6B1DAB15B30C9D5A19DDB9B2" />
+    <Allow ID="ID_ALLOW_A_56_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\native-reg\prebuilds\win32-ia32\node.napi.node Hash Page Sha256" Hash="A60260B5A35D94E4F511C0A3B13D50EFC63856C02557330A99472FF8AC70B24A" />
+    <Allow ID="ID_ALLOW_A_57_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\nutils\lib\binding\napi-v4\nutils.node Hash Sha1" Hash="6ED4D2112501B9D1870D3C1CD5F71C52F85DAE59" />
+    <Allow ID="ID_ALLOW_A_58_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\nutils\lib\binding\napi-v4\nutils.node Hash Sha256" Hash="6388B9C762A7418FE88ED7D3E118A22EF5B4407EE0A6932A564FB1885B228947" />
+    <Allow ID="ID_ALLOW_A_59_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\nutils\lib\binding\napi-v4\nutils.node Hash Page Sha1" Hash="2965A1ABA2FF120815EA299AF35CEBBDD994F998" />
+    <Allow ID="ID_ALLOW_A_5A_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\nutils\lib\binding\napi-v4\nutils.node Hash Page Sha256" Hash="885178EE5911826612B881615352BDF5A314110C021BC4054E0D8C04D47C05B2" />
+    <Allow ID="ID_ALLOW_A_5B_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\src\addon.js Hash Sha1" Hash="A7AE69E11F7F858A45F54CD854CAE4BDED9114EB" />
+    <Allow ID="ID_ALLOW_A_5C_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\src\addon.js Hash Sha256" Hash="B117C8B61478C1FE41ED5D54450D56C2F23D99B961D1F0220A527D9174F29955" />
+    <Allow ID="ID_ALLOW_A_5D_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\src\addon.js Hash Authenticode SIP Sha256" Hash="0000000000000000000000000000000000000000000000000000000000000000" />
+    <Allow ID="ID_ALLOW_A_5E_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\src\index.js Hash Sha1" Hash="0FC9F0928B3F342E178B12AD7A959EE5FCD3757B" />
+    <Allow ID="ID_ALLOW_A_5F_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\src\index.js Hash Sha256" Hash="6B39C8B4271C6B1F4A6193B4D03FD4734610CC29302980D68A6357F09DA16675" />
+    <Allow ID="ID_ALLOW_A_60_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\scripts\install.js Hash Sha1" Hash="2A499A73B628C515D6C21664EBF8F01E3B88497C" />
+    <Allow ID="ID_ALLOW_A_61_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\scripts\install.js Hash Sha256" Hash="63B409511EE72FC09DC6E02C3216A98D233F5E82C56DEB71C100B7E657467A0D" />
+    <Allow ID="ID_ALLOW_A_62_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\lib\Release\GTNTCore.node Hash Sha1" Hash="F276C1A48270D3E550ADF34E92D7B9E0AB920B99" />
+    <Allow ID="ID_ALLOW_A_63_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\lib\Release\GTNTCore.node Hash Sha256" Hash="B323565D5F00313B5A01E663B010F4DBD85114DBEFD6265F0C4711BEC41A21A9" />
+    <Allow ID="ID_ALLOW_A_64_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\lib\Release\GTNTCore.node Hash Page Sha1" Hash="8F3E6AAC97F50A17E00CA207431F1EFEBA6A539C" />
+    <Allow ID="ID_ALLOW_A_65_0" FriendlyName="C:\Users\MATTES4\AppData\Local\Programs\goto\resources\app.asar.unpacked\node_modules\@getgo\gtnt-core\lib\Release\GTNTCore.node Hash Page Sha256" Hash="9B3F80021EB17DED9DC9A66CBC5BF834AC4A845EBBF7250A8CAEBB6D989EFB59" />
+    <FileAttrib ID="ID_FILEATTRIB_F_6A_1" FriendlyName="C:\Program Files (x86)\GoTo Opener\GoTo Opener.exe FileAttribute" FileName="GoToOpener.exe" MinimumFileVersion="1.0.0.568" />
+    <Allow ID="ID_ALLOW_A_6E_1" FriendlyName="C:\Program Files (x86)\GoTo Opener\Unicode\StdUtils.dll Hash Sha1" Hash="7F4239B7C8CA5B57B85B93D0097FBF7B13AF4BDF" />
+    <Allow ID="ID_ALLOW_A_6F_1" FriendlyName="C:\Program Files (x86)\GoTo Opener\Unicode\StdUtils.dll Hash Sha256" Hash="30C6EBE96BD2A624BC1912401C69735553B380B63AFE3DE77CCCC8FFCA01B09A" />
+    <Allow ID="ID_ALLOW_A_70_1" FriendlyName="C:\Program Files (x86)\GoTo Opener\Unicode\StdUtils.dll Hash Page Sha1" Hash="9B1CFA40E77AC1B6999837249DBAFB7466DBBEE2" />
+    <Allow ID="ID_ALLOW_A_71_1" FriendlyName="C:\Program Files (x86)\GoTo Opener\Unicode\StdUtils.dll Hash Page Sha256" Hash="ECFAADD818FB6FE321B8A2F18927D894B988EA69C28730B97F8EFD331B0FB939" />
+    <Allow ID="ID_ALLOW_A_72_1" FriendlyName="C:\Program Files (x86)\GoTo Opener\Tiny\StdUtils.dll Hash Sha1" Hash="74E954F4A9F7B886A4FA19852FD7D489A8E3F965" />
+    <Allow ID="ID_ALLOW_A_73_1" FriendlyName="C:\Program Files (x86)\GoTo Opener\Tiny\StdUtils.dll Hash Sha256" Hash="21E43E889C3A89D6662F43FAFCF65CD42407CCACC87403C814A1435A4A798DE1" />
+    <Allow ID="ID_ALLOW_A_74_1" FriendlyName="C:\Program Files (x86)\GoTo Opener\Tiny\StdUtils.dll Hash Page Sha1" Hash="CFC5119599774CE35A2D749F924858F4B7BC9DF2" />
+    <Allow ID="ID_ALLOW_A_75_1" FriendlyName="C:\Program Files (x86)\GoTo Opener\Tiny\StdUtils.dll Hash Page Sha256" Hash="F7F79DF4AFAF96109D804A17CA648329E183BFFDBF9187DDC2A208C9BC37C581" />
+    <Allow ID="ID_ALLOW_A_76_1" FriendlyName="C:\Program Files (x86)\GoTo Opener\ANSI\StdUtils.dll Hash Sha1" Hash="06416B7D8D42EC8AE91C7312CBF29A8E341EA924" />
+    <Allow ID="ID_ALLOW_A_77_1" FriendlyName="C:\Program Files (x86)\GoTo Opener\ANSI\StdUtils.dll Hash Sha256" Hash="4A32F03BACAC27B82EE142EA0878229D1B3FC1FCE0838614E3954126EB42E69A" />
+    <Allow ID="ID_ALLOW_A_78_1" FriendlyName="C:\Program Files (x86)\GoTo Opener\ANSI\StdUtils.dll Hash Page Sha1" Hash="47B7BE41065A6777FC1161617A02A546CB0CD6B8" />
+    <Allow ID="ID_ALLOW_A_79_1" FriendlyName="C:\Program Files (x86)\GoTo Opener\ANSI\StdUtils.dll Hash Page Sha256" Hash="B346C51061FA25216969ACE7D41384272E7A4C9A90B656C2FA4480BED3CFACE9" />
+    <Allow ID="ID_ALLOW_A_1" FriendlyName="C:\Users\*\AppData\Local\Temp\*.tmp\* FileRule" MinimumFileVersion="0.0.0.0" FilePath="C:\Users\*\AppData\Local\Temp\*.tmp\*" />
+  </FileRules>
+  <!--Signers-->
+  <Signers>
+    <Signer ID="ID_SIGNER_F_1_0" Name="Microsoft Code Signing PCA 2010">
+      <CertRoot Type="TBS" Value="121AF4B922A74247EA49DF50DE37609CC1451A1FE06B2CB7E1E079B492BD8195" />
+      <CertPublisher Value="Microsoft Corporation" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_28_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_9_0" Name="Microsoft Code Signing PCA 2011">
+      <CertRoot Type="TBS" Value="F6F717A43AD9ABDDC8CEFDDE1C505462535E7D1307E630F9544A2D14FE8BF26E" />
+      <CertPublisher Value="Microsoft Corporation" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_30_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_31_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_32_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_33_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_34_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_35_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_39_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_F_0" Name="Entrust Code Signing Root Certification Authority - CSBR1">
+      <CertRoot Type="TBS" Value="F89F7EA86830083D285A316E68F23FE53B4D3031237987231AE889F6792E6D04" />
+      <CertPublisher Value="The Qt Company Oy" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_36_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_14_1" Name="DigiCert Trusted Root G4">
+      <CertRoot Type="TBS" Value="11533EFD6B326A4E065A936DE300FE0586A479F93D569D2403BD62C7AD35F1B2199DAEE3ADB510F429C4FC97B4B024E3" />
+      <CertPublisher Value="LogMeIn, Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_6A_1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_15_1" Name="DigiCert Trusted Root G4">
+      <CertRoot Type="TBS" Value="11533EFD6B326A4E065A936DE300FE0586A479F93D569D2403BD62C7AD35F1B2199DAEE3ADB510F429C4FC97B4B024E3" />
+      <CertPublisher Value="LogMeIn, Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_6A_1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_2_0" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="GoTo Technologies USA, LLC" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_29_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F_0" />
+    </Signer>
+  </Signers>
+  <!--Driver Signing Scenarios-->
+  <SigningScenarios>
+    <SigningScenario Value="131" ID="ID_SIGNINGSCENARIO_DRIVERS_1" FriendlyName="Auto generated policy on 11-27-2024">
+      <ProductSigners>
+        <AllowedSigners>
+          <AllowedSigner SignerId="ID_SIGNER_F_14_1" />
+        </AllowedSigners>
+      </ProductSigners>
+    </SigningScenario>
+    <SigningScenario Value="12" ID="ID_SIGNINGSCENARIO_WINDOWS" FriendlyName="Auto generated policy on 11-27-2024">
+      <ProductSigners>
+        <AllowedSigners>
+          <AllowedSigner SignerId="ID_SIGNER_F_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_9_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_F_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_15_1" />
+          <AllowedSigner SignerId="ID_SIGNER_F_2_0" />
+        </AllowedSigners>
+        <FileRulesRef>
+		  <FileRuleRef RuleID="ID_ALLOW_A_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3B_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3C_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3D_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3E_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_40_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_41_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_42_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_43_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_44_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_45_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_46_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_47_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_48_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_49_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4A_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4B_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4C_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4D_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4E_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_50_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_51_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_52_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_53_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_54_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_55_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_56_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_57_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_58_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_59_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_5A_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_5B_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_5C_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_5D_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_5E_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_5F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_60_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_61_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_62_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_63_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_64_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_65_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_6E_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_6F_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_70_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_71_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_72_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_73_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_74_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_75_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_76_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_77_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_78_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_79_1" />
+        </FileRulesRef>
+      </ProductSigners>
+    </SigningScenario>
+  </SigningScenarios>
+  <UpdatePolicySigners />
+  <CiSigners>
+    <CiSigner SignerId="ID_SIGNER_F_1_0" />
+    <CiSigner SignerId="ID_SIGNER_F_9_0" />
+    <CiSigner SignerId="ID_SIGNER_F_F_0" />
+    <CiSigner SignerId="ID_SIGNER_F_15_1" />
+    <CiSigner SignerId="ID_SIGNER_F_2_0" />
+  </CiSigners>
+  <HvciOptions>2</HvciOptions>
+  <BasePolicyID>{488E7D72-DA1E-4219-BB58-22EEBCBB2CFE}</BasePolicyID>
+  <PolicyID>{B8FF04EB-604A-4950-A737-3030B7183633}</PolicyID>
+  <Settings>
+    <Setting Provider="PolicyInfo" Key="Information" ValueName="Name">
+      <Value>
+        <String>GoToOpenerMultiUser-10568-V07 - 11-27-2024</String>
+      </Value>
+    </Setting>
+  </Settings>
+</SiPolicy>

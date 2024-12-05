@@ -1,0 +1,1519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SiPolicy xmlns="urn:schemas-microsoft-com:sipolicy" PolicyType="Supplemental Policy">
+  <VersionEx>1.0.0.0</VersionEx>
+  <PlatformID>{2E07F7E4-194C-4D20-B7C9-6F44A6C5A234}</PlatformID>
+  <Rules>
+    <Rule>
+      <Option>Enabled:Unsigned System Integrity Policy</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:Managed Installer</Option>
+    </Rule>
+  </Rules>
+  <!--EKUS-->
+  <EKUs>
+    <EKU ID="ID_EKU_E_1" Value="010A2B0601040182370A0305" FriendlyName="Windows Hardware Driver Verification" />
+  </EKUs>
+  <!--File Rules-->
+  <FileRules>
+    <FileAttrib ID="ID_FILEATTRIB_F_23F_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Workshare.ExcelCompare.Assets.dll FileAttribute" FileName="Workshare.ExcelCompare.Assets.dll" MinimumFileVersion="1.9.7246.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_241_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Workshare.ExcelCompare.Core.dll FileAttribute" FileName="Workshare.ExcelCompare.Core.dll" MinimumFileVersion="1.9.7246.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_243_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Workshare.ExcelCompare.Engine.dll FileAttribute" FileName="Workshare.ExcelCompare.Engine.dll" MinimumFileVersion="1.9.7246.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_245_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Workshare.ExcelCompare.exe FileAttribute" FileName="Workshare.ExcelCompare.exe" MinimumFileVersion="1.9.7246.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_247_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Workshare.ExcelCompare.Obfuscator.exe FileAttribute" FileName="Workshare.ExcelCompare.Obfuscator.exe" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_249_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Workshare.ExcelCompare.Options.dll FileAttribute" FileName="Workshare.ExcelCompare.Options.dll" MinimumFileVersion="1.9.7246.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_24B_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Workshare.ExcelCompare.Services.dll FileAttribute" FileName="Workshare.ExcelCompare.Services.dll" MinimumFileVersion="1.9.7246.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_256_0" FriendlyName="C:\Program Files\Workshare\Modules\bc-console.exe FileAttribute" FileName="bc-console.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_258_0" FriendlyName="C:\Program Files\Workshare\Modules\bc-engine.dll FileAttribute" FileName="bc-engine.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_277_0" FriendlyName="C:\Program Files\Workshare\Modules\Litera.Compare.Licence.Api.dll FileAttribute" FileName="Litera.Compare.Licence.Api.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_279_0" FriendlyName="C:\Program Files\Workshare\Modules\Lumberjack.exe FileAttribute" FileName="Lumberjack.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A9_0" FriendlyName="C:\Program Files\Workshare\Modules\WmOption.Resource.dll FileAttribute" FileName="WmOption.Resource.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2AB_0" FriendlyName="C:\Program Files\Workshare\Modules\WMResources1033.dll FileAttribute" FileName="WMResources1033.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B7_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.API.dll FileAttribute" FileName="Workshare.API.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2BB_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.ChangeSummary.Controls.dll FileAttribute" FileName="Workshare.ChangeSummary.Controls.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2BF_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Common.WPF.dll FileAttribute" FileName="Workshare.Common.WPF.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C1_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Configuration.Admin.Console.exe FileAttribute" FileName="Workshare.Configuration.Admin.Console.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C3_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Configuration.Shell.dll FileAttribute" FileName="Workshare.Configuration.Shell.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C5_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Configuration.User.Console.exe FileAttribute" FileName="Workshare.Configuration.User.Console.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C9_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Desktop.Api.dll FileAttribute" FileName="Workshare.Desktop.API.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2CB_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Desktop.Exceptions.dll FileAttribute" FileName="Workshare.Desktop.Exceptions.dll" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2CD_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Desktop.Foundation.dll FileAttribute" FileName="Workshare.Desktop.Foundation.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2CF_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Desktop.Interfaces.dll FileAttribute" FileName="Workshare.Desktop.Interfaces.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D1_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Desktop.Library.dll FileAttribute" FileName="Workshare.Desktop.Library.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D3_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Desktop.Options.dll FileAttribute" FileName="Workshare.Desktop.Options.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D5_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Desktop.Platform.dll FileAttribute" FileName="Workshare.Desktop.Platform.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D7_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Desktop.Services.dll FileAttribute" FileName="Workshare.Desktop.Services.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D9_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Desktop.UI.dll FileAttribute" FileName="Workshare.Desktop.UI.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2DE_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.DocumentProviders.Common.dll FileAttribute" FileName="Workshare.DocumentProviders.Common.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2E2_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.ExcelRibbon.Addin.dll FileAttribute" FileName="Workshare.ExcelRibbon.Addin.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F3_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Interfaces.Policy.CloudStorage.dll FileAttribute" FileName="Workshare.Interfaces.Policy.CloudStorage.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_303_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Mail.dll FileAttribute" FileName="Workshare.Mail.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_308_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Metadata.Cleaner.exe FileAttribute" FileName="Workshare.Metadata.Cleaner.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_30B_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Options.Converters.dll FileAttribute" FileName="Workshare.Options.Converters.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_30D_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Options.ObjectModel.dll FileAttribute" FileName="Workshare.Options.ObjectModel.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_310_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Outlook.MessageAttachments.dll FileAttribute" FileName="Workshare.Outlook.MessageAttachments.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_314_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Outlooki.SharedResources.dll FileAttribute" FileName="Workshare.Outlooki.SharedResources.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_316_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.OutlookProxy.dll FileAttribute" FileName="Workshare.OutlookProxy.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_318_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.OutlookRibbon.Addin.dll FileAttribute" FileName="Workshare.OutlookRibbon.Addin.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_31A_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.OutlookRibbon.Library.dll FileAttribute" FileName="Workshare.OutlookRibbon.Library.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_31F_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Pdf.Runner.exe FileAttribute" FileName="Workshare.Pdf.Runner.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_322_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.PdfCreator.exe FileAttribute" FileName="Workshare.PdfCreator.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_324_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.PdfLauncher.exe FileAttribute" FileName="Workshare.PdfLauncher.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_326_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Platform.Api.dll FileAttribute" FileName="Workshare.Platform.Api.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_328_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Platform.SSO.dll FileAttribute" FileName="Workshare.Platform.SSO.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_34D_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.PolicyResources.dll FileAttribute" FileName="Workshare.PolicyResources.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_34F_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.PowerPointRibbon.Addin.dll FileAttribute" FileName="Workshare.PowerPointRibbon.Addin.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_354_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Professional.Options.Exporter.dll FileAttribute" FileName="unknown" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_356_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Professional.Options.Exporter.Launcher.exe FileAttribute" FileName="Workshare.Professional.Options.Exporter.Launcher.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_35E_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Protect.UserInit.exe FileAttribute" FileName="Workshare.Protect.UserInit.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_360_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.ProtectServer.Export.exe FileAttribute" FileName="Workshare.ProtectServer.Export.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_362_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.ProtectServer.ProfileConversion.dll FileAttribute" FileName="Workshare.ProtectServer.ProfileConversion.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_364_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.ProtectSimple.dll FileAttribute" FileName="Workshare.ProtectSimple.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_368_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Registrar.exe FileAttribute" FileName="Workshare.Registrar.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_371_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.SendLink.Client.Core.dll FileAttribute" FileName="Workshare.SendLink.Client.Core.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_373_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.SendLink.Client.exe FileAttribute" FileName="Workshare.SendLink.Client.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_375_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.SharedRibbon.Library.dll FileAttribute" FileName="Workshare.SharedRibbon.Library.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_37B_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.WordRibbon.Addin.dll FileAttribute" FileName="Workshare.WordRibbon.Addin.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_393_0" FriendlyName="C:\Program Files\Workshare\Modules\WSIntegration.dll FileAttribute" FileName="WSIntegration.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_405_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\DeckCompare.exe FileAttribute" FileName="DeckCompare.exe" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_40D_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\PresentationContentObfuscator.exe FileAttribute" FileName="PresentationContentObfuscator.exe" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_40F_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Comparison.Packaging.dll FileAttribute" FileName="Workshare.Comparison.Packaging.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_411_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.Api.dll FileAttribute" FileName="Workshare.Presentation.Api.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_413_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.ChangeML.Builder.dll FileAttribute" FileName="Workshare.Presentation.ChangeML.Builder.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_415_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.ChangeML.dll FileAttribute" FileName="Workshare.Presentation.ChangeML.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_417_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.ChangeSetReader.dll FileAttribute" FileName="Workshare.Presentation.ChangeSetReader.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_419_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.Compare.ApplyChange.dll FileAttribute" FileName="Workshare.Presentation.Compare.ApplyChange.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_41B_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.Compare.Common.dll FileAttribute" FileName="Workshare.Presentation.Compare.Common.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_41D_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.Compare.Controller.dll FileAttribute" FileName="Workshare.Presentation.Compare.Controller.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_41F_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.Compare.exe FileAttribute" FileName="Workshare.Presentation.Compare.exe" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_421_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.Comparer.dll FileAttribute" FileName="Workshare.Presentation.Comparer.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_423_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.DefaultReader.dll FileAttribute" FileName="Workshare.Presentation.DefaultReader.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_425_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.ObjectModel.dll FileAttribute" FileName="Workshare.Presentation.ObjectModel.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_427_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.Readers.dll FileAttribute" FileName="Workshare.Presentation.Readers.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_429_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.UI.Controls.dll FileAttribute" FileName="Workshare.Presentation.UI.Controls.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_25C_0" FriendlyName="C:\Program Files\Workshare\Modules\CDIntfNet.dll FileAttribute" FileName="CDIntfNet.dll" MinimumFileVersion="5.0.1.8" />
+    <FileAttrib ID="ID_FILEATTRIB_F_25E_0" FriendlyName="C:\Program Files\Workshare\Modules\CDIntfNet500.dll FileAttribute" FileName="CDIntfNet500.dll" MinimumFileVersion="5.0.1.8" />
+    <FileAttrib ID="ID_FILEATTRIB_F_260_0" FriendlyName="C:\Program Files\Workshare\Modules\CDIntfNet64.dll FileAttribute" FileName="CDIntfNet64.dll" MinimumFileVersion="5.0.1.8" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3AE_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Kofax.OmniPageCSDK.ArgTypes.dll FileAttribute" FileName="Kofax.OmniPageCSDK.ArgTypes.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B0_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Kofax.OmniPageCSDK.CAPI.dll FileAttribute" FileName="Kofax.OmniPageCSDK.CAPI.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B2_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Kofax.OmniPageCSDK.NETCore.CAPI.dll FileAttribute" FileName="Kofax.OmniPageCSDK.NETCore.CAPI.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B4_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Kofax.OmniPageCSDK.NETCore.Objects.dll FileAttribute" FileName="Kofax.OmniPageCSDK.NETCore.Objects.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B6_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Kofax.OmniPageCSDK.NETCore.RecPDF.dll FileAttribute" FileName="Kofax.OmniPageCSDK.NETCore.RecPDF.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B8_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Kofax.OmniPageCSDK.Objects.dll FileAttribute" FileName="Kofax.OmniPageCSDK.Objects.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3BA_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Kofax.OmniPageCSDK.RecPDF.dll FileAttribute" FileName="Kofax.OmniPageCSDK.RecPDF.dll" MinimumFileVersion="21.0.19466.100" />
+    <Allow ID="ID_ALLOW_A_48F_0" FriendlyName="C:\Program Files\Workshare\Modules\icudt64.dll Hash Sha1" Hash="52E40ACB29AF4E978BB62A5D1474D8004184BB35" />
+    <Allow ID="ID_ALLOW_A_490_0" FriendlyName="C:\Program Files\Workshare\Modules\icudt64.dll Hash Sha256" Hash="81A5AF3B237CE08C8A3FEA058D933186F7CD3B365EE287EA2FB41A9EBD2D4847" />
+    <Allow ID="ID_ALLOW_A_491_0" FriendlyName="C:\Program Files\Workshare\Modules\icudt64.dll Hash Page Sha1" Hash="F4763D335D2674825928188245B41BE05B34C930" />
+    <Allow ID="ID_ALLOW_A_492_0" FriendlyName="C:\Program Files\Workshare\Modules\icudt64.dll Hash Page Sha256" Hash="56ED09014FDA1FB590964F352AB3666B4DC333DFF43CA7112BE238EFDE5D2E8C" />
+    <FileAttrib ID="ID_FILEATTRIB_F_221_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Aspose.Cells.dll FileAttribute" FileName="Aspose.Cells.dll" MinimumFileVersion="18.6.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_252_0" FriendlyName="C:\Program Files\Workshare\Modules\Aspose.Pdf.dll FileAttribute" FileName="Empty.dll" MinimumFileVersion="19.8.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_404_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Aspose.Slides.dll FileAttribute" FileName="Aspose.Slides.DOM_API.dll" MinimumFileVersion="17.12.1.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_225_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Litera.About.dll FileAttribute" FileName="Litera.About.dll" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_226_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Litera.Compare.Telemetry.dll FileAttribute" FileName="Litera.Compare.Telemetry.dll" MinimumFileVersion="1.0.63.46610" />
+    <FileAttrib ID="ID_FILEATTRIB_F_227_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Litera.Licensing.Client.dll FileAttribute" FileName="Litera.Licensing.Client.dll" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_234_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsystems.Telemetry.dll FileAttribute" FileName="Microsystems.Telemetry.dll" MinimumFileVersion="10.6.0.999" />
+    <FileAttrib ID="ID_FILEATTRIB_F_23E_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Workshare.Comparer.Generic.dll FileAttribute" FileName="Workshare.Comparer.Generic.dll" MinimumFileVersion="13.1.429.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_240_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Workshare.ExcelCompare.Assets.dll FileAttribute" FileName="Workshare.ExcelCompare.Assets.dll" MinimumFileVersion="1.9.7246.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_242_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Workshare.ExcelCompare.Core.dll FileAttribute" FileName="Workshare.ExcelCompare.Core.dll" MinimumFileVersion="1.9.7246.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_244_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Workshare.ExcelCompare.Engine.dll FileAttribute" FileName="Workshare.ExcelCompare.Engine.dll" MinimumFileVersion="1.9.7246.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_246_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Workshare.ExcelCompare.exe FileAttribute" FileName="Workshare.ExcelCompare.exe" MinimumFileVersion="1.9.7246.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_248_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Workshare.ExcelCompare.Obfuscator.exe FileAttribute" FileName="Workshare.ExcelCompare.Obfuscator.exe" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_24A_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Workshare.ExcelCompare.Options.dll FileAttribute" FileName="Workshare.ExcelCompare.Options.dll" MinimumFileVersion="1.9.7246.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_24C_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Workshare.ExcelCompare.Services.dll FileAttribute" FileName="Workshare.ExcelCompare.Services.dll" MinimumFileVersion="1.9.7246.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_24D_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Workshare.Interop.Messaging.dll FileAttribute" FileName="Workshare.Interop.Messaging.dll" MinimumFileVersion="10.9.17049.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_24E_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Workshare.Interop.Options.dll FileAttribute" FileName="Workshare.Interop.Options.dll" MinimumFileVersion="10.4.504.18338" />
+    <FileAttrib ID="ID_FILEATTRIB_F_257_0" FriendlyName="C:\Program Files\Workshare\Modules\bc-console.exe FileAttribute" FileName="bc-console.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_259_0" FriendlyName="C:\Program Files\Workshare\Modules\bc-engine.dll FileAttribute" FileName="bc-engine.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_263_0" FriendlyName="C:\Program Files\Workshare\Modules\ConfigPDFPublisher.exe FileAttribute" FileName="ConfigPDFPublisher.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_264_0" FriendlyName="C:\Program Files\Workshare\Modules\DeltaVw.exe FileAttribute" FileName="DeltaVw.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_265_0" FriendlyName="C:\Program Files\Workshare\Modules\DocumentFormat.OpenXml.dll FileAttribute" FileName="DocumentFormat.OpenXml.dll" MinimumFileVersion="2.7.2.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_271_0" FriendlyName="C:\Program Files\Workshare\Modules\Interop.Protect.Api.dll FileAttribute" FileName="Interop.Protect.Api.dll" MinimumFileVersion="10.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_272_0" FriendlyName="C:\Program Files\Workshare\Modules\Interop.Protect.Backend.dll FileAttribute" FileName="Interop.Protect.Backend.dll" MinimumFileVersion="10.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_273_0" FriendlyName="C:\Program Files\Workshare\Modules\Interop.Protect.Builders.dll FileAttribute" FileName="Interop.Protect.Builders.dll" MinimumFileVersion="10.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_275_0" FriendlyName="C:\Program Files\Workshare\Modules\Interop.WPWordOptimisingAddin.dll FileAttribute" FileName="Interop.WpWordOptimisingAddin.dll" MinimumFileVersion="10.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_276_0" FriendlyName="C:\Program Files\Workshare\Modules\Litera.Compare.Interop.Telemetry.dll FileAttribute" FileName="Litera.Compare.Interop.Telemetry.dll" MinimumFileVersion="1.0.63.46610" />
+    <FileAttrib ID="ID_FILEATTRIB_F_278_0" FriendlyName="C:\Program Files\Workshare\Modules\Litera.Compare.Licence.Api.dll FileAttribute" FileName="Litera.Compare.Licence.Api.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_27A_0" FriendlyName="C:\Program Files\Workshare\Modules\Lumberjack.exe FileAttribute" FileName="Lumberjack.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_284_0" FriendlyName="C:\Program Files\Workshare\Modules\NxBRE.dll FileAttribute" FileName="NxBRE.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_286_0" FriendlyName="C:\Program Files\Workshare\Modules\OfficeProperties.dll FileAttribute" FileName="OfficeProperties.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_287_0" FriendlyName="C:\Program Files\Workshare\Modules\OfflineDocumentProvider.dll FileAttribute" FileName="OfflineDocumentProvider.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_289_0" FriendlyName="C:\Program Files\Workshare\Modules\OpenXmlPowerTools.dll FileAttribute" FileName="OpenXmlPowerTools.dll" MinimumFileVersion="13.2.2602.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_28B_0" FriendlyName="C:\Program Files\Workshare\Modules\PGP.Action.dll FileAttribute" FileName="PGP.Action.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_28D_0" FriendlyName="C:\Program Files\Workshare\Modules\RPost.Action.dll FileAttribute" FileName="RPost.Action.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_298_0" FriendlyName="C:\Program Files\Workshare\Modules\TerLogger.dll FileAttribute" FileName="TerLogger.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_299_0" FriendlyName="C:\Program Files\Workshare\Modules\WCConnectNetAdapters.dll FileAttribute" FileName="WCConnectNetAdapters.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_29A_0" FriendlyName="C:\Program Files\Workshare\Modules\WCConnectorComAdapter.dll FileAttribute" FileName="WCConnectorComAdapter.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_29B_0" FriendlyName="C:\Program Files\Workshare\Modules\WCConnectProxy.dll FileAttribute" FileName="WCConnectProxy.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_29C_0" FriendlyName="C:\Program Files\Workshare\Modules\WCDocumentProviderFacade.dll FileAttribute" FileName="WCDocumentProviderFacade.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_29D_0" FriendlyName="C:\Program Files\Workshare\Modules\WCRegisterConnectSettings.exe FileAttribute" FileName="WCRegisterConnectSettings.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_29F_0" FriendlyName="C:\Program Files\Workshare\Modules\WMConfigAssistant.exe FileAttribute" FileName="WmConfigAssistant.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A0_0" FriendlyName="C:\Program Files\Workshare\Modules\WmDMSHelper.dll FileAttribute" FileName="DMSHelper.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A1_0" FriendlyName="C:\Program Files\Workshare\Modules\WmErrorInfoMockObject.dll FileAttribute" FileName="ErrorInfoMockObject.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A2_0" FriendlyName="C:\Program Files\Workshare\Modules\WmFileCombo.dll FileAttribute" FileName="FileCombo.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A3_0" FriendlyName="C:\Program Files\Workshare\Modules\WmLocalFileStore.dll FileAttribute" FileName="LocalFileStore.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A4_0" FriendlyName="C:\Program Files\Workshare\Modules\WmMailSender.exe FileAttribute" FileName="DVMailSender.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A5_0" FriendlyName="C:\Program Files\Workshare\Modules\wmmetadatareporter.dll FileAttribute" FileName="WmMetadataReporter.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A6_0" FriendlyName="C:\Program Files\Workshare\Modules\WmMsW8Aut.dll FileAttribute" FileName="MSW8Aut.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A7_0" FriendlyName="C:\Program Files\Workshare\Modules\WmOpenPdfInWord.exe FileAttribute" FileName="WmOpenPdfInWord.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A8_0" FriendlyName="C:\Program Files\Workshare\Modules\WmOption.dll FileAttribute" FileName="WmOption.dll" MinimumFileVersion="10.4.429.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2AA_0" FriendlyName="C:\Program Files\Workshare\Modules\WmOption.Resource.dll FileAttribute" FileName="WmOption.Resource.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2AC_0" FriendlyName="C:\Program Files\Workshare\Modules\WMResources1033.dll FileAttribute" FileName="WMResources1033.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2AD_0" FriendlyName="C:\Program Files\Workshare\Modules\WmSynergyUI.dll FileAttribute" FileName="SynergyUI.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2AE_0" FriendlyName="C:\Program Files\Workshare\Modules\WmTer32.dll FileAttribute" FileName="Ter32.dll" MinimumFileVersion="11.1.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2AF_0" FriendlyName="C:\Program Files\Workshare\Modules\WmWorkshareProgress.dll FileAttribute" FileName="WorkshareProgress.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B0_0" FriendlyName="C:\Program Files\Workshare\Modules\WmWSComparer.dll FileAttribute" FileName="WmWSComparer.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B1_0" FriendlyName="C:\Program Files\Workshare\Modules\WmWSCompose.dll FileAttribute" FileName="WSCompose.dll" MinimumFileVersion="13.2.2602.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B2_0" FriendlyName="C:\Program Files\Workshare\Modules\WmWSConverter.dll FileAttribute" FileName="WmWSConverter.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B3_0" FriendlyName="C:\Program Files\Workshare\Modules\WmWSCrypt.dll FileAttribute" FileName="WmWSCrypt.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B4_0" FriendlyName="C:\Program Files\Workshare\Modules\WmWSDocumentProvider.dll FileAttribute" FileName="WSDocumentProvider.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B5_0" FriendlyName="C:\Program Files\Workshare\Modules\WmWsShared.dll FileAttribute" FileName="WmWsShared.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B6_0" FriendlyName="C:\Program Files\Workshare\Modules\WmWSTer32X.dll FileAttribute" FileName="WSTer32X.ocx" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B8_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.API.dll FileAttribute" FileName="Workshare.API.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B9_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.ApplicationControllers.dll FileAttribute" FileName="Workshare.ApplicationControllers.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2BA_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Carbon.exe FileAttribute" FileName="Workshare.Carbon.exe" MinimumFileVersion="13.2.432.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2BC_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.ChangeSummary.Controls.dll FileAttribute" FileName="Workshare.ChangeSummary.Controls.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2BD_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.ChangeSummary.dll FileAttribute" FileName="Workshare.ChangeSummary.dll" MinimumFileVersion="13.2.2602.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2BE_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Common.dll FileAttribute" FileName="Workshare.Common.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C0_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Common.WPF.dll FileAttribute" FileName="Workshare.Common.WPF.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C2_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Configuration.Admin.Console.exe FileAttribute" FileName="Workshare.Configuration.Admin.Console.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C4_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Configuration.Shell.dll FileAttribute" FileName="Workshare.Configuration.Shell.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C6_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Configuration.User.Console.exe FileAttribute" FileName="Workshare.Configuration.User.Console.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C7_0" FriendlyName="C:\Program Files\Workshare\Modules\workshare.connect.dll FileAttribute" FileName="Workshare.Connect.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C8_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Connect.Proxy.dll FileAttribute" FileName="Workshare.Connect.Proxy.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2CA_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Desktop.Api.dll FileAttribute" FileName="Workshare.Desktop.API.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2CC_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Desktop.Exceptions.dll FileAttribute" FileName="Workshare.Desktop.Exceptions.dll" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2CE_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Desktop.Foundation.dll FileAttribute" FileName="Workshare.Desktop.Foundation.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D0_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Desktop.Interfaces.dll FileAttribute" FileName="Workshare.Desktop.Interfaces.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D2_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Desktop.Library.dll FileAttribute" FileName="Workshare.Desktop.Library.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D4_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Desktop.Options.dll FileAttribute" FileName="Workshare.Desktop.Options.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D6_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Desktop.Platform.dll FileAttribute" FileName="Workshare.Desktop.Platform.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D8_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Desktop.Services.dll FileAttribute" FileName="Workshare.Desktop.Services.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2DA_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Desktop.UI.dll FileAttribute" FileName="Workshare.Desktop.UI.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2DB_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.DirectorySearcher.dll FileAttribute" FileName="Workshare.DirectorySearcher.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2DC_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.DIS.DocInspector.dll FileAttribute" FileName="Workshare.DIS.DocInspector.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2DD_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.DocumentConverter.dll FileAttribute" FileName="Workshare.DocumentConverter.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2DF_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.DocumentProviders.Common.dll FileAttribute" FileName="Workshare.DocumentProviders.Common.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2E0_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.DocumentTagging.dll FileAttribute" FileName="Workshare.DocumentTagging.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2E1_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.EMF.Decoder.dll FileAttribute" FileName="Workshare.EMF.Decoder.dll" MinimumFileVersion="13.2.2602.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2E3_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.ExcelRibbon.Addin.dll FileAttribute" FileName="Workshare.ExcelRibbon.Addin.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2E4_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Exception.dll FileAttribute" FileName="Workshare.Exception.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2E5_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.FCS.Lite.Base.dll FileAttribute" FileName="Workshare.FCS.Lite.Base.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2E6_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.FCS.Lite.Base.Mixed.dll FileAttribute" FileName="Workshare.Fcs.Lite.Base.Mixed.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2E7_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.FCS.Lite.BinaryReader.dll FileAttribute" FileName="Workshare.Fcs.Lite.BinaryReader.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2E8_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.FCS.Lite.dll FileAttribute" FileName="Workshare.Fcs.Lite.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2E9_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.FCS.Lite.Html.dll FileAttribute" FileName="Workshare.Fcs.Lite.Rtf.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2EA_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.FCS.Lite.Interface.dll FileAttribute" FileName="Workshare.FCS.Lite.Interface.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2EB_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.FCS.Lite.OfficeOpenXML.dll FileAttribute" FileName="Workshare.Fcs.Lite.OfficeOpenXML.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2EC_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Fcs.Lite.Pdf.dll FileAttribute" FileName="Workshare.Fcs.Lite.Pdf.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2ED_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.FCS.Lite.Proxy.dll FileAttribute" FileName="Workshare.FCS.Lite.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2EE_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Fcs.Lite.RtfStreamProcessor.dll FileAttribute" FileName="Workshare.Fcs.Lite.RtfStreamProcessor.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2EF_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.FCS.Lite.Support.dll FileAttribute" FileName="Workshare.Fcs.Lite.Support.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F0_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.FCS.Lite.WordMacroCleaner.dll FileAttribute" FileName="Workshare.FCS.Lite.WordMacroCleaner.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F1_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Interfaces.Batch.Clean.dll FileAttribute" FileName="Workshare.Interfaces.Batch.Clean.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F2_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Interfaces.Policy.Action.dll FileAttribute" FileName="Workshare.Interfaces.Policy.Action.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F4_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Interfaces.Policy.CloudStorage.dll FileAttribute" FileName="Workshare.Interfaces.Policy.CloudStorage.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F5_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Interfaces.Policy.dll FileAttribute" FileName="Workshare.Interfaces.Policy.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F6_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Interfaces.Policy.Engine.dll FileAttribute" FileName="Workshare.Interfaces.Policy.Engine.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F7_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Interfaces.Policy.Routing.dll FileAttribute" FileName="Workshare.Interfaces.Policy.Routing.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F8_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Interfaces.PolicyResources.dll FileAttribute" FileName="Workshare.Interfaces.PolicyResources.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F9_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.InternalExternalResolver.dll FileAttribute" FileName="Workshare.InternalExternalResolver.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2FA_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Interop.DocProviders.dll FileAttribute" FileName="Workshare.Interop.DocProviders.dll" MinimumFileVersion="10.9.17091.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2FB_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Interop.Logging.dll FileAttribute" FileName="Workshare.Interop.Logging.dll" MinimumFileVersion="13.2.427.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2FC_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Interop.MailSender.dll FileAttribute" FileName="Workshare.Interop.MailSender.dll" MinimumFileVersion="10.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2FD_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Interop.Options.dll FileAttribute" FileName="Interop.WmOption.dll" MinimumFileVersion="10.4.429.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2FE_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Interop.PdfPublisher.dll FileAttribute" FileName="Workshare.Interop.PdfPublisher.dll" MinimumFileVersion="10.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2FF_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Interop.Progress.dll FileAttribute" FileName="Workshare.Interop.Progress.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_300_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Interop.RightClick.dll FileAttribute" FileName="Workshare.Interop.RightClick.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_301_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.LightSpeed.API.Clean.Comparer.exe FileAttribute" FileName="Workshare.LightSpeed.API.Clean.Comparer.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_302_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Lumberjack.NativeSupport.dll FileAttribute" FileName="Workshare.Lumberjack.NativeSupport.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_304_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Mail.dll FileAttribute" FileName="Workshare.Mail.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_305_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.MailProvider.Outlook.dll FileAttribute" FileName="WSOutlookMail.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_306_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.MailProvider.Proxy.dll FileAttribute" FileName="Workshare.MailProvider.Proxy.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_307_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Messaging.dll FileAttribute" FileName="Workshare.Messaging.dll" MinimumFileVersion="10.9.17049.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_309_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Metadata.Cleaner.exe FileAttribute" FileName="Workshare.Metadata.Cleaner.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_30A_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Mime.dll FileAttribute" FileName="Workshare.Mime.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_30C_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Options.Converters.dll FileAttribute" FileName="Workshare.Options.Converters.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_30E_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Options.ObjectModel.dll FileAttribute" FileName="Workshare.Options.ObjectModel.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_30F_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Outlook.dll FileAttribute" FileName="Workshare.Outlook.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_311_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Outlook.MessageAttachments.dll FileAttribute" FileName="Workshare.Outlook.MessageAttachments.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_312_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Outlook.ObjectModel.dll FileAttribute" FileName="Workshare.Outlook.ObjectModel.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_313_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Outlook.RedemptionImpl.dll FileAttribute" FileName="Workshare.Outlook.RedemptionImpl.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_315_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Outlooki.SharedResources.dll FileAttribute" FileName="Workshare.Outlooki.SharedResources.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_317_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.OutlookProxy.dll FileAttribute" FileName="Workshare.OutlookProxy.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_319_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.OutlookRibbon.Addin.dll FileAttribute" FileName="Workshare.OutlookRibbon.Addin.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_31B_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.OutlookRibbon.Library.dll FileAttribute" FileName="Workshare.OutlookRibbon.Library.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_31C_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Pdf.Combine.Coordinator.dll FileAttribute" FileName="Workshare.Pdf.Combine.Coordinator.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_31D_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Pdf.Combine.Library.dll FileAttribute" FileName="Workshare.Pdf.Combine.Library.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_31E_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Pdf.dll FileAttribute" FileName="Workshare.Pdf.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_320_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Pdf.Runner.exe FileAttribute" FileName="Workshare.Pdf.Runner.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_321_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Pdf.Runner.Library.dll FileAttribute" FileName="Workshare.Pdf.Runner.Library.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_323_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.PdfCreator.exe FileAttribute" FileName="Workshare.PdfCreator.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_325_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.PdfLauncher.exe FileAttribute" FileName="Workshare.PdfLauncher.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_327_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Platform.Api.dll FileAttribute" FileName="Workshare.Platform.Api.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_329_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Platform.SSO.dll FileAttribute" FileName="Workshare.Platform.SSO.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_32A_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Action.AbstractUserAction.dll FileAttribute" FileName="Workshare.Policy.Action.AbstractUserAction.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_32B_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Action.Template.dll FileAttribute" FileName="Workshare.Policy.Action.Template.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_32C_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Actions.AlertUserAction.dll FileAttribute" FileName="Workshare.Policy.Actions.AlertUserAction.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_32D_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Actions.AsposeCleanUserAction.dll FileAttribute" FileName="Workshare.Policy.Actions.AsposeCleanUserAction.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_32E_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Actions.BlockUserAction.dll FileAttribute" FileName="Workshare.Policy.Actions.BlockUserAction.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_32F_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Actions.CertifiedActions.dll FileAttribute" FileName="Workshare.Policy.Actions.CertifiedActions.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_330_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Actions.CleanUserAction.dll FileAttribute" FileName="Workshare.Policy.Actions.CleanUserAction.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_331_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Actions.LightSpeedCleanUserAction.dll FileAttribute" FileName="Workshare.Policy.Actions.LightSpeedCleanUserAction.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_332_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Actions.PDFCleanUserAction.dll FileAttribute" FileName="Workshare.Policy.Actions.PDFCleanUserAction.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_333_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Actions.PDFUserAction.dll FileAttribute" FileName="Workshare.Policy.Actions.PDFUserAction.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_334_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Actions.SkyDoxSendLinkUserAction.dll FileAttribute" FileName="Workshare.Policy.Actions.SkyDoxSendLinkUserAction.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_335_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Actions.ZipUserAction.dll FileAttribute" FileName="Workshare.Policy.Actions.ZipUserAction.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_336_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Adaptors.dll FileAttribute" FileName="Workshare.Policy.Adaptors.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_337_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.ClientCache.LocalCache.dll FileAttribute" FileName="Workshare.Policy.ClientCache.LocalCache.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_338_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.ClientManager.dll FileAttribute" FileName="Workshare.Policy.ClientManager.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_339_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Condition.ContentAnalysis.dll FileAttribute" FileName="Workshare.Policy.Condition.ContentAnalysis.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_33A_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Conditions.PiiInspection.dll FileAttribute" FileName="Workshare.Policy.Conditions.PiiInspection.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_33B_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.ContentEncryption.dll FileAttribute" FileName="Workshare.Policy.ContentEncryption.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_33C_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.ContentScanner.dll FileAttribute" FileName="Workshare.Policy.ContentScanner.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_33D_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.dll FileAttribute" FileName="Workshare.Policy.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_33E_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Engine.dll FileAttribute" FileName="Workshare.Policy.Engine.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_33F_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Engine.ResponseObjects.dll FileAttribute" FileName="Workshare.Policy.Engine.ResponseObjects.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_340_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Exceptions.dll FileAttribute" FileName="Workshare.Policy.Exceptions.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_341_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.ObjectModel.dll FileAttribute" FileName="Workshare.Policy.ObjectModel.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_342_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.PolicySuite.dll FileAttribute" FileName="Workshare.Policy.PolicySuite.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_343_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Routing.DeviceRouter.dll FileAttribute" FileName="Workshare.Policy.Routing.DeviceRouter.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_344_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Routing.MtaRouter.dll FileAttribute" FileName="Workshare.Policy.Routing.MtaRouter.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_345_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Store.NxBrePolicyStore.dll FileAttribute" FileName="Workshare.Policy.Store.NxBrePolicyStore.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_346_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.Store.XMLPolicyStore.dll FileAttribute" FileName="Workshare.Policy.Store.XMLPolicyStore.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_347_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Policy.UI.DisplayTranslations.dll FileAttribute" FileName="Workshare.Policy.UI.DisplayTranslations.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_348_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.PolicyContent.CacheManager.dll FileAttribute" FileName="Workshare.PolicyContent.CacheManager.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_349_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.PolicyContent.dll FileAttribute" FileName="Workshare.PolicyContent.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_34A_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.PolicyContent.Interfaces.dll FileAttribute" FileName="Workshare.PolicyContent.Interfaces.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_34B_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.PolicyContent.Objects.dll FileAttribute" FileName="Workshare.PolicyContent.Objects.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_34C_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.PolicyMarshaller.dll FileAttribute" FileName="Workshare.PolicyMarshaller.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_34E_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.PolicyResources.dll FileAttribute" FileName="Workshare.PolicyResources.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_350_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.PowerPointRibbon.Addin.dll FileAttribute" FileName="Workshare.PowerPointRibbon.Addin.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_351_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Professional.Document.Reports.dll FileAttribute" FileName="Workshare.Professional.Document.Reports.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_352_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Professional.Document.Reports.Resources.dll FileAttribute" FileName="Workshare.Professional.Document.Report.Resources.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_353_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Professional.Exception.dll FileAttribute" FileName="Workshare.Professional.Exception.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_355_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Professional.Options.Exporter.dll FileAttribute" FileName="unknown" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_357_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Professional.Options.Exporter.Launcher.exe FileAttribute" FileName="Workshare.Professional.Options.Exporter.Launcher.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_358_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Professional.Policy.Inspector.dll FileAttribute" FileName="Workshare.Professional.Policy.Inspector.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_359_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Professional.Regex.dll FileAttribute" FileName="Workshare.Professional.Regex.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_35A_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Protect.Engine.dll FileAttribute" FileName="Workshare.Protect.Engine.dll" MinimumFileVersion="6.1.0.192" />
+    <FileAttrib ID="ID_FILEATTRIB_F_35B_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Protect.Engine.Format.dll FileAttribute" FileName="Workshare.Protect.Engine.Format.dll" MinimumFileVersion="6.1.0.192" />
+    <FileAttrib ID="ID_FILEATTRIB_F_35C_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Protect.Engine.Interfaces.dll FileAttribute" FileName="Workshare.Protect.Engine.Interfaces.dll" MinimumFileVersion="6.1.0.192" />
+    <FileAttrib ID="ID_FILEATTRIB_F_35D_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Protect.Engine.SlidesWrapper.dll FileAttribute" FileName="Workshare.Protect.Engine.SlidesWrapper.dll" MinimumFileVersion="6.1.0.192" />
+    <FileAttrib ID="ID_FILEATTRIB_F_35F_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Protect.UserInit.exe FileAttribute" FileName="Workshare.Protect.UserInit.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_361_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.ProtectServer.Export.exe FileAttribute" FileName="Workshare.ProtectServer.Export.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_363_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.ProtectServer.ProfileConversion.dll FileAttribute" FileName="Workshare.ProtectServer.ProfileConversion.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_365_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.ProtectSimple.dll FileAttribute" FileName="Workshare.ProtectSimple.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_366_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.RecipientsProxy.dll FileAttribute" FileName="Workshare.RecipientsProxy.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_367_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.RedlineML.dll FileAttribute" FileName="Workshare.RedlineML.dll" MinimumFileVersion="13.2.2602.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_369_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Registrar.exe FileAttribute" FileName="Workshare.Registrar.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_36A_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Review.Apply.dll FileAttribute" FileName="Workshare.Review.Apply.dll" MinimumFileVersion="13.2.2602.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_36B_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Review.ApplyController.dll FileAttribute" FileName="Workshare.Review.ApplyController.dll" MinimumFileVersion="13.2.2602.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_36C_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Review.BlockMap.dll FileAttribute" FileName="Workshare.Review.BlockMap.dll" MinimumFileVersion="13.2.2602.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_36D_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Review.DOMProxy.Interfaces.dll FileAttribute" FileName="Workshare.Review.DOMProxy.Interfaces.dll" MinimumFileVersion="13.2.2602.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_36E_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Review.DOMProxy.OOXML.dll FileAttribute" FileName="Workshare.Review.DOMProxy.OOXML.dll" MinimumFileVersion="13.2.2602.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_36F_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Review.RedlineMapping.dll FileAttribute" FileName="Workshare.Review.RedlineMapping.dll" MinimumFileVersion="13.2.2602.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_370_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.RightClick.x64.dll FileAttribute" FileName="Workshare.RightClick.xx.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_372_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.SendLink.Client.Core.dll FileAttribute" FileName="Workshare.SendLink.Client.Core.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_374_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.SendLink.Client.exe FileAttribute" FileName="Workshare.SendLink.Client.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_376_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.SharedRibbon.Library.dll FileAttribute" FileName="Workshare.SharedRibbon.Library.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_377_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.SharePoint.Browser.COM.dll FileAttribute" FileName="Workshare.SharePoint.Browser.COM.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_378_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.SharePoint.COMClient.dll FileAttribute" FileName="Workshare.SharePoint.COMClient.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_379_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Upgrade.exe FileAttribute" FileName="Workshare.Upgrade.PreAssemblyMerge.exe" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_37A_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.Utilities.dll FileAttribute" FileName="Workshare.Utilities.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_37C_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.WordRibbon.Addin.dll FileAttribute" FileName="Workshare.WordRibbon.Addin.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_37D_0" FriendlyName="C:\Program Files\Workshare\Modules\WorkshareRegex.dll FileAttribute" FileName="WorkshareRegex.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_37E_0" FriendlyName="C:\Program Files\Workshare\Modules\WpAPI.dll FileAttribute" FileName="MetawallAPI.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_37F_0" FriendlyName="C:\Program Files\Workshare\Modules\WpCommon.dll FileAttribute" FileName="WPCommon.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_380_0" FriendlyName="C:\Program Files\Workshare\Modules\WpExcelInstanceManager.dll FileAttribute" FileName="ExcelInstanceManager.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_381_0" FriendlyName="C:\Program Files\Workshare\Modules\WpExcelStrategies.dll FileAttribute" FileName="WpExcelStrategies.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_382_0" FriendlyName="C:\Program Files\Workshare\Modules\WpFCSDiscoveryStrategies.dll FileAttribute" FileName="WpFCSDiscoveryStrategies.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_383_0" FriendlyName="C:\Program Files\Workshare\Modules\WpFileFormat.dll FileAttribute" FileName="WSFileFormat.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_385_0" FriendlyName="C:\Program Files\Workshare\Modules\WpHtmlReport.dll FileAttribute" FileName="WPHtmlReport.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_386_0" FriendlyName="C:\Program Files\Workshare\Modules\WpOfficeBinaryStrategies.dll FileAttribute" FileName="WPOfficeBinaryStrategies.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_387_0" FriendlyName="C:\Program Files\Workshare\Modules\WpPowerPointInstanceManager.dll FileAttribute" FileName="PowerPointInstanceManager.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_388_0" FriendlyName="C:\Program Files\Workshare\Modules\WpPowerPointStrategies.dll FileAttribute" FileName="WpPowerPointStrategies.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_389_0" FriendlyName="C:\Program Files\Workshare\Modules\WpWordBinaryStrategies.dll FileAttribute" FileName="WpWordBinaryStrategies.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_38A_0" FriendlyName="C:\Program Files\Workshare\Modules\WpWordDomStrategies.dll FileAttribute" FileName="WpWordDOMStrategies.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_38B_0" FriendlyName="C:\Program Files\Workshare\Modules\WpWordInstanceManager.dll FileAttribute" FileName="WordInstanceManager.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_38C_0" FriendlyName="C:\Program Files\Workshare\Modules\WpWordOptimisingAddin.dll FileAttribute" FileName="WPWordOptimisingAddin.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_38D_0" FriendlyName="C:\Program Files\Workshare\Modules\WpXmlBuilder.dll FileAttribute" FileName="MWXMLBuilder.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_38E_0" FriendlyName="C:\Program Files\Workshare\Modules\WpXmlReport.dll FileAttribute" FileName="MWXMLReport.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_38F_0" FriendlyName="C:\Program Files\Workshare\Modules\WSActivationContextLoader.dll FileAttribute" FileName="WSActivationContextLoader.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_390_0" FriendlyName="C:\Program Files\Workshare\Modules\WsContext.dll FileAttribute" FileName="WSContext.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_391_0" FriendlyName="C:\Program Files\Workshare\Modules\WSContextWrapper.dll FileAttribute" FileName="WsContextWrapper.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_392_0" FriendlyName="C:\Program Files\Workshare\Modules\WsConvertFromPdf.dll FileAttribute" FileName="WsConvertFromPdf.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_394_0" FriendlyName="C:\Program Files\Workshare\Modules\WSIntegration.dll FileAttribute" FileName="WSIntegration.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_395_0" FriendlyName="C:\Program Files\Workshare\Modules\WsPdfPublisher.dll FileAttribute" FileName="WsPdfPublisher.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_396_0" FriendlyName="C:\Program Files\Workshare\Modules\WsPdfToWord.dll FileAttribute" FileName="WsPdfToWord.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_400_0" FriendlyName="C:\Program Files\Workshare\Modules\ja-JP\Workshare.Policy.UI.DisplayTranslations.resources.dll FileAttribute" FileName="Workshare.Policy.UI.DisplayTranslations.resources.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_401_0" FriendlyName="C:\Program Files\Workshare\Modules\ja-JP\Workshare.PolicyMarshaller.resources.dll FileAttribute" FileName="Workshare.PolicyMarshaller.resources.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_402_0" FriendlyName="C:\Program Files\Workshare\Modules\ja-JP\Workshare.Utilities.resources.dll FileAttribute" FileName="Workshare.Utilities.resources.dll" MinimumFileVersion="10.9.17107.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_406_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\DeckCompare.exe FileAttribute" FileName="DeckCompare.exe" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_407_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\DeckCompareAddin.dll FileAttribute" FileName="DeckCompareAddin.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_40C_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\PCShellExt64.dll FileAttribute" FileName="PCShellExt.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_40E_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\PresentationContentObfuscator.exe FileAttribute" FileName="PresentationContentObfuscator.exe" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_410_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Comparison.Packaging.dll FileAttribute" FileName="Workshare.Comparison.Packaging.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_412_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.Api.dll FileAttribute" FileName="Workshare.Presentation.Api.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_414_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.ChangeML.Builder.dll FileAttribute" FileName="Workshare.Presentation.ChangeML.Builder.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_416_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.ChangeML.dll FileAttribute" FileName="Workshare.Presentation.ChangeML.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_418_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.ChangeSetReader.dll FileAttribute" FileName="Workshare.Presentation.ChangeSetReader.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_41A_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.Compare.ApplyChange.dll FileAttribute" FileName="Workshare.Presentation.Compare.ApplyChange.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_41C_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.Compare.Common.dll FileAttribute" FileName="Workshare.Presentation.Compare.Common.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_41E_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.Compare.Controller.dll FileAttribute" FileName="Workshare.Presentation.Compare.Controller.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_420_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.Compare.exe FileAttribute" FileName="Workshare.Presentation.Compare.exe" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_422_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.Comparer.dll FileAttribute" FileName="Workshare.Presentation.Comparer.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_424_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.DefaultReader.dll FileAttribute" FileName="Workshare.Presentation.DefaultReader.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_426_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.ObjectModel.dll FileAttribute" FileName="Workshare.Presentation.ObjectModel.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_428_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.Readers.dll FileAttribute" FileName="Workshare.Presentation.Readers.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_42A_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Workshare.Presentation.UI.Controls.dll FileAttribute" FileName="Workshare.Presentation.UI.Controls.dll" MinimumFileVersion="3.2.8227.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_22A_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsoft.ApplicationInsights.dll FileAttribute" FileName="Microsoft.ApplicationInsights.dll" MinimumFileVersion="2.6.1.23451" />
+    <FileAttrib ID="ID_FILEATTRIB_F_22B_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsoft.IdentityModel.JsonWebTokens.dll FileAttribute" FileName="Microsoft.IdentityModel.JsonWebTokens.dll" MinimumFileVersion="5.3.0.51005" />
+    <FileAttrib ID="ID_FILEATTRIB_F_22C_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsoft.IdentityModel.Logging.dll FileAttribute" FileName="Microsoft.IdentityModel.Logging.dll" MinimumFileVersion="5.3.0.51005" />
+    <FileAttrib ID="ID_FILEATTRIB_F_22D_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsoft.IdentityModel.Protocols.dll FileAttribute" FileName="Microsoft.IdentityModel.Protocols.dll" MinimumFileVersion="5.3.0.51005" />
+    <FileAttrib ID="ID_FILEATTRIB_F_22E_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll FileAttribute" FileName="Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" MinimumFileVersion="5.3.0.51005" />
+    <FileAttrib ID="ID_FILEATTRIB_F_22F_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsoft.IdentityModel.Tokens.dll FileAttribute" FileName="Microsoft.IdentityModel.Tokens.dll" MinimumFileVersion="5.3.0.51005" />
+    <FileAttrib ID="ID_FILEATTRIB_F_230_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsoft.Practices.ServiceLocation.dll FileAttribute" FileName="Microsoft.Practices.ServiceLocation.dll" MinimumFileVersion="1.3.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_23A_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\System.IdentityModel.Tokens.Jwt.dll FileAttribute" FileName="System.IdentityModel.Tokens.Jwt.dll" MinimumFileVersion="5.3.0.51005" />
+    <FileAttrib ID="ID_FILEATTRIB_F_23B_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\System.Reflection.TypeExtensions.dll FileAttribute" FileName="System.Reflection.TypeExtensions.dll" MinimumFileVersion="1.0.24212.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_23C_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\System.Threading.Tasks.Extensions.dll FileAttribute" FileName="System.Threading.Tasks.Extensions.dll" MinimumFileVersion="4.6.24705.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_23D_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\System.Windows.Interactivity.dll FileAttribute" FileName="System.Windows.Interactivity.dll" MinimumFileVersion="3.0.40218.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_27B_0" FriendlyName="C:\Program Files\Workshare\Modules\Microsoft.Office.Interop.Excel.dll FileAttribute" FileName="Excel Primary Interop Assembly" MinimumFileVersion="15.0.4420.1017" />
+    <FileAttrib ID="ID_FILEATTRIB_F_27C_0" FriendlyName="C:\Program Files\Workshare\Modules\Microsoft.Office.Interop.PowerPoint.dll FileAttribute" FileName="PowerPoint Primary Interop Assembly" MinimumFileVersion="15.0.4420.1017" />
+    <FileAttrib ID="ID_FILEATTRIB_F_27D_0" FriendlyName="C:\Program Files\Workshare\Modules\Microsoft.Office.Interop.Word.dll FileAttribute" FileName="Word Primary Interop Assembly" MinimumFileVersion="15.0.4420.1017" />
+    <FileAttrib ID="ID_FILEATTRIB_F_282_0" FriendlyName="C:\Program Files\Workshare\Modules\Microsoft.Vbe.Interop.dll FileAttribute" FileName="Visual Basic Extensions Primary Interop Assembly" MinimumFileVersion="15.0.4420.1017" />
+    <FileAttrib ID="ID_FILEATTRIB_F_285_0" FriendlyName="C:\Program Files\Workshare\Modules\OFFICE.DLL FileAttribute" FileName="Core Primary Interop Assembly" MinimumFileVersion="15.0.4420.1017" />
+    <FileAttrib ID="ID_FILEATTRIB_F_294_0" FriendlyName="C:\Program Files\Workshare\Modules\System.Reactive.Core.dll FileAttribute" FileName="System.Reactive.Core.dll" MinimumFileVersion="2.2.5.40722" />
+    <FileAttrib ID="ID_FILEATTRIB_F_295_0" FriendlyName="C:\Program Files\Workshare\Modules\System.Reactive.Interfaces.dll FileAttribute" FileName="System.Reactive.Interfaces.dll" MinimumFileVersion="2.2.5.40722" />
+    <FileAttrib ID="ID_FILEATTRIB_F_296_0" FriendlyName="C:\Program Files\Workshare\Modules\System.Reactive.Linq.dll FileAttribute" FileName="System.Reactive.Linq.dll" MinimumFileVersion="2.2.5.40722" />
+    <FileAttrib ID="ID_FILEATTRIB_F_297_0" FriendlyName="C:\Program Files\Workshare\Modules\System.Reactive.PlatformServices.dll FileAttribute" FileName="System.Reactive.PlatformServices.dll" MinimumFileVersion="2.2.5.40722" />
+    <FileAttrib ID="ID_FILEATTRIB_F_239_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\System.Diagnostics.DiagnosticSource.dll FileAttribute" FileName="System.Diagnostics.DiagnosticSource.dll" MinimumFileVersion="4.700.19.46214" />
+    <FileAttrib ID="ID_FILEATTRIB_F_27E_0" FriendlyName="C:\Program Files\Workshare\Modules\Microsoft.Office.Tools.Common.v4.0.Utilities.dll FileAttribute" FileName="Microsoft.Office.Tools.Common.v4.0.Utilities.dll" MinimumFileVersion="10.0.30319.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_235_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Newtonsoft.Json.dll FileAttribute" FileName="Newtonsoft.Json.dll" MinimumFileVersion="12.0.2.23222" />
+    <FileAttrib ID="ID_FILEATTRIB_F_253_0" FriendlyName="C:\Program Files\Workshare\Modules\Aspose.Slides.dll FileAttribute" FileName="Aspose.Slides.dll" MinimumFileVersion="8.4.2.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_25B_0" FriendlyName="C:\Program Files\Workshare\Modules\cdintf.dll FileAttribute" FileName="CDINTF.DLL" MinimumFileVersion="5.0.1.9" />
+    <FileAttrib ID="ID_FILEATTRIB_F_25D_0" FriendlyName="C:\Program Files\Workshare\Modules\CDIntfNet.dll FileAttribute" FileName="CDIntfNet.dll" MinimumFileVersion="5.0.1.8" />
+    <FileAttrib ID="ID_FILEATTRIB_F_25F_0" FriendlyName="C:\Program Files\Workshare\Modules\CDIntfNet500.dll FileAttribute" FileName="CDIntfNet500.dll" MinimumFileVersion="5.0.1.8" />
+    <FileAttrib ID="ID_FILEATTRIB_F_261_0" FriendlyName="C:\Program Files\Workshare\Modules\CDIntfNet64.dll FileAttribute" FileName="CDIntfNet64.dll" MinimumFileVersion="5.0.1.8" />
+    <FileAttrib ID="ID_FILEATTRIB_F_270_0" FriendlyName="C:\Program Files\Workshare\Modules\Install.exe FileAttribute" FileName="Install.exe" MinimumFileVersion="1.0.1.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_274_0" FriendlyName="C:\Program Files\Workshare\Modules\Interop.Redemption.dll FileAttribute" FileName="Interop.Redemption.dll" MinimumFileVersion="5.20.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_28C_0" FriendlyName="C:\Program Files\Workshare\Modules\Redemption64.dll FileAttribute" FileName="redemption.dll" MinimumFileVersion="5.20.0.5298" />
+    <FileAttrib ID="ID_FILEATTRIB_F_27F_0" FriendlyName="C:\Program Files\Workshare\Modules\Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll FileAttribute" FileName="Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll" MinimumFileVersion="10.0.30319.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_28E_0" FriendlyName="C:\Program Files\Workshare\Modules\secman.dll FileAttribute" FileName="secman.dll" MinimumFileVersion="5.7.2.12" />
+    <FileAttrib ID="ID_FILEATTRIB_F_28F_0" FriendlyName="C:\Program Files\Workshare\Modules\secman64.dll FileAttribute" FileName="secman64.dll" MinimumFileVersion="5.7.2.12" />
+    <FileAttrib ID="ID_FILEATTRIB_F_290_0" FriendlyName="C:\Program Files\Workshare\Modules\SecurityManager.2005.dll FileAttribute" FileName="SecurityManager.2005.dll" MinimumFileVersion="8.17.3272.2005" />
+    <FileAttrib ID="ID_FILEATTRIB_F_292_0" FriendlyName="C:\Program Files\Workshare\Modules\SolidFramework.dll FileAttribute" FileName="SolidFramework.dll" MinimumFileVersion="10.0.10158.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_397_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\AppHelper.dll FileAttribute" FileName="APPHELPER.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_398_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\AppProductConfig.dll FileAttribute" FileName="APPPRODUCTCONFIG.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_399_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\AppUtils.dll FileAttribute" FileName="AppUtils.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_39A_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Asian.dll FileAttribute" FileName="ASIAN.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_39B_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\atm2lll.dll FileAttribute" FileName="ATM2LLL.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_39C_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Bar.dll FileAttribute" FileName="BAR.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_39D_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Bnt.dll FileAttribute" FileName="BNT.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_39E_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\CRX.dll FileAttribute" FileName="CRX.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_39F_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Defaults.dll FileAttribute" FileName="DEFAULTS.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A0_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\DISTR_TST.exe FileAttribute" FileName="DISTR_TST.EXE" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A1_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Dot.dll FileAttribute" FileName="DOT.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A2_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Firewrx.dll FileAttribute" FileName="FIREWRX.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A3_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Formatter.dll FileAttribute" FileName="FORMATTER.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A4_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\hybridmodule.dll FileAttribute" FileName="hybridmodule.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A5_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\ICDLLW32.dll FileAttribute" FileName="ICDLLW32.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A6_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\ICHUNW32.dll FileAttribute" FileName="ICHUNW32.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A7_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Icr.dll FileAttribute" FileName="ICR.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A8_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Icr2.dll FileAttribute" FileName="ICR2.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A9_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\IF_PNG.dll FileAttribute" FileName="IF_PNG.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3AA_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\IPP_OmniPage.dlm FileAttribute" FileName="IPP_OMNIPAGE.DLM" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3AB_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\jp2k_kdu_apps_vnew.dll FileAttribute" FileName="jp2k_kdu_apps_vnew.dll" MinimumFileVersion="7.10.4.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3AC_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\kdu_vnewR.dll FileAttribute" FileName="kdu_vnewR.dll" MinimumFileVersion="7.10.4.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3AD_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\KernelAPI.dll FileAttribute" FileName="KERNELAPI.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3AF_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Kofax.OmniPageCSDK.ArgTypes.dll FileAttribute" FileName="Kofax.OmniPageCSDK.ArgTypes.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B1_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Kofax.OmniPageCSDK.CAPI.dll FileAttribute" FileName="Kofax.OmniPageCSDK.CAPI.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B3_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Kofax.OmniPageCSDK.NETCore.CAPI.dll FileAttribute" FileName="Kofax.OmniPageCSDK.NETCore.CAPI.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B5_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Kofax.OmniPageCSDK.NETCore.Objects.dll FileAttribute" FileName="Kofax.OmniPageCSDK.NETCore.Objects.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B7_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Kofax.OmniPageCSDK.NETCore.RecPDF.dll FileAttribute" FileName="Kofax.OmniPageCSDK.NETCore.RecPDF.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B9_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Kofax.OmniPageCSDK.Objects.dll FileAttribute" FileName="Kofax.OmniPageCSDK.Objects.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3BB_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Kofax.OmniPageCSDK.RecPDF.dll FileAttribute" FileName="Kofax.OmniPageCSDK.RecPDF.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3BC_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\LecsoMgr.dll FileAttribute" FileName="LECSOMGR.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3BD_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\LEditor.dll FileAttribute" FileName="LEDITOR.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3BE_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\LMQuery.dll FileAttribute" FileName="LMQuery.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3BF_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Mat.dll FileAttribute" FileName="MAT.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3C0_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\ME_ConverterMgr.dlm FileAttribute" FileName="ME_CONVERTERMGR.DLM" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3C1_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\ME_D2D.dlm FileAttribute" FileName="ME_D2D.DLM" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3C2_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\ME_DocMgr.dlm FileAttribute" FileName="ME_DOCMGR.DLM" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3C3_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\ME_WFAssist.dlm FileAttribute" FileName="ME_WFASSIST.DLM" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3C4_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\ME_WFMgr.dlm FileAttribute" FileName="ME_WFMGR.DLM" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3C5_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\ME_WFView.dlm FileAttribute" FileName="ME_WFVIEW.DLM" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3C6_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\MiddleEarth.dll FileAttribute" FileName="MIDDLEEARTH.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3C7_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Mor.dll FileAttribute" FileName="MOR.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3C8_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Mor2.dll FileAttribute" FileName="MOR2.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3C9_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Mor3.dll FileAttribute" FileName="MOR3.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3CA_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Mor5.dll FileAttribute" FileName="MORIF.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3CB_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\mytoolbox.dll FileAttribute" FileName="mytoolbox.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3CC_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\OMR.dll FileAttribute" FileName="OMR.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3CD_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\p4dll1.dll FileAttribute" FileName="P4.exe" MinimumFileVersion="4.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3CE_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\pccext.dll FileAttribute" FileName="PCCEXT.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3CF_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\pccext2.dll FileAttribute" FileName="PCCEXT2.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D0_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\pccext3.dll FileAttribute" FileName="PCCEXT3.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D1_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\pccext4.dll FileAttribute" FileName="PCCEXT4.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D2_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\PDFCnv.dlc FileAttribute" FileName="PDFCNV.DLC" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D3_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\pdflin.dll FileAttribute" FileName="PDFLIN.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D4_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\PreRendering.dll FileAttribute" FileName="PRERENDERING.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D5_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\RecAPIPlus.dll FileAttribute" FileName="RECAPIPLUS.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D6_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\RecDiag.dll FileAttribute" FileName="RECDIAG.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D7_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\RecoCore.dll FileAttribute" FileName="RecoCore.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D8_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Rendering.dll FileAttribute" FileName="RENDERING.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D9_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\Rendering2.dll FileAttribute" FileName="RENDERING2.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3DA_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\rndsdawg.dll FileAttribute" FileName="RNDSDAWG.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3DB_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\rndsinso.dll FileAttribute" FileName="RNDSINSO.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3DC_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\RtfConv.dlc FileAttribute" FileName="RTFCONV.DLC" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3DD_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\SkinnedClasses.dll FileAttribute" FileName="SkinnedClasses.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3DE_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\SkinnedWindows.dll FileAttribute" FileName="SkinnedWindows.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3DF_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\SPDFLib.dll FileAttribute" FileName="SPDFLIB.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3E0_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\THOCRAPI.dll FileAttribute" FileName="Thocrapi.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3E1_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\TWBIG532.dll FileAttribute" FileName="TWBIG532.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3E2_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\twcut.dll FileAttribute" FileName="twcut.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3E3_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\twcutchr.dll FileAttribute" FileName="twcutchr.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3E4_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\twcutckr.dll FileAttribute" FileName="twcutckr.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3E5_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\twcutla.dll FileAttribute" FileName="twcutlu.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3E6_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\twcutle.dll FileAttribute" FileName="twcutle.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3E7_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\twcutlin.dll FileAttribute" FileName="twcutlin.dll" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3E8_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\twcutlkr.dll FileAttribute" FileName="twcutlkr.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3E9_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\TWForm.dll FileAttribute" FileName="form.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3EA_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\TWGB32.dll FileAttribute" FileName="TWGB32.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3EB_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\twiden.dll FileAttribute" FileName="TWIDEN.DLL" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3EC_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\twksc32.dll FileAttribute" FileName="twksc32.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3ED_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\TWLAY32.dll FileAttribute" FileName="TWLAY32.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3EE_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\twlay32a.dll FileAttribute" FileName="twlay32a.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3EF_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\tworient.dll FileAttribute" FileName="tworient.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3F0_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\twpost32.dll FileAttribute" FileName="twpost32.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3F1_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\twpostk.dll FileAttribute" FileName="twpostk.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3F2_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\twrecc.dll FileAttribute" FileName="twrecc.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3F3_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\twrecc_hk.dll FileAttribute" FileName="twrecc_hk.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3F4_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\twrece.dll FileAttribute" FileName="twrece.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3F5_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\twrecj.dll FileAttribute" FileName="twrecj.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3F6_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\twreck.dll FileAttribute" FileName="twreck.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3F7_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\twrecs.dll FileAttribute" FileName="twrecs.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3F8_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\TWReverse.dll FileAttribute" FileName="Reverse.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3F9_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\TWSJIS32.dll FileAttribute" FileName="TWSJIS32.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3FA_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\twstruct.dll FileAttribute" FileName="twstruct.dll" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3FB_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\WM_OPActions.dlm FileAttribute" FileName="WM_OPACTIONS.DLM" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3FC_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\WM_OPSteps.dlm FileAttribute" FileName="WM_OPSTEPS.DLM" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3FD_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\WM_OPUIActions.dlm FileAttribute" FileName="WM_OPUIACTIONS.DLM" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3FE_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\xocr.dll FileAttribute" FileName="XOCR.DLL" MinimumFileVersion="21.0.20067.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3FF_0" FriendlyName="C:\Program Files\Workshare\Modules\KofaxSDK\xocr32b.exe FileAttribute" FileName="XOCR32B.EXE" MinimumFileVersion="21.0.19466.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_403_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\Ab2d.ReaderSvg.dll FileAttribute" FileName="Ab2d.ReaderSvg.dll" MinimumFileVersion="5.3.5036.25858" />
+    <FileAttrib ID="ID_FILEATTRIB_F_408_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\DevComponents.WPF.Controls.dll FileAttribute" FileName="DevComponents.WPF.Controls.dll" MinimumFileVersion="7.9.0.8" />
+    <FileAttrib ID="ID_FILEATTRIB_F_409_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\DevComponents.WpfDock.dll FileAttribute" FileName="DevComponents.WpfDock.dll" MinimumFileVersion="7.9.0.8" />
+    <FileAttrib ID="ID_FILEATTRIB_F_40A_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\DevComponents.WpfEditors.dll FileAttribute" FileName="DevComponents.WpfEditors.dll" MinimumFileVersion="7.9.0.8" />
+    <FileAttrib ID="ID_FILEATTRIB_F_40B_0" FriendlyName="C:\Program Files\Workshare\Compare For PowerPoint\DevComponents.WpfRibbon.dll FileAttribute" FileName="DevComponents.WpfRibbon.dll" MinimumFileVersion="7.9.0.8" />
+    <FileAttrib ID="ID_FILEATTRIB_F_44_0" FriendlyName="C:\Program Files\Workshare\Modules\acfpdfu.dll FileAttribute" FileName="ACFPDF.DLL" MinimumFileVersion="0.3.0.5019" />
+    <FileAttrib ID="ID_FILEATTRIB_F_45_0" FriendlyName="C:\Program Files\Workshare\Modules\acfpdfui.dll FileAttribute" FileName="ACFPDFUI.DLL" MinimumFileVersion="0.3.0.5019" />
+    <Allow ID="ID_ALLOW_A_42B_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Castle.Core.dll Hash Sha1" Hash="4802E814E16CC48F1A9E355E5945EBC39F794E0C" />
+    <Allow ID="ID_ALLOW_A_42C_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Castle.Core.dll Hash Sha256" Hash="D86B19D50F58783194C9B6AA202C473E9EAEA2130FB49EC3790EC9348457E942" />
+    <Allow ID="ID_ALLOW_A_42D_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Castle.Core.dll Hash Page Sha1" Hash="E66E03F1429E1F93587A31DECE6EC5F1D7D39EEF" />
+    <Allow ID="ID_ALLOW_A_42E_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Castle.Core.dll Hash Page Sha256" Hash="C462FC1AA9B24C08D50C3F7ACFF9BCDF850084756833C3A4987CABE9680A237A" />
+    <Allow ID="ID_ALLOW_A_42F_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\CommandLine.dll Hash Sha1" Hash="B5E285105F6A6197D5309F8BF197B8BA00D94E1D" />
+    <Allow ID="ID_ALLOW_A_430_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\CommandLine.dll Hash Sha256" Hash="F8BE0EAB8B30235ACB299A80589E8E52BD18A3AD8D6DA3963CCA550810B6C6D4" />
+    <Allow ID="ID_ALLOW_A_431_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\CommandLine.dll Hash Page Sha1" Hash="31B400DA09B80229B5B199143E36C194E8A108E7" />
+    <Allow ID="ID_ALLOW_A_432_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\CommandLine.dll Hash Page Sha256" Hash="2174439C4A6371D8065E6693DFD042D5EACAD0FE195EDA7B2177BC4AC48F5B87" />
+    <Allow ID="ID_ALLOW_A_433_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\ControlzEx.dll Hash Sha1" Hash="080BF2494416C6455E84C0DBF9C154F3763C1823" />
+    <Allow ID="ID_ALLOW_A_434_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\ControlzEx.dll Hash Sha256" Hash="4E6998040011CDE66E798A2C9467B8390F0D5D4DFBFE4D4E64DF9600FDD7A32C" />
+    <Allow ID="ID_ALLOW_A_435_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\ControlzEx.dll Hash Page Sha1" Hash="A32D534901313171E0B9D81A77FCD9B5EDCD4610" />
+    <Allow ID="ID_ALLOW_A_436_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\ControlzEx.dll Hash Page Sha256" Hash="DF1337E6633CA5F66604E9E466986ACE671440FD8A87FB2318F40B4BF7B22E68" />
+    <Allow ID="ID_ALLOW_A_437_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\log4net.dll Hash Sha1" Hash="48AA2B29679FB63A5C7F2F610D6A7C89A9337166" />
+    <Allow ID="ID_ALLOW_A_438_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\log4net.dll Hash Sha256" Hash="1F0B302D0DDBFA891B5C4CF36441BF211A2CEB2E9106C31694057B34FCB9C685" />
+    <Allow ID="ID_ALLOW_A_439_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\log4net.dll Hash Page Sha1" Hash="AAA996BFD0D9B4972E5E18B89DA978F9BE82DD80" />
+    <Allow ID="ID_ALLOW_A_43A_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\log4net.dll Hash Page Sha256" Hash="B0C34D2ECBFE56BE5A790DA0E392F718630120E3E20DF11FFE9AD12AAC1932C7" />
+    <Allow ID="ID_ALLOW_A_43B_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\MahApps.Metro.dll Hash Sha1" Hash="C7D54CF36CCF6536336BD025E56045276692282B" />
+    <Allow ID="ID_ALLOW_A_43C_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\MahApps.Metro.dll Hash Sha256" Hash="06FB6D2C47D2238C973C7011E43F015663DE7D91D3A93142DF7C9866AFCC6AFD" />
+    <Allow ID="ID_ALLOW_A_43D_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\MahApps.Metro.dll Hash Page Sha1" Hash="6AF8C4F9222186A25155FBC28EB2BCF4243003BA" />
+    <Allow ID="ID_ALLOW_A_43E_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\MahApps.Metro.dll Hash Page Sha256" Hash="2CD2BC373FFA37AC56D0AA8F03FF6542AA28E76A906DF5243C4F6332FF30CCBD" />
+    <Allow ID="ID_ALLOW_A_43F_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsoft.Practices.Unity.Configuration.dll Hash Sha1" Hash="80F38E8082590CA29F46A211CEE1225AFC240B76" />
+    <Allow ID="ID_ALLOW_A_440_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsoft.Practices.Unity.Configuration.dll Hash Sha256" Hash="2BBF71EC7AACE4E98962766457BAA373EBB556979203D433DABA183D79D5674E" />
+    <Allow ID="ID_ALLOW_A_441_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsoft.Practices.Unity.Configuration.dll Hash Page Sha1" Hash="1B574B331D60A59F0DFFF1CA824B17180AD3350D" />
+    <Allow ID="ID_ALLOW_A_442_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsoft.Practices.Unity.Configuration.dll Hash Page Sha256" Hash="266918089C19ED28CD3473549790ABF8B5EF58DF412DF2CB7D5A70A3E4E48D02" />
+    <Allow ID="ID_ALLOW_A_443_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsoft.Practices.Unity.dll Hash Sha1" Hash="8DE673CE0E072A2DABC3BC6E0F088314E36514E0" />
+    <Allow ID="ID_ALLOW_A_444_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsoft.Practices.Unity.dll Hash Sha256" Hash="4AA1E2CC32643B28CA601A04E9804E4A25356D03A6FFFFB7A67BC3215AE4B7E2" />
+    <Allow ID="ID_ALLOW_A_445_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsoft.Practices.Unity.dll Hash Page Sha1" Hash="F8B64F40C145A42704C96D311416A7B851BFADDE" />
+    <Allow ID="ID_ALLOW_A_446_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsoft.Practices.Unity.dll Hash Page Sha256" Hash="608CF5E76EA7EE77284D293EA961834A6067691884DE169B49BBA62826CC4F38" />
+    <Allow ID="ID_ALLOW_A_447_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsoft.Practices.Unity.RegistrationByConvention.dll Hash Sha1" Hash="2E0C2060AE5C06A74B0803CF43030D33E0D64213" />
+    <Allow ID="ID_ALLOW_A_448_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsoft.Practices.Unity.RegistrationByConvention.dll Hash Sha256" Hash="342E1C0B65EA774962C661B76334872666F57CC9CB38306D6F42F7B150094D60" />
+    <Allow ID="ID_ALLOW_A_449_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsoft.Practices.Unity.RegistrationByConvention.dll Hash Page Sha1" Hash="B36BEDE10EDC35658191A6EB0F6A1EF51702C5B8" />
+    <Allow ID="ID_ALLOW_A_44A_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Microsoft.Practices.Unity.RegistrationByConvention.dll Hash Page Sha256" Hash="4B5A7D0834DBF39BB6B06911445157507C0F5605C8CD9F61F9BE6CDE097C1461" />
+    <Allow ID="ID_ALLOW_A_44B_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Prism.dll Hash Sha1" Hash="69A7AE50E42E203AF64525612E9EB59A55692589" />
+    <Allow ID="ID_ALLOW_A_44C_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Prism.dll Hash Sha256" Hash="F6FF74ADCA0599ECDADEA831A8D261C24A085D223F9EDF44CD1A31AE04B81C60" />
+    <Allow ID="ID_ALLOW_A_44D_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Prism.dll Hash Page Sha1" Hash="914D7592D73C56F9381C28E0A0DD98F93609E672" />
+    <Allow ID="ID_ALLOW_A_44E_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Prism.dll Hash Page Sha256" Hash="CF767849330E34853F0A63BFEAD646B169F6F41FB3B0C0588EBAF3CE848902E9" />
+    <Allow ID="ID_ALLOW_A_44F_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Prism.Unity.Wpf.dll Hash Sha1" Hash="98C42ABE5B382C168A100098E9C6A90358D3AD18" />
+    <Allow ID="ID_ALLOW_A_450_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Prism.Unity.Wpf.dll Hash Sha256" Hash="FC96C8FB42033864932FD58F8BF3CF3AB301451D54DDE478B7C95B672C73DD23" />
+    <Allow ID="ID_ALLOW_A_451_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Prism.Unity.Wpf.dll Hash Page Sha1" Hash="16CDAA6A5E415D9C2430BEFC1EBE319E49589E66" />
+    <Allow ID="ID_ALLOW_A_452_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Prism.Unity.Wpf.dll Hash Page Sha256" Hash="9A0AC9F42A4CF5593AF17838301981D6E6DA5EAE004DD3BD6C211B91EFED18E9" />
+    <Allow ID="ID_ALLOW_A_453_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Prism.Wpf.dll Hash Sha1" Hash="647B33C99B801ADC6F40108E65A0E1A02BDC20B3" />
+    <Allow ID="ID_ALLOW_A_454_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Prism.Wpf.dll Hash Sha256" Hash="2020BD7E8271580525EE62CFA14AEC45D7A94129F784397ECA4D7269504F6EBD" />
+    <Allow ID="ID_ALLOW_A_455_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Prism.Wpf.dll Hash Page Sha1" Hash="2A513A6A29B1C4EC5BEF626171E23F56D386FE9D" />
+    <Allow ID="ID_ALLOW_A_456_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\Prism.Wpf.dll Hash Page Sha256" Hash="DD20DBC9EF16D0EAAE47EDEA4CB8DFF221517004DF941E6DD6E77A93AD3F0B77" />
+    <Allow ID="ID_ALLOW_A_457_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\WpfAnimatedGif.dll Hash Sha1" Hash="DB149AAAD4A084070FB97C45068F30E31CB85FE4" />
+    <Allow ID="ID_ALLOW_A_458_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\WpfAnimatedGif.dll Hash Sha256" Hash="63A1E11ACC6FECA9161F6373E05ED054BC170939ED81DFEF5DA8933542582CCE" />
+    <Allow ID="ID_ALLOW_A_459_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\WpfAnimatedGif.dll Hash Page Sha1" Hash="1CAD1C413681088DCA740C8D465E32228C39C371" />
+    <Allow ID="ID_ALLOW_A_45A_0" FriendlyName="C:\Program Files\Workshare\Workshare.ExcelCompare\WpfAnimatedGif.dll Hash Page Sha256" Hash="9B18552AEDEB2EF48949F26E2EF87C122BFECF147BBE0F757CA31319DB1A0A57" />
+    <Allow ID="ID_ALLOW_A_45B_0" FriendlyName="C:\Program Files\Workshare\Modules\acMAPIWrapper.dll Hash Sha1" Hash="180AE6F4B0A630B444C2F21F91660AD7413A37EE" />
+    <Allow ID="ID_ALLOW_A_45C_0" FriendlyName="C:\Program Files\Workshare\Modules\acMAPIWrapper.dll Hash Sha256" Hash="169B887DFC1DD500157E9259830B51867C167B0E9474CCC3A26AE9BB4ED5DA8E" />
+    <Allow ID="ID_ALLOW_A_45D_0" FriendlyName="C:\Program Files\Workshare\Modules\acMAPIWrapper.dll Hash Page Sha1" Hash="D7614D38CB956CD89137039A8AC77AF417C8F6F9" />
+    <Allow ID="ID_ALLOW_A_45E_0" FriendlyName="C:\Program Files\Workshare\Modules\acMAPIWrapper.dll Hash Page Sha256" Hash="2EF25E7F3794F35C177E22DFBF801CF9E2C6770E26F24B090CF37BD69520C29C" />
+    <Allow ID="ID_ALLOW_A_45F_0" FriendlyName="C:\Program Files\Workshare\Modules\AlphaFS.dll Hash Sha1" Hash="DD68824D1C48B5D8D5429EF74350296400CCA911" />
+    <Allow ID="ID_ALLOW_A_460_0" FriendlyName="C:\Program Files\Workshare\Modules\AlphaFS.dll Hash Sha256" Hash="07611EFB0D87826A2B5817DF5973F716A9E19BECB56F4A9F36F09EF9D8AAE1DA" />
+    <Allow ID="ID_ALLOW_A_461_0" FriendlyName="C:\Program Files\Workshare\Modules\AlphaFS.dll Hash Page Sha1" Hash="E1C84AA7A14E724B5ABC7856A47E33BDF5547CC1" />
+    <Allow ID="ID_ALLOW_A_462_0" FriendlyName="C:\Program Files\Workshare\Modules\AlphaFS.dll Hash Page Sha256" Hash="D960A45B65584D7358BF5A4CE8DB1B64D654E468846388E14AF37421B3AF39C6" />
+    <Allow ID="ID_ALLOW_A_463_0" FriendlyName="C:\Program Files\Workshare\Modules\Aspose.Email.dll Hash Sha1" Hash="D9953E879547477F51D0FB97CFBEB78363051735" />
+    <Allow ID="ID_ALLOW_A_464_0" FriendlyName="C:\Program Files\Workshare\Modules\Aspose.Email.dll Hash Sha256" Hash="74D7A9EECEB6D89028627EF6A7F53BE85B83E6486E1DCF9547EDD28F2BD43698" />
+    <Allow ID="ID_ALLOW_A_465_0" FriendlyName="C:\Program Files\Workshare\Modules\Aspose.Email.dll Hash Page Sha1" Hash="F07A632742A63922978C4046BECFC962256656A1" />
+    <Allow ID="ID_ALLOW_A_466_0" FriendlyName="C:\Program Files\Workshare\Modules\Aspose.Email.dll Hash Page Sha256" Hash="8D3D3445FC54191C5B751CE2DB6576F91399875C1F42C9417B59889CC9A36BF5" />
+    <Allow ID="ID_ALLOW_A_467_0" FriendlyName="C:\Program Files\Workshare\Modules\Aspose.Words.dll Hash Sha1" Hash="80AA94E6F082AFE36256A7D6AEE144558623D961" />
+    <Allow ID="ID_ALLOW_A_468_0" FriendlyName="C:\Program Files\Workshare\Modules\Aspose.Words.dll Hash Sha256" Hash="0B95CCF98C7EF4F4CE96C4B88CD860D713923B23FDF3E2050DA2D380CA3C53D3" />
+    <Allow ID="ID_ALLOW_A_469_0" FriendlyName="C:\Program Files\Workshare\Modules\Aspose.Words.dll Hash Page Sha1" Hash="3510207879295C344CE603B999E235EB48C27E89" />
+    <Allow ID="ID_ALLOW_A_46A_0" FriendlyName="C:\Program Files\Workshare\Modules\Aspose.Words.dll Hash Page Sha256" Hash="0FA6DD51280D20670620E6E42B316FF218F7E524F6D184CFC8A2B9504904597F" />
+    <Allow ID="ID_ALLOW_A_46B_0" FriendlyName="C:\Program Files\Workshare\Modules\AutoMapper.dll Hash Sha1" Hash="BD1930C286F071FACBBA4FB5A6D1F1CF13BDDD65" />
+    <Allow ID="ID_ALLOW_A_46C_0" FriendlyName="C:\Program Files\Workshare\Modules\AutoMapper.dll Hash Sha256" Hash="81739CFB98BB0D63AD77B42EA1F0276038D60C141177F31682C8CCD4C10851BA" />
+    <Allow ID="ID_ALLOW_A_46D_0" FriendlyName="C:\Program Files\Workshare\Modules\AutoMapper.dll Hash Page Sha1" Hash="4B2A08B05647A524C9D584261B3272408F399E5C" />
+    <Allow ID="ID_ALLOW_A_46E_0" FriendlyName="C:\Program Files\Workshare\Modules\AutoMapper.dll Hash Page Sha256" Hash="992410FEDC0D1F89956ACBA2336B13182C4F610B00023FF837F99582B3FA87F0" />
+    <Allow ID="ID_ALLOW_A_46F_0" FriendlyName="C:\Program Files\Workshare\Modules\BCGCBPRO2410u142.dll Hash Sha1" Hash="4212B0A4BED4F4CA455C529DB484209A673B4C90" />
+    <Allow ID="ID_ALLOW_A_470_0" FriendlyName="C:\Program Files\Workshare\Modules\BCGCBPRO2410u142.dll Hash Sha256" Hash="AA18F381F8A0D6BE8CE5CE0871D1A82E142C97EF7FE11DD02D9C400CAD80A823" />
+    <Allow ID="ID_ALLOW_A_471_0" FriendlyName="C:\Program Files\Workshare\Modules\BCGCBPRO2410u142.dll Hash Page Sha1" Hash="34A905CFC691DD4BE95B1E846119BE4B6680E769" />
+    <Allow ID="ID_ALLOW_A_472_0" FriendlyName="C:\Program Files\Workshare\Modules\BCGCBPRO2410u142.dll Hash Page Sha256" Hash="AEF28F9AB5693528BEF29BF6BADE6B2B074343080652D4F7C82B0EAE836A77B4" />
+    <Allow ID="ID_ALLOW_A_473_0" FriendlyName="C:\Program Files\Workshare\Modules\Castle.Core.dll Hash Sha1" Hash="CA042B6354F2D1A5A47F8C1964C33E52FE84A1DF" />
+    <Allow ID="ID_ALLOW_A_474_0" FriendlyName="C:\Program Files\Workshare\Modules\Castle.Core.dll Hash Sha256" Hash="8F5F246CEE3528FA868EE04A5B619C6CFAF892DE64471E3401E70AEBA3AD7DD7" />
+    <Allow ID="ID_ALLOW_A_475_0" FriendlyName="C:\Program Files\Workshare\Modules\Castle.Core.dll Hash Page Sha1" Hash="1D6164A58F6C378CA375AE1AB33311C7DEDCB242" />
+    <Allow ID="ID_ALLOW_A_476_0" FriendlyName="C:\Program Files\Workshare\Modules\Castle.Core.dll Hash Page Sha256" Hash="8690E8AFA1473393BA17557B47AF31EC2FBFB265CF5DFFA14A43B5FC91F4C8DF" />
+    <Allow ID="ID_ALLOW_A_477_0" FriendlyName="C:\Program Files\Workshare\Modules\ChilkatDotNet4.dll Hash Sha1" Hash="0FFD5AC79DC87D1D3494071E53797B6F9A43FBBB" />
+    <Allow ID="ID_ALLOW_A_478_0" FriendlyName="C:\Program Files\Workshare\Modules\ChilkatDotNet4.dll Hash Sha256" Hash="C0B761B58465768B5AF842C28ED098675E4D457D9AE8A3869F0D90646BFF5B83" />
+    <Allow ID="ID_ALLOW_A_479_0" FriendlyName="C:\Program Files\Workshare\Modules\ChilkatDotNet4.dll Hash Page Sha1" Hash="E4C49D4F0ADEE5D62321D83F8ACC164581E6BF19" />
+    <Allow ID="ID_ALLOW_A_47A_0" FriendlyName="C:\Program Files\Workshare\Modules\ChilkatDotNet4.dll Hash Page Sha256" Hash="261DBCA1C163B6140991CF7D9BBC12214DB79493D4D190543C4A6C0CEDF872AA" />
+    <Allow ID="ID_ALLOW_A_47B_0" FriendlyName="C:\Program Files\Workshare\Modules\DotNetZip.dll Hash Sha1" Hash="BCB38F43780BD6EF225A1F3B07CD7DAB85B60EF6" />
+    <Allow ID="ID_ALLOW_A_47C_0" FriendlyName="C:\Program Files\Workshare\Modules\DotNetZip.dll Hash Sha256" Hash="41AADED81C62BB0AFBEE62468FF39EDA3E3C0B738315941BA43DCA7ECB5AD660" />
+    <Allow ID="ID_ALLOW_A_47D_0" FriendlyName="C:\Program Files\Workshare\Modules\DotNetZip.dll Hash Page Sha1" Hash="6605D88DC048121435439C6621D9F01D91D294E4" />
+    <Allow ID="ID_ALLOW_A_47E_0" FriendlyName="C:\Program Files\Workshare\Modules\DotNetZip.dll Hash Page Sha256" Hash="08A9A6F46EB071FDD121C8B17E603E2AFD50E21506649EF4086E311116206682" />
+    <Allow ID="ID_ALLOW_A_47F_0" FriendlyName="C:\Program Files\Workshare\Modules\Extensibility.dll Hash Sha1" Hash="CE4C4EFF74B88F4977C43185455918E6D2EE9A19" />
+    <Allow ID="ID_ALLOW_A_480_0" FriendlyName="C:\Program Files\Workshare\Modules\Extensibility.dll Hash Sha256" Hash="FBF54B74B0BA7D4FAE7516438176793CE22836BFE218A95DBEB4BFADE3749985" />
+    <Allow ID="ID_ALLOW_A_481_0" FriendlyName="C:\Program Files\Workshare\Modules\Extensibility.dll Hash Page Sha1" Hash="3BD1A14654864BEBBB0E9530C97DFA04034A3DD7" />
+    <Allow ID="ID_ALLOW_A_482_0" FriendlyName="C:\Program Files\Workshare\Modules\Extensibility.dll Hash Page Sha256" Hash="3A8BC1821623F957A12F59E474E985256B2D7D7643332833A369A5ED272CFC2A" />
+    <Allow ID="ID_ALLOW_A_483_0" FriendlyName="C:\Program Files\Workshare\Modules\HtmlAgilityPack.dll Hash Sha1" Hash="9E4630079467D5844CF54F5F991ED4F3031D4A22" />
+    <Allow ID="ID_ALLOW_A_484_0" FriendlyName="C:\Program Files\Workshare\Modules\HtmlAgilityPack.dll Hash Sha256" Hash="BC847981C259C136D28117650C2D6B2D13D7B8569088777B26089A1C88459580" />
+    <Allow ID="ID_ALLOW_A_485_0" FriendlyName="C:\Program Files\Workshare\Modules\HtmlAgilityPack.dll Hash Page Sha1" Hash="CFEB28E6AED4AACA3A81C2F25CB87DCE990589B6" />
+    <Allow ID="ID_ALLOW_A_486_0" FriendlyName="C:\Program Files\Workshare\Modules\HtmlAgilityPack.dll Hash Page Sha256" Hash="321724E6CC512299836DA6E810DCF37FF111215A3D58BD2E054F463894A1836A" />
+    <Allow ID="ID_ALLOW_A_487_0" FriendlyName="C:\Program Files\Workshare\Modules\Hunspellx86.dll Hash Sha1" Hash="923D03EE30815DC36DD5A5D34F926F07158589C7" />
+    <Allow ID="ID_ALLOW_A_488_0" FriendlyName="C:\Program Files\Workshare\Modules\Hunspellx86.dll Hash Sha256" Hash="80D52DE173799C926DCF4BAD37C9C2A7E488A0354D3162D86E5D49A8DB8E6BE5" />
+    <Allow ID="ID_ALLOW_A_489_0" FriendlyName="C:\Program Files\Workshare\Modules\Hunspellx86.dll Hash Page Sha1" Hash="DAECB30B5225D47D21CF7E04D0617D51D660F248" />
+    <Allow ID="ID_ALLOW_A_48A_0" FriendlyName="C:\Program Files\Workshare\Modules\Hunspellx86.dll Hash Page Sha256" Hash="02CD072F071F39957CFCC488EAE77E3F836EC4DC0766C6C4A6C6A13209BBD6AC" />
+    <Allow ID="ID_ALLOW_A_48B_0" FriendlyName="C:\Program Files\Workshare\Modules\ICSharpCode.SharpZipLib.dll Hash Sha1" Hash="C81CB66B7A576F79C228DF6D42B9D679C120AB1C" />
+    <Allow ID="ID_ALLOW_A_48C_0" FriendlyName="C:\Program Files\Workshare\Modules\ICSharpCode.SharpZipLib.dll Hash Sha256" Hash="6C95676D3544E68B83517CFBB51BB7F7E3BC63070853FCF0D7F2F34D7CD3C1B5" />
+    <Allow ID="ID_ALLOW_A_48D_0" FriendlyName="C:\Program Files\Workshare\Modules\ICSharpCode.SharpZipLib.dll Hash Page Sha1" Hash="01FC20609BD7EDDFF22BFACFE49EEE0A071098F2" />
+    <Allow ID="ID_ALLOW_A_48E_0" FriendlyName="C:\Program Files\Workshare\Modules\ICSharpCode.SharpZipLib.dll Hash Page Sha256" Hash="7A5D79DFD273A0264DE501C4E10316F8DC813D92930BB97A6A5F3D2A34EE47A5" />
+    <Allow ID="ID_ALLOW_A_493_0" FriendlyName="C:\Program Files\Workshare\Modules\icudt64.dll Hash Sha1" Hash="52E40ACB29AF4E978BB62A5D1474D8004184BB35" />
+    <Allow ID="ID_ALLOW_A_494_0" FriendlyName="C:\Program Files\Workshare\Modules\icudt64.dll Hash Sha256" Hash="81A5AF3B237CE08C8A3FEA058D933186F7CD3B365EE287EA2FB41A9EBD2D4847" />
+    <Allow ID="ID_ALLOW_A_495_0" FriendlyName="C:\Program Files\Workshare\Modules\icudt64.dll Hash Page Sha1" Hash="F4763D335D2674825928188245B41BE05B34C930" />
+    <Allow ID="ID_ALLOW_A_496_0" FriendlyName="C:\Program Files\Workshare\Modules\icudt64.dll Hash Page Sha256" Hash="56ED09014FDA1FB590964F352AB3666B4DC333DFF43CA7112BE238EFDE5D2E8C" />
+    <Allow ID="ID_ALLOW_A_497_0" FriendlyName="C:\Program Files\Workshare\Modules\icuin64.dll Hash Sha1" Hash="FB85634F0769C1658DE04AA1383A41942115B44E" />
+    <Allow ID="ID_ALLOW_A_498_0" FriendlyName="C:\Program Files\Workshare\Modules\icuin64.dll Hash Sha256" Hash="C3D7E1795CCBB9FF89EEB218283DABD1EFA7E4E0F9369CB3E174AF0069E5DFFD" />
+    <Allow ID="ID_ALLOW_A_499_0" FriendlyName="C:\Program Files\Workshare\Modules\icuin64.dll Hash Page Sha1" Hash="CF01AC4E96A4511F7952C1CC412B59D81EF425BA" />
+    <Allow ID="ID_ALLOW_A_49A_0" FriendlyName="C:\Program Files\Workshare\Modules\icuin64.dll Hash Page Sha256" Hash="0DA2E7A8143FB9F1467764FFFEB69C307471B908503EAD8407D9ACEB730F06BC" />
+    <Allow ID="ID_ALLOW_A_49B_0" FriendlyName="C:\Program Files\Workshare\Modules\icuio64.dll Hash Sha1" Hash="F1E3DABD6C19E30ACCF83C33F74DB3D9303662A8" />
+    <Allow ID="ID_ALLOW_A_49C_0" FriendlyName="C:\Program Files\Workshare\Modules\icuio64.dll Hash Sha256" Hash="7307EAA7A6B0AF5E32F876C482CECC62DCE5747197324AD0A9312E425A685E27" />
+    <Allow ID="ID_ALLOW_A_49D_0" FriendlyName="C:\Program Files\Workshare\Modules\icuio64.dll Hash Page Sha1" Hash="54544E8B3A4D67C7D8004A884CC51D77D4A37532" />
+    <Allow ID="ID_ALLOW_A_49E_0" FriendlyName="C:\Program Files\Workshare\Modules\icuio64.dll Hash Page Sha256" Hash="BFCA13ACC3CCA3A9CB73CBD9B587EC2741B48B15214EC46506D5D60C1B585B24" />
+    <Allow ID="ID_ALLOW_A_49F_0" FriendlyName="C:\Program Files\Workshare\Modules\icutu64.dll Hash Sha1" Hash="770C0B896DA20F5A059E2CDC3FA1AF095523B988" />
+    <Allow ID="ID_ALLOW_A_4A0_0" FriendlyName="C:\Program Files\Workshare\Modules\icutu64.dll Hash Sha256" Hash="E108A4C87E076E48CAD4BFF3DD5A256FB3C4F52B8374191FF4FB1A99F10B7DBF" />
+    <Allow ID="ID_ALLOW_A_4A1_0" FriendlyName="C:\Program Files\Workshare\Modules\icutu64.dll Hash Page Sha1" Hash="3AED377894F9D8D693755EE88D68FE212121A4F4" />
+    <Allow ID="ID_ALLOW_A_4A2_0" FriendlyName="C:\Program Files\Workshare\Modules\icutu64.dll Hash Page Sha256" Hash="D72D083093C91DB3281C9330DAB16A3A3642FC28D4F651E538490DE6498F82B0" />
+    <Allow ID="ID_ALLOW_A_4A3_0" FriendlyName="C:\Program Files\Workshare\Modules\icuuc64.dll Hash Sha1" Hash="F963E80C6DB7FB68887702BA6865B4038D10365D" />
+    <Allow ID="ID_ALLOW_A_4A4_0" FriendlyName="C:\Program Files\Workshare\Modules\icuuc64.dll Hash Sha256" Hash="AEC09C96F809E0759ADC7A2B405C2DB9CF146C0A5B1D60F0FDC67A96C4D7D990" />
+    <Allow ID="ID_ALLOW_A_4A5_0" FriendlyName="C:\Program Files\Workshare\Modules\icuuc64.dll Hash Page Sha1" Hash="680EAF8B4E1F38672F793EC5B7A733486B78CCB1" />
+    <Allow ID="ID_ALLOW_A_4A6_0" FriendlyName="C:\Program Files\Workshare\Modules\icuuc64.dll Hash Page Sha256" Hash="1AD742B5BEAEE07428464BF9E06383C63D8D367BA4C0D52C6E5B68AD7A2A68A5" />
+    <Allow ID="ID_ALLOW_A_4A7_0" FriendlyName="C:\Program Files\Workshare\Modules\ImpromptuInterface.dll Hash Sha1" Hash="08A178A38280C0B4367ACF916A5FBAA85FAE3CE7" />
+    <Allow ID="ID_ALLOW_A_4A8_0" FriendlyName="C:\Program Files\Workshare\Modules\ImpromptuInterface.dll Hash Sha256" Hash="D3D71F5235C0F6A1A7A1702E175EAB0B4126848E1B1ACF607D6F74D4D56A728C" />
+    <Allow ID="ID_ALLOW_A_4A9_0" FriendlyName="C:\Program Files\Workshare\Modules\ImpromptuInterface.dll Hash Page Sha1" Hash="23942C73E74125B2B9E3CAF1F1281013EA4C0175" />
+    <Allow ID="ID_ALLOW_A_4AA_0" FriendlyName="C:\Program Files\Workshare\Modules\ImpromptuInterface.dll Hash Page Sha256" Hash="95A17AAD596334CE150E6F85C09EF8B4C461846DE0BA96C4165280C4C5EA2DBC" />
+    <Allow ID="ID_ALLOW_A_4AB_0" FriendlyName="C:\Program Files\Workshare\Modules\Microsoft.Practices.Unity.Interception.Configuration.dll Hash Sha1" Hash="891A2657D9488E780414972B6880E33B31A3CC82" />
+    <Allow ID="ID_ALLOW_A_4AC_0" FriendlyName="C:\Program Files\Workshare\Modules\Microsoft.Practices.Unity.Interception.Configuration.dll Hash Sha256" Hash="25400B1A5F23DED9A1AC95F1F8F7428DD35F4B89C9D6D9015E31EA647BBD6F16" />
+    <Allow ID="ID_ALLOW_A_4AD_0" FriendlyName="C:\Program Files\Workshare\Modules\Microsoft.Practices.Unity.Interception.Configuration.dll Hash Page Sha1" Hash="4CDA3BAEBAB421A270E8E05D8584C1F541EC8C1E" />
+    <Allow ID="ID_ALLOW_A_4AE_0" FriendlyName="C:\Program Files\Workshare\Modules\Microsoft.Practices.Unity.Interception.Configuration.dll Hash Page Sha256" Hash="0B56A6CFE46D22083990B1BFCF4CD4B9A1F14F1353F40D08C88A5C64B9735A4F" />
+    <Allow ID="ID_ALLOW_A_4AF_0" FriendlyName="C:\Program Files\Workshare\Modules\Microsoft.Practices.Unity.Interception.dll Hash Sha1" Hash="3ED43168B52E1F5B8DA56ED7B2B288F4EADC0ABB" />
+    <Allow ID="ID_ALLOW_A_4B0_0" FriendlyName="C:\Program Files\Workshare\Modules\Microsoft.Practices.Unity.Interception.dll Hash Sha256" Hash="0C351AA11FF326FED5809B7DBAD5B4124124C3EF6EF0505555A940FA45AA68E6" />
+    <Allow ID="ID_ALLOW_A_4B1_0" FriendlyName="C:\Program Files\Workshare\Modules\Microsoft.Practices.Unity.Interception.dll Hash Page Sha1" Hash="0CAAE450EFBD54ED121A9FEE7E4A1DEC3F9C3193" />
+    <Allow ID="ID_ALLOW_A_4B2_0" FriendlyName="C:\Program Files\Workshare\Modules\Microsoft.Practices.Unity.Interception.dll Hash Page Sha256" Hash="5DAB4EB5AC23F4CB1B3B02D5B89C5196384D1EDDD8E9507CEF50CA477A86583C" />
+    <Allow ID="ID_ALLOW_A_4B3_0" FriendlyName="C:\Program Files\Workshare\Modules\Nhunspell.dll Hash Sha1" Hash="849E506ED3D65598301DC68B555AB23E0BD85891" />
+    <Allow ID="ID_ALLOW_A_4B4_0" FriendlyName="C:\Program Files\Workshare\Modules\Nhunspell.dll Hash Sha256" Hash="243EC54C850B60024E3021FBC9620CB4D12EA9E1F6908E6729B5FD7761BF032C" />
+    <Allow ID="ID_ALLOW_A_4B5_0" FriendlyName="C:\Program Files\Workshare\Modules\Nhunspell.dll Hash Page Sha1" Hash="9CC56F6AD49F4C54EE1396A3F1806DF6CBD9F87D" />
+    <Allow ID="ID_ALLOW_A_4B6_0" FriendlyName="C:\Program Files\Workshare\Modules\Nhunspell.dll Hash Page Sha256" Hash="A56048D75F2CB1BD409BD50320A793BAD8EDAB261B82423156B0F1E1373F915C" />
+    <Allow ID="ID_ALLOW_A_4B7_0" FriendlyName="C:\Program Files\Workshare\Modules\OpenMcdf.dll Hash Sha1" Hash="CDE187873894F81F3158A5331D96A1BD8955BB29" />
+    <Allow ID="ID_ALLOW_A_4B8_0" FriendlyName="C:\Program Files\Workshare\Modules\OpenMcdf.dll Hash Sha256" Hash="BE7AB8275C033D9C0D566042153B43ED78C3DB11FE5C2DCF76EF4C10D60AB498" />
+    <Allow ID="ID_ALLOW_A_4B9_0" FriendlyName="C:\Program Files\Workshare\Modules\OpenMcdf.dll Hash Page Sha1" Hash="86FDEE81038658FACBB7B8DC56503C57B32497A9" />
+    <Allow ID="ID_ALLOW_A_4BA_0" FriendlyName="C:\Program Files\Workshare\Modules\OpenMcdf.dll Hash Page Sha256" Hash="AD02A6956A1D5329C3C3D3F0D87A3BED2D63F856C7F5E4BCA65DE1A28AF0AA15" />
+    <Allow ID="ID_ALLOW_A_4BB_0" FriendlyName="C:\Program Files\Workshare\Modules\ParallelExtensionsExtras.dll Hash Sha1" Hash="713F782D43A1BA70CFD74519B295F51E24D9229D" />
+    <Allow ID="ID_ALLOW_A_4BC_0" FriendlyName="C:\Program Files\Workshare\Modules\ParallelExtensionsExtras.dll Hash Sha256" Hash="A6EE7F68B768DAF6C1C679F75A35D0B342302B19403ACF397FD6DE7AB3081B08" />
+    <Allow ID="ID_ALLOW_A_4BD_0" FriendlyName="C:\Program Files\Workshare\Modules\ParallelExtensionsExtras.dll Hash Page Sha1" Hash="C3617D139D27CBA2C0E46DF45EDDA8236EDDB95D" />
+    <Allow ID="ID_ALLOW_A_4BE_0" FriendlyName="C:\Program Files\Workshare\Modules\ParallelExtensionsExtras.dll Hash Page Sha256" Hash="96D750DDC4388BE1CF7834596C1AC284AC9FB3634F6F822986E2122519825342" />
+    <Allow ID="ID_ALLOW_A_4BF_0" FriendlyName="C:\Program Files\Workshare\Modules\SocketIOClient.dll Hash Sha1" Hash="C4445C97325F4BBFFD3F6C8CF8A10FB05C30FB28" />
+    <Allow ID="ID_ALLOW_A_4C0_0" FriendlyName="C:\Program Files\Workshare\Modules\SocketIOClient.dll Hash Sha256" Hash="AC495725B0489FF768B2836BFE963E152FB7B2A71C64FC857E0E19A92E0BD39D" />
+    <Allow ID="ID_ALLOW_A_4C1_0" FriendlyName="C:\Program Files\Workshare\Modules\SocketIOClient.dll Hash Page Sha1" Hash="B05F97B64CA3C00FEBB338ED7446587B715CB015" />
+    <Allow ID="ID_ALLOW_A_4C2_0" FriendlyName="C:\Program Files\Workshare\Modules\SocketIOClient.dll Hash Page Sha256" Hash="A304B7F9AEFD559A43F5E4CB55994794CD1F22E6F80A3934C238CBD9D1E66137" />
+    <Allow ID="ID_ALLOW_A_4C3_0" FriendlyName="C:\Program Files\Workshare\Modules\SSGP.dll Hash Sha1" Hash="5F9B8CFC5BED49C93104CF6381CD14A1FC4A7F29" />
+    <Allow ID="ID_ALLOW_A_4C4_0" FriendlyName="C:\Program Files\Workshare\Modules\SSGP.dll Hash Sha256" Hash="AD0A65269B2995377AB8F5137648B3C573CA7383B569C819315A4316275792C6" />
+    <Allow ID="ID_ALLOW_A_4C5_0" FriendlyName="C:\Program Files\Workshare\Modules\SSGP.dll Hash Page Sha1" Hash="BA755A5B422236AD10059E5DC4BB06B91568224E" />
+    <Allow ID="ID_ALLOW_A_4C6_0" FriendlyName="C:\Program Files\Workshare\Modules\SSGP.dll Hash Page Sha256" Hash="8BDC5C29869A166DD27EFA6FE112C1ED76EDD6A7907099A38AF3C15E68D4AAEE" />
+    <Allow ID="ID_ALLOW_A_4C7_0" FriendlyName="C:\Program Files\Workshare\Modules\WebSocket4Net.dll Hash Sha1" Hash="BE9BF22EB89F75A13A501BD9EA45B8BCC17DD1DD" />
+    <Allow ID="ID_ALLOW_A_4C8_0" FriendlyName="C:\Program Files\Workshare\Modules\WebSocket4Net.dll Hash Sha256" Hash="C60EF7624851DEDA4EEB1E01CBF70EBAD6FFF1EC7C3D25F0A51BD1C9906EDACC" />
+    <Allow ID="ID_ALLOW_A_4C9_0" FriendlyName="C:\Program Files\Workshare\Modules\WebSocket4Net.dll Hash Page Sha1" Hash="F5FCD21FAC4CEAC7610DCE0059FD890BAC8D5DF2" />
+    <Allow ID="ID_ALLOW_A_4CA_0" FriendlyName="C:\Program Files\Workshare\Modules\WebSocket4Net.dll Hash Page Sha256" Hash="25487C730191ADA9BB4D9EDC99A6FFAD429EEE5B0B5E37A9210A32D066727294" />
+    <Allow ID="ID_ALLOW_A_4CB_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.RenderingSet.Manager.dll Hash Sha1" Hash="8AA45D8DE64523C1D821190F44EA4132D3973205" />
+    <Allow ID="ID_ALLOW_A_4CC_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.RenderingSet.Manager.dll Hash Sha256" Hash="4892A0B9972FD33F8C9418870BC0EF3A8A0BED818041A065AD95C8872EC6A1B4" />
+    <Allow ID="ID_ALLOW_A_4CD_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.RenderingSet.Manager.dll Hash Page Sha1" Hash="6517664052EEE95F09F339BF7345D650F32396FE" />
+    <Allow ID="ID_ALLOW_A_4CE_0" FriendlyName="C:\Program Files\Workshare\Modules\Workshare.RenderingSet.Manager.dll Hash Page Sha256" Hash="64182D5785AA7EBAEBC091E401A918E073B6DF7277A32033D0B5E614B2EE9280" />
+    <Allow ID="ID_ALLOW_A_4CF_0" FriendlyName="C:\Program Files\Workshare\Modules\WPFToolkit.Extended.dll Hash Sha1" Hash="D3E6EBA9B586AEAEEE86AEF517DB42E6F20FA02F" />
+    <Allow ID="ID_ALLOW_A_4D0_0" FriendlyName="C:\Program Files\Workshare\Modules\WPFToolkit.Extended.dll Hash Sha256" Hash="EC66AE66CB086D86991502D8CACD24A40A29B12F122895FF68BF5EB110F3FBF6" />
+    <Allow ID="ID_ALLOW_A_4D1_0" FriendlyName="C:\Program Files\Workshare\Modules\WPFToolkit.Extended.dll Hash Page Sha1" Hash="7FC4A28462F3BA001F847C3B50935907EA95B52F" />
+    <Allow ID="ID_ALLOW_A_4D2_0" FriendlyName="C:\Program Files\Workshare\Modules\WPFToolkit.Extended.dll Hash Page Sha256" Hash="85E658FCB3163D3BFA28A37BDA2CA96E166E9055AC8B6657F199A2C7B5CB7677" />
+    <Allow ID="ID_ALLOW_A_BB244D0687674360A04A97A396BDC3A6_1" FriendlyName="7-zip.dll Hash Sha256" Hash="D373EF61052FF0F5962BD786CD05DFBE71720A96E238DABE80914E14BACBA508" />
+    <Allow ID="ID_ALLOW_B_BB244D0687674360A04A97A396BDC3A6_1" FriendlyName="7-zip.dll Hash Sha1" Hash="245B9C893044030DD067CD3DAFD98FB9C0D5D20F" />
+  </FileRules>
+  <!--Signers-->
+  <Signers>
+    <Signer ID="ID_SIGNER_F_23_0" Name="DigiCert SHA2 Assured ID Code Signing CA">
+      <CertRoot Type="TBS" Value="E767799478F64A34B3F53FF3BB9057FE1768F4AB178041B0DCC0FF1E210CBA65" />
+      <CertPublisher Value="Litera" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_23F_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_241_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_243_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_245_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_247_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_249_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_24B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_256_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_258_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_277_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_279_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A9_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2AB_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B7_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2BB_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2BF_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C1_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C3_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C5_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C9_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2CB_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2CD_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2CF_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D1_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D3_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D5_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D7_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D9_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2DE_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E2_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F3_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_303_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_308_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_30B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_30D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_310_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_314_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_316_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_318_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_31A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_31F_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_322_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_324_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_326_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_328_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_34D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_34F_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_354_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_356_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_35E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_360_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_362_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_364_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_368_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_371_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_373_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_375_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_393_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_405_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_40D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_40F_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_411_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_413_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_415_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_417_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_419_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_41B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_41D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_41F_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_421_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_423_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_425_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_427_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_429_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_43_0" Name="VeriSign Class 3 Code Signing 2010 CA">
+      <CertRoot Type="TBS" Value="4843A82ED3B1F2BFBEE9671960E1940C942F688D" />
+      <CertPublisher Value="Amyuni Technologies Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_25C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_25E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_260_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_1CD_0" Name="DigiCert SHA2 Assured ID Code Signing CA">
+      <CertRoot Type="TBS" Value="E767799478F64A34B3F53FF3BB9057FE1768F4AB178041B0DCC0FF1E210CBA65" />
+      <CertPublisher Value="Kofax, Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3AE_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B0_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B2_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B4_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B6_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B8_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3BA_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_5_0" Name="Symantec Class 3 SHA256 Code Signing CA">
+      <CertRoot Type="TBS" Value="A08E79C386083D875014C409C13D144E0A24386132980DF11FF59737C8489EB1" />
+      <CertPublisher Value="Aspose Pty Ltd" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_221_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_252_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_404_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_7_0" Name="DigiCert SHA2 Assured ID Code Signing CA">
+      <CertRoot Type="TBS" Value="E767799478F64A34B3F53FF3BB9057FE1768F4AB178041B0DCC0FF1E210CBA65" />
+      <CertPublisher Value="Litera" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_225_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_226_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_227_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_234_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_23E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_240_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_242_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_244_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_246_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_248_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_24A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_24C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_24D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_24E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_257_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_259_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_263_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_264_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_265_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_271_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_272_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_273_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_275_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_276_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_278_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_27A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_284_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_286_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_287_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_289_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_28B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_28D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_298_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_299_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_29A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_29B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_29C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_29D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_29F_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A0_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A1_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A2_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A3_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A4_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A5_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A6_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A7_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A8_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2AA_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2AC_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2AD_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2AE_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2AF_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B0_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B1_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B2_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B3_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B4_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B5_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B6_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B8_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B9_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2BA_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2BC_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2BD_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2BE_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C0_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C2_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C4_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C6_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C7_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C8_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2CA_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2CC_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2CE_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D0_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D2_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D4_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D6_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D8_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2DA_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2DB_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2DC_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2DD_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2DF_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E0_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E1_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E3_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E4_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E5_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E6_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E7_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E8_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E9_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2EA_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2EB_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2EC_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2ED_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2EE_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2EF_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F0_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F1_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F2_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F4_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F5_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F6_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F7_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F8_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F9_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2FA_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2FB_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2FC_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2FD_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2FE_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2FF_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_300_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_301_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_302_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_304_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_305_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_306_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_307_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_309_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_30A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_30C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_30E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_30F_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_311_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_312_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_313_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_315_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_317_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_319_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_31B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_31C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_31D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_31E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_320_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_321_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_323_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_325_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_327_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_329_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_32A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_32B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_32C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_32D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_32E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_32F_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_330_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_331_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_332_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_333_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_334_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_335_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_336_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_337_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_338_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_339_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_33A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_33B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_33C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_33D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_33E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_33F_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_340_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_341_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_342_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_343_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_344_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_345_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_346_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_347_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_348_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_349_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_34A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_34B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_34C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_34E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_350_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_351_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_352_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_353_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_355_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_357_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_358_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_359_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_35A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_35B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_35C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_35D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_35F_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_361_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_363_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_365_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_366_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_367_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_369_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_36A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_36B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_36C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_36D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_36E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_36F_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_370_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_372_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_374_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_376_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_377_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_378_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_379_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37F_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_380_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_381_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_382_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_383_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_385_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_386_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_387_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_388_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_389_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38F_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_390_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_391_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_392_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_394_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_395_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_396_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_400_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_401_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_402_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_406_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_407_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_40C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_40E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_410_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_412_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_414_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_416_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_418_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_41A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_41C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_41E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_420_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_422_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_424_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_426_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_428_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_42A_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_A_0" Name="Microsoft Code Signing PCA">
+      <CertRoot Type="TBS" Value="27543A3F7612DE2261C7228321722402F63A07DE" />
+      <CertPublisher Value="Microsoft Corporation" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_22A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_22B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_22C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_22D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_22E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_22F_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_230_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_23A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_23B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_23C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_23D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_27B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_27C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_27D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_282_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_285_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_294_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_295_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_296_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_297_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_B_0" Name="Microsoft Code Signing PCA 2011">
+      <CertRoot Type="TBS" Value="F6F717A43AD9ABDDC8CEFDDE1C505462535E7D1307E630F9544A2D14FE8BF26E" />
+      <CertPublisher Value="Microsoft Corporation" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_22A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_22B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_22C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_22D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_22E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_22F_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_239_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_23A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_23B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_23C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_23D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_27E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_294_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_295_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_296_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_297_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_18_0" Name=".NET Foundation Projects Code Signing CA">
+      <CertRoot Type="TBS" Value="B6D27A37A95C0A174C66496B3225B11A6250846BBC31FCA10D69D61F92DF5084" />
+      <CertPublisher Value="Json.NET (.NET Foundation)" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_235_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_37_0" Name="VeriSign Class 3 Code Signing 2010 CA">
+      <CertRoot Type="TBS" Value="4843A82ED3B1F2BFBEE9671960E1940C942F688D" />
+      <CertPublisher Value="Aspose Pty Ltd" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_253_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_3D_0" Name="VeriSign Class 3 Code Signing 2010 CA">
+      <CertRoot Type="TBS" Value="4843A82ED3B1F2BFBEE9671960E1940C942F688D" />
+      <CertPublisher Value="Amyuni Technologies Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_25B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_25D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_25F_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_261_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_3E_0" Name="Microsoft Windows Hardware Compatibility PCA">
+      <CertRoot Type="TBS" Value="6B3242A9A639B0DA4D5882C7EEB402BE6615AD0C" />
+      <CertPublisher Value="Microsoft Windows Hardware Compatibility Publisher" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_25B_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_4C_0" Name="DigiCert EV Code Signing CA (SHA2)">
+      <CertRoot Type="TBS" Value="EEC58131DC11CD7F512501B15FDBC6074C603B68CA91F7162D5A042054EDB0CF" />
+      <CertPublisher Value="Amyuni Technologies, Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_270_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_50_0" Name="COMODO RSA Code Signing CA">
+      <CertRoot Type="TBS" Value="4805A7E23D6C8FF5E149F197B744BCB2346E73F19A48835A2F64129183981109256B75EA371A331746D01FD4E135AB6E" />
+      <CertPublisher Value="Advanced Messaging Systems LLC" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_274_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_28C_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_69_0" Name="Microsoft Code Signing PCA">
+      <CertRoot Type="TBS" Value="7251ADC0F732CF409EE462E335BB99544F2DD40F" />
+      <CertPublisher Value="Microsoft Corporation" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_27E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_27F_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_7F_0" Name="COMODO RSA Code Signing CA">
+      <CertRoot Type="TBS" Value="4805A7E23D6C8FF5E149F197B744BCB2346E73F19A48835A2F64129183981109256B75EA371A331746D01FD4E135AB6E" />
+      <CertPublisher Value="MAPILab LLC" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_28E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_28F_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_83_0" Name="DigiCert SHA2 Assured ID Code Signing CA">
+      <CertRoot Type="TBS" Value="E767799478F64A34B3F53FF3BB9057FE1768F4AB178041B0DCC0FF1E210CBA65" />
+      <CertPublisher Value="Add-in Express" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_290_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_85_0" Name="Symantec Class 3 SHA256 Code Signing CA - G2">
+      <CertRoot Type="TBS" Value="7F25CBD37DCDC0E0D93E0D477C4BC0C54231379E6CAF1023841E1F0D96467A6C" />
+      <CertPublisher Value="Solid Documents Ltd" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_292_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_195_0" Name="DigiCert SHA2 Assured ID Code Signing CA">
+      <CertRoot Type="TBS" Value="E767799478F64A34B3F53FF3BB9057FE1768F4AB178041B0DCC0FF1E210CBA65" />
+      <CertPublisher Value="Kofax, Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_397_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_398_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_399_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_39A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_39B_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_39C_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_39D_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_39E_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_39F_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A0_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A1_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A2_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A3_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A4_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A5_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A6_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A7_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A8_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A9_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3AA_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3AB_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3AC_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3AD_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3AF_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B1_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B3_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B5_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B7_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B9_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3BB_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3BC_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3BD_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3BE_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3BF_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C0_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C1_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C2_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C3_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C4_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C5_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C6_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C7_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C8_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C9_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3CA_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3CB_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3CC_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3CD_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3CE_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3CF_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D0_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D1_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D2_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D3_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D4_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D5_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D6_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D7_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D8_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D9_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3DA_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3DB_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3DC_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3DD_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3DE_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3DF_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E0_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E1_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E2_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E3_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E4_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E5_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E6_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E7_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E8_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E9_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3EA_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3EB_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3EC_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3ED_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3EE_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3EF_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3F0_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3F1_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3F2_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3F3_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3F4_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3F5_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3F6_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3F7_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3F8_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3F9_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3FA_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3FB_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3FC_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3FD_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3FE_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3FF_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_293_0" Name="Go Daddy Secure Certification Authority">
+      <CertRoot Type="TBS" Value="DB433834D80013AC248C21B354B482890A8F9FC2" />
+      <CertPublisher Value="AB4D d.o.o." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_403_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_299_0" Name="COMODO RSA Code Signing CA">
+      <CertRoot Type="TBS" Value="4805A7E23D6C8FF5E149F197B744BCB2346E73F19A48835A2F64129183981109256B75EA371A331746D01FD4E135AB6E" />
+      <CertPublisher Value="DevComponents" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_408_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_409_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_40A_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_40B_0" />
+    </Signer>
+    <Signer ID="ID_SIGNER_W_1_0" Name="Microsoft Windows Third Party Component CA 2012">
+      <CertRoot Type="TBS" Value="CEC1AFD0E310C55C1DCC601AB8E172917706AA32FB5EAF826813547FDF02DD46" />
+      <CertEKU ID="ID_EKU_E_1" />
+      <CertOemID Value="Amyuni Technologies Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_44_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_45_0" />
+    </Signer>
+  </Signers>
+  <!--Driver Signing Scenarios-->
+  <SigningScenarios>
+    <SigningScenario Value="131" ID="ID_SIGNINGSCENARIO_DRIVERS_1" FriendlyName="Auto generated policy on 11-25-2024">
+      <ProductSigners>
+        <AllowedSigners>
+          <AllowedSigner SignerId="ID_SIGNER_F_23_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_43_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_1CD_0" />
+        </AllowedSigners>
+        <FileRulesRef>
+          <FileRuleRef RuleID="ID_ALLOW_A_48F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_490_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_491_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_492_0" />
+        </FileRulesRef>
+      </ProductSigners>
+    </SigningScenario>
+    <SigningScenario Value="12" ID="ID_SIGNINGSCENARIO_WINDOWS" FriendlyName="Auto generated policy on 11-25-2024">
+      <ProductSigners>
+        <AllowedSigners>
+          <AllowedSigner SignerId="ID_SIGNER_F_5_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_7_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_A_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_B_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_18_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_37_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_3D_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_3E_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_4C_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_50_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_69_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_7F_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_83_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_85_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_195_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_293_0" />
+          <AllowedSigner SignerId="ID_SIGNER_F_299_0" />
+          <AllowedSigner SignerId="ID_SIGNER_W_1_0" />
+        </AllowedSigners>
+        <FileRulesRef>
+          <FileRuleRef RuleID="ID_ALLOW_A_42B_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_42C_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_42D_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_42E_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_42F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_430_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_431_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_432_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_433_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_434_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_435_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_436_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_437_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_438_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_439_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_43A_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_43B_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_43C_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_43D_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_43E_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_43F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_440_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_441_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_442_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_443_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_444_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_445_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_446_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_447_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_448_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_449_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_44A_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_44B_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_44C_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_44D_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_44E_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_44F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_450_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_451_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_452_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_453_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_454_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_455_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_456_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_457_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_458_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_459_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_45A_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_45B_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_45C_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_45D_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_45E_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_45F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_460_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_461_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_462_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_463_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_464_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_465_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_466_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_467_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_468_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_469_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_46A_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_46B_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_46C_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_46D_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_46E_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_46F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_470_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_471_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_472_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_473_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_474_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_475_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_476_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_477_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_478_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_479_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_47A_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_47B_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_47C_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_47D_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_47E_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_47F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_480_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_481_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_482_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_483_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_484_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_485_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_486_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_487_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_488_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_489_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_48A_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_48B_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_48C_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_48D_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_48E_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_493_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_494_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_495_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_496_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_497_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_498_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_499_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_49A_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_49B_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_49C_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_49D_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_49E_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_49F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4A0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4A1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4A2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4A3_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4A4_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4A5_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4A6_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4A7_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4A8_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4A9_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4AA_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4AB_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4AC_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4AD_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4AE_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4AF_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4B0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4B1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4B2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4B3_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4B4_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4B5_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4B6_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4B7_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4B8_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4B9_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4BA_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4BB_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4BC_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4BD_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4BE_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4BF_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4C0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4C1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4C2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4C3_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4C4_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4C5_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4C6_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4C7_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4C8_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4C9_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4CA_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4CB_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4CC_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4CD_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4CE_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4CF_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4D0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4D1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4D2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_BB244D0687674360A04A97A396BDC3A6_1" />
+          <FileRuleRef RuleID="ID_ALLOW_B_BB244D0687674360A04A97A396BDC3A6_1" />
+        </FileRulesRef>
+      </ProductSigners>
+    </SigningScenario>
+  </SigningScenarios>
+  <UpdatePolicySigners />
+  <CiSigners>
+    <CiSigner SignerId="ID_SIGNER_F_5_0" />
+    <CiSigner SignerId="ID_SIGNER_F_7_0" />
+    <CiSigner SignerId="ID_SIGNER_F_A_0" />
+    <CiSigner SignerId="ID_SIGNER_F_B_0" />
+    <CiSigner SignerId="ID_SIGNER_F_18_0" />
+    <CiSigner SignerId="ID_SIGNER_F_37_0" />
+    <CiSigner SignerId="ID_SIGNER_F_3D_0" />
+    <CiSigner SignerId="ID_SIGNER_F_3E_0" />
+    <CiSigner SignerId="ID_SIGNER_F_4C_0" />
+    <CiSigner SignerId="ID_SIGNER_F_50_0" />
+    <CiSigner SignerId="ID_SIGNER_F_69_0" />
+    <CiSigner SignerId="ID_SIGNER_F_7F_0" />
+    <CiSigner SignerId="ID_SIGNER_F_83_0" />
+    <CiSigner SignerId="ID_SIGNER_F_85_0" />
+    <CiSigner SignerId="ID_SIGNER_F_195_0" />
+    <CiSigner SignerId="ID_SIGNER_F_293_0" />
+    <CiSigner SignerId="ID_SIGNER_F_299_0" />
+    <CiSigner SignerId="ID_SIGNER_W_1_0" />
+  </CiSigners>
+  <HvciOptions>2</HvciOptions>
+  <BasePolicyID>{488E7D72-DA1E-4219-BB58-22EEBCBB2CFE}</BasePolicyID>
+  <PolicyID>{954DBCFB-0D0C-41CD-B69B-55DF0BE3190F}</PolicyID>
+  <Settings>
+    <Setting Provider="AllHostIds" Key="AllKeys" ValueName="EnterpriseDefinedClsId">
+      <Value>
+        <Boolean>true</Boolean>
+      </Value>
+    </Setting>
+    <Setting Provider="PolicyInfo" Key="Information" ValueName="Name">
+      <Value>
+        <String>WorkshareCompareBundlex64-2-V01 - 11-25-2024</String>
+      </Value>
+    </Setting>
+    <Setting Provider="PolicyInfo" Key="Information" ValueName="Id">
+      <Value>
+        <String>022422</String>
+      </Value>
+    </Setting>
+  </Settings>
+</SiPolicy>

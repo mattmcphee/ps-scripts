@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SiPolicy xmlns="urn:schemas-microsoft-com:sipolicy" PolicyType="Supplemental Policy">
+  <VersionEx>1.0.0.0</VersionEx>
+  <PlatformID>{2E07F7E4-194C-4D20-B7C9-6F44A6C5A234}</PlatformID>
+  <Rules>
+    <Rule>
+      <Option>Enabled:Unsigned System Integrity Policy</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:Managed Installer</Option>
+    </Rule>
+  </Rules>
+  <!--EKUS-->
+  <EKUs />
+  <!--File Rules-->
+  <FileRules>
+    <Allow ID="ID_ALLOW_A_3F_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Assistant.exe Hash Sha1" Hash="0D1774F838488A6B8A2BB1F8BA8431FA0B4F229E" />
+    <Allow ID="ID_ALLOW_A_40_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Assistant.exe Hash Sha256" Hash="1FCF650FB237DD8EB118DFFBE202EAFDD3F5362137D02E4A79CC04EC1B31B505" />
+    <Allow ID="ID_ALLOW_A_41_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Assistant.exe Hash Page Sha1" Hash="E3EA6775D749C5DFD04F5755867FFFEBFF7041E8" />
+    <Allow ID="ID_ALLOW_A_42_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Assistant.exe Hash Page Sha256" Hash="92228CF4BB90E39AEEF5ADFFE0EE931A2F13220C1F316553640F091A8592905B" />
+    <Allow ID="ID_ALLOW_A_43_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\libeay32.dll Hash Sha1" Hash="0C77609926826672097A90E3ECCD4CCA14D23D81" />
+    <Allow ID="ID_ALLOW_A_44_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\libeay32.dll Hash Sha256" Hash="ED790C968389F562F855F1CA4661358E66560717A474D05398F73DE914E30335" />
+    <Allow ID="ID_ALLOW_A_45_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\libeay32.dll Hash Page Sha1" Hash="A7C8AF118892DFE1BC75728CE0BD3B5B8803C955" />
+    <Allow ID="ID_ALLOW_A_46_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\libeay32.dll Hash Page Sha256" Hash="CD2188706FDDACEA9794B5806F55B2F65C50602C74F57B91E98AF7A8207AD948" />
+    <Allow ID="ID_ALLOW_A_47_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Core.dll Hash Sha1" Hash="6CE38C4CE912D69BFF99DCAE5541C2DA09D5B723" />
+    <Allow ID="ID_ALLOW_A_48_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Core.dll Hash Sha256" Hash="675AFAA491AA8F4E18C2E598202AF3C0C75296CC2CF9DB0174E45A85390A4B00" />
+    <Allow ID="ID_ALLOW_A_49_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Core.dll Hash Page Sha1" Hash="9D52315D8E9D49E4A08A1481B8C5C32BACACAF82" />
+    <Allow ID="ID_ALLOW_A_4A_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Core.dll Hash Page Sha256" Hash="AD35A13D6549879947AF4C8A8542677956E40FF0F3693AFF1CFB6C6AD74C3F0F" />
+    <Allow ID="ID_ALLOW_A_4B_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Gui.dll Hash Sha1" Hash="AF821A30871C3672137834EF02BF4FE15484D604" />
+    <Allow ID="ID_ALLOW_A_4C_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Gui.dll Hash Sha256" Hash="7C75CE1B212E7B9B1695BB567B5B3A69909BA62CA2368D262CE1A5489FFC68CC" />
+    <Allow ID="ID_ALLOW_A_4D_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Gui.dll Hash Page Sha1" Hash="8AD36F85B9508635EBDFC7D6952A650910067325" />
+    <Allow ID="ID_ALLOW_A_4E_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Gui.dll Hash Page Sha256" Hash="C31511CB45C27AAC48C0843B939608A461436BEA3FDFE1395A82A55A7BE5F7E1" />
+    <Allow ID="ID_ALLOW_A_4F_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Help.dll Hash Sha1" Hash="041DB3C02DB840ED7DB49C1394E4859B6E0236D3" />
+    <Allow ID="ID_ALLOW_A_50_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Help.dll Hash Sha256" Hash="DF76F95B1218A7D703C06A0A7BDDD64E21F517EF6EF2330CA9A20B5BB0B89DD8" />
+    <Allow ID="ID_ALLOW_A_51_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Help.dll Hash Page Sha1" Hash="1C66D5AF17A8426552018A7F71C501E80E2595CA" />
+    <Allow ID="ID_ALLOW_A_52_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Help.dll Hash Page Sha256" Hash="CC28484A4EA9FE2EAAE605544C159133F5D037BD0CB4678A08683623ECAF5CE3" />
+    <Allow ID="ID_ALLOW_A_53_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5MULTIMEDIA.dll Hash Sha1" Hash="FE93FD2CA593428EA7920628B056E9763F8412CD" />
+    <Allow ID="ID_ALLOW_A_54_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5MULTIMEDIA.dll Hash Sha256" Hash="CD6D8A072AF1840FA2348CCC437743B3D3423E2A51E5161A8C4CB72096E88969" />
+    <Allow ID="ID_ALLOW_A_55_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5MULTIMEDIA.dll Hash Page Sha1" Hash="69FD7C4CDEC01ADDFCB56127F2808E0843E7D24C" />
+    <Allow ID="ID_ALLOW_A_56_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5MULTIMEDIA.dll Hash Page Sha256" Hash="26A75C52574D324E8B49C9542C22C33110A31F9DF878F1DB83B0F3A7A4D81214" />
+    <Allow ID="ID_ALLOW_A_57_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5MULTIMEDIAWIDGETS.dll Hash Sha1" Hash="ADE5F552AEA3EDD2BC93B80B80063E8A1E1008D5" />
+    <Allow ID="ID_ALLOW_A_58_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5MULTIMEDIAWIDGETS.dll Hash Sha256" Hash="A107C3FB85C580E932FEC580324D8D8B29596575ECD87DEB69F92A8D33AA8863" />
+    <Allow ID="ID_ALLOW_A_59_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5MULTIMEDIAWIDGETS.dll Hash Page Sha1" Hash="990C4BE44B8F1426996514A88D9EA39AC8E5C72F" />
+    <Allow ID="ID_ALLOW_A_5A_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5MULTIMEDIAWIDGETS.dll Hash Page Sha256" Hash="1DA7E0E779228C6809D556CD87142735495362AEA126B9CD7BF36D492D6D0ABF" />
+    <Allow ID="ID_ALLOW_A_5B_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Network.dll Hash Sha1" Hash="F1CC225E658E69482A4999CA6C551AB5CFA37CA0" />
+    <Allow ID="ID_ALLOW_A_5C_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Network.dll Hash Sha256" Hash="E7A32B05C6CBA0D87098332DC27C3FD24B4F1A3D449F8AAECE299623301A45A7" />
+    <Allow ID="ID_ALLOW_A_5D_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Network.dll Hash Page Sha1" Hash="357924A0021A8EBF33FBD22D11E4F5450C00FAEF" />
+    <Allow ID="ID_ALLOW_A_5E_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Network.dll Hash Page Sha256" Hash="67451408BB1D8AF416CC0E417CBC3B4D22BFEF3198590828197D6A1F1AE951C3" />
+    <Allow ID="ID_ALLOW_A_5F_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Opengl.dll Hash Sha1" Hash="81869E63BFF19EE627E3F4FBA8BB429BDF7E3C02" />
+    <Allow ID="ID_ALLOW_A_60_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Opengl.dll Hash Sha256" Hash="A52F1571FC81664C28A0892D7F795C6C7F0287F5FF616411E861221C48EB16DE" />
+    <Allow ID="ID_ALLOW_A_61_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Opengl.dll Hash Page Sha1" Hash="57AB2D5FC5E09994F2039AC691FF2D6BF9248965" />
+    <Allow ID="ID_ALLOW_A_62_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Opengl.dll Hash Page Sha256" Hash="C1471D39D96B81BFC7EE4027E7F5F86069063DD014375829DB58DB2BD7158863" />
+    <Allow ID="ID_ALLOW_A_63_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5POSITIONING.dll Hash Sha1" Hash="C2C59EFD450F45CB15211814A8267C3CFA37E4E5" />
+    <Allow ID="ID_ALLOW_A_64_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5POSITIONING.dll Hash Sha256" Hash="3DB41FC0106215B421F1A529EF274F7A44A79C47E1DFBA6E250CFA5581B212F2" />
+    <Allow ID="ID_ALLOW_A_65_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5POSITIONING.dll Hash Page Sha1" Hash="BE14562591FC371ACA7DF0D83222522BC66CFCD6" />
+    <Allow ID="ID_ALLOW_A_66_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5POSITIONING.dll Hash Page Sha256" Hash="699B32ECC4440D5AC76C7C3FEC1D6E2EF3756E3910E700FC2EDA1A2181BCA31D" />
+    <Allow ID="ID_ALLOW_A_67_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5PrintSupport.dll Hash Sha1" Hash="78EEB300C1EAE7F4C84FD79FB171243F4E3BB58B" />
+    <Allow ID="ID_ALLOW_A_68_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5PrintSupport.dll Hash Sha256" Hash="5059E84FD0FFA416E8CE961625B649795002BF05CA67D6AFFAE2552F38CE9AC5" />
+    <Allow ID="ID_ALLOW_A_69_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5PrintSupport.dll Hash Page Sha1" Hash="A8262839A4A5CABAE2AA3FE7EDF012A3E9296AB8" />
+    <Allow ID="ID_ALLOW_A_6A_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5PrintSupport.dll Hash Page Sha256" Hash="85A329B17C22FB423111C5FDDA3D4830C25CE120D6160EA2C6DEC9C86F0CC404" />
+    <Allow ID="ID_ALLOW_A_6B_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5QML.dll Hash Sha1" Hash="21E1441AA3B8CDE38AD7441612712471DE630A0A" />
+    <Allow ID="ID_ALLOW_A_6C_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5QML.dll Hash Sha256" Hash="E76D8AE8D97F47F0661687F5F47E69B7866F035B3E7A01B9CAD145A544834C93" />
+    <Allow ID="ID_ALLOW_A_6D_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5QML.dll Hash Page Sha1" Hash="1EBA6EBD1716178275220DCA9492776A27026DCF" />
+    <Allow ID="ID_ALLOW_A_6E_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5QML.dll Hash Page Sha256" Hash="BA7B7C23D9608918675218C46D5D885E2EF0B596439FC67AF846565C8ED95057" />
+    <Allow ID="ID_ALLOW_A_6F_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5QUICK.dll Hash Sha1" Hash="1783FEE5E25BED57E2675967E3B3AF6BBF509245" />
+    <Allow ID="ID_ALLOW_A_70_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5QUICK.dll Hash Sha256" Hash="EA947B4FFA4199E20DB002245B66E9CC8EFDD2DE1595669941CABA17D8972A23" />
+    <Allow ID="ID_ALLOW_A_71_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5QUICK.dll Hash Page Sha1" Hash="F2E3DACA36D7457DCBED6B4273935F40DDF5F701" />
+    <Allow ID="ID_ALLOW_A_72_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5QUICK.dll Hash Page Sha256" Hash="14AC82B282F1E09DC719952ECCD0385CAC1C4B2C2DA9BB8AAED89E043023B172" />
+    <Allow ID="ID_ALLOW_A_73_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5SENSORS.dll Hash Sha1" Hash="729BDCDEDEC279F6ED36BFAF3577C8973DD6DAD0" />
+    <Allow ID="ID_ALLOW_A_74_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5SENSORS.dll Hash Sha256" Hash="06C4B448377BD185AA3E3A5324840DEA86682C564422F96FE322B7582A998E33" />
+    <Allow ID="ID_ALLOW_A_75_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5SENSORS.dll Hash Page Sha1" Hash="BE37D5B802D66A91C34B3AF2A0D8C4541A784967" />
+    <Allow ID="ID_ALLOW_A_76_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5SENSORS.dll Hash Page Sha256" Hash="BBF3E21358EB54CF666F8CF63032E0B756135FEFBE7FEA5BFE91E835415F3E08" />
+    <Allow ID="ID_ALLOW_A_77_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Sql.dll Hash Sha1" Hash="FBAF7AA4F4F6914DC7E40B8A031CA2A213E8E904" />
+    <Allow ID="ID_ALLOW_A_78_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Sql.dll Hash Sha256" Hash="21BDE6BEFCA1F35C9A34A08638D495D3FC28B3BEF55292A0B38219F54A7DA5BC" />
+    <Allow ID="ID_ALLOW_A_79_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Sql.dll Hash Page Sha1" Hash="972AC004824456C553904D25675C5A400C4275BC" />
+    <Allow ID="ID_ALLOW_A_7A_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Sql.dll Hash Page Sha256" Hash="3850160DAB064BD1E708B56A6A788A30E8FD3253C94E17AE5388D60927AAD5BA" />
+    <Allow ID="ID_ALLOW_A_7B_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Svg.dll Hash Sha1" Hash="0B41765203357FFBDBD195E7B06C0FB740FE1545" />
+    <Allow ID="ID_ALLOW_A_7C_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Svg.dll Hash Sha256" Hash="EB483F7F149FA3090252C10EF849D0FB83B21DACA3BAED979DCCDCC49312616C" />
+    <Allow ID="ID_ALLOW_A_7D_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Svg.dll Hash Page Sha1" Hash="F9C5F920BF27D33A89054A6FD059A2ECDC5ED491" />
+    <Allow ID="ID_ALLOW_A_7E_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Svg.dll Hash Page Sha256" Hash="3772EC2F7B172BD041EB300F8C9F5948D9D40D5982704526845A47DFDEE23E8C" />
+    <Allow ID="ID_ALLOW_A_7F_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5WEBCHANNEL.dll Hash Sha1" Hash="4C77F8A32BF2D57412FB6CA3CE1557068FD9411D" />
+    <Allow ID="ID_ALLOW_A_80_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5WEBCHANNEL.dll Hash Sha256" Hash="BE7A4E21F20985C22A097A3CC2FF1B2C6A8A80A5FEC6C0A98FDF95E5A78153F6" />
+    <Allow ID="ID_ALLOW_A_81_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5WEBCHANNEL.dll Hash Page Sha1" Hash="B9B0B7CD628C6E644EF4C8525C887889E253E1B3" />
+    <Allow ID="ID_ALLOW_A_82_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\QT5WEBCHANNEL.dll Hash Page Sha256" Hash="783C93780BD750B1AB66AD33F3022047030C73540185B1D52BEC6E5E52DBAD1C" />
+    <Allow ID="ID_ALLOW_A_83_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Widgets.dll Hash Sha1" Hash="D9FE5EFD28F884ABD983B3786C853599E99C783F" />
+    <Allow ID="ID_ALLOW_A_84_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Widgets.dll Hash Sha256" Hash="E60AE98F0B8CB763CA75C97D08A16459971FCA484DABBA3540D7E7DBB99278B5" />
+    <Allow ID="ID_ALLOW_A_85_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Widgets.dll Hash Page Sha1" Hash="35050E99A6B39E3BEEE5FFE379DB7E7E741C535C" />
+    <Allow ID="ID_ALLOW_A_86_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Qt5Widgets.dll Hash Page Sha256" Hash="0E156FECBC04EB93EFF57DE02BD7F6ABD8A8A3C1C4692FDAF0F014E5A84B9E79" />
+    <Allow ID="ID_ALLOW_A_87_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\qwt.dll Hash Sha1" Hash="E5A1A8EFA4B9CBF26DE49539D25A45FEEB2F2403" />
+    <Allow ID="ID_ALLOW_A_88_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\qwt.dll Hash Sha256" Hash="3288B9E2F086110C419169F4BF5A7DEC9835766DA153AC7F1510C407930E6B7C" />
+    <Allow ID="ID_ALLOW_A_89_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\qwt.dll Hash Page Sha1" Hash="D81EF832219B3EF79E1B6E8D106BFBEEC25F2A59" />
+    <Allow ID="ID_ALLOW_A_8A_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\qwt.dll Hash Page Sha256" Hash="0C81FD3B3BDFEF99666AA47CDDC60872ABA2B5A30E66C9A451DEC3BA36D343E1" />
+    <Allow ID="ID_ALLOW_A_8B_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Vibra.exe Hash Sha1" Hash="C517DD18C3F62EC4059FB7B35854A3E4CA16CDFA" />
+    <Allow ID="ID_ALLOW_A_8C_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Vibra.exe Hash Sha256" Hash="0C304FAF0D8086E9B4F614012E256541117B73FAA5E6F58DAD7CDD5A5C4F87B1" />
+    <Allow ID="ID_ALLOW_A_8D_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Vibra.exe Hash Page Sha1" Hash="9A0B7E1DD378E211AC1D1BF06CCC7CC1C6B44FE7" />
+    <Allow ID="ID_ALLOW_A_8E_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\Vibra.exe Hash Page Sha256" Hash="A7888F954E5DE6A0FE06524706D0AAEED5E0F9FA106EEE3FEA40A6413D7E6205" />
+    <Allow ID="ID_ALLOW_A_8F_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\VibRC.exe Hash Sha1" Hash="46E2B96F702AA63155C88FA6D472131680C5EABE" />
+    <Allow ID="ID_ALLOW_A_90_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\VibRC.exe Hash Sha256" Hash="B6D4CDB71914A766C74C1E677B23D03AF26C8D91CC4CBAD9CB28C061442A83F3" />
+    <Allow ID="ID_ALLOW_A_91_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\VibRC.exe Hash Page Sha1" Hash="9CFEB9B4880F1221C73CD86EFF94842A3977CCC4" />
+    <Allow ID="ID_ALLOW_A_92_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\VibRC.exe Hash Page Sha256" Hash="92FFB88BE60F7D725ED332924E51BA54ACD068A5382B20C35D57BEFFBBEA68C4" />
+    <Allow ID="ID_ALLOW_A_93_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\VibTrace.exe Hash Sha1" Hash="EAFB715EFB86DE5B73AFBDDF892CBD09D1E44233" />
+    <Allow ID="ID_ALLOW_A_94_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\VibTrace.exe Hash Sha256" Hash="76047C65588961C513EC15DE7C8321200253919ED6B828824B1762F5E107BE72" />
+    <Allow ID="ID_ALLOW_A_95_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\VibTrace.exe Hash Page Sha1" Hash="D07D29015685CE11D109E4CFA48299348F3AC184" />
+    <Allow ID="ID_ALLOW_A_96_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\VibTrace.exe Hash Page Sha256" Hash="C0AEE90C38529CB324F924F1BCD48D7B3C07045D36630267982A226826C4E7C3" />
+    <Allow ID="ID_ALLOW_A_97_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\usbdriver\CDM21228_Setup.exe Hash Sha1" Hash="95C4EEABC212E42AEDC864E7ECB5C5640181E9E3" />
+    <Allow ID="ID_ALLOW_A_98_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\usbdriver\CDM21228_Setup.exe Hash Sha256" Hash="37F239650BDF2916B8EDF781613F1894EA5745BE565DBC5582711B92FD24F966" />
+    <Allow ID="ID_ALLOW_A_99_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\usbdriver\CDM21228_Setup.exe Hash Page Sha1" Hash="B1B170BB5117B5E38B05ED61B65EDDBEAB63B3D6" />
+    <Allow ID="ID_ALLOW_A_9A_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\usbdriver\CDM21228_Setup.exe Hash Page Sha256" Hash="FF9B7D2FE4D55A29AF962DB68D4EFC423D6EA499AC239EAF7B0F7BC5FD4B1B6D" />
+    <Allow ID="ID_ALLOW_A_9B_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\sqldrivers\qsqlite.dll Hash Sha1" Hash="E3F85B8743546171D2107373E962DB3A8DAF4D1F" />
+    <Allow ID="ID_ALLOW_A_9C_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\sqldrivers\qsqlite.dll Hash Sha256" Hash="F7EC488620BAD23D7636F3105E3BB2340EC8E6305601D73B164ECD41173890D7" />
+    <Allow ID="ID_ALLOW_A_9D_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\sqldrivers\qsqlite.dll Hash Page Sha1" Hash="874B825DCDBBC92B326C64B1FB30E1A612AF2D15" />
+    <Allow ID="ID_ALLOW_A_9E_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\sqldrivers\qsqlite.dll Hash Page Sha256" Hash="5CDE68577AADDFD50FBF0ADF254E0BE62216A8134E13A2E027158A1B1D07F533" />
+    <Allow ID="ID_ALLOW_A_9F_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\printsupport\qwindows.dll Hash Sha1" Hash="BAF825C7575FD3D72CF989B4B41604B9BA3D1C15" />
+    <Allow ID="ID_ALLOW_A_A0_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\printsupport\qwindows.dll Hash Sha256" Hash="C5C9F9456ED57921C1FDAC508119A2FB348A30245AA8CF6E1E06530A0381B4E3" />
+    <Allow ID="ID_ALLOW_A_A1_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\printsupport\qwindows.dll Hash Page Sha1" Hash="DC5E17935EA45D223EDCA9D216CA0577F9C83155" />
+    <Allow ID="ID_ALLOW_A_A2_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\printsupport\qwindows.dll Hash Page Sha256" Hash="9A156C8BBC75DE648F6075CDA1265E41FD5D4C9DE23E6B708B40D9EAE12250ED" />
+    <Allow ID="ID_ALLOW_A_A3_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\platforms\qwindows.dll Hash Sha1" Hash="A3A0C24AA03C714654540CFA79ACA8235F6E14E9" />
+    <Allow ID="ID_ALLOW_A_A4_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\platforms\qwindows.dll Hash Sha256" Hash="91B8D236A75C8269F444B89B9CBD00BE7C6059B44B0AF811FCB84B324212E490" />
+    <Allow ID="ID_ALLOW_A_A5_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\platforms\qwindows.dll Hash Page Sha1" Hash="8C05B56DEC6F2B7C71D628A93759EA9569B7B559" />
+    <Allow ID="ID_ALLOW_A_A6_0" FriendlyName="C:\Program Files\Profound\Vibra-4.30\platforms\qwindows.dll Hash Page Sha256" Hash="51B78C413CD88777D720A4B93ECCF686B9CEE244D4A2F8EF2F2C5BE4BB6676CA" />
+  </FileRules>
+  <!--Signers-->
+  <Signers />
+  <!--Driver Signing Scenarios-->
+  <SigningScenarios>
+    <SigningScenario Value="131" ID="ID_SIGNINGSCENARIO_DRIVERS_1" FriendlyName="Auto generated policy on 11-22-2024">
+      <ProductSigners />
+    </SigningScenario>
+    <SigningScenario Value="12" ID="ID_SIGNINGSCENARIO_WINDOWS" FriendlyName="Auto generated policy on 11-22-2024">
+      <ProductSigners>
+        <FileRulesRef>
+          <FileRuleRef RuleID="ID_ALLOW_A_3F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_40_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_41_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_42_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_43_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_44_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_45_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_46_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_47_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_48_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_49_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4A_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4B_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4C_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4D_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4E_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_4F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_50_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_51_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_52_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_53_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_54_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_55_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_56_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_57_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_58_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_59_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_5A_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_5B_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_5C_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_5D_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_5E_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_5F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_60_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_61_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_62_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_63_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_64_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_65_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_66_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_67_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_68_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_69_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_6A_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_6B_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_6C_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_6D_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_6E_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_6F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_70_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_71_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_72_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_73_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_74_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_75_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_76_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_77_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_78_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_79_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7A_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7B_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7C_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7D_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7E_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_80_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_81_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_82_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_83_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_84_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_85_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_86_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_87_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_88_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_89_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8A_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8B_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8C_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8D_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8E_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_90_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_91_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_92_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_93_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_94_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_95_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_96_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_97_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_98_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_99_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_9A_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_9B_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_9C_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_9D_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_9E_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_9F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A0_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A1_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A2_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A3_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A4_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A5_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A6_0" />
+        </FileRulesRef>
+      </ProductSigners>
+    </SigningScenario>
+  </SigningScenarios>
+  <UpdatePolicySigners />
+  <CiSigners />
+  <HvciOptions>2</HvciOptions>
+  <BasePolicyID>{488E7D72-DA1E-4219-BB58-22EEBCBB2CFE}</BasePolicyID>
+  <PolicyID>{F70BFA5D-3D65-479A-A33E-65262181D9C4}</PolicyID>
+  <Settings>
+    <Setting Provider="PolicyInfo" Key="Information" ValueName="Name">
+      <Value>
+        <String>VIBRA-430-V01 - 11-22-2024</String>
+      </Value>
+    </Setting>
+  </Settings>
+</SiPolicy>
