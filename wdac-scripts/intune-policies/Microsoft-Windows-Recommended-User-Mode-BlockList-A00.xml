@@ -29,9 +29,6 @@
 		<Rule>
 			<Option>Enabled:Revoked Expired As Unsigned</Option>
 		</Rule>
-		<Rule>
-			<Option>Disabled:Script Enforcement</Option>
-		</Rule>
 	</Rules>
 	<EKUs />
 	<FileRules>
