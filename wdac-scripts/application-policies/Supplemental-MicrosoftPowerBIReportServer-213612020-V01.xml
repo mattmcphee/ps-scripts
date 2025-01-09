@@ -1,0 +1,1251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SiPolicy xmlns="urn:schemas-microsoft-com:sipolicy" PolicyType="Supplemental Policy">
+  <VersionEx>1.0.0.0</VersionEx>
+  <PlatformID>{2E07F7E4-194C-4D20-B7C9-6F44A6C5A234}</PlatformID>
+  <Rules>
+    <Rule>
+      <Option>Enabled:Unsigned System Integrity Policy</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:Managed Installer</Option>
+    </Rule>
+  </Rules>
+  <!--EKUS-->
+  <EKUs />
+  <!--File Rules-->
+  <FileRules>
+    <FileAttrib ID="ID_FILEATTRIB_F_21E_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.AnalysisServices.MInterop.dll FileAttribute" FileName="Microsoft.AnalysisServices.MInterop.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_226_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Data.DeltaLake.dll FileAttribute" FileName="Microsoft.Data.DeltaLake.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_22A_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Data.Mashup.dll FileAttribute" FileName="Microsoft.Data.Mashup.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_22C_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Data.Mashup.Preview.dll FileAttribute" FileName="Microsoft.Data.Mashup.Preview.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_22E_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Data.Mashup.ProviderCommon.dll FileAttribute" FileName="Microsoft.Data.Mashup.ProviderCommon.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_23A_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.DI.RoaringBitmap.dll FileAttribute" FileName="Microsoft.DI.RoaringBitmap.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_243_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.HostIntegration.Connectors.dll FileAttribute" FileName="Microsoft.PowerBI.AzureCorextNugetPackages.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_269_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.Cdm.ICdmProvider.dll FileAttribute" FileName="Microsoft.Mashup.Cdm.ICdmProvider.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_26E_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.Client.Models.dll FileAttribute" FileName="Microsoft.Mashup.Client.Models.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_270_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.Client.Packaging.dll FileAttribute" FileName="Microsoft.Mashup.Client.Packaging.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_272_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.Client.UI.dll FileAttribute" FileName="Microsoft.Mashup.Client.UI.Shared.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_274_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.Client.UI.Extension.dll FileAttribute" FileName="Microsoft.Mashup.Client.UI.Extension.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_276_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.Container.NetFX45.exe FileAttribute" FileName="Microsoft.Mashup.Container.NetFX45.exe" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_278_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.Document.dll FileAttribute" FileName="Microsoft.Mashup.Document.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_27B_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.DocumentServices.dll FileAttribute" FileName="Microsoft.Mashup.DocumentServices.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_27E_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.EventSource.dll FileAttribute" FileName="Microsoft.Mashup.EventSource.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_280_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.InformationProtection.dll FileAttribute" FileName="Microsoft.Mashup.InformationProtection.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_282_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.OAuth.dll FileAttribute" FileName="Microsoft.Mashup.OAuth.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_285_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.OleDbProvider.dll FileAttribute" FileName="Microsoft.Mashup.OleDbProvider.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_287_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.ProgramSynthesisServices.dll FileAttribute" FileName="Microsoft.Mashup.ProgramSynthesisServices.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_289_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.ProviderShared.dll FileAttribute" FileName="Microsoft.Mashup.ProviderShared.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_28B_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.QueryDiagnostics.dll FileAttribute" FileName="Microsoft.Mashup.QueryDiagnostics.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_28D_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.SapBwProvider.dll FileAttribute" FileName="Microsoft.Mashup.SapBwProvider.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_28F_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.SapBwProvider31.dll FileAttribute" FileName="Microsoft.Mashup.SapBwProvider31.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_292_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.Shims.dll FileAttribute" FileName="Microsoft.Mashup.Shims.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A1_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.MashupEngine.dll FileAttribute" FileName="Microsoft.Mashup.Engine.Interface.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A3_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.MashupEngine.Library45.dll FileAttribute" FileName="Microsoft.Mashup.Cdm.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B6_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.ASCommon.dll FileAttribute" FileName="Microsoft.PowerBI.ASCommon.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B8_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.ASModelUpgrade.dll FileAttribute" FileName="Microsoft.PowerBI.ASModelUpgrade.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2BB_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Client.OleDbProvider.dll FileAttribute" FileName="Microsoft.PowerBI.Client.OleDbProvider.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2BD_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Client.QueriesEditor.Ribbon.dll FileAttribute" MinimumFileVersion="2.136.1202.0" ProductName="Microsoft &quot;Data Explorer&quot; Preview for Excel" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2BE_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Client.Shared.dll FileAttribute" FileName="Microsoft.PowerBI.Client.Shared.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C0_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Client.Windows.dll FileAttribute" FileName="Microsoft.PowerBI.Client.Windows.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C2_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Client.Windows.Themes.dll FileAttribute" FileName="Microsoft.PowerBI.Client.Windows.Themes.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C5_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.ClientResources.dll FileAttribute" FileName="Microsoft.PowerBI.ClientResources.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D3_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.DAXParser.dll FileAttribute" FileName="Microsoft.PowerBI.DAXParser.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D6_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.DiagramView.dll FileAttribute" FileName="Microsoft.PowerBI.DiagramView.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2DF_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Modeler.dll FileAttribute" FileName="Microsoft.PowerBI.Modeler.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2E1_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Modeling.Common.dll FileAttribute" FileName="Microsoft.PowerBI.Modeling.Common.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2E3_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Modeling.Contracts.dll FileAttribute" FileName="Microsoft.PowerBI.Modeling.Contracts.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2E5_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Modeling.Engine.dll FileAttribute" FileName="Microsoft.PowerBI.Modeling.Engine.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2E9_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Packaging.dll FileAttribute" FileName="Microsoft.PowerBI.Packaging.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2EB_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.PersistentCache.dll FileAttribute" FileName="Microsoft.PowerBI.PersistentCache.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F0_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Security.dll FileAttribute" FileName="Microsoft.PowerBI.Security.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F2_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.SmartNarrativesResources.dll FileAttribute" FileName="Microsoft.PowerBI.SmartNarrativesResources.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_31F_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\msmdspdm.dll FileAttribute" FileName="msmdspdm.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_32F_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ParquetSharp.dll FileAttribute" FileName="ParquetSharp.dll" MinimumFileVersion="0.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_332_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\PBIDesktop.exe FileAttribute" FileName="PBIDesktop.exe" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_335_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\PowerBIExtensions.dll FileAttribute" FileName="PowerBIExtensions.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_339_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\prm0009.bin FileAttribute" FileName="prm0009.dll" MinimumFileVersion="16.0.8431.1011" />
+    <FileAttrib ID="ID_FILEATTRIB_F_371_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Resources\9242\msmdsrv.rll FileAttribute" FileName="msmdsrv.rll" MinimumFileVersion="2022.160.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_373_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Resources\9242\msmdsrvi.rll FileAttribute" FileName="msmdsrvi.rll" MinimumFileVersion="2022.160.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_37B_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Trino ODBC Driver\sbicudt71_64.dll FileAttribute" FileName="icudt71.dll" MinimumFileVersion="71.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A0_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\en\mssp7en.lex FileAttribute" FileName="mssp7en.dll" MinimumFileVersion="16.0.8431.1011" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A2_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\en\msth8en.lex FileAttribute" FileName="MsTh8en_temp.dll" MinimumFileVersion="16.0.8431.1011" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A5_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Cdm\Microsoft.Mashup.Cdm.MashupCdmProvider.dll FileAttribute" FileName="Microsoft.Mashup.Cdm.MashupCdmProvider.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3AA_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\AI\Microsoft.AI.Common.dll FileAttribute" FileName="Microsoft.AI.Common.dll" MinimumFileVersion="2023.8.2.2" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3AC_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\AI\Microsoft.AI.Dax.Extensions.dll FileAttribute" FileName="Microsoft.AI.Dax.Extensions.dll" MinimumFileVersion="2023.8.2.2" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3C1_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.AI.AdoDotNetProvider.dll FileAttribute" FileName="Microsoft.AI.AdoDotNetProvider.dll" MinimumFileVersion="2023.11.3.7" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3C3_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.AI.Contracts.dll FileAttribute" FileName="Microsoft.AI.Contracts.dll" MinimumFileVersion="2023.11.3.7" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3C5_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.AI.Extensions.dll FileAttribute" FileName="Microsoft.AI.Extensions.dll" MinimumFileVersion="2023.11.3.7" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3C7_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.AI.Mashup.Extensions.dll FileAttribute" FileName="Microsoft.AI.Mashup.Extensions.dll" MinimumFileVersion="2023.11.3.7" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3DC_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\MashupSql\Microsoft.Data.Mashup.SqlClient.dll FileAttribute" FileName="Microsoft.Data.Mashup.SqlClient.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3E2_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\cdsa\Microsoft.Dataflows.Contracts.Core.dll FileAttribute" FileName="Microsoft.Dataflows.Contracts.Core.dll" MinimumFileVersion="2023.8.2.10" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3E4_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\cdsa\Microsoft.Dataflows.Core.Platform.dll FileAttribute" FileName="Microsoft.Dataflows.Core.Platform.dll" MinimumFileVersion="2023.8.2.10" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3E6_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\cdsa\Microsoft.PowerBI.Dataflows.ADO.Provider.dll FileAttribute" FileName="Microsoft.PowerBI.Dataflows.ADO.Provider.dll" MinimumFileVersion="2023.8.2.10" />
+    <FileAttrib ID="ID_FILEATTRIB_F_353_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ucrtbase.dll FileAttribute" FileName="ucrtbase.dll" MinimumFileVersion="10.0.10240.16384" />
+    <FileAttrib ID="ID_FILEATTRIB_F_376_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Vertica ODBC Driver\sbicudt53_64.dll FileAttribute" FileName="icudt53.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_392_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Netezza ODBC Driver\sbicudt58_64.dll FileAttribute" FileName="icudt58.dll" MinimumFileVersion="58.2.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_200_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\AngleSharp.dll FileAttribute" FileName="AngleSharp.dll" MinimumFileVersion="0.9.9.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_209_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\J2N.dll FileAttribute" FileName="J2N.dll" MinimumFileVersion="2.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_20A_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libgio-2.0-0.dll FileAttribute" FileName="libgio-2.0-0.dll" MinimumFileVersion="2.78.4.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_20B_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libglib-2.0-0.dll FileAttribute" FileName="libglib-2.0-0.dll" MinimumFileVersion="2.78.4.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_20C_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libgmodule-2.0-0.dll FileAttribute" FileName="libgmodule-2.0-0.dll" MinimumFileVersion="2.78.4.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_20D_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libgobject-2.0-0.dll FileAttribute" FileName="libgobject-2.0-0.dll" MinimumFileVersion="2.78.4.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_20E_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libiconv-2.dll FileAttribute" FileName="iconv.dll" MinimumFileVersion="1.17.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_20F_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libintl-8.dll FileAttribute" FileName="intl.dll" MinimumFileVersion="0.22.4.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_210_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\liblzma-5.dll FileAttribute" FileName="liblzma.dll" MinimumFileVersion="5.4.6.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_211_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libwinpthread-1.dll FileAttribute" FileName="WinPthreadGC" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_212_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Lucene.Net.Analysis.Common.dll FileAttribute" FileName="Lucene.Net.Analysis.Common.dll" MinimumFileVersion="4.8.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_213_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Lucene.Net.dll FileAttribute" FileName="Lucene.Net.dll" MinimumFileVersion="4.8.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_214_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Lucene.Net.Queries.dll FileAttribute" FileName="Lucene.Net.Queries.dll" MinimumFileVersion="4.8.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_215_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Lucene.Net.QueryParser.dll FileAttribute" FileName="Lucene.Net.QueryParser.dll" MinimumFileVersion="4.8.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_216_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Lucene.Net.Sandbox.dll FileAttribute" FileName="Lucene.Net.Sandbox.dll" MinimumFileVersion="4.8.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2FA_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Practices.Unity.dll FileAttribute" FileName="Microsoft.Practices.Unity.dll" MinimumFileVersion="2.1.505.2" />
+    <FileAttrib ID="ID_FILEATTRIB_F_32D_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Newtonsoft.Json.dll FileAttribute" FileName="Newtonsoft.Json.dll" MinimumFileVersion="13.0.2.27524" />
+    <FileAttrib ID="ID_FILEATTRIB_F_32E_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Newtonsoft.Json.Schema.dll FileAttribute" FileName="Newtonsoft.Json.Schema.dll" MinimumFileVersion="3.0.14.25421" />
+    <FileAttrib ID="ID_FILEATTRIB_F_338_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\PRIVATE_ODBC32.dll FileAttribute" FileName="odbc32.dll" MinimumFileVersion="10.0.19041.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_341_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\System.Linq.Dynamic.Core.dll FileAttribute" FileName="System.Linq.Dynamic.Core.dll" MinimumFileVersion="0.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_34D_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\tbb.dll FileAttribute" FileName="tbb.dll" MinimumFileVersion="2019.0.2019.410" />
+    <FileAttrib ID="ID_FILEATTRIB_F_34E_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\tbbmalloc.dll FileAttribute" FileName="tbbmalloc.dll" MinimumFileVersion="2019.0.2019.410" />
+    <FileAttrib ID="ID_FILEATTRIB_F_35D_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\YamlDotNet.dll FileAttribute" FileName="YamlDotNet.dll" MinimumFileVersion="15.3.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_375_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Vertica ODBC Driver\libcrypto-1_1-x64.dll FileAttribute" FileName="libcrypto" MinimumFileVersion="1.1.1.4" />
+    <FileAttrib ID="ID_FILEATTRIB_F_378_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Vertica ODBC Driver\sbicuin53_64.dll FileAttribute" FileName="icuin53.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_379_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Vertica ODBC Driver\sbicuuc53_64.dll FileAttribute" FileName="icuuc53.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_37A_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Vertica ODBC Driver\VerticaODBC_sb64.dll FileAttribute" FileName="vertica_11.1_odbc_3.5.dll" MinimumFileVersion="11.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_37D_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Trino ODBC Driver\sbicuin71_64.dll FileAttribute" FileName="icuin71.dll" MinimumFileVersion="71.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_37E_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Trino ODBC Driver\sbicuuc71_64.dll FileAttribute" FileName="icuuc71.dll" MinimumFileVersion="71.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_37F_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Trino ODBC Driver\TrinoODBC_sb64.dll FileAttribute" MinimumFileVersion="2.1.5.1011" InternalName="Microsoft Trino ODBC Driver" />
+    <FileAttrib ID="ID_FILEATTRIB_F_380_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Trino ODBC Driver\zlibwapi.dll FileAttribute" FileName="zlibwapi.dll" MinimumFileVersion="1.2.11.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_381_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Trino ODBC Driver\OpenSSL64.DllA\libssl-3-x64.dll FileAttribute" FileName="libssl" MinimumFileVersion="1.1.1.4" />
+    <FileAttrib ID="ID_FILEATTRIB_F_382_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Trino ODBC Driver\LibCurl64.DllA\libcurl.dll FileAttribute" FileName="libcurl.dll" MinimumFileVersion="7.78.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_383_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Spark ODBC Driver\libsasl.dll FileAttribute" FileName="libsasl.dll" MinimumFileVersion="2.1.26.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_384_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Spark ODBC Driver\SparkODBC_sb64.dll FileAttribute" MinimumFileVersion="2.8.2.1014" InternalName="Microsoft Spark ODBC Driver" />
+    <FileAttrib ID="ID_FILEATTRIB_F_385_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Spark ODBC Driver\zlib.dll FileAttribute" FileName="zlib1.dll" MinimumFileVersion="1.3.1.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_386_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Spark ODBC Driver\saslSSPI\saslSSPI.dll FileAttribute" MinimumFileVersion="1.0.2.1003" InternalName="Simba SASL SSPI Plug-in" />
+    <FileAttrib ID="ID_FILEATTRIB_F_387_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Spark ODBC Driver\saslGSSAPI\saslGSSAPI.dll FileAttribute" FileName="saslGSSAPI.dll" MinimumFileVersion="2.1.26.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_388_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Spark ODBC Driver\sasl2\saslANONYMOUS.dll FileAttribute" FileName="saslANONYMOUS.dll" MinimumFileVersion="2.1.26.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_389_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Spark ODBC Driver\sasl2\saslCRAMMD5.dll FileAttribute" FileName="saslCRAMMD5.dll" MinimumFileVersion="2.1.26.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_38A_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Spark ODBC Driver\sasl2\saslDIGESTMD5.dll FileAttribute" FileName="saslDIGESTMD5.dll" MinimumFileVersion="2.1.26.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_38B_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Spark ODBC Driver\sasl2\saslLOGIN.dll FileAttribute" FileName="saslLOGIN.dll" MinimumFileVersion="2.1.26.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_38C_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Spark ODBC Driver\sasl2\saslPLAIN.dll FileAttribute" FileName="saslPLAIN.dll" MinimumFileVersion="2.1.26.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_38D_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Spark ODBC Driver\sasl2\saslSCRAM.dll FileAttribute" FileName="saslSCRAM.dll" MinimumFileVersion="2.1.26.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_38E_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Snowflake ODBC Driver\SnowflakeODBC_sb64.dll FileAttribute" MinimumFileVersion="3.3.3.1010" InternalName="Microsoft Snowflake ODBC Driver" />
+    <FileAttrib ID="ID_FILEATTRIB_F_38F_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba QuickBooks ODBC Driver\QuickBooksODBC_sb64.dll FileAttribute" MinimumFileVersion="1.7.7.1006" InternalName="QuickBooks ODBC Driver" />
+    <FileAttrib ID="ID_FILEATTRIB_F_390_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba QuickBooks ODBC Driver\RDFODBC_sb64.dll FileAttribute" MinimumFileVersion="1.7.7.1011" InternalName="Rest Data Factory ODBC Driver" />
+    <FileAttrib ID="ID_FILEATTRIB_F_391_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Netezza ODBC Driver\NetezzaODBC_sb64.dll FileAttribute" MinimumFileVersion="1.0.15.1014" InternalName="Microsoft Netezza ODBC Driver" />
+    <FileAttrib ID="ID_FILEATTRIB_F_394_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Netezza ODBC Driver\sbicuin58_64.dll FileAttribute" FileName="icuin58.dll" MinimumFileVersion="58.2.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_395_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Netezza ODBC Driver\sbicuuc58_64.dll FileAttribute" FileName="icuuc58.dll" MinimumFileVersion="58.2.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_396_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Impala ODBC Driver\ImpalaODBC_sb64.dll FileAttribute" MinimumFileVersion="2.6.16.1022" InternalName="Microsoft Impala ODBC Driver" />
+    <FileAttrib ID="ID_FILEATTRIB_F_397_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Hive ODBC Driver\DriverConfiguration64.exe FileAttribute" MinimumFileVersion="2.6.12.1012" InternalName="Simba Hive ODBC Driver" />
+    <FileAttrib ID="ID_FILEATTRIB_F_398_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Hive ODBC Driver\HiveODBC_sb64.dll FileAttribute" MinimumFileVersion="2.6.12.1012" InternalName="Microsoft Hive ODBC Driver" />
+    <FileAttrib ID="ID_FILEATTRIB_F_399_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Google BigQuery ODBC Driver\GoogleBigQueryODBC_sb64.dll FileAttribute" MinimumFileVersion="3.0.5.1013" InternalName="Microsoft ODBC Driver for Google BigQuery" />
+    <FileAttrib ID="ID_FILEATTRIB_F_39A_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Drill ODBC Driver\drillClient.dll FileAttribute" FileName="drillClient.dll" MinimumFileVersion="1.19.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_39B_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Drill ODBC Driver\DrillODBC_sb64.dll FileAttribute" MinimumFileVersion="1.5.5.1005" InternalName="Microsoft Drill ODBC Driver" />
+    <FileAttrib ID="ID_FILEATTRIB_F_39C_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba DocumentDB ODBC Driver\Cosmos.CRTCompat.dll FileAttribute" FileName="Cosmos.CRTCompat.dll" MinimumFileVersion="2.14.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_39D_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba DocumentDB ODBC Driver\CosmosDB.Serializers.dll FileAttribute" FileName="CosmosDB.Serializers.dll" MinimumFileVersion="2.14.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_39E_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba DocumentDB ODBC Driver\DocumentDBODBC_sb64.dll FileAttribute" MinimumFileVersion="2.3.4.1007" InternalName="Microsoft Azure DocumentDB ODBC Driver" />
+    <FileAttrib ID="ID_FILEATTRIB_F_39F_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ODBC Drivers\Simba Amazon Redshift ODBC Driver\AmazonRedshiftODBC_sb64.dll FileAttribute" FileName="Microsoft ODBC Driver for Amazon Redshift" MinimumFileVersion="1.4.52.1000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_356_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\vcruntime140.dll FileAttribute" FileName="vcruntime140.dll" MinimumFileVersion="14.31.31103.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D6_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.Practices.Unity.Configuration.dll FileAttribute" FileName="Microsoft.Practices.Unity.Configuration.dll" MinimumFileVersion="4.0.1.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D7_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.Practices.Unity.RegistrationByConvention.dll FileAttribute" FileName="Microsoft.Practices.Unity.RegistrationByConvention.dll" MinimumFileVersion="4.0.1.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_201_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ASPlatformHost.dll FileAttribute" FileName="ASPlatformHost.dll" MinimumFileVersion="2022.160.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_202_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\AsyncFriendlyStackTrace.dll FileAttribute" FileName="AsyncFriendlyStackTrace.dll" MinimumFileVersion="1.5.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_203_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Azure.Core.dll FileAttribute" FileName="Azure.Core.dll" MinimumFileVersion="1.3800.24.12602" />
+    <FileAttrib ID="ID_FILEATTRIB_F_204_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Azure.Storage.Blobs.dll FileAttribute" FileName="Azure.Storage.Blobs.dll" MinimumFileVersion="12.1900.123.56305" />
+    <FileAttrib ID="ID_FILEATTRIB_F_205_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Azure.Storage.Common.dll FileAttribute" FileName="Azure.Storage.Common.dll" MinimumFileVersion="12.1800.123.56305" />
+    <FileAttrib ID="ID_FILEATTRIB_F_206_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\concrt140.dll FileAttribute" FileName="concrt140.dll" MinimumFileVersion="14.40.33813.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_207_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\CpuMathNative.dll FileAttribute" FileName="Native" MinimumFileVersion="0.1800.21.36503" />
+    <FileAttrib ID="ID_FILEATTRIB_F_208_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ExcelDataReader.dll FileAttribute" FileName="ExcelDataReader.dll" MinimumFileVersion="3.6.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_217_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.AnalysisServices.AzureClient.dll FileAttribute" MinimumFileVersion="2022.160.148.21" ProductName="Microsoft Analysis Services" />
+    <FileAttrib ID="ID_FILEATTRIB_F_218_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.AnalysisServices.DatasetSerializer.dll FileAttribute" FileName="Microsoft.AnalysisServices.DatasetSerializer.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_219_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.AnalysisServices.Dax.ExtensionInterfaces.dll FileAttribute" FileName="Microsoft.AnalysisServices.Dax.ExtensionInterfaces.dll" MinimumFileVersion="16.0.80.18" />
+    <FileAttrib ID="ID_FILEATTRIB_F_21A_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.AnalysisServices.Dax.Extensions.dll FileAttribute" FileName="Microsoft.AnalysisServices.Dax.Extensions.dll" MinimumFileVersion="16.0.80.18" />
+    <FileAttrib ID="ID_FILEATTRIB_F_21B_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.AnalysisServices.ExecEngine.dll FileAttribute" FileName="Microsoft.AnalysisServices.ExecEngine.dll" MinimumFileVersion="2022.160.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_21C_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.AnalysisServices.ExecPlan.ExecPlanTypes.dll FileAttribute" FileName="Microsoft.AnalysisServices.ExecPlan.ExecPlanTypes.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_21D_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.AnalysisServices.ExecPlan.MBuilder.dll FileAttribute" FileName="Microsoft.AnalysisServices.ExecPlan.MBuilder.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_220_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.AnalysisServices.Server.Tabular.Json.dll FileAttribute" FileName="Microsoft.AnalysisServices.Server.Tabular.Json.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_221_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.AnalysisServices.Tracing.MEngineTraceReader.dll FileAttribute" FileName="Microsoft.AnalysisServices.Tracing.MEngineTraceReader.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_222_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.AnalysisServices.ZipLoadSaveHelper.dll FileAttribute" FileName="Microsoft.AnalysisServices.ZipLoadSaveHelper.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_223_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ApplicationInsights.dll FileAttribute" FileName="Microsoft.ApplicationInsights.dll" MinimumFileVersion="2.14.0.17971" />
+    <FileAttrib ID="ID_FILEATTRIB_F_224_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Bcl.AsyncInterfaces.dll FileAttribute" FileName="Microsoft.Bcl.AsyncInterfaces.dll" MinimumFileVersion="6.0.21.52210" />
+    <FileAttrib ID="ID_FILEATTRIB_F_225_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Bcl.Numerics.dll FileAttribute" FileName="Microsoft.Bcl.Numerics.dll" MinimumFileVersion="8.0.23.53103" />
+    <FileAttrib ID="ID_FILEATTRIB_F_228_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Data.Edm.dll FileAttribute" FileName="Microsoft.Data.Edm.dll" MinimumFileVersion="5.8.4.63386" />
+    <FileAttrib ID="ID_FILEATTRIB_F_229_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Data.Edm.NetFX35.dll FileAttribute" FileName="Microsoft.Data.Edm.NetFX35.dll" MinimumFileVersion="5.7.0.62516" />
+    <FileAttrib ID="ID_FILEATTRIB_F_230_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Data.OData.NetFX35.dll FileAttribute" FileName="Microsoft.Data.OData.NetFX35.dll" MinimumFileVersion="5.7.0.62516" />
+    <FileAttrib ID="ID_FILEATTRIB_F_231_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Data.OData.Query.NetFX35.dll FileAttribute" FileName="Microsoft.Data.OData.Query.NetFX35.dll" MinimumFileVersion="5.7.0.62516" />
+    <FileAttrib ID="ID_FILEATTRIB_F_232_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.DataIntegration.FuzzyClustering.dll FileAttribute" FileName="Microsoft.DataIntegration.FuzzyClustering.dll" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_233_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.DataIntegration.FuzzyMatching.dll FileAttribute" FileName="Microsoft.DataIntegration.FuzzyMatching.dll" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_234_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.DataIntegration.FuzzyMatchingCommon.dll FileAttribute" FileName="Microsoft.DataIntegration.FuzzyMatchingCommon.dll" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_235_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.DataIntegration.RecommendTransform.Join.dll FileAttribute" FileName="Microsoft.DataIntegration.RecommendTransform.Join.dll" MinimumFileVersion="1.1.1.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_236_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.DataIntegration.RecommendTransform.TableUtils.dll FileAttribute" FileName="Microsoft.DataIntegration.RecommendTransform.TableUtils.dll" MinimumFileVersion="1.2.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_237_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.DataIntegration.RecommendTransform.Unpivot.dll FileAttribute" FileName="Microsoft.DataIntegration.RecommendTransform.Unpivot.dll" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_238_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.DataIntegration.TransformDataByExample.dll FileAttribute" FileName="Microsoft.DataIntegration.TransformDataByExample.dll" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_239_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.DataShaping.DaxQueryExecution.dll FileAttribute" FileName="Microsoft.DataShaping.DaxQueryExecution.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_23C_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Diagnostics.Tracing.TraceEvent.dll FileAttribute" FileName="Microsoft.Diagnostics.Tracing.TraceEvent.dll" MinimumFileVersion="1.0.41.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_23D_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Exchange.WebServices.dll FileAttribute" FileName="Microsoft.Exchange.WebServices.dll" MinimumFileVersion="15.0.913.15" />
+    <FileAttrib ID="ID_FILEATTRIB_F_23E_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Extensions.Configuration.Abstractions.dll FileAttribute" FileName="Microsoft.Extensions.Configuration.Abstractions.dll" MinimumFileVersion="1.1.2.30427" />
+    <FileAttrib ID="ID_FILEATTRIB_F_23F_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Extensions.Primitives.dll FileAttribute" FileName="Microsoft.Extensions.Primitives.dll" MinimumFileVersion="1.1.1.30427" />
+    <FileAttrib ID="ID_FILEATTRIB_F_240_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Fabric.DatahubEmbed.Resources.dll FileAttribute" FileName="Microsoft.Fabric.DatahubEmbed.Resources.dll" MinimumFileVersion="11.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_241_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Graph.Core.dll FileAttribute" FileName="Microsoft.Graph.Core.dll" MinimumFileVersion="2.0.7.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_242_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Graph.dll FileAttribute" FileName="Microsoft.Graph.dll" MinimumFileVersion="4.15.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_245_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Identity.Client.Broker.dll FileAttribute" FileName="Microsoft.Identity.Client.Broker.dll" MinimumFileVersion="4.61.3.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_246_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Identity.Client.dll FileAttribute" FileName="Microsoft.Identity.Client.dll" MinimumFileVersion="4.61.3.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_247_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Identity.Client.NativeInterop.dll FileAttribute" FileName="Microsoft.Identity.Client.NativeInterop.dll" MinimumFileVersion="0.16.1.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_248_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.IdentityModel.Abstractions.dll FileAttribute" FileName="Microsoft.IdentityModel.Abstractions.dll" MinimumFileVersion="7.5.1.50405" />
+    <FileAttrib ID="ID_FILEATTRIB_F_249_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.In4.AutoInsight.dll FileAttribute" FileName="Microsoft.In4.AutoInsight.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_24A_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.In4.DataContracts.dll FileAttribute" FileName="Microsoft.In4.DataContracts.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_24B_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.In4.Numerics.dll FileAttribute" FileName="Microsoft.In4.Numerics.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_24C_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.InfoNav.Analytics.AnalyticsEngine.dll FileAttribute" FileName="Microsoft.InfoNav.Analytics.AnalyticsEngine.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_24D_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.InfoNav.Analytics.ExponentialSmoothing.dll FileAttribute" FileName="Microsoft.InfoNav.Analytics.ExponentialSmoothing.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_24E_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.InfoNav.Analytics.TimeSeriesPreProcessing.dll FileAttribute" FileName="Microsoft.InfoNav.Analytics.TimeSeriesPreProcessing.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_24F_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.InfoNav.Common.dll FileAttribute" FileName="Microsoft.InfoNav.Common.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_250_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.InfoNav.Data.Contracts.dll FileAttribute" FileName="Microsoft.InfoNav.Data.Contracts.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_251_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.InfoNav.Data.Edm.dll FileAttribute" FileName="Microsoft.InfoNav.Data.Edm.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_252_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.InfoNav.Explore.ExploreConverter.dll FileAttribute" FileName="Microsoft.InfoNav.Explore.ExploreConverter.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_253_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.InfoNav.Explore.VisualContracts.dll FileAttribute" FileName="Microsoft.InfoNav.Explore.VisualContracts.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_254_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.InfoNav.Insights.DataModel.dll FileAttribute" FileName="Microsoft.InfoNav.Insights.DataModel.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_255_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.InfoNav.Insights.Engines.dll FileAttribute" FileName="Microsoft.InfoNav.Insights.Engines.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_256_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.InfoNav.Insights.InternalContracts.dll FileAttribute" FileName="Microsoft.InfoNav.Insights.InternalContracts.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_257_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.InfoNav.Insights.ServiceContracts.dll FileAttribute" FileName="Microsoft.InfoNav.Insights.ServiceContracts.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_258_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.InfoNav.Insights.ServiceRuntime.dll FileAttribute" FileName="Microsoft.InfoNav.Insights.ServiceRuntime.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_259_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.InfoNav.NaturalLanguage.InternalContracts.dll FileAttribute" FileName="Microsoft.InfoNav.NaturalLanguage.InternalContracts.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_25A_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.InfoNav.NaturalLanguage.ServiceContracts.dll FileAttribute" FileName="Microsoft.InfoNav.NaturalLanguage.ServiceContracts.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_25B_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.InfoNav.NaturalLanguage.VisualGeneration.dll FileAttribute" FileName="Microsoft.InfoNav.NaturalLanguage.VisualGeneration.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_25C_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.InformationProtection.dll FileAttribute" FileName="Microsoft.InformationProtection.dll" MinimumFileVersion="1.14.128.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_25D_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Lucia.Core.Completion.dll FileAttribute" FileName="Microsoft.Lucia.Core.Completion.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_25E_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Lucia.Core.DataModel.dll FileAttribute" FileName="Microsoft.Lucia.Core.DataModel.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_25F_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Lucia.Core.English.dll FileAttribute" FileName="Microsoft.Lucia.Core.English.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_260_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Lucia.Core.LinguisticDataProvider.dll FileAttribute" FileName="Microsoft.Lucia.Core.LinguisticDataProvider.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_261_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Lucia.Core.Runtime.Common.dll FileAttribute" FileName="Microsoft.Lucia.Core.Runtime.Common.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_262_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Lucia.Core.Runtime.dll FileAttribute" FileName="Microsoft.Lucia.Core.Runtime.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_263_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Lucia.Core.Semantics.dll FileAttribute" FileName="Microsoft.Lucia.Core.Semantics.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_264_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Lucia.Core.Syntax.dll FileAttribute" FileName="Microsoft.Lucia.Core.Syntax.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_265_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Lucia.Core.TermIndex.dll FileAttribute" FileName="Microsoft.Lucia.Core.TermIndex.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_266_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Lucia.Core.Text.dll FileAttribute" FileName="Microsoft.Lucia.Core.Text.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_267_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Lucia.Core.Text.Generation.dll FileAttribute" FileName="Microsoft.Lucia.Core.Text.Generation.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_268_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Lucia.Hosting.Analytics.dll FileAttribute" FileName="Microsoft.Lucia.Hosting.Analytics.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_26B_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.Client.Desktop.UI.dll FileAttribute" FileName="Microsoft.Mashup.Client.Desktop.UI.dll" MinimumFileVersion="1.0.330.21105" />
+    <FileAttrib ID="ID_FILEATTRIB_F_26C_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.Client.Desktop.UI.Hosts.dll FileAttribute" FileName="Microsoft.Mashup.Client.Desktop.UI.Hosts.dll" MinimumFileVersion="1.0.330.21105" />
+    <FileAttrib ID="ID_FILEATTRIB_F_26D_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.Client.Desktop.UI.LegacyAdapters.dll FileAttribute" FileName="Microsoft.Mashup.Client.Desktop.UI.LegacyAdapters.dll" MinimumFileVersion="1.0.330.21105" />
+    <FileAttrib ID="ID_FILEATTRIB_F_27A_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.Document.XmlSerializers.dll FileAttribute" FileName="Microsoft.Mashup.Document.XmlSerializers.dll" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_27D_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.DocumentServices.Preview.dll FileAttribute" FileName="Microsoft.Mashup.DocumentServices.Preview.dll" MinimumFileVersion="1.0.330.21105" />
+    <FileAttrib ID="ID_FILEATTRIB_F_284_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.OleDbInterop.dll FileAttribute" MinimumFileVersion="2.133.802.0" ProductName="Microsoft &quot;Data Explorer&quot; Preview for Excel" />
+    <FileAttrib ID="ID_FILEATTRIB_F_291_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.ScriptDom.dll FileAttribute" FileName="Microsoft.Mashup.ScriptDom.dll" MinimumFileVersion="2.40.4554.261" />
+    <FileAttrib ID="ID_FILEATTRIB_F_294_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.TypeScriptCore.dll FileAttribute" FileName="Microsoft.Mashup.TypeScriptCore.dll" MinimumFileVersion="1.0.330.21105" />
+    <FileAttrib ID="ID_FILEATTRIB_F_295_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.Web.Client.Authoring.Core.dll FileAttribute" FileName="Microsoft.Mashup.Web.Client.Authoring.Core.dll" MinimumFileVersion="1.0.330.21105" />
+    <FileAttrib ID="ID_FILEATTRIB_F_296_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.Web.Client.Core.dll FileAttribute" FileName="Microsoft.Mashup.Web.Client.Core.dll" MinimumFileVersion="1.0.330.21105" />
+    <FileAttrib ID="ID_FILEATTRIB_F_297_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.Web.Client.MashupRewriters.dll FileAttribute" FileName="Microsoft.Mashup.Web.Client.MashupRewriters.dll" MinimumFileVersion="1.0.330.21105" />
+    <FileAttrib ID="ID_FILEATTRIB_F_298_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.Web.Client.MsrUtility.dll FileAttribute" FileName="Microsoft.Mashup.Web.Client.MsrUtility.dll" MinimumFileVersion="1.0.330.21105" />
+    <FileAttrib ID="ID_FILEATTRIB_F_299_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.Web.Client.ProseUtility.dll FileAttribute" FileName="Microsoft.Mashup.Web.Client.ProseUtility.dll" MinimumFileVersion="1.0.330.21105" />
+    <FileAttrib ID="ID_FILEATTRIB_F_29A_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.Web.Diagnostics.dll FileAttribute" FileName="Microsoft.Mashup.Web.Diagnostics.dll" MinimumFileVersion="1.0.330.21105" />
+    <FileAttrib ID="ID_FILEATTRIB_F_29B_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.Web.Utilities.dll FileAttribute" FileName="Microsoft.Mashup.Web.Utilities.dll" MinimumFileVersion="1.0.330.21105" />
+    <FileAttrib ID="ID_FILEATTRIB_F_29C_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.WebViews.App.Attributes.dll FileAttribute" FileName="Microsoft.Mashup.WebViews.App.Attributes.dll" MinimumFileVersion="1.1.219.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_29D_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.WebViews.App.Common.dll FileAttribute" FileName="Microsoft.Mashup.WebViews.App.Common.dll" MinimumFileVersion="1.1.219.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_29E_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.WebViews.dll FileAttribute" FileName="Microsoft.Mashup.WebViews.dll" MinimumFileVersion="1.1.219.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_29F_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.WebViews.Windows.EdgeChromium.dll FileAttribute" FileName="Microsoft.Mashup.WebViews.Windows.EdgeChromium.dll" MinimumFileVersion="1.1.219.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A0_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Mashup.WebViews.Windows.Shared.dll FileAttribute" FileName="Microsoft.Mashup.WebViews.Windows.Shared.dll" MinimumFileVersion="1.1.219.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A5_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ML.Core.dll FileAttribute" FileName="Microsoft.ML.Core.dll" MinimumFileVersion="1.600.21.36503" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A6_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ML.CpuMath.dll FileAttribute" FileName="Microsoft.ML.CpuMath.dll" MinimumFileVersion="1.600.21.36503" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A7_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ML.Data.dll FileAttribute" FileName="Microsoft.ML.Data.dll" MinimumFileVersion="1.600.21.36503" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A8_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ML.DataView.dll FileAttribute" FileName="Microsoft.ML.DataView.dll" MinimumFileVersion="1.600.21.36503" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A9_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ML.dll FileAttribute" FileName="Microsoft.ML.dll" MinimumFileVersion="3.0.124.6804" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2AA_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ML.KMeansClustering.dll FileAttribute" FileName="Microsoft.ML.KMeansClustering.dll" MinimumFileVersion="1.600.21.36503" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2AB_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.mshtml.dll FileAttribute" FileName="Microsoft.mshtml.dll" MinimumFileVersion="7.0.3300.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2AC_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.NaturalLanguage.Runtime.Interop.dll FileAttribute" FileName="Microsoft.NaturalLanguage.Runtime.Interop.dll" MinimumFileVersion="16.0.8431.1011" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2AD_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.NaturalLanguage.Runtime.Managed.dll FileAttribute" FileName="Microsoft.NaturalLanguage.Runtime.Managed.dll" MinimumFileVersion="16.0.8431.1011" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2AE_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.OData.Core.NetFX35.dll FileAttribute" FileName="Microsoft.OData.Core.NetFX35.dll" MinimumFileVersion="6.15.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2AF_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.OData.Core.NetFX35.V7.dll FileAttribute" FileName="Microsoft.OData.Core.NetFX35.V7.dll" MinimumFileVersion="7.4.0.11102" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B0_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.OData.Edm.NetFX35.dll FileAttribute" FileName="Microsoft.OData.Edm.NetFX35.dll" MinimumFileVersion="6.15.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B1_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.OData.Edm.NetFX35.V7.dll FileAttribute" FileName="Microsoft.OData.Edm.NetFX35.V7.dll" MinimumFileVersion="7.4.0.11102" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B2_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.AdomdClient.dll FileAttribute" FileName="Microsoft.PowerBI.AdomdClient.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B3_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Amo.Core.dll FileAttribute" FileName="Microsoft.PowerBI.Amo.Core.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B4_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Amo.dll FileAttribute" FileName="Microsoft.PowerBI.Amo.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B5_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Analytics.Contracts.dll FileAttribute" FileName="Microsoft.PowerBI.Analytics.Contracts.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2BA_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.BackEnd.dll FileAttribute" FileName="Microsoft.PowerBI.BackEnd.dll" MinimumFileVersion="13.0.800.292" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C4_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.ClientCommon.dll FileAttribute" FileName="Microsoft.PowerBI.ClientCommon.dll" MinimumFileVersion="13.0.800.292" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C7_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Data.ModelSchemaAnalysis.dll FileAttribute" FileName="Microsoft.PowerBI.Data.ModelSchemaAnalysis.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C8_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.DataExtension.Contracts.dll FileAttribute" FileName="Microsoft.PowerBI.DataExtension.Contracts.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C9_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.DataExtension.MsolapDataExtension.dll FileAttribute" FileName="Microsoft.PowerBI.DataExtension.MsolapDataExtension.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2CA_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.DataShaping.Common.dll FileAttribute" FileName="Microsoft.PowerBI.DataShaping.Common.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2CB_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.DataShaping.DataShapeQueryGeneration.dll FileAttribute" FileName="Microsoft.PowerBI.DataShaping.DataShapeQueryGeneration.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2CC_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.DataShaping.DataShapeQueryTranslation.dll FileAttribute" FileName="Microsoft.PowerBI.DataShaping.DataShapeQueryTranslation.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2CD_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.DataShaping.Engine.dll FileAttribute" FileName="Microsoft.PowerBI.DataShaping.Engine.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2CE_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.DataShaping.InternalContracts.dll FileAttribute" FileName="Microsoft.PowerBI.DataShaping.InternalContracts.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2CF_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.DataShaping.Processing.dll FileAttribute" FileName="Microsoft.PowerBI.DataShaping.Processing.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D0_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.DataShaping.QueryDesignModel.dll FileAttribute" FileName="Microsoft.PowerBI.DataShaping.QueryDesignModel.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D1_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.DataShaping.SemanticQueryTranslation.dll FileAttribute" FileName="Microsoft.PowerBI.DataShaping.SemanticQueryTranslation.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D2_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.DataShaping.ServiceContracts.dll FileAttribute" FileName="Microsoft.PowerBI.DataShaping.ServiceContracts.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D5_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Diagnostics.dll FileAttribute" FileName="Microsoft.PowerBI.Diagnostics.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D8_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.ExplorationContracts.dll FileAttribute" FileName="Microsoft.PowerBI.ExplorationContracts.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D9_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.ExploreHost.Contracts.dll FileAttribute" FileName="Microsoft.Powerbi.ExploreHost.Contracts.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2DA_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.ExploreHost.dll FileAttribute" FileName="Microsoft.Powerbi.ExploreHost.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2DB_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.ExploreServiceCommon.dll FileAttribute" FileName="Microsoft.PowerBI.ExploreServiceCommon.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2DC_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Insights.Hosting.dll FileAttribute" FileName="Microsoft.PowerBI.Insights.Hosting.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2DD_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Lucia.Contracts.dll FileAttribute" FileName="Microsoft.PowerBI.Lucia.Contracts.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2DE_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Lucia.Hosting.dll FileAttribute" FileName="Microsoft.PowerBI.Lucia.Hosting.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2E7_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.MsolapWrapper.dll FileAttribute" FileName="MsolapWrapper" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2E8_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.NaturalLanguage.NLToDax.dll FileAttribute" FileName="Microsoft.PowerBI.NaturalLanguage.NLToDax.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2ED_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Query.Contracts.dll FileAttribute" FileName="Microsoft.PowerBI.Query.Contracts.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2EE_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.ReportingServicesHost.dll FileAttribute" FileName="Microsoft.PowerBI.ReportingServicesHost.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2EF_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Scripting.dll FileAttribute" FileName="Microsoft.PowerBI.Scripting.dll" MinimumFileVersion="1.11.2551.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F4_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.SPClient.Interfaces.dll FileAttribute" FileName="Microsoft.PowerBI.SPClient.Interfaces.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F5_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Tabular.dll FileAttribute" FileName="Microsoft.PowerBI.Tabular.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F6_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Tabular.Json.dll FileAttribute" FileName="Microsoft.PowerBI.Tabular.Json.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F7_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Tabular.Utilities.dll FileAttribute" FileName="Microsoft.PowerBI.Tabular.Utilities.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F8_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.PowerBI.Telemetry.dll FileAttribute" FileName="Microsoft.PowerBI.Telemetry.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F9_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Practices.Prism.PubSubEvents.dll FileAttribute" FileName="Microsoft.Practices.Prism.PubSubEvents.dll" MinimumFileVersion="1.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2FB_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ProgramSynthesis.Common.dll FileAttribute" FileName="Microsoft.ProgramSynthesis.Common.dll" MinimumFileVersion="8.30.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2FC_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ProgramSynthesis.Conditionals.dll FileAttribute" FileName="Microsoft.ProgramSynthesis.Conditionals.dll" MinimumFileVersion="8.30.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2FD_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ProgramSynthesis.Detection.dll FileAttribute" FileName="Microsoft.ProgramSynthesis.Detection.dll" MinimumFileVersion="8.30.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2FE_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ProgramSynthesis.Extraction.Json.dll FileAttribute" FileName="Microsoft.ProgramSynthesis.Extraction.Json.dll" MinimumFileVersion="8.30.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2FF_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ProgramSynthesis.Extraction.Pdf.dll FileAttribute" FileName="Microsoft.ProgramSynthesis.Extraction.Pdf.dll" MinimumFileVersion="8.30.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_300_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ProgramSynthesis.Extraction.Spreadsheet.dll FileAttribute" FileName="Microsoft.ProgramSynthesis.Extraction.Spreadsheet.dll" MinimumFileVersion="8.30.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_301_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ProgramSynthesis.Extraction.Text.dll FileAttribute" FileName="Microsoft.ProgramSynthesis.Extraction.Text.dll" MinimumFileVersion="8.30.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_302_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ProgramSynthesis.Extraction.Web.dll FileAttribute" FileName="Microsoft.ProgramSynthesis.Extraction.Web.dll" MinimumFileVersion="8.30.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_303_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ProgramSynthesis.Read.FlatFile.dll FileAttribute" FileName="Microsoft.ProgramSynthesis.Read.FlatFile.dll" MinimumFileVersion="8.30.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_304_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ProgramSynthesis.Split.Text.dll FileAttribute" FileName="Microsoft.ProgramSynthesis.Split.Text.dll" MinimumFileVersion="8.30.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_305_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ProgramSynthesis.Split.Translation.dll FileAttribute" FileName="Microsoft.ProgramSynthesis.Split.Translation.dll" MinimumFileVersion="8.30.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_306_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ProgramSynthesis.Transformation.Formula.dll FileAttribute" FileName="Microsoft.ProgramSynthesis.Transformation.Formula.dll" MinimumFileVersion="8.30.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_307_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ProgramSynthesis.Transformation.Formula.MachineLearning.dll FileAttribute" FileName="Microsoft.ProgramSynthesis.Transformation.Formula.MachineLearning.dll" MinimumFileVersion="8.30.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_308_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ProgramSynthesis.Transformation.Table.dll FileAttribute" FileName="Microsoft.ProgramSynthesis.Transformation.Table.dll" MinimumFileVersion="8.30.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_309_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ProgramSynthesis.Transformation.Text.dll FileAttribute" FileName="Microsoft.ProgramSynthesis.Transformation.Text.dll" MinimumFileVersion="8.30.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_30A_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.ReportingServices.Interfaces.dll FileAttribute" FileName="Microsoft.ReportingServices.Interfaces.dll" MinimumFileVersion="13.0.24101.27" />
+    <FileAttrib ID="ID_FILEATTRIB_F_30B_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Spatial.NetFX35.dll FileAttribute" FileName="Microsoft.Spatial.NetFX35.dll" MinimumFileVersion="6.15.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_30C_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Spatial.NetFX35.V7.dll FileAttribute" FileName="Microsoft.Spatial.NetFX35.V7.dll" MinimumFileVersion="7.4.0.11102" />
+    <FileAttrib ID="ID_FILEATTRIB_F_30D_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.SqlServer.Configuration.SString.dll FileAttribute" FileName="Microsoft.SqlServer.Configuration.SString.dll" MinimumFileVersion="13.0.800.292" />
+    <FileAttrib ID="ID_FILEATTRIB_F_30E_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.SqlServer.MgdSqlDumper.dll FileAttribute" FileName="Microsoft.SqlServer.MgdSqlDumper.dll" MinimumFileVersion="2017.140.3015.40" />
+    <FileAttrib ID="ID_FILEATTRIB_F_30F_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.SqlServer.XE.Core.dll FileAttribute" FileName="Microsoft.SqlServer.XE.Core.dll" MinimumFileVersion="2022.160.455.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_310_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.SqlServer.XEvent.Configuration.dll FileAttribute" FileName="Microsoft.SqlServer.XEvent.Configuration.dll" MinimumFileVersion="2022.160.455.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_311_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.SqlServer.XEvent.dll FileAttribute" FileName="Microsoft.SqlServer.XEvent.dll" MinimumFileVersion="2022.160.455.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_312_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.SqlServer.XEvent.Linq.dll FileAttribute" FileName="Microsoft.SqlServer.XEvent.Linq.dll" MinimumFileVersion="2022.160.455.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_313_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.SqlServer.XEvent.Targets.dll FileAttribute" FileName="Microsoft.SqlServer.XEvent.Targets.dll" MinimumFileVersion="2022.160.455.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_314_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Web.WebView2.Core.dll FileAttribute" FileName="Microsoft.Web.WebView2.Core.dll" MinimumFileVersion="1.0.2365.46" />
+    <FileAttrib ID="ID_FILEATTRIB_F_315_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Microsoft.Web.WebView2.WinForms.dll FileAttribute" FileName="Microsoft.Web.WebView2.WinForms.dll" MinimumFileVersion="1.0.2365.46" />
+    <FileAttrib ID="ID_FILEATTRIB_F_316_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\MicrosoftEdgeWebview2Setup.exe FileAttribute" FileName="MicrosoftEdgeUpdateSetup.exe" MinimumFileVersion="1.3.173.45" />
+    <FileAttrib ID="ID_FILEATTRIB_F_317_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\mip_ClientTelemetry.dll FileAttribute" FileName="mip_ClientTelemetry.dll" MinimumFileVersion="3.7.264.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_318_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\mip_core.dll FileAttribute" FileName="mip_core.dll" MinimumFileVersion="1.14.128.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_319_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\mip_dotnet.dll FileAttribute" MinimumFileVersion="1.14.128.0" FileDescription="MIP SDK" />
+    <FileAttrib ID="ID_FILEATTRIB_F_31A_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\mip_file_sdk.dll FileAttribute" FileName="mip_file_sdk.dll" MinimumFileVersion="1.14.128.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_31B_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\mip_protection_sdk.dll FileAttribute" FileName="mip_protection_sdk.dll" MinimumFileVersion="1.14.128.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_31C_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\mip_upe_sdk.dll FileAttribute" FileName="mip_upe_sdk.dll" MinimumFileVersion="1.14.128.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_31D_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\msalruntime.dll FileAttribute" FileName="msalruntime.dll" MinimumFileVersion="0.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_31E_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\msasxpress.dll FileAttribute" FileName="msasxpress.dll" MinimumFileVersion="2022.160.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_321_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\msmdsrv.exe FileAttribute" FileName="msmdsrv.exe" MinimumFileVersion="2022.160.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_322_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\msmdvbanet.dll FileAttribute" FileName="msmdvbanet.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_323_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\msmgdsrv.dll FileAttribute" FileName="msmgdsrv.dll" MinimumFileVersion="2022.160.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_324_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\msolap.dll FileAttribute" FileName="msolap.dll" MinimumFileVersion="2022.160.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_325_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\msspell7.dll FileAttribute" FileName="msspell7.dll" MinimumFileVersion="16.0.8431.1011" />
+    <FileAttrib ID="ID_FILEATTRIB_F_326_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\msth8en.dll FileAttribute" FileName="msth8en.dll" MinimumFileVersion="16.0.8431.1011" />
+    <FileAttrib ID="ID_FILEATTRIB_F_327_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\msvcp140.dll FileAttribute" FileName="msvcp140.dll" MinimumFileVersion="14.40.33813.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_328_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\msvcp140_1.dll FileAttribute" FileName="msvcp140_1.dll" MinimumFileVersion="14.40.33813.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_329_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\msvcp140_2.dll FileAttribute" FileName="msvcp140_2.dll" MinimumFileVersion="14.40.33813.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_32A_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\msvcp140_atomic_wait.dll FileAttribute" FileName="msvcp140_atomic_wait.dll" MinimumFileVersion="14.40.33813.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_32B_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\msvcp140_codecvt_ids.dll FileAttribute" FileName="msvcp140_codecvt_ids.dll" MinimumFileVersion="14.40.33813.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_32C_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\MsWb7.dll FileAttribute" FileName="MSWB7.dll" MinimumFileVersion="16.0.8431.1011" />
+    <FileAttrib ID="ID_FILEATTRIB_F_331_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ParquetSharpNative.dll FileAttribute" FileName="ParquetSharpNative.dll" MinimumFileVersion="12.0.1.3" />
+    <FileAttrib ID="ID_FILEATTRIB_F_334_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\pdf2text.dll FileAttribute" FileName="PDF2TEXT.DLL" MinimumFileVersion="16.0.13215.30000" />
+    <FileAttrib ID="ID_FILEATTRIB_F_337_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Prism.dll FileAttribute" FileName="Prism.dll" MinimumFileVersion="7.2.0.1422" />
+    <FileAttrib ID="ID_FILEATTRIB_F_33B_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\SqlDumper.exe FileAttribute" FileName="SqlDumper.exe" MinimumFileVersion="2022.160.454.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_33C_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\System.Buffers.dll FileAttribute" FileName="System.Buffers.dll" MinimumFileVersion="4.6.28619.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_33D_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\System.Collections.Immutable.dll FileAttribute" FileName="System.Collections.Immutable.dll" MinimumFileVersion="4.6.24816.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_33E_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\System.Diagnostics.DiagnosticSource.dll FileAttribute" FileName="System.Diagnostics.DiagnosticSource.dll" MinimumFileVersion="6.0.1523.11507" />
+    <FileAttrib ID="ID_FILEATTRIB_F_33F_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\System.IO.Compression.dll FileAttribute" FileName="System.IO.Compression.dll" MinimumFileVersion="4.6.24705.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_340_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\System.IO.Hashing.dll FileAttribute" FileName="System.IO.Hashing.dll" MinimumFileVersion="6.0.21.52210" />
+    <FileAttrib ID="ID_FILEATTRIB_F_342_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\System.Memory.dll FileAttribute" FileName="System.Memory.dll" MinimumFileVersion="4.6.28619.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_343_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\System.Numerics.Tensors.dll FileAttribute" FileName="System.Numerics.Tensors.dll" MinimumFileVersion="8.0.23.53103" />
+    <FileAttrib ID="ID_FILEATTRIB_F_344_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\System.Numerics.Vectors.dll FileAttribute" FileName="System.Numerics.Vectors.dll" MinimumFileVersion="4.6.26515.6" />
+    <FileAttrib ID="ID_FILEATTRIB_F_345_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\System.Runtime.CompilerServices.Unsafe.dll FileAttribute" FileName="System.Runtime.CompilerServices.Unsafe.dll" MinimumFileVersion="5.0.20.51904" />
+    <FileAttrib ID="ID_FILEATTRIB_F_346_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\System.Spatial.NetFX35.dll FileAttribute" FileName="System.Spatial.NetFX35.dll" MinimumFileVersion="5.7.0.62516" />
+    <FileAttrib ID="ID_FILEATTRIB_F_347_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\System.Text.Encodings.Web.dll FileAttribute" FileName="System.Text.Encodings.Web.dll" MinimumFileVersion="6.0.21.52210" />
+    <FileAttrib ID="ID_FILEATTRIB_F_348_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\System.Text.Json.dll FileAttribute" FileName="System.Text.Json.dll" MinimumFileVersion="6.0.121.56705" />
+    <FileAttrib ID="ID_FILEATTRIB_F_349_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\System.Threading.Tasks.Dataflow.dll FileAttribute" FileName="System.Threading.Tasks.Dataflow.dll" MinimumFileVersion="4.6.26515.6" />
+    <FileAttrib ID="ID_FILEATTRIB_F_34A_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\System.Threading.Tasks.Extensions.dll FileAttribute" FileName="System.Threading.Tasks.Extensions.dll" MinimumFileVersion="4.6.28619.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_34B_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\System.ValueTuple.dll FileAttribute" FileName="System.ValueTuple.dll" MinimumFileVersion="4.6.26515.6" />
+    <FileAttrib ID="ID_FILEATTRIB_F_34C_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\System.Web.Mvc.dll FileAttribute" FileName="System.Web.Mvc.dll" MinimumFileVersion="2.0.60926.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_34F_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\tmapi.dll FileAttribute" FileName="TMAPI.dll" MinimumFileVersion="2022.160.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_350_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\tmcachemgr.dll FileAttribute" FileName="TMCacheMgr.dll" MinimumFileVersion="2022.160.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_351_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\tmpersistence.dll FileAttribute" FileName="tmpersistence.dll" MinimumFileVersion="2022.160.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_352_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\tmtransactions.dll FileAttribute" FileName="TMTransactions.dll" MinimumFileVersion="2022.160.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_355_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\vccorlib140.dll FileAttribute" FileName="vccorlib140.DLL" MinimumFileVersion="14.40.33813.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_357_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\vcruntime140_1.dll FileAttribute" FileName="vcruntime140_1.dll" MinimumFileVersion="14.40.33813.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_358_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\WebView2Loader.dll FileAttribute" FileName="WebView2Loader.dll" MinimumFileVersion="1.0.2365.46" />
+    <FileAttrib ID="ID_FILEATTRIB_F_359_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\xe.dll FileAttribute" FileName="xe.dll" MinimumFileVersion="2022.160.455.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_35A_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\xmlrw.dll FileAttribute" FileName="XMLRW.DLL" MinimumFileVersion="2022.160.455.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_35B_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\xmlrwbin.dll FileAttribute" FileName="XMLRWBIN.DLL" MinimumFileVersion="2022.160.455.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_35C_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\xmsrv.dll FileAttribute" FileName="xmsrv.dll" MinimumFileVersion="2022.160.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_35E_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zh-HANT\Microsoft.Mashup.Client.Desktop.UI.Resources.dll FileAttribute" FileName="Microsoft.Mashup.Client.Desktop.UI.resources.dll" MinimumFileVersion="1.0.330.21105" />
+    <FileAttrib ID="ID_FILEATTRIB_F_35F_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zh-HANT\Microsoft.Mashup.Client.UI.Resources.dll FileAttribute" FileName="Microsoft.Mashup.Client.UI.resources.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_360_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zh-HANT\Microsoft.Mashup.Document.Resources.dll FileAttribute" FileName="Microsoft.Mashup.Document.resources.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_361_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zh-HANT\Microsoft.Mashup.DocumentServices.Resources.dll FileAttribute" FileName="Microsoft.Mashup.DocumentServices.resources.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_362_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zh-HANT\Microsoft.Mashup.OAuth.Resources.dll FileAttribute" FileName="Microsoft.Mashup.OAuth.resources.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_363_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zh-HANT\Microsoft.Mashup.OleDbProvider.Resources.dll FileAttribute" FileName="Microsoft.Mashup.OleDbProvider.resources.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_364_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zh-HANT\Microsoft.MashupEngine.Library45.Resources.dll FileAttribute" FileName="Microsoft.MashupEngine.Library45.resources.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_365_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zh-HANT\Microsoft.MashupEngine.Resources.dll FileAttribute" FileName="Microsoft.MashupEngine.resources.dll" MinimumFileVersion="2.133.802.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_366_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zh-HANT\Microsoft.PowerBI.AdomdClient.Resources.dll FileAttribute" FileName="Microsoft.PowerBI.AdomdClient.resources.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_367_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zh-HANT\Microsoft.PowerBI.Amo.Core.Resources.dll FileAttribute" FileName="Microsoft.PowerBI.Amo.Core.resources.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_368_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zh-HANT\Microsoft.PowerBI.Amo.Resources.dll FileAttribute" FileName="Microsoft.PowerBI.Amo.resources.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_369_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zh-HANT\Microsoft.PowerBI.ASModelUpgrade.Resources.dll FileAttribute" FileName="Microsoft.PowerBI.ASModelUpgrade.resources.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_36A_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zh-HANT\Microsoft.PowerBI.Client.Windows.Resources.dll FileAttribute" FileName="Microsoft.PowerBI.Client.Windows.resources.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_36B_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zh-HANT\Microsoft.PowerBI.Modeler.Resources.dll FileAttribute" FileName="Microsoft.PowerBI.Modeler.resources.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_36C_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zh-HANT\Microsoft.PowerBI.Modeling.Engine.Resources.dll FileAttribute" FileName="Microsoft.PowerBI.Modeling.Engine.resources.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_36D_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zh-HANT\Microsoft.PowerBI.Scripting.Resources.dll FileAttribute" FileName="Microsoft.PowerBI.Scripting.resources.dll" MinimumFileVersion="1.11.2551.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_36E_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zh-HANT\Microsoft.PowerBI.SmartNarrativesResources.Resources.dll FileAttribute" FileName="Microsoft.PowerBI.SmartNarrativesResources.resources.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_36F_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zh-HANT\Microsoft.PowerBI.Tabular.Resources.dll FileAttribute" FileName="Microsoft.PowerBI.Tabular.resources.dll" MinimumFileVersion="16.0.148.21" />
+    <FileAttrib ID="ID_FILEATTRIB_F_370_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zh-HANT\PBIDesktop.Resources.dll FileAttribute" FileName="PBIDesktop.resources.dll" MinimumFileVersion="2.136.1202.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A4_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Cdm\Microsoft.CommonDataModel.ObjectModel.dll FileAttribute" FileName="Microsoft.CommonDataModel.ObjectModel.dll" MinimumFileVersion="1.7.4.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A7_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Cdm\System.Net.Http.Extensions.dll FileAttribute" FileName="System.Net.Http.Extensions.dll" MinimumFileVersion="2.2.29.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A8_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\Cdm\System.Net.Http.Primitives.dll FileAttribute" FileName="System.Net.Http.Primitives.dll" MinimumFileVersion="4.2.29.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A9_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\AI\libiomp5md.dll FileAttribute" FileName="libiomp5md.dll" MinimumFileVersion="5.0.2018.913" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3AE_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\AI\Microsoft.Cloud.InstrumentationFramework.Events.dll FileAttribute" FileName="Microsoft.Cloud.InstrumentationFramework.Events.dll" MinimumFileVersion="3.4.1.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3AF_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\AI\Microsoft.Cloud.InstrumentationFramework.Health.dll FileAttribute" FileName="Microsoft.Cloud.InstrumentationFramework.Health.dll" MinimumFileVersion="3.4.1.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B0_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\AI\Microsoft.Cloud.InstrumentationFramework.Metrics.dll FileAttribute" FileName="Microsoft.Cloud.InstrumentationFramework.Metrics.dll" MinimumFileVersion="3.4.1.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B1_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\AI\Microsoft.ML.Experimental.dll FileAttribute" FileName="Microsoft.ML.Experimental.dll" MinimumFileVersion="0.17.28926.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B2_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\AI\Microsoft.ML.FastTree.dll FileAttribute" FileName="Microsoft.ML.FastTree.dll" MinimumFileVersion="1.600.21.36503" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B3_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\AI\Microsoft.ML.PCA.dll FileAttribute" FileName="Microsoft.ML.PCA.dll" MinimumFileVersion="1.600.21.36503" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B4_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\AI\Microsoft.ML.StandardTrainers.dll FileAttribute" FileName="Microsoft.ML.StandardTrainers.dll" MinimumFileVersion="1.600.21.36503" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B5_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\AI\Microsoft.ML.TimeSeries.dll FileAttribute" FileName="Microsoft.ML.TimeSeries.dll" MinimumFileVersion="1.600.21.36503" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B6_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\AI\Microsoft.ML.Transforms.dll FileAttribute" FileName="Microsoft.ML.Transforms.dll" MinimumFileVersion="1.600.21.36503" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B7_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\AI\Microsoft.Practices.ServiceLocation.dll FileAttribute" FileName="Microsoft.Practices.ServiceLocation.dll" MinimumFileVersion="1.3.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B8_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\AI\Microsoft.ServicePlatform.dll FileAttribute" FileName="Microsoft.ServicePlatform.dll" MinimumFileVersion="2023.8.2.2" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B9_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\AI\MklImports.dll FileAttribute" FileName="mkl_custom.dll" MinimumFileVersion="2021.3.1.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3BA_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Npgsql\Npgsql.dll FileAttribute" FileName="Npgsql.dll" MinimumFileVersion="4.0.10.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3BB_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Bond.Attributes.dll FileAttribute" FileName="Bond.Attributes.dll" MinimumFileVersion="11.0.0.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3BC_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Bond.dll FileAttribute" FileName="Bond.dll" MinimumFileVersion="11.0.0.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3BD_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Bond.IO.dll FileAttribute" FileName="Bond.IO.dll" MinimumFileVersion="11.0.0.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3BE_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Bond.JSON.dll FileAttribute" FileName="Bond.JSON.dll" MinimumFileVersion="11.0.0.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3BF_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Bond.Reflection.dll FileAttribute" FileName="Bond.Reflection.dll" MinimumFileVersion="11.0.0.100" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3C0_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\CsvHelper.dll FileAttribute" FileName="CsvHelper.dll" MinimumFileVersion="6.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3C9_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.Azure.KeyVault.Core.dll FileAttribute" FileName="Microsoft.Azure.KeyVault.Core.dll" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3CA_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.Azure.Management.ResourceGraph.dll FileAttribute" FileName="Microsoft.Azure.Management.ResourceGraph.dll" MinimumFileVersion="2.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3CB_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.Azure.Management.ResourceManager.dll FileAttribute" FileName="Microsoft.Azure.Management.ResourceManager.dll" MinimumFileVersion="3.17.4.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3CC_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.Azure.Storage.Blob.dll FileAttribute" FileName="Microsoft.Azure.Storage.Blob.dll" MinimumFileVersion="11.2.2.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3CD_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.Azure.Storage.Common.dll FileAttribute" FileName="Microsoft.Azure.Storage.Common.dll" MinimumFileVersion="11.2.2.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3CE_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.Caching.Redis.dll FileAttribute" FileName="Microsoft.Caching.Redis.dll" MinimumFileVersion="3.0.57.15755" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3CF_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.IdentityModel.JsonWebTokens.dll FileAttribute" FileName="Microsoft.IdentityModel.JsonWebTokens.dll" MinimumFileVersion="6.16.0.30218" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D0_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.IdentityModel.Logging.dll FileAttribute" FileName="Microsoft.IdentityModel.Logging.dll" MinimumFileVersion="6.16.0.30218" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D1_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.IdentityModel.Tokens.dll FileAttribute" FileName="Microsoft.IdentityModel.Tokens.dll" MinimumFileVersion="6.16.0.30218" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D2_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.PowerBI.DataMovement.ExternalContracts.dll FileAttribute" FileName="Microsoft.PowerBI.DataMovement.ExternalContracts.dll" MinimumFileVersion="3000.162.5.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D3_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.PowerBI.DataMovement.Pipeline.Configuration.dll FileAttribute" FileName="Microsoft.PowerBI.DataMovement.Pipeline.Configuration.dll" MinimumFileVersion="3000.162.5.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D4_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.PowerBI.DataMovement.Pipeline.Diagnostics.dll FileAttribute" FileName="Microsoft.PowerBI.DataMovement.Pipeline.Diagnostics.dll" MinimumFileVersion="3000.162.5.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D5_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.PowerBI.DataMovement.Pipeline.OleDbBase.dll FileAttribute" FileName="Microsoft.PowerBI.DataMovement.Pipeline.OleDbBase.dll" MinimumFileVersion="3000.162.5.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D8_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.Rest.ClientRuntime.Azure.dll FileAttribute" FileName="Microsoft.Rest.ClientRuntime.Azure.dll" MinimumFileVersion="3.3.18.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D9_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.Rest.ClientRuntime.dll FileAttribute" FileName="Microsoft.Rest.ClientRuntime.dll" MinimumFileVersion="2.3.20.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3DA_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\Microsoft.ServicePlatform.UnityContainer.dll FileAttribute" FileName="Microsoft.ServicePlatform.UnityContainer.dll" MinimumFileVersion="2023.8.2.2" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3DB_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\Microsoft.AI.AdoDotNetProvider\System.IdentityModel.Tokens.Jwt.dll FileAttribute" FileName="System.IdentityModel.Tokens.Jwt.dll" MinimumFileVersion="6.16.0.30218" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3DE_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\MashupSql\Microsoft.Data.SqlClient.dll FileAttribute" FileName="Microsoft.Data.SqlClient.dll" MinimumFileVersion="2.17.23292.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3DF_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\MashupSql\Microsoft.Data.SqlClient.SNI.x64.dll FileAttribute" FileName="Microsoft.Data.SqlClient.SNI.dll" MinimumFileVersion="2.1.1.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3E0_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\MashupSql\Microsoft.IdentityModel.Protocols.dll FileAttribute" FileName="Microsoft.IdentityModel.Protocols.dll" MinimumFileVersion="7.5.1.50405" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3E1_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\MashupSql\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll FileAttribute" FileName="Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" MinimumFileVersion="7.5.1.50405" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3E8_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\cdsa\Microsoft.VisualStudio.Threading.dll FileAttribute" FileName="Microsoft.VisualStudio.Threading.dll" MinimumFileVersion="16.0.102.38751" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3E9_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\cdsa\Microsoft.VisualStudio.Validation.dll FileAttribute" FileName="Microsoft.VisualStudio.Validation.dll" MinimumFileVersion="15.3.15.16354" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3EA_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\ADO.NET Providers\cdsa\System.Net.Http.Formatting.dll FileAttribute" FileName="System.Net.Http.Formatting.dll" MinimumFileVersion="5.2.61128.0" />
+    <Allow ID="ID_ALLOW_A_3EB_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libbz2-1.dll Hash Sha1" Hash="029D2972FA1ACD1D1DD02C2413A5844D87B21A2E" />
+    <Allow ID="ID_ALLOW_A_3EC_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libbz2-1.dll Hash Sha256" Hash="0FB8835152DC683588A72768BD77C32BFF0076BCFEBA289EA1147DC2136D786E" />
+    <Allow ID="ID_ALLOW_A_3ED_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libbz2-1.dll Hash Page Sha1" Hash="C5A02D7FC367DF017425415C919CEF887D51739F" />
+    <Allow ID="ID_ALLOW_A_3EE_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libbz2-1.dll Hash Page Sha256" Hash="57454967C2733355DEBAA0FCD7D4972F001EC972B4FF642DFE342EEAFF419A7C" />
+    <Allow ID="ID_ALLOW_A_3EF_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libffi-8.dll Hash Sha1" Hash="02F9EC67F7592FAB403C7C680FB61E6E387BF331" />
+    <Allow ID="ID_ALLOW_A_3F0_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libffi-8.dll Hash Sha256" Hash="D217D8892FF769C387A3FFBBAC64719901FB212B38C42DC5C39FFA14DB555EE9" />
+    <Allow ID="ID_ALLOW_A_3F1_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libffi-8.dll Hash Page Sha1" Hash="1C45924AEA5B5DF89B56D25A860C6EE4EAFF918C" />
+    <Allow ID="ID_ALLOW_A_3F2_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libffi-8.dll Hash Page Sha256" Hash="597EB0990CC25ABC890BF7E53100886419FB9A98434500BC51E18AEBF3717741" />
+    <Allow ID="ID_ALLOW_A_3F3_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libgsf-1-114.dll Hash Sha1" Hash="3FEF539906E58A10D9C772019A7B19972A1A6BE9" />
+    <Allow ID="ID_ALLOW_A_3F4_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libgsf-1-114.dll Hash Sha256" Hash="57ABF1102A45BE8AE28A713115CF2A500F29CC350A4DCE197F8B28A502885B31" />
+    <Allow ID="ID_ALLOW_A_3F5_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libgsf-1-114.dll Hash Page Sha1" Hash="1740789D06E1292ED369EF4DB3C81D4A746F9DE0" />
+    <Allow ID="ID_ALLOW_A_3F6_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libgsf-1-114.dll Hash Page Sha256" Hash="16BC6517CBB30E079220733B4DD84A574B23C9593DFD77FB5ED2C86807D80D45" />
+    <Allow ID="ID_ALLOW_A_3F7_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libpcre2-8-0.dll Hash Sha1" Hash="8F5406BB73BF5DAAD1B4FCF6F5F4975362770C24" />
+    <Allow ID="ID_ALLOW_A_3F8_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libpcre2-8-0.dll Hash Sha256" Hash="4E3273CFEFF39D116C6EAEE4B49D1DA7ED1176A05CC0BA7458876374E23E9ADA" />
+    <Allow ID="ID_ALLOW_A_3F9_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libpcre2-8-0.dll Hash Page Sha1" Hash="D7EDB568F569D21CA1DFD28004A42EE9349476F1" />
+    <Allow ID="ID_ALLOW_A_3FA_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libpcre2-8-0.dll Hash Page Sha256" Hash="2A2DB9E8778618B41841FA23687BE0532D239A104AF59CE940B45C02C5697C9F" />
+    <Allow ID="ID_ALLOW_A_3FB_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libxml2-2.dll Hash Sha1" Hash="25D70C4ACB4E1A917AA3A26B07C361D84DDEE567" />
+    <Allow ID="ID_ALLOW_A_3FC_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libxml2-2.dll Hash Sha256" Hash="C041079D6FEF93A74EF1C23F01420147896828C169A859FBE0AC9EA32DB4E7FD" />
+    <Allow ID="ID_ALLOW_A_3FD_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libxml2-2.dll Hash Page Sha1" Hash="355121F0C137BBC6C4D0A9995B886D98A2A73C3C" />
+    <Allow ID="ID_ALLOW_A_3FE_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\libxml2-2.dll Hash Page Sha256" Hash="57703D8558A04244F8B835C246C9C3B709AC40D61D8B9B57DE073C94641D3091" />
+    <Allow ID="ID_ALLOW_A_3FF_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\pdfium.dll Hash Sha1" Hash="A4ED1496FAB6C044C71AFDC0DC1EE069595AB25E" />
+    <Allow ID="ID_ALLOW_A_400_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\pdfium.dll Hash Sha256" Hash="795AF886647DADD5CF535C6026B21175E5834323D92C535DA7663F3F4F99CBE2" />
+    <Allow ID="ID_ALLOW_A_401_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\pdfium.dll Hash Page Sha1" Hash="E4804C4488F05795E39CD41E1338FFD44822A41E" />
+    <Allow ID="ID_ALLOW_A_402_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\pdfium.dll Hash Page Sha256" Hash="665DE06CE09C4817A16A034D1D1C2A9F9969A9E88E85480463006613840899D6" />
+    <Allow ID="ID_ALLOW_A_403_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zlib1.dll Hash Sha1" Hash="1EAB128DFF76F8EA16989F03C97A609A404FC7ED" />
+    <Allow ID="ID_ALLOW_A_404_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zlib1.dll Hash Sha256" Hash="A295BA5B68E3F546F98B305F69C057C8386F7AE359E3B0F1FA847972007441D4" />
+    <Allow ID="ID_ALLOW_A_405_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zlib1.dll Hash Page Sha1" Hash="4D7555A2C58B72E2CFC15BF4B5FF744670C8C6DC" />
+    <Allow ID="ID_ALLOW_A_406_1" FriendlyName="C:\Program Files\Microsoft Power BI Desktop RS\bin\zlib1.dll Hash Page Sha256" Hash="5A44BEC2D18B5BFEBC6B4F88D7B7D917CB27EC58B9CAFB19F0B228130F758E9C" />
+    <FileAttrib ID="ID_FILEATTRIB_A_16688893063A416989416B9C76DCD60A_2" FriendlyName="ADPClientService.exe" FileName="ADPClientService.exe" MinimumFileVersion="5.1.34.0" InternalName="ADPClientService.exe" FileDescription="Autodesk Analytics Client Service" ProductName="Autodesk Windows Components" />
+  </FileRules>
+  <!--Signers-->
+  <Signers>
+    <Signer ID="ID_SIGNER_F_2A_1" Name="Microsoft Code Signing PCA 2011">
+      <CertRoot Type="TBS" Value="F6F717A43AD9ABDDC8CEFDDE1C505462535E7D1307E630F9544A2D14FE8BF26E" />
+      <CertPublisher Value="Microsoft Corporation" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_21E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_226_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_22A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_22C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_22E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_23A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_243_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_269_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_26E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_270_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_272_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_274_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_276_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_278_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_27B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_27E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_280_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_282_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_285_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_287_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_289_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_28B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_28D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_28F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_292_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A1_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A3_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B6_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B8_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2BB_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2BD_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2BE_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C0_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C2_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C5_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D3_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D6_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2DF_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E1_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E3_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E5_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E9_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2EB_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F0_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F2_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_31F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_32F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_332_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_335_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_339_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_371_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_373_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A0_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A2_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A5_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3AA_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3AC_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C1_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C3_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C5_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C7_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3DC_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E2_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E4_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E6_1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_1B9_1" Name="Microsoft Windows Production PCA 2011">
+      <CertRoot Type="TBS" Value="4E80BE107C860DE896384B3EFF50504DC2D76AC7151DF3102A4450637A032146" />
+      <CertPublisher Value="Microsoft Windows" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_353_1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_39F_1" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="Magnitude Software, Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_376_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_392_1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_3A0_1" Name="Microsoft Code Signing PCA 2011">
+      <CertRoot Type="TBS" Value="F6F717A43AD9ABDDC8CEFDDE1C505462535E7D1307E630F9544A2D14FE8BF26E" />
+      <CertPublisher Value="Microsoft 3rd Party Application Component" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_376_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_392_1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_47C_1" Name="DigiCert SHA2 Assured ID Code Signing CA">
+      <CertRoot Type="TBS" Value="E767799478F64A34B3F53FF3BB9057FE1768F4AB178041B0DCC0FF1E210CBA65" />
+      <CertPublisher Value="Magnitude Software, Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_392_1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_1_1" Name="Microsoft Code Signing PCA 2011">
+      <CertRoot Type="TBS" Value="F6F717A43AD9ABDDC8CEFDDE1C505462535E7D1307E630F9544A2D14FE8BF26E" />
+      <CertPublisher Value="Microsoft 3rd Party Application Component" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_200_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_209_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_20A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_20B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_20C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_20D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_20E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_20F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_210_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_211_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_212_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_213_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_214_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_215_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_216_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2FA_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_32D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_32E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_338_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_341_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_34D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_34E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_35D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_375_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_376_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_378_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_379_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_380_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_381_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_382_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_383_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_384_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_385_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_386_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_387_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_388_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_389_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_390_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_391_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_392_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_394_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_395_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_396_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_397_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_398_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_399_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_39A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_39B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_39C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_39D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_39E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_39F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_356_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D6_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D7_1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_3_1" Name="Microsoft Code Signing PCA 2011">
+      <CertRoot Type="TBS" Value="F6F717A43AD9ABDDC8CEFDDE1C505462535E7D1307E630F9544A2D14FE8BF26E" />
+      <CertPublisher Value="Microsoft Corporation" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_200_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_201_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_202_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_203_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_204_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_205_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_206_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_207_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_208_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_217_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_218_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_219_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_21A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_21B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_21C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_21D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_21E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_220_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_221_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_222_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_223_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_224_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_225_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_226_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_228_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_229_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_22A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_22C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_22E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_230_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_231_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_232_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_233_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_234_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_235_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_236_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_237_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_238_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_239_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_23A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_23C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_23D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_23E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_23F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_240_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_241_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_242_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_243_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_245_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_246_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_247_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_248_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_249_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_24A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_24B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_24C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_24D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_24E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_24F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_250_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_251_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_252_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_253_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_254_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_255_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_256_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_257_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_258_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_259_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_25A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_25B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_25C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_25D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_25E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_25F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_260_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_261_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_262_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_263_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_264_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_265_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_266_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_267_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_268_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_269_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_26B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_26C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_26D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_26E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_270_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_272_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_274_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_276_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_278_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_27A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_27B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_27D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_27E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_280_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_282_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_284_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_285_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_287_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_289_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_28B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_28D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_28F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_291_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_292_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_294_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_295_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_296_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_297_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_298_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_299_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_29A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_29B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_29C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_29D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_29E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_29F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A0_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A1_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A3_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A5_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A6_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A7_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A8_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2A9_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2AA_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2AB_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2AC_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2AD_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2AE_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2AF_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B0_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B1_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B2_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B3_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B4_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B5_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B6_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2B8_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2BA_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2BB_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2BE_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C0_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C2_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C4_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C5_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C7_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C8_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C9_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2CA_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2CB_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2CC_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2CD_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2CE_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2CF_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D0_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D1_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D2_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D3_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D5_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D6_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D8_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2D9_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2DA_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2DB_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2DC_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2DD_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2DE_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2DF_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E1_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E3_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E5_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E7_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E8_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2E9_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2EB_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2ED_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2EE_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2EF_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F0_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F2_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F4_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F5_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F6_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F7_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F8_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2F9_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2FA_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2FB_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2FC_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2FD_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2FE_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2FF_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_300_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_301_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_302_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_303_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_304_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_305_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_306_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_307_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_308_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_309_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_30A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_30B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_30C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_30D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_30E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_30F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_310_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_311_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_312_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_313_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_314_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_315_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_316_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_317_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_318_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_319_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_31A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_31B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_31C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_31D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_31E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_31F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_321_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_322_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_323_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_324_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_325_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_326_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_327_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_328_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_329_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_32A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_32B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_32C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_32D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_32F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_331_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_332_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_334_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_335_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_337_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_338_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_339_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_33B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_33C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_33D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_33E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_33F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_340_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_342_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_343_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_344_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_345_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_346_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_347_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_348_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_349_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_34A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_34B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_34C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_34F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_350_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_351_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_352_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_355_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_356_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_357_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_358_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_359_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_35A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_35B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_35C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_35E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_35F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_360_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_361_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_362_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_363_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_364_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_365_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_366_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_367_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_368_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_369_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_36A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_36B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_36C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_36D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_36E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_36F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_370_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_371_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_373_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_375_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_381_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_382_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_385_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_39C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_39D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A0_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A2_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A4_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A5_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A7_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A8_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3A9_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3AA_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3AC_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3AE_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3AF_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B0_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B1_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B2_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B3_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B4_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B5_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B6_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B7_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B8_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3B9_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3BA_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3BB_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3BC_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3BD_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3BE_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3BF_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C0_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C1_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C3_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C5_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C7_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C9_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3CA_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3CB_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3CC_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3CD_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3CE_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3CF_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D0_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D1_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D2_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D3_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D4_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D5_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D8_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D9_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3DA_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3DB_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3DC_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3DE_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3DF_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E0_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E1_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E2_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E4_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E6_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D6_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D7_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E8_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E9_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3EA_1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_52_1" Name="Microsoft Code Signing PCA">
+      <CertRoot Type="TBS" Value="27543A3F7612DE2261C7228321722402F63A07DE" />
+      <CertPublisher Value="Microsoft Corporation" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_23C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_291_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2AB_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2AC_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2AD_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2BA_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C4_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2FA_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_30D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_30E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_325_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_326_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_32C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_33F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_349_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_34B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_34C_1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_C9_1" Name="Microsoft Code Signing PCA 2010">
+      <CertRoot Type="TBS" Value="121AF4B922A74247EA49DF50DE37609CC1451A1FE06B2CB7E1E079B492BD8195" />
+      <CertPublisher Value="Microsoft Corporation" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2AB_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_32D_1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_14D_1" Name="EdgeBuild">
+      <CertRoot Type="TBS" Value="D15E8FF6D196E682FDF13B1165A5762035DE6D617C78A83BFC918200AC421DA3" />
+      <CertPublisher Value="EdgeBuild" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_316_1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_167_1" Name=".NET Foundation Projects Code Signing CA2">
+      <CertRoot Type="TBS" Value="A1BEDD53F9260FD3E0CB84900BF05837563BE8AEE86F613562196AE77804F456" />
+      <CertPublisher Value="Json.NET (.NET Foundation)" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_32D_1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_16B_1" Name="Microsoft Windows Production PCA 2011">
+      <CertRoot Type="TBS" Value="4E80BE107C860DE896384B3EFF50504DC2D76AC7151DF3102A4450637A032146" />
+      <CertPublisher Value="Microsoft Windows" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_32D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_33C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_342_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_344_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_345_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_353_1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_1B1_1" Name="Intel External Issuing CA 7B">
+      <CertRoot Type="TBS" Value="5FA042C979FABA67DE861093B4ACA808AE4BE0FCEDF123CB8AFE126856C0B6AC3451393048211DB8993914C5FF410BD8" />
+      <CertPublisher Value="Intel(R) Software Development Products" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_34D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_34E_1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_39C_1" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="Magnitude Software, Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_375_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_376_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_378_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_379_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_37F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_380_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_381_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_382_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_391_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_396_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_385_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_39A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_39B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_39E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_392_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_394_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_395_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_39F_1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_3CF_1" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="Insightsoftware, LLC" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_382_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_383_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_384_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_385_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_386_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_387_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_388_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_389_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_375_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_381_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38E_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38F_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_390_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_399_1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_47F_1" Name="DigiCert SHA2 Assured ID Code Signing CA">
+      <CertRoot Type="TBS" Value="E767799478F64A34B3F53FF3BB9057FE1768F4AB178041B0DCC0FF1E210CBA65" />
+      <CertPublisher Value="Magnitude Software, Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_392_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_394_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_395_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_383_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_388_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_389_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38D_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_397_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_398_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_375_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_381_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_382_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_387_1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_49A_1" Name="Symantec Class 3 SHA256 Code Signing CA">
+      <CertRoot Type="TBS" Value="A08E79C386083D875014C409C13D144E0A24386132980DF11FF59737C8489EB1" />
+      <CertPublisher Value="Simba Technologies Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_386_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_387_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_383_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_380_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_388_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_389_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38A_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38B_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38C_1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_38D_1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_A_CE04ED7F36974B11B147F67EE83B41CC_2" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="Autodesk, Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_A_16688893063A416989416B9C76DCD60A_2" />
+    </Signer>
+  </Signers>
+  <!--Driver Signing Scenarios-->
+  <SigningScenarios>
+    <SigningScenario Value="131" ID="ID_SIGNINGSCENARIO_DRIVERS_1" FriendlyName="Auto generated policy on 12-12-2024">
+      <ProductSigners>
+        <AllowedSigners>
+          <AllowedSigner SignerId="ID_SIGNER_F_2A_1" />
+          <AllowedSigner SignerId="ID_SIGNER_F_1B9_1" />
+          <AllowedSigner SignerId="ID_SIGNER_F_39F_1" />
+          <AllowedSigner SignerId="ID_SIGNER_F_3A0_1" />
+          <AllowedSigner SignerId="ID_SIGNER_F_47C_1" />
+        </AllowedSigners>
+      </ProductSigners>
+    </SigningScenario>
+    <SigningScenario Value="12" ID="ID_SIGNINGSCENARIO_WINDOWS" FriendlyName="Auto generated policy on 12-12-2024">
+      <ProductSigners>
+        <AllowedSigners>
+          <AllowedSigner SignerId="ID_SIGNER_F_1_1" />
+          <AllowedSigner SignerId="ID_SIGNER_F_3_1" />
+          <AllowedSigner SignerId="ID_SIGNER_F_52_1" />
+          <AllowedSigner SignerId="ID_SIGNER_F_C9_1" />
+          <AllowedSigner SignerId="ID_SIGNER_F_14D_1" />
+          <AllowedSigner SignerId="ID_SIGNER_F_167_1" />
+          <AllowedSigner SignerId="ID_SIGNER_F_16B_1" />
+          <AllowedSigner SignerId="ID_SIGNER_F_1B1_1" />
+          <AllowedSigner SignerId="ID_SIGNER_F_39C_1" />
+          <AllowedSigner SignerId="ID_SIGNER_F_3CF_1" />
+          <AllowedSigner SignerId="ID_SIGNER_F_47F_1" />
+          <AllowedSigner SignerId="ID_SIGNER_F_49A_1" />
+          <AllowedSigner SignerId="ID_SIGNER_A_CE04ED7F36974B11B147F67EE83B41CC_2" />
+        </AllowedSigners>
+        <FileRulesRef>
+          <FileRuleRef RuleID="ID_ALLOW_A_3EB_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3EC_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3ED_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3EE_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3EF_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3F0_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3F1_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3F2_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3F3_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3F4_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3F5_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3F6_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3F7_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3F8_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3F9_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3FA_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3FB_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3FC_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3FD_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3FE_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3FF_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_400_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_401_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_402_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_403_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_404_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_405_1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_406_1" />
+        </FileRulesRef>
+      </ProductSigners>
+    </SigningScenario>
+  </SigningScenarios>
+  <UpdatePolicySigners />
+  <CiSigners>
+    <CiSigner SignerId="ID_SIGNER_F_1_1" />
+    <CiSigner SignerId="ID_SIGNER_F_3_1" />
+    <CiSigner SignerId="ID_SIGNER_F_52_1" />
+    <CiSigner SignerId="ID_SIGNER_F_C9_1" />
+    <CiSigner SignerId="ID_SIGNER_F_14D_1" />
+    <CiSigner SignerId="ID_SIGNER_F_167_1" />
+    <CiSigner SignerId="ID_SIGNER_F_16B_1" />
+    <CiSigner SignerId="ID_SIGNER_F_1B1_1" />
+    <CiSigner SignerId="ID_SIGNER_F_39C_1" />
+    <CiSigner SignerId="ID_SIGNER_F_3CF_1" />
+    <CiSigner SignerId="ID_SIGNER_F_47F_1" />
+    <CiSigner SignerId="ID_SIGNER_F_49A_1" />
+    <CiSigner SignerId="ID_SIGNER_A_CE04ED7F36974B11B147F67EE83B41CC_2" />
+  </CiSigners>
+  <HvciOptions>2</HvciOptions>
+  <BasePolicyID>{488E7D72-DA1E-4219-BB58-22EEBCBB2CFE}</BasePolicyID>
+  <PolicyID>{7B32600E-9A37-4A51-A02E-A825276F2B0B}</PolicyID>
+  <Settings>
+    <Setting Provider="AllHostIds" Key="AllKeys" ValueName="EnterpriseDefinedClsId">
+      <Value>
+        <Boolean>true</Boolean>
+      </Value>
+    </Setting>
+    <Setting Provider="PolicyInfo" Key="Information" ValueName="Name">
+      <Value>
+        <String>MicrosoftPowerBIReportServer-213612020-V01 - 12-12-2024</String>
+      </Value>
+    </Setting>
+    <Setting Provider="PolicyInfo" Key="Information" ValueName="Id">
+      <Value>
+        <String>022422</String>
+      </Value>
+    </Setting>
+  </Settings>
+</SiPolicy>
