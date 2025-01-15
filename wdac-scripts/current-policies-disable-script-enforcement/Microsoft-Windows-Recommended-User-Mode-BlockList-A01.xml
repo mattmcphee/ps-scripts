@@ -62,8 +62,10 @@
 		<Deny ID="ID_DENY_LXRUN_0" FriendlyName="lxrun.exe" FileName="lxrun.exe" MinimumFileVersion="0.0.0.0" MaximumFileVersion="65355.65355.65355.65355" />
 		<Deny ID="ID_DENY_INTUNE_AGENT_0" FriendlyName="IntuneWindowsAgent.exe" FileName="Microsoft.Management.Services.IntuneWindowsAgent.exe" MinimumFileVersion="1.46.204.0" />
 		<Deny ID="ID_DENY_MFC40_0" FriendlyName="mfc40.dll" FileName="mfc40.dll" MinimumFileVersion="0.0.0.0" MaximumFileVersion="65355.65355.65355.65355" />
+		<!-- Required for powerbi, microsoft openjdk and a few other apps
 		<Deny ID="ID_DENY_MS_BUILD_0" FriendlyName="Microsoft.Build.dll" FileName="Microsoft.Build.dll" MinimumFileVersion="0.0.0.0" MaximumFileVersion="65355.65355.65355.65355" />
 		<Deny ID="ID_DENY_MS_BUILD_FMWK_0" FriendlyName="Microsoft.Build.Framework.dll" FileName="Microsoft.Build.Framework.dll" MinimumFileVersion="0.0.0.0" MaximumFileVersion="65355.65355.65355.65355" />
+		-->
 		<Deny ID="ID_DENY_MWFC_0" FriendlyName="Microsoft.Workflow.Compiler.exe" FileName="Microsoft.Workflow.Compiler.exe" MinimumFileVersion="0.0.0.0" MaximumFileVersion="65355.65355.65355.65355" />
 		<Deny ID="ID_DENY_MSBUILD_0" FriendlyName="MSBuild.exe" FileName="MSBuild.exe" MinimumFileVersion="0.0.0.0" MaximumFileVersion="65355.65355.65355.65355" />
 		<Deny ID="ID_DENY_MSBUILD_DLL_0" FriendlyName="MSBuild.dll" FileName="MSBuild.dll" MinimumFileVersion="0.0.0.0" MaximumFileVersion="65355.65355.65355.65355" />
@@ -739,8 +741,10 @@
 					<FileRuleRef RuleID="ID_DENY_LXRUN_0" />
 					<FileRuleRef RuleID="ID_DENY_INTUNE_AGENT_0" />
 					<FileRuleRef RuleID="ID_DENY_MFC40_0" />
+					<!-- Required for powerbi, microsoft openjdk and a few other apps
 					<FileRuleRef RuleID="ID_DENY_MS_BUILD_0" />
 					<FileRuleRef RuleID="ID_DENY_MS_BUILD_FMWK_0" />
+					-->
 					<FileRuleRef RuleID="ID_DENY_MWFC_0" />
 					<FileRuleRef RuleID="ID_DENY_MSBUILD_0" />
 					<FileRuleRef RuleID="ID_DENY_MSBUILD_DLL_0" />
