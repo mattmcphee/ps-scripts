@@ -1,4 +1,4 @@
-function Get-SQLIssueConfirmation {
+function Confirm-CCMSQLIssue {
     param(
         # ComputerName
         [Parameter(Mandatory=$true)]
@@ -14,5 +14,8 @@ function Get-SQLIssueConfirmation {
     $sql = Invoke-Command -ComputerName $ComputerName -ScriptBlock {
         Get-Content 'C:\Windows\CCM\Logs\CCMSQLCE.log'
     }
-    ([regex]::matches($sql,"active concurrent sessions")).count
+    $count = ([regex]::matches($sql,"active concurrent sessions")).count
+    $outputMsg = "There were $count instances of the phrase " + `
+        "'active concurrent sessions' found in CCMSQLCE.log"
+    Write-Output $outputMsg
 }

@@ -6,19 +6,16 @@
   <BasePolicyID>{488E7D72-DA1E-4219-BB58-22EEBCBB2CFE}</BasePolicyID>
   <Rules>
     <Rule>
-      <Option>Enabled:UMCI</Option>
-    </Rule>
-    <Rule>
       <Option>Enabled:Unsigned System Integrity Policy</Option>
     </Rule>
     <Rule>
       <Option>Enabled:Advanced Boot Options Menu</Option>
     </Rule>
     <Rule>
-      <Option>Required:Enforce Store Applications</Option>
+      <Option>Enabled:UMCI</Option>
     </Rule>
     <Rule>
-      <Option>Enabled:Managed Installer</Option>
+      <Option>Enabled:Inherit Default Policy</Option>
     </Rule>
     <Rule>
       <Option>Enabled:Update Policy No Reboot</Option>
@@ -27,7 +24,19 @@
       <Option>Enabled:Allow Supplemental Policies</Option>
     </Rule>
     <Rule>
+      <Option>Enabled:Managed Installer</Option>
+    </Rule>
+    <Rule>
       <Option>Enabled:Revoked Expired As Unsigned</Option>
+    </Rule>
+    <Rule>
+      <Option>Required:Enforce Store Applications</Option>
+    </Rule>
+	<Rule>
+      <Option>Enabled:Audit Mode</Option>
+    </Rule>
+	<Rule>
+      <Option>Disabled:Script Enforcement</Option>
     </Rule>
   </Rules>
   <EKUs>

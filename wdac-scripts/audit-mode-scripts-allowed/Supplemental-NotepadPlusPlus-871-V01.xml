@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SiPolicy xmlns="urn:schemas-microsoft-com:sipolicy" PolicyType="Supplemental Policy">
+  <VersionEx>1.0.0.0</VersionEx>
+  <PlatformID>{2E07F7E4-194C-4D20-B7C9-6F44A6C5A234}</PlatformID>
+  <Rules>
+    <Rule>
+      <Option>Enabled:Unsigned System Integrity Policy</Option>
+    </Rule>
+    <Rule>
+	  <Option>Enabled:Managed Installer</Option>
+	</Rule>
+  </Rules>
+  <!--EKUS-->
+  <EKUs />
+  <!--File Rules-->
+  <FileRules>
+    <FileAttrib ID="ID_FILEATTRIB_F_21_0" FriendlyName="C:\Program Files\Notepad++\notepad++.exe FileAttribute" FileName="notepad++.exe" MinimumFileVersion="8.7.1.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_22_0" FriendlyName="C:\Program Files\Notepad++\uninstall.exe FileAttribute" MinimumFileVersion="8.7.1.0" FileDescription="Notepad++ : a free (GNU) source code editor" />
+    <FileAttrib ID="ID_FILEATTRIB_F_23_0" FriendlyName="C:\Program Files\Notepad++\updater\GUP.exe FileAttribute" FileName="gup.exe" MinimumFileVersion="5.3.1.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_24_0" FriendlyName="C:\Program Files\Notepad++\updater\libcurl.dll FileAttribute" FileName="libcurl.dll" MinimumFileVersion="8.10.1.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_25_0" FriendlyName="C:\Program Files\Notepad++\plugins\NppExport\NppExport.dll FileAttribute" FileName="NppExport.dll" MinimumFileVersion="0.4.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_26_0" FriendlyName="C:\Program Files\Notepad++\plugins\NppConverter\NppConverter.dll FileAttribute" FileName="NppConverter.dll" MinimumFileVersion="4.6.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_27_0" FriendlyName="C:\Program Files\Notepad++\plugins\mimeTools\mimeTools.dll FileAttribute" FileName="base64.dll" MinimumFileVersion="3.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_28_0" FriendlyName="C:\Program Files\Notepad++\plugins\Config\nppPluginList.dll FileAttribute" FileName="nppPluginList.dll" MinimumFileVersion="1.7.5.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C_0" FriendlyName="C:\Program Files\Notepad++\contextMenu\NppShell.dll FileAttribute" FileName="NppShell.dll" MinimumFileVersion="1.5.0.0" />
+    <Allow ID="ID_ALLOW_A_2D_0" FriendlyName="C:\Program Files\Notepad++\plugins\ComparePlugin\ComparePlugin.dll Hash Sha1" Hash="A74441107F6BFCA5D74120CEA682027E02746840" />
+    <Allow ID="ID_ALLOW_A_2E_0" FriendlyName="C:\Program Files\Notepad++\plugins\ComparePlugin\ComparePlugin.dll Hash Sha256" Hash="5EF87416A3224B94767D5BC784D1D4147B4A68EB63EDBA53E0D04CE14561F306" />
+    <Allow ID="ID_ALLOW_A_2F_0" FriendlyName="C:\Program Files\Notepad++\plugins\ComparePlugin\ComparePlugin.dll Hash Page Sha1" Hash="AE59864BF87EF052379B6B817DFEE03C358AEFC3" />
+    <Allow ID="ID_ALLOW_A_30_0" FriendlyName="C:\Program Files\Notepad++\plugins\ComparePlugin\ComparePlugin.dll Hash Page Sha256" Hash="0A5FB1094079662F78CFD17E9CB32011E1D963F519F8BFFE35C443D58FA1CD8E" />
+    <Allow ID="ID_ALLOW_A_31_0" FriendlyName="C:\Program Files\Notepad++\plugins\ComparePlugin\ComparePlugin\git2.dll Hash Sha1" Hash="1A93FC54E7709B06B267775956BC7FC403F380A0" />
+    <Allow ID="ID_ALLOW_A_32_0" FriendlyName="C:\Program Files\Notepad++\plugins\ComparePlugin\ComparePlugin\git2.dll Hash Sha256" Hash="9DE4B43A2851629CDA4010344381532AC706832BA5FA3B685D1331F9D0F87993" />
+    <Allow ID="ID_ALLOW_A_33_0" FriendlyName="C:\Program Files\Notepad++\plugins\ComparePlugin\ComparePlugin\git2.dll Hash Page Sha1" Hash="76F1D65B9F852C215ECD7AEA6E74D568880C2B35" />
+    <Allow ID="ID_ALLOW_A_34_0" FriendlyName="C:\Program Files\Notepad++\plugins\ComparePlugin\ComparePlugin\git2.dll Hash Page Sha256" Hash="651BF7CF316167A142ED2153BE36C8A559B02EC0E3CC984920131B8A95074AA4" />
+    <Allow ID="ID_ALLOW_A_35_0" FriendlyName="C:\Program Files\Notepad++\plugins\ComparePlugin\ComparePlugin\sqlite3.dll Hash Sha1" Hash="D6E2E667D32819DCC55235258939B50BEE81A69A" />
+    <Allow ID="ID_ALLOW_A_36_0" FriendlyName="C:\Program Files\Notepad++\plugins\ComparePlugin\ComparePlugin\sqlite3.dll Hash Sha256" Hash="861A3B83EEDB56180F1389A91009813110B552F480AD5C2AED811D29E01564A9" />
+    <Allow ID="ID_ALLOW_A_37_0" FriendlyName="C:\Program Files\Notepad++\plugins\ComparePlugin\ComparePlugin\sqlite3.dll Hash Page Sha1" Hash="BA357B4B03FC82D837F899D59A120701C988CD1E" />
+    <Allow ID="ID_ALLOW_A_38_0" FriendlyName="C:\Program Files\Notepad++\plugins\ComparePlugin\ComparePlugin\sqlite3.dll Hash Page Sha256" Hash="60BF7CD751AFF4007B7AEFCD8D59E38A125C5734A54701E579C89C21473E8A83" />
+    <Allow ID="ID_ALLOW_A_39_0" FriendlyName="C:\Program Files\Notepad++\contextMenu\NppShell.msix Hash Sha1" Hash="10EFC1790E53130A3D69A46A9B31E55E959E8E39" />
+    <Allow ID="ID_ALLOW_A_3A_0" FriendlyName="C:\Program Files\Notepad++\contextMenu\NppShell.msix Hash Sha256" Hash="BEBB64330A20F48475055189AB0BD799904CE7E4E59F47FDB4B3B0F99249B91C" />
+  </FileRules>
+  <!--Signers-->
+  <Signers>
+    <Signer ID="ID_SIGNER_F_1_0" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="Notepad++" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_21_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_22_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_23_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_24_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_25_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_26_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_27_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_28_0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_2C_0" />
+    </Signer>
+  </Signers>
+  <!--Driver Signing Scenarios-->
+  <SigningScenarios>
+    <SigningScenario Value="131" ID="ID_SIGNINGSCENARIO_DRIVERS_1" FriendlyName="Auto generated policy on 11-08-2024">
+      <ProductSigners />
+    </SigningScenario>
+    <SigningScenario Value="12" ID="ID_SIGNINGSCENARIO_WINDOWS" FriendlyName="Auto generated policy on 11-08-2024">
+      <ProductSigners>
+        <AllowedSigners>
+          <AllowedSigner SignerId="ID_SIGNER_F_1_0" />
+        </AllowedSigners>
+        <FileRulesRef>
+          <FileRuleRef RuleID="ID_ALLOW_A_2D_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_2E_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_2F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_30_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_31_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_32_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_33_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_34_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_35_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_36_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_37_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_38_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_39_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_3A_0" />
+        </FileRulesRef>
+      </ProductSigners>
+    </SigningScenario>
+  </SigningScenarios>
+  <UpdatePolicySigners />
+  <CiSigners>
+    <CiSigner SignerId="ID_SIGNER_F_1_0" />
+  </CiSigners>
+  <HvciOptions>2</HvciOptions>
+  <BasePolicyID>{488e7d72-da1e-4219-bb58-22eebcbb2cfe}</BasePolicyID>
+  <PolicyID>{3CB19C26-59D5-402A-8DD2-823D318DB7A9}</PolicyID>
+  <Settings>
+    <Setting Provider="PolicyInfo" Key="Information" ValueName="Name">
+      <Value>
+        <String>NotepadPlusPlus-871-V01 - 11-08-2024</String>
+      </Value>
+    </Setting>
+  </Settings>
+</SiPolicy>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SiPolicy xmlns="urn:schemas-microsoft-com:sipolicy" PolicyType="Supplemental Policy">
+  <VersionEx>1.0.0.0</VersionEx>
+  <PlatformID>{2E07F7E4-194C-4D20-B7C9-6F44A6C5A234}</PlatformID>
+  <Rules>
+    <Rule>
+      <Option>Enabled:Unsigned System Integrity Policy</Option>
+    </Rule>
+    <Rule>
+	  <Option>Enabled:Managed Installer</Option>
+	</Rule>
+  </Rules>
+  <!--EKUS-->
+  <EKUs />
+  <!--File Rules-->
+  <FileRules>
+    <Allow ID="ID_ALLOW_A_19_0" FriendlyName="C:\Program Files (x86)\The BMD Group\BMD EMail Signature\BMDEMailSignature.exe Hash Sha1" Hash="8A79093574B199CD4F7358CACED29DEA69D23832" />
+    <Allow ID="ID_ALLOW_A_1A_0" FriendlyName="C:\Program Files (x86)\The BMD Group\BMD EMail Signature\BMDEMailSignature.exe Hash Sha256" Hash="777C7E0366338FFA0DD3236886D235D761E64BBF030E3422D9A350D11482C6E4" />
+    <Allow ID="ID_ALLOW_A_1B_0" FriendlyName="C:\Program Files (x86)\The BMD Group\BMD EMail Signature\BMDEMailSignature.exe Hash Page Sha1" Hash="7633177F6E75867E7C0F4B94B5FCCFB7969F06F4" />
+    <Allow ID="ID_ALLOW_A_1C_0" FriendlyName="C:\Program Files (x86)\The BMD Group\BMD EMail Signature\BMDEMailSignature.exe Hash Page Sha256" Hash="443317172F83125519D2C867EAF2BE2C45A85B6E870C4677B70FDB2008D6DF01" />
+    <Allow ID="ID_ALLOW_A_1D_0" FriendlyName="C:\Program Files (x86)\The BMD Group\BMD EMail Signature\InstallHelper.dll Hash Sha1" Hash="9C6799FFD3777C94812E650CA5186B867C090803" />
+    <Allow ID="ID_ALLOW_A_1E_0" FriendlyName="C:\Program Files (x86)\The BMD Group\BMD EMail Signature\InstallHelper.dll Hash Sha256" Hash="5369F0BA2F50C448E9A06D472DA07FD9EE508B71DC7507EE49E9CD48490EB3C7" />
+    <Allow ID="ID_ALLOW_A_1F_0" FriendlyName="C:\Program Files (x86)\The BMD Group\BMD EMail Signature\InstallHelper.dll Hash Page Sha1" Hash="5A68F8BE3E92EED808376479E1A4C141D8E688DE" />
+    <Allow ID="ID_ALLOW_A_20_0" FriendlyName="C:\Program Files (x86)\The BMD Group\BMD EMail Signature\InstallHelper.dll Hash Page Sha256" Hash="71F7802189716A2F0C4CB365271742C3527B287AA77DA4F6CE918223BF30C3E1" />
+  </FileRules>
+  <!--Signers-->
+  <Signers />
+  <!--Driver Signing Scenarios-->
+  <SigningScenarios>
+    <SigningScenario Value="131" ID="ID_SIGNINGSCENARIO_DRIVERS_1" FriendlyName="Auto generated policy on 11-12-2024">
+      <ProductSigners />
+    </SigningScenario>
+    <SigningScenario Value="12" ID="ID_SIGNINGSCENARIO_WINDOWS" FriendlyName="Auto generated policy on 11-12-2024">
+      <ProductSigners>
+        <FileRulesRef>
+          <FileRuleRef RuleID="ID_ALLOW_A_19_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1A_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1B_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1C_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1D_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1E_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1F_0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_20_0" />
+        </FileRulesRef>
+      </ProductSigners>
+    </SigningScenario>
+  </SigningScenarios>
+  <UpdatePolicySigners />
+  <CiSigners />
+  <HvciOptions>2</HvciOptions>
+  <BasePolicyID>{488e7d72-da1e-4219-bb58-22eebcbb2cfe}</BasePolicyID>
+  <PolicyID>{E3AF6775-64EA-4A9F-B37D-ECB05C994B61}</PolicyID>
+  <Settings>
+    <Setting Provider="PolicyInfo" Key="Information" ValueName="Name">
+      <Value>
+        <String>BMDEmailSignature-4150-V01 - 11-12-2024</String>
+      </Value>
+    </Setting>
+  </Settings>
+</SiPolicy>
