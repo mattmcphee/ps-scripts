@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SiPolicy xmlns="urn:schemas-microsoft-com:sipolicy" PolicyType="Supplemental Policy">
+  <VersionEx>10.0.0.0</VersionEx>
+  <PlatformID>{2E07F7E4-194C-4D20-B7C9-6F44A6C5A234}</PlatformID>
+  <Rules>
+    <Rule>
+      <Option>Enabled:Unsigned System Integrity Policy</Option>
+    </Rule>
+  </Rules>
+  <!--EKUS-->
+  <EKUs />
+  <!--File Rules-->
+  <FileRules>
+    <Allow ID="ID_ALLOW_A_84" FriendlyName="C:\sources\epicgames_files\icudt53.dll Hash Sha1" Hash="2FBD28AF8A5EFABE93F04D57A48182AA87199A4D" />
+    <Allow ID="ID_ALLOW_A_85" FriendlyName="C:\sources\epicgames_files\icudt53.dll Hash Sha256" Hash="31AEE23A011DFF491CCF74FC271D34C4E22C23936B6496CD64A148929F5D18D4" />
+    <Allow ID="ID_ALLOW_A_86" FriendlyName="C:\sources\epicgames_files\icudt53.dll Hash Page Sha1" Hash="4BFF1CF64C04F9DE1C478C25FE8919DBF7447470" />
+    <Allow ID="ID_ALLOW_A_87" FriendlyName="C:\sources\epicgames_files\icudt53.dll Hash Page Sha256" Hash="CD6C166F7F96189D0F61541C0C2A04CA1ACD8C9B8A12818F005ACFD69525C2BB" />
+    <Allow ID="ID_ALLOW_A_8C" FriendlyName="C:\sources\epicgames_files\icudtd53.dll Hash Sha1" Hash="99E8232C82BEDBFF7F02DF0BEBA27B3FB43B2DB7" />
+    <Allow ID="ID_ALLOW_A_8D" FriendlyName="C:\sources\epicgames_files\icudtd53.dll Hash Sha256" Hash="314A5567250DA921964B213D45515A8DED8E59888EF5D3A4228DE61D05268CA3" />
+    <Allow ID="ID_ALLOW_A_8E" FriendlyName="C:\sources\epicgames_files\icudtd53.dll Hash Page Sha1" Hash="2EC188918170CFFE3C3BD6D36B3B54F1949790B4" />
+    <Allow ID="ID_ALLOW_A_8F" FriendlyName="C:\sources\epicgames_files\icudtd53.dll Hash Page Sha256" Hash="95C1B2D03466D520E1DB4888BA987DFB27637B03A47017DA92FC3DDAF02D8EBE" />
+    <Allow ID="ID_ALLOW_A_77" FriendlyName="C:\sources\epicgames_files\2.11f48363.chunk.js Hash Sha1" Hash="7EA18F66CF48A802DF282E2812E828FC197D79E8" />
+    <Allow ID="ID_ALLOW_A_78" FriendlyName="C:\sources\epicgames_files\2.11f48363.chunk.js Hash Sha256" Hash="E6317AD89AABB18CACC10F6EE2FA1BE8934FC6AB982A34101A0825FEC177195E" />
+    <Allow ID="ID_ALLOW_A_79" FriendlyName="C:\sources\epicgames_files\2.11f48363.chunk.js Hash Authenticode SIP Sha256" Hash="0000000000000000000000000000000000000000000000000000000000000000" />
+    <Allow ID="ID_ALLOW_A_7A" FriendlyName="C:\sources\epicgames_files\2.2f1d1e57.chunk.js Hash Sha1" Hash="EE47577CEA54857FDDAA6DE2BA7832D93565A5B9" />
+    <Allow ID="ID_ALLOW_A_7B" FriendlyName="C:\sources\epicgames_files\2.2f1d1e57.chunk.js Hash Sha256" Hash="B9930DF3599ED77882A3B4A58DA9C5EE7C8220CC83A11AB8EAE57881CFE9C0B6" />
+    <Allow ID="ID_ALLOW_A_7C" FriendlyName="C:\sources\epicgames_files\d3.v4.min.js Hash Sha1" Hash="410C07B6655CAFF93D58F67A82F9BB3A822BE95B" />
+    <Allow ID="ID_ALLOW_A_7D" FriendlyName="C:\sources\epicgames_files\d3.v4.min.js Hash Sha256" Hash="529AF642A8556057714A01295A8EDB6F5F22177A3B081EFDC16FD73F69C85938" />
+    <Allow ID="ID_ALLOW_A_7E" FriendlyName="C:\sources\epicgames_files\EpicInstaller-15.7.0-unrealEngine.msi Hash Sha1" Hash="055882B09332740127876CCB07482771BB792EA3" />
+    <Allow ID="ID_ALLOW_A_7F" FriendlyName="C:\sources\epicgames_files\EpicInstaller-15.7.0-unrealEngine.msi Hash Sha256" Hash="2581ED77845F71B7CDA4C654F1070F8CEC13DA3BC2D2F192210E56EB51870DF5" />
+    <Allow ID="ID_ALLOW_A_80" FriendlyName="C:\sources\epicgames_files\EpicInstaller-15.7.0-unrealEngine.msi Hash Authenticode SIP Sha256" Hash="917B3DD52F86EA85BE4C6C90265E0F363F97839891DCD425D32195260150F4D0" />
+    <Allow ID="ID_ALLOW_A_81" FriendlyName="C:\sources\epicgames_files\EpicOnlineServices.msi Hash Sha1" Hash="241804C49F78F966A8C95E3DFD8F56A0297B574D" />
+    <Allow ID="ID_ALLOW_A_82" FriendlyName="C:\sources\epicgames_files\EpicOnlineServices.msi Hash Sha256" Hash="64C852ED5CFC5F3CCA85D6C6DD792DB083712BD77BF2F771EEED667312EED558" />
+    <Allow ID="ID_ALLOW_A_83" FriendlyName="C:\sources\epicgames_files\EpicOnlineServices.msi Hash Authenticode SIP Sha256" Hash="738AECBC3C03C5D08756F6C74D2994FEC69A7D2DD5E9DA0AC5AFD089DA603061" />
+    <Allow ID="ID_ALLOW_A_88" FriendlyName="C:\sources\epicgames_files\icudt53.dll Hash Sha1" Hash="2FBD28AF8A5EFABE93F04D57A48182AA87199A4D" />
+    <Allow ID="ID_ALLOW_A_89" FriendlyName="C:\sources\epicgames_files\icudt53.dll Hash Sha256" Hash="31AEE23A011DFF491CCF74FC271D34C4E22C23936B6496CD64A148929F5D18D4" />
+    <Allow ID="ID_ALLOW_A_8A" FriendlyName="C:\sources\epicgames_files\icudt53.dll Hash Page Sha1" Hash="4BFF1CF64C04F9DE1C478C25FE8919DBF7447470" />
+    <Allow ID="ID_ALLOW_A_8B" FriendlyName="C:\sources\epicgames_files\icudt53.dll Hash Page Sha256" Hash="CD6C166F7F96189D0F61541C0C2A04CA1ACD8C9B8A12818F005ACFD69525C2BB" />
+    <Allow ID="ID_ALLOW_A_90" FriendlyName="C:\sources\epicgames_files\icudtd53.dll Hash Sha1" Hash="99E8232C82BEDBFF7F02DF0BEBA27B3FB43B2DB7" />
+    <Allow ID="ID_ALLOW_A_91" FriendlyName="C:\sources\epicgames_files\icudtd53.dll Hash Sha256" Hash="314A5567250DA921964B213D45515A8DED8E59888EF5D3A4228DE61D05268CA3" />
+    <Allow ID="ID_ALLOW_A_92" FriendlyName="C:\sources\epicgames_files\icudtd53.dll Hash Page Sha1" Hash="2EC188918170CFFE3C3BD6D36B3B54F1949790B4" />
+    <Allow ID="ID_ALLOW_A_93" FriendlyName="C:\sources\epicgames_files\icudtd53.dll Hash Page Sha256" Hash="95C1B2D03466D520E1DB4888BA987DFB27637B03A47017DA92FC3DDAF02D8EBE" />
+    <Allow ID="ID_ALLOW_A_94" FriendlyName="C:\sources\epicgames_files\icutu53.dll Hash Sha1" Hash="B40698B8CF2DF022748B61B1E16E6661E08193DC" />
+    <Allow ID="ID_ALLOW_A_95" FriendlyName="C:\sources\epicgames_files\icutu53.dll Hash Sha256" Hash="8E142D451F64A52E3A2794F1C72DED48CEA3F55646AE156EEC3F3196985A1422" />
+    <Allow ID="ID_ALLOW_A_96" FriendlyName="C:\sources\epicgames_files\icutu53.dll Hash Page Sha1" Hash="645E893DE29C8AC7EC80151EE74BDDA9D7C2D2A6" />
+    <Allow ID="ID_ALLOW_A_97" FriendlyName="C:\sources\epicgames_files\icutu53.dll Hash Page Sha256" Hash="AEA045C98FD142AF9A8B3D7C8A05A9F0C6B766DFA3C60638F04F1E46371451C6" />
+    <Allow ID="ID_ALLOW_A_98" FriendlyName="C:\sources\epicgames_files\icutud53.dll Hash Sha1" Hash="280167BB583B012717285EB3EE4171DF5B1FBDAE" />
+    <Allow ID="ID_ALLOW_A_99" FriendlyName="C:\sources\epicgames_files\icutud53.dll Hash Sha256" Hash="53741A7A66C4A5277836A6B426894EA1DCAA2E2E059F04C4661050C2B9476506" />
+    <Allow ID="ID_ALLOW_A_9A" FriendlyName="C:\sources\epicgames_files\icutud53.dll Hash Page Sha1" Hash="ECF1A168C541357C22C88CE11087F512FEE98CA4" />
+    <Allow ID="ID_ALLOW_A_9B" FriendlyName="C:\sources\epicgames_files\icutud53.dll Hash Page Sha256" Hash="D4ECB85618BFCFD81A6FDDD7B5E415EAB8756FB83864B674FD8F2D200DD18BC8" />
+    <Allow ID="ID_ALLOW_A_9C" FriendlyName="C:\sources\epicgames_files\installer.js Hash Sha1" Hash="73B9663527ACF32D46328F22B1AC386B7515057B" />
+    <Allow ID="ID_ALLOW_A_9D" FriendlyName="C:\sources\epicgames_files\installer.js Hash Sha256" Hash="6D043947DB24B2925900550E5B810FC68345A35CA9EDAFD4E0677386C590E9C4" />
+    <Allow ID="ID_ALLOW_A_9E" FriendlyName="C:\sources\epicgames_files\ipc.node Hash Sha1" Hash="8429EA159F6E2330C776D3E598D9D96BE8EC61CB" />
+    <Allow ID="ID_ALLOW_A_9F" FriendlyName="C:\sources\epicgames_files\ipc.node Hash Sha256" Hash="3579F7D3A0BAAB075A476467B608A722C5E21BB6412D31645CD9ACFC1FC03ADB" />
+    <Allow ID="ID_ALLOW_A_A0" FriendlyName="C:\sources\epicgames_files\ipc.node Hash Page Sha1" Hash="4AA7BD8A7061722A9F6D8AAB9CA265515FF1DD22" />
+    <Allow ID="ID_ALLOW_A_A1" FriendlyName="C:\sources\epicgames_files\ipc.node Hash Page Sha256" Hash="5C03769B7B4154DC626BCA87F1AE7B29356F7DE9D4BC1CAAFCB933F833533FBB" />
+    <Allow ID="ID_ALLOW_A_A2" FriendlyName="C:\sources\epicgames_files\jquery-3.2.1.min.js Hash Sha1" Hash="67BDACBD077EE59F411109FD119EE9F58DB15A5F" />
+    <Allow ID="ID_ALLOW_A_A3" FriendlyName="C:\sources\epicgames_files\jquery-3.2.1.min.js Hash Sha256" Hash="75B707D8761E2BFBD25FBD661F290A4F7FD11C48E1BF53A36DC6BD8A0034FA35" />
+    <Allow ID="ID_ALLOW_A_A4" FriendlyName="C:\sources\epicgames_files\language.js Hash Sha1" Hash="142A2F87A315F27A8836FACBAACAAF3733A983D3" />
+    <Allow ID="ID_ALLOW_A_A5" FriendlyName="C:\sources\epicgames_files\language.js Hash Sha256" Hash="9CBCE2163176C4EE9B9E41C1EBC1A6A726237353A0F498938128F0D4FFB42B39" />
+    <Allow ID="ID_ALLOW_A_A6" FriendlyName="C:\sources\epicgames_files\main.4ffb1e75.chunk.js Hash Sha1" Hash="FAD284B33AAB707BE704B37537717A5C679C5BAB" />
+    <Allow ID="ID_ALLOW_A_A7" FriendlyName="C:\sources\epicgames_files\main.4ffb1e75.chunk.js Hash Sha256" Hash="500A23FCDE1B1FDE02BFF204C506936DB973B98A606829A7C039007F3ECD008A" />
+    <Allow ID="ID_ALLOW_A_A8" FriendlyName="C:\sources\epicgames_files\main.8c97be22.chunk.js Hash Sha1" Hash="34C687CBB61B2D7922F4DB7CCF259206ACF2CBD9" />
+    <Allow ID="ID_ALLOW_A_A9" FriendlyName="C:\sources\epicgames_files\main.8c97be22.chunk.js Hash Sha256" Hash="F4352863686F3ED827D59124CF163FFB3FC870E4E9DCA0F4B50F2DC068E4F6A0" />
+    <Allow ID="ID_ALLOW_A_AA" FriendlyName="C:\sources\epicgames_files\main.cabd7598.chunk.js Hash Sha1" Hash="A66239A63B3A5433AC1716DD4A6B9DDBC72E06DB" />
+    <Allow ID="ID_ALLOW_A_AB" FriendlyName="C:\sources\epicgames_files\main.cabd7598.chunk.js Hash Sha256" Hash="12300B24030DA793084DEC848A05EA0F94FEE72F1335C53149D3033F95FCBBD7" />
+    <Allow ID="ID_ALLOW_A_AC" FriendlyName="C:\sources\epicgames_files\main.de353350.chunk.js Hash Sha1" Hash="D6EB23A168F359FC02281E3A1975BF111070C612" />
+    <Allow ID="ID_ALLOW_A_AD" FriendlyName="C:\sources\epicgames_files\main.de353350.chunk.js Hash Sha256" Hash="BE1EC4623E81C45C41013CC20A6EDAE49307B00D53DF2864610E61969A66F1E3" />
+    <Allow ID="ID_ALLOW_A_AE" FriendlyName="C:\sources\epicgames_files\main.js Hash Sha1" Hash="F5BB89D85F0035285DF2FC8B69507428667CC8BA" />
+    <Allow ID="ID_ALLOW_A_AF" FriendlyName="C:\sources\epicgames_files\main.js Hash Sha256" Hash="5D6E6DD68387A8F40FF5ED9578E9020455FAC78E78A0332BFDF7E2C02C4FD088" />
+    <Allow ID="ID_ALLOW_A_B0" FriendlyName="C:\sources\epicgames_files\os_toolbox.node Hash Sha1" Hash="36095CED1E34BCE92A6A6F091F995F954313F7ED" />
+    <Allow ID="ID_ALLOW_A_B1" FriendlyName="C:\sources\epicgames_files\os_toolbox.node Hash Sha256" Hash="BCE465E1C370C8F8C8129800131280F413BDB447EFF8BCB5C17DC4EF0C444126" />
+    <Allow ID="ID_ALLOW_A_B2" FriendlyName="C:\sources\epicgames_files\os_toolbox.node Hash Page Sha1" Hash="063D41A99DC8AF6C68F835FE875674700CC6AE01" />
+    <Allow ID="ID_ALLOW_A_B3" FriendlyName="C:\sources\epicgames_files\os_toolbox.node Hash Page Sha256" Hash="AE3EC0C07D6FFFD069EECC0A8956B9F2C72614ED05A0AE40B9A47839246AA3D8" />
+    <Allow ID="ID_ALLOW_A_B4" FriendlyName="C:\sources\epicgames_files\runtime-main.97be8d92.js Hash Sha1" Hash="F1D3E8E68D769CE5DEDD71028F86A44E600A5617" />
+    <Allow ID="ID_ALLOW_A_B5" FriendlyName="C:\sources\epicgames_files\runtime-main.97be8d92.js Hash Sha256" Hash="EB504FCC04FF0D4FEC8BC67DB666A31638D3540DB999C4504E9792ED16C5E049" />
+    <Allow ID="ID_ALLOW_A_B6" FriendlyName="C:\sources\epicgames_files\turbojpeg.dll Hash Sha1" Hash="43C5B7B939F3DD7DE100A2DD78AF51FC27D6C4F8" />
+    <Allow ID="ID_ALLOW_A_B7" FriendlyName="C:\sources\epicgames_files\turbojpeg.dll Hash Sha256" Hash="0DE3BF9918F9B8E5C5DE8F0F425069B8E83B4E9A5C47A0CB399C32B846DD8E95" />
+    <Allow ID="ID_ALLOW_A_B8" FriendlyName="C:\sources\epicgames_files\turbojpeg.dll Hash Page Sha1" Hash="58D817ECDE28BC4187A976B8A955145C50F2972A" />
+    <Allow ID="ID_ALLOW_A_B9" FriendlyName="C:\sources\epicgames_files\turbojpeg.dll Hash Page Sha256" Hash="83B5908C30846459B777BF34FC230916E2468FDB6CD4E1779A53E90B4F9325A0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3C" FriendlyName="C:\sources\epicgames_files\api-ms-win-core-console-l1-1-0.dll FileAttribute" FileName="apisetstub" MinimumFileVersion="10.0.17763.132" />
+    <FileAttrib ID="ID_FILEATTRIB_F_6F" FriendlyName="C:\sources\epicgames_files\ucrtbase.dll FileAttribute" FileName="ucrtbase.dll" MinimumFileVersion="10.0.17763.132" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D" FriendlyName="C:\sources\epicgames_files\api-ms-win-core-console-l1-1-0.dll FileAttribute" FileName="apisetstub" MinimumFileVersion="10.0.17763.132" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3E" FriendlyName="C:\sources\epicgames_files\chrome_elf.dll FileAttribute" FileName="chrome_elf.dll" MinimumFileVersion="90.0.4430.212" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3F" FriendlyName="C:\sources\epicgames_files\concrt140.dll FileAttribute" FileName="concrt140.dll" MinimumFileVersion="14.24.28127.4" />
+    <FileAttrib ID="ID_FILEATTRIB_F_40" FriendlyName="C:\sources\epicgames_files\CrashReportClient.exe FileAttribute" FileName="CrashReportClient.exe" MinimumFileVersion="4.27.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_41" FriendlyName="C:\sources\epicgames_files\D3D12Core.dll FileAttribute" FileName="D3D12Core.dll" MinimumFileVersion="1.606.4.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_42" FriendlyName="C:\sources\epicgames_files\d3dcompiler_43.dll FileAttribute" FileName="d3dcompiler_43.dll" MinimumFileVersion="9.29.952.3111" />
+    <FileAttrib ID="ID_FILEATTRIB_F_43" FriendlyName="C:\sources\epicgames_files\d3dcompiler_47.dll FileAttribute" FileName="d3dcompiler_47.dll" MinimumFileVersion="10.0.17134.12" />
+    <FileAttrib ID="ID_FILEATTRIB_F_44" FriendlyName="C:\sources\epicgames_files\dbghelp.dll FileAttribute" FileName="DBGHELP.DLL" MinimumFileVersion="10.0.19041.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_45" FriendlyName="C:\sources\epicgames_files\DSETUP.dll FileAttribute" FileName="dsetup.dll" MinimumFileVersion="4.9.0.904" />
+    <FileAttrib ID="ID_FILEATTRIB_F_46" FriendlyName="C:\sources\epicgames_files\dsetup32.dll FileAttribute" FileName="dsetup32.dll" MinimumFileVersion="4.9.0.904" />
+    <FileAttrib ID="ID_FILEATTRIB_F_47" FriendlyName="C:\sources\epicgames_files\dxil.dll FileAttribute" FileName="dxil.dll" MinimumFileVersion="10.0.19587.1001" />
+    <FileAttrib ID="ID_FILEATTRIB_F_48" FriendlyName="C:\sources\epicgames_files\DXSETUP.exe FileAttribute" FileName="dxsetup.exe" MinimumFileVersion="4.9.0.904" />
+    <FileAttrib ID="ID_FILEATTRIB_F_49" FriendlyName="C:\sources\epicgames_files\EOSBootStrapper.exe FileAttribute" FileName="EOSBootstrapper-Win32-Shipping.exe" MinimumFileVersion="1.2.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_4A" FriendlyName="C:\sources\epicgames_files\EOSIPC.dll FileAttribute" FileName="EOSIPC.dll" MinimumFileVersion="0.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_4B" FriendlyName="C:\sources\epicgames_files\EOSOverlayRenderer-Win32-Shipping.exe FileAttribute" FileName="EOSOverlayRenderer-Win32-Shipping.exe" MinimumFileVersion="1.2.8.1200" />
+    <FileAttrib ID="ID_FILEATTRIB_F_4C" FriendlyName="C:\sources\epicgames_files\EOSOverlayRenderer-Win64-Shipping.exe FileAttribute" FileName="EOSOverlayRenderer-Win64-Shipping.exe" MinimumFileVersion="1.2.8.1200" />
+    <FileAttrib ID="ID_FILEATTRIB_F_4D" FriendlyName="C:\sources\epicgames_files\EOSOVH-Win32-Shipping.dll FileAttribute" FileName="EOSOVH-Win32-Shipping.dll" MinimumFileVersion="1.2.8.1200" />
+    <FileAttrib ID="ID_FILEATTRIB_F_4E" FriendlyName="C:\sources\epicgames_files\EOSOVH-Win64-Shipping.dll FileAttribute" FileName="EOSOVH-Win64-Shipping.dll" MinimumFileVersion="1.2.8.1200" />
+    <FileAttrib ID="ID_FILEATTRIB_F_4F" FriendlyName="C:\sources\epicgames_files\EOSUE4.dll FileAttribute" FileName="EOSUE4.dll" MinimumFileVersion="4.27.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_50" FriendlyName="C:\sources\epicgames_files\EpicGamesLauncher.exe FileAttribute" FileName="UnrealEngineLauncherProxy-Win32-Shipping.exe" MinimumFileVersion="1.11.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_51" FriendlyName="C:\sources\epicgames_files\EpicGamesLauncher.exe.old.ver FileAttribute" FileName="EpicGamesBootstrapLauncher.exe" MinimumFileVersion="15.7.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_52" FriendlyName="C:\sources\epicgames_files\EpicOnlineServices.exe FileAttribute" FileName="EpicOnlineServices.exe" MinimumFileVersion="15.13.159.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_53" FriendlyName="C:\sources\epicgames_files\EpicOnlineServicesHost.exe FileAttribute" FileName="WinSW.exe" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_54" FriendlyName="C:\sources\epicgames_files\EpicOnlineServicesInstaller.exe FileAttribute" FileName="EOSInstallerExe.exe" MinimumFileVersion="1.2.19.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_55" FriendlyName="C:\sources\epicgames_files\EpicOnlineServicesInstallHelper.exe FileAttribute" FileName="EpicOnlineServicesInstallHelper.exe" MinimumFileVersion="1.4.4.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_56" FriendlyName="C:\sources\epicgames_files\EpicOnlineServicesUIHelper.exe FileAttribute" FileName="EpicOnlineServicesUIHelper.exe" MinimumFileVersion="1.2.4.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_57" FriendlyName="C:\sources\epicgames_files\EpicOnlineServicesUserHelper.exe FileAttribute" FileName="EpicOnlineServicesUserHelper.exe" MinimumFileVersion="1.4.4.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_58" FriendlyName="C:\sources\epicgames_files\EpicWebHelper.exe FileAttribute" FileName="EpicWebHelper.exe" MinimumFileVersion="4.27.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_59" FriendlyName="C:\sources\epicgames_files\ETWProviders.dll FileAttribute" FileName="ETWProviders.dll" MinimumFileVersion="1.0.0.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_5A" FriendlyName="C:\sources\epicgames_files\GfnRuntimeSdk.dll FileAttribute" FileName="GfnRuntimeSdk.dll" MinimumFileVersion="1.7.3039.5783" />
+    <FileAttrib ID="ID_FILEATTRIB_F_5B" FriendlyName="C:\sources\epicgames_files\icuin53.dll FileAttribute" FileName="icuin53.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_5C" FriendlyName="C:\sources\epicgames_files\icuind53.dll FileAttribute" FileName="icuin53d.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_5D" FriendlyName="C:\sources\epicgames_files\icuio53.dll FileAttribute" FileName="icuio53.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_5E" FriendlyName="C:\sources\epicgames_files\icuiod53.dll FileAttribute" FileName="icuio53d.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_5F" FriendlyName="C:\sources\epicgames_files\icule53.dll FileAttribute" FileName="icule53.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_60" FriendlyName="C:\sources\epicgames_files\iculed53.dll FileAttribute" FileName="icule53d.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_61" FriendlyName="C:\sources\epicgames_files\iculx53.dll FileAttribute" FileName="iculx53.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_62" FriendlyName="C:\sources\epicgames_files\iculxd53.dll FileAttribute" FileName="iculx53d.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_63" FriendlyName="C:\sources\epicgames_files\icuuc53.dll FileAttribute" FileName="icuuc53.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_64" FriendlyName="C:\sources\epicgames_files\icuucd53.dll FileAttribute" FileName="icuuc53d.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_65" FriendlyName="C:\sources\epicgames_files\InstallChainer.exe FileAttribute" FileName="InstallChainer.exe" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_66" FriendlyName="C:\sources\epicgames_files\LauncherPrereqSetup_x64.exe FileAttribute" FileName="LauncherPrereqSetup_x64.exe" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_67" FriendlyName="C:\sources\epicgames_files\libcef.dll FileAttribute" FileName="libcef.dll" MinimumFileVersion="90.6.7.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_68" FriendlyName="C:\sources\epicgames_files\libEGL.dll FileAttribute" FileName="libEGL.dll" MinimumFileVersion="2.1.15048.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_69" FriendlyName="C:\sources\epicgames_files\libGLESv2.dll FileAttribute" FileName="libGLESv2.dll" MinimumFileVersion="2.1.15048.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_6A" FriendlyName="C:\sources\epicgames_files\Microsoft.Deployment.WindowsInstaller.dll FileAttribute" FileName="Microsoft.Deployment.WindowsInstaller.dll" MinimumFileVersion="3.11.2.4516" />
+    <FileAttrib ID="ID_FILEATTRIB_F_6B" FriendlyName="C:\sources\epicgames_files\msvcp140.dll FileAttribute" FileName="msvcp140.dll" MinimumFileVersion="14.24.28127.4" />
+    <FileAttrib ID="ID_FILEATTRIB_F_6C" FriendlyName="C:\sources\epicgames_files\msvcp140_1.dll FileAttribute" FileName="msvcp140_1.dll" MinimumFileVersion="14.24.28127.4" />
+    <FileAttrib ID="ID_FILEATTRIB_F_6D" FriendlyName="C:\sources\epicgames_files\msvcp140_2.dll FileAttribute" FileName="msvcp140_2.dll" MinimumFileVersion="14.24.28127.4" />
+    <FileAttrib ID="ID_FILEATTRIB_F_6E" FriendlyName="C:\sources\epicgames_files\msvcp140_codecvt_ids.dll FileAttribute" FileName="msvcp140_codecvt_ids.dll" MinimumFileVersion="14.24.28127.4" />
+    <FileAttrib ID="ID_FILEATTRIB_F_70" FriendlyName="C:\sources\epicgames_files\ucrtbase.dll FileAttribute" FileName="ucrtbase.dll" MinimumFileVersion="10.0.17763.132" />
+    <FileAttrib ID="ID_FILEATTRIB_F_71" FriendlyName="C:\sources\epicgames_files\UnrealEngineLauncher.exe FileAttribute" FileName="UnrealEngineLauncherProxy-Win64-Shipping.exe" MinimumFileVersion="1.11.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_72" FriendlyName="C:\sources\epicgames_files\UnrealVersionSelector.exe FileAttribute" FileName="VersionSelector.exe" MinimumFileVersion="4.27.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_73" FriendlyName="C:\sources\epicgames_files\vccorlib140.dll FileAttribute" FileName="vccorlib140.DLL" MinimumFileVersion="14.24.28127.4" />
+    <FileAttrib ID="ID_FILEATTRIB_F_74" FriendlyName="C:\sources\epicgames_files\vcruntime140.dll FileAttribute" FileName="vcruntime140.dll" MinimumFileVersion="14.24.28127.4" />
+    <FileAttrib ID="ID_FILEATTRIB_F_75" FriendlyName="C:\sources\epicgames_files\vcruntime140_1.dll FileAttribute" FileName="vcruntime140_1.dll" MinimumFileVersion="14.24.28127.4" />
+    <FileAttrib ID="ID_FILEATTRIB_F_76" FriendlyName="C:\sources\epicgames_files\widevinecdmadapter.dll FileAttribute" FileName="widevinecdmadapter.dll" MinimumFileVersion="59.0.3071.15" />
+    <FileAttrib ID="ID_FILEATTRIB_F_1" FriendlyName="C:\sources\epicgames_files\api-ms-win-core-console-l1-1-0.dll FileAttribute" FileName="apisetstub" MinimumFileVersion="10.0.17763.132" />
+    <FileAttrib ID="ID_FILEATTRIB_F_34" FriendlyName="C:\sources\epicgames_files\ucrtbase.dll FileAttribute" FileName="ucrtbase.dll" MinimumFileVersion="10.0.17763.132" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2" FriendlyName="C:\sources\epicgames_files\api-ms-win-core-console-l1-1-0.dll FileAttribute" FileName="apisetstub" MinimumFileVersion="10.0.17763.132" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3" FriendlyName="C:\sources\epicgames_files\chrome_elf.dll FileAttribute" FileName="chrome_elf.dll" MinimumFileVersion="90.0.4430.212" />
+    <FileAttrib ID="ID_FILEATTRIB_F_4" FriendlyName="C:\sources\epicgames_files\concrt140.dll FileAttribute" FileName="concrt140.dll" MinimumFileVersion="14.24.28127.4" />
+    <FileAttrib ID="ID_FILEATTRIB_F_5" FriendlyName="C:\sources\epicgames_files\CrashReportClient.exe FileAttribute" FileName="CrashReportClient.exe" MinimumFileVersion="4.27.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_6" FriendlyName="C:\sources\epicgames_files\D3D12Core.dll FileAttribute" FileName="D3D12Core.dll" MinimumFileVersion="1.606.4.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_7" FriendlyName="C:\sources\epicgames_files\d3dcompiler_43.dll FileAttribute" FileName="d3dcompiler_43.dll" MinimumFileVersion="9.29.952.3111" />
+    <FileAttrib ID="ID_FILEATTRIB_F_8" FriendlyName="C:\sources\epicgames_files\d3dcompiler_47.dll FileAttribute" FileName="d3dcompiler_47.dll" MinimumFileVersion="10.0.17134.12" />
+    <FileAttrib ID="ID_FILEATTRIB_F_9" FriendlyName="C:\sources\epicgames_files\dbghelp.dll FileAttribute" FileName="DBGHELP.DLL" MinimumFileVersion="10.0.19041.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_A" FriendlyName="C:\sources\epicgames_files\DSETUP.dll FileAttribute" FileName="dsetup.dll" MinimumFileVersion="4.9.0.904" />
+    <FileAttrib ID="ID_FILEATTRIB_F_B" FriendlyName="C:\sources\epicgames_files\dsetup32.dll FileAttribute" FileName="dsetup32.dll" MinimumFileVersion="4.9.0.904" />
+    <FileAttrib ID="ID_FILEATTRIB_F_C" FriendlyName="C:\sources\epicgames_files\dxil.dll FileAttribute" FileName="dxil.dll" MinimumFileVersion="10.0.19587.1001" />
+    <FileAttrib ID="ID_FILEATTRIB_F_D" FriendlyName="C:\sources\epicgames_files\DXSETUP.exe FileAttribute" FileName="dxsetup.exe" MinimumFileVersion="4.9.0.904" />
+    <FileAttrib ID="ID_FILEATTRIB_F_E" FriendlyName="C:\sources\epicgames_files\EOSBootStrapper.exe FileAttribute" FileName="EOSBootstrapper-Win32-Shipping.exe" MinimumFileVersion="1.2.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_F" FriendlyName="C:\sources\epicgames_files\EOSIPC.dll FileAttribute" FileName="EOSIPC.dll" MinimumFileVersion="0.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_10" FriendlyName="C:\sources\epicgames_files\EOSOverlayRenderer-Win32-Shipping.exe FileAttribute" FileName="EOSOverlayRenderer-Win32-Shipping.exe" MinimumFileVersion="1.2.8.1200" />
+    <FileAttrib ID="ID_FILEATTRIB_F_11" FriendlyName="C:\sources\epicgames_files\EOSOverlayRenderer-Win64-Shipping.exe FileAttribute" FileName="EOSOverlayRenderer-Win64-Shipping.exe" MinimumFileVersion="1.2.8.1200" />
+    <FileAttrib ID="ID_FILEATTRIB_F_12" FriendlyName="C:\sources\epicgames_files\EOSOVH-Win32-Shipping.dll FileAttribute" FileName="EOSOVH-Win32-Shipping.dll" MinimumFileVersion="1.2.8.1200" />
+    <FileAttrib ID="ID_FILEATTRIB_F_13" FriendlyName="C:\sources\epicgames_files\EOSOVH-Win64-Shipping.dll FileAttribute" FileName="EOSOVH-Win64-Shipping.dll" MinimumFileVersion="1.2.8.1200" />
+    <FileAttrib ID="ID_FILEATTRIB_F_14" FriendlyName="C:\sources\epicgames_files\EOSUE4.dll FileAttribute" FileName="EOSUE4.dll" MinimumFileVersion="4.27.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_15" FriendlyName="C:\sources\epicgames_files\EpicGamesLauncher.exe FileAttribute" FileName="UnrealEngineLauncherProxy-Win32-Shipping.exe" MinimumFileVersion="1.11.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_16" FriendlyName="C:\sources\epicgames_files\EpicGamesLauncher.exe.old.ver FileAttribute" FileName="EpicGamesBootstrapLauncher.exe" MinimumFileVersion="15.7.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_17" FriendlyName="C:\sources\epicgames_files\EpicOnlineServices.exe FileAttribute" FileName="EpicOnlineServices.exe" MinimumFileVersion="15.13.159.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_18" FriendlyName="C:\sources\epicgames_files\EpicOnlineServicesHost.exe FileAttribute" FileName="WinSW.exe" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_19" FriendlyName="C:\sources\epicgames_files\EpicOnlineServicesInstaller.exe FileAttribute" FileName="EOSInstallerExe.exe" MinimumFileVersion="1.2.19.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_1A" FriendlyName="C:\sources\epicgames_files\EpicOnlineServicesInstallHelper.exe FileAttribute" FileName="EpicOnlineServicesInstallHelper.exe" MinimumFileVersion="1.4.4.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_1B" FriendlyName="C:\sources\epicgames_files\EpicOnlineServicesUIHelper.exe FileAttribute" FileName="EpicOnlineServicesUIHelper.exe" MinimumFileVersion="1.2.4.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_1C" FriendlyName="C:\sources\epicgames_files\EpicOnlineServicesUserHelper.exe FileAttribute" FileName="EpicOnlineServicesUserHelper.exe" MinimumFileVersion="1.4.4.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_1D" FriendlyName="C:\sources\epicgames_files\EpicWebHelper.exe FileAttribute" FileName="EpicWebHelper.exe" MinimumFileVersion="4.27.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_1E" FriendlyName="C:\sources\epicgames_files\ETWProviders.dll FileAttribute" FileName="ETWProviders.dll" MinimumFileVersion="1.0.0.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_1F" FriendlyName="C:\sources\epicgames_files\GfnRuntimeSdk.dll FileAttribute" FileName="GfnRuntimeSdk.dll" MinimumFileVersion="1.7.3039.5783" />
+    <FileAttrib ID="ID_FILEATTRIB_F_20" FriendlyName="C:\sources\epicgames_files\icuin53.dll FileAttribute" FileName="icuin53.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_21" FriendlyName="C:\sources\epicgames_files\icuind53.dll FileAttribute" FileName="icuin53d.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_22" FriendlyName="C:\sources\epicgames_files\icuio53.dll FileAttribute" FileName="icuio53.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_23" FriendlyName="C:\sources\epicgames_files\icuiod53.dll FileAttribute" FileName="icuio53d.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_24" FriendlyName="C:\sources\epicgames_files\icule53.dll FileAttribute" FileName="icule53.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_25" FriendlyName="C:\sources\epicgames_files\iculed53.dll FileAttribute" FileName="icule53d.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_26" FriendlyName="C:\sources\epicgames_files\iculx53.dll FileAttribute" FileName="iculx53.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_27" FriendlyName="C:\sources\epicgames_files\iculxd53.dll FileAttribute" FileName="iculx53d.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_28" FriendlyName="C:\sources\epicgames_files\icuuc53.dll FileAttribute" FileName="icuuc53.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_29" FriendlyName="C:\sources\epicgames_files\icuucd53.dll FileAttribute" FileName="icuuc53d.dll" MinimumFileVersion="53.1.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A" FriendlyName="C:\sources\epicgames_files\InstallChainer.exe FileAttribute" FileName="InstallChainer.exe" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B" FriendlyName="C:\sources\epicgames_files\LauncherPrereqSetup_x64.exe FileAttribute" FileName="LauncherPrereqSetup_x64.exe" MinimumFileVersion="1.0.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C" FriendlyName="C:\sources\epicgames_files\libcef.dll FileAttribute" FileName="libcef.dll" MinimumFileVersion="90.6.7.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D" FriendlyName="C:\sources\epicgames_files\libEGL.dll FileAttribute" FileName="libEGL.dll" MinimumFileVersion="2.1.15048.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2E" FriendlyName="C:\sources\epicgames_files\libGLESv2.dll FileAttribute" FileName="libGLESv2.dll" MinimumFileVersion="2.1.15048.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F" FriendlyName="C:\sources\epicgames_files\Microsoft.Deployment.WindowsInstaller.dll FileAttribute" FileName="Microsoft.Deployment.WindowsInstaller.dll" MinimumFileVersion="3.11.2.4516" />
+    <FileAttrib ID="ID_FILEATTRIB_F_30" FriendlyName="C:\sources\epicgames_files\msvcp140.dll FileAttribute" FileName="msvcp140.dll" MinimumFileVersion="14.24.28127.4" />
+    <FileAttrib ID="ID_FILEATTRIB_F_31" FriendlyName="C:\sources\epicgames_files\msvcp140_1.dll FileAttribute" FileName="msvcp140_1.dll" MinimumFileVersion="14.24.28127.4" />
+    <FileAttrib ID="ID_FILEATTRIB_F_32" FriendlyName="C:\sources\epicgames_files\msvcp140_2.dll FileAttribute" FileName="msvcp140_2.dll" MinimumFileVersion="14.24.28127.4" />
+    <FileAttrib ID="ID_FILEATTRIB_F_33" FriendlyName="C:\sources\epicgames_files\msvcp140_codecvt_ids.dll FileAttribute" FileName="msvcp140_codecvt_ids.dll" MinimumFileVersion="14.24.28127.4" />
+    <FileAttrib ID="ID_FILEATTRIB_F_35" FriendlyName="C:\sources\epicgames_files\ucrtbase.dll FileAttribute" FileName="ucrtbase.dll" MinimumFileVersion="10.0.17763.132" />
+    <FileAttrib ID="ID_FILEATTRIB_F_36" FriendlyName="C:\sources\epicgames_files\UnrealEngineLauncher.exe FileAttribute" FileName="UnrealEngineLauncherProxy-Win64-Shipping.exe" MinimumFileVersion="1.11.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_37" FriendlyName="C:\sources\epicgames_files\UnrealVersionSelector.exe FileAttribute" FileName="VersionSelector.exe" MinimumFileVersion="4.27.0.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_38" FriendlyName="C:\sources\epicgames_files\vccorlib140.dll FileAttribute" FileName="vccorlib140.DLL" MinimumFileVersion="14.24.28127.4" />
+    <FileAttrib ID="ID_FILEATTRIB_F_39" FriendlyName="C:\sources\epicgames_files\vcruntime140.dll FileAttribute" FileName="vcruntime140.dll" MinimumFileVersion="14.24.28127.4" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A" FriendlyName="C:\sources\epicgames_files\vcruntime140_1.dll FileAttribute" FileName="vcruntime140_1.dll" MinimumFileVersion="14.24.28127.4" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B" FriendlyName="C:\sources\epicgames_files\widevinecdmadapter.dll FileAttribute" FileName="widevinecdmadapter.dll" MinimumFileVersion="59.0.3071.15" />
+  </FileRules>
+  <!--Signers-->
+  <Signers>
+    <Signer ID="ID_SIGNER_F_1" Name="DigiCert SHA2 Assured ID Code Signing CA">
+      <CertRoot Type="TBS" Value="E767799478F64A34B3F53FF3BB9057FE1768F4AB178041B0DCC0FF1E210CBA65" />
+      <CertPublisher Value="Epic Games Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3C" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_6F" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_3" Name="DigiCert SHA2 Assured ID Code Signing CA">
+      <CertRoot Type="TBS" Value="E767799478F64A34B3F53FF3BB9057FE1768F4AB178041B0DCC0FF1E210CBA65" />
+      <CertPublisher Value="Epic Games Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3D" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3E" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_3F" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_40" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_43" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_4A" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_4F" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_51" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_52" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_53" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_55" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_56" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_57" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_59" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_5A" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_67" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_68" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_69" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_6B" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_6C" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_6D" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_6E" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_70" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_73" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_74" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_76" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_AB" Name="DigiCert Trusted Root G4">
+      <CertRoot Type="TBS" Value="11533EFD6B326A4E065A936DE300FE0586A479F93D569D2403BD62C7AD35F1B2199DAEE3ADB510F429C4FC97B4B024E3" />
+      <CertPublisher Value="Epic Games Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_41" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_42" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_44" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_47" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_49" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_4B" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_4C" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_4D" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_4E" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_50" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_54" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_58" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_59" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_5B" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_5C" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_5D" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_5E" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_5F" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_60" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_61" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_62" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_63" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_64" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_65" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_66" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_6A" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_71" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_72" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_75" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_AC" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="Epic Games Inc." />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_41" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_42" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_44" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_47" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_49" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_4B" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_4C" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_4D" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_4E" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_50" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_54" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_58" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_59" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_5B" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_5C" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_5D" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_5E" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_5F" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_60" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_61" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_62" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_63" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_64" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_65" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_66" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_6A" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_71" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_72" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_75" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_B3" Name="Microsoft Code Signing PCA">
+      <CertRoot Type="TBS" Value="7251ADC0F732CF409EE462E335BB99544F2DD40F" />
+      <CertPublisher Value="Microsoft Corporation" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_45" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_46" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_48" />
+    </Signer>
+  </Signers>
+  <!--Driver Signing Scenarios-->
+  <SigningScenarios>
+    <SigningScenario Value="131" ID="ID_SIGNINGSCENARIO_DRIVERS_1" FriendlyName="Auto generated policy on 01-21-2025">
+      <ProductSigners>
+        <FileRulesRef>
+          <FileRuleRef RuleID="ID_ALLOW_A_84" />
+          <FileRuleRef RuleID="ID_ALLOW_A_85" />
+          <FileRuleRef RuleID="ID_ALLOW_A_86" />
+          <FileRuleRef RuleID="ID_ALLOW_A_87" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8F" />
+        </FileRulesRef>
+        <AllowedSigners>
+          <AllowedSigner SignerId="ID_SIGNER_F_1" />
+        </AllowedSigners>
+      </ProductSigners>
+    </SigningScenario>
+    <SigningScenario Value="12" ID="ID_SIGNINGSCENARIO_WINDOWS" FriendlyName="Auto generated policy on 01-21-2025">
+      <ProductSigners>
+        <FileRulesRef>
+          <FileRuleRef RuleID="ID_ALLOW_A_77" />
+          <FileRuleRef RuleID="ID_ALLOW_A_78" />
+          <FileRuleRef RuleID="ID_ALLOW_A_79" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_7F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_80" />
+          <FileRuleRef RuleID="ID_ALLOW_A_81" />
+          <FileRuleRef RuleID="ID_ALLOW_A_82" />
+          <FileRuleRef RuleID="ID_ALLOW_A_83" />
+          <FileRuleRef RuleID="ID_ALLOW_A_88" />
+          <FileRuleRef RuleID="ID_ALLOW_A_89" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_8B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_90" />
+          <FileRuleRef RuleID="ID_ALLOW_A_91" />
+          <FileRuleRef RuleID="ID_ALLOW_A_92" />
+          <FileRuleRef RuleID="ID_ALLOW_A_93" />
+          <FileRuleRef RuleID="ID_ALLOW_A_94" />
+          <FileRuleRef RuleID="ID_ALLOW_A_95" />
+          <FileRuleRef RuleID="ID_ALLOW_A_96" />
+          <FileRuleRef RuleID="ID_ALLOW_A_97" />
+          <FileRuleRef RuleID="ID_ALLOW_A_98" />
+          <FileRuleRef RuleID="ID_ALLOW_A_99" />
+          <FileRuleRef RuleID="ID_ALLOW_A_9A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_9B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_9C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_9D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_9E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_9F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A2" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A3" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A4" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A5" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A6" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A7" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A8" />
+          <FileRuleRef RuleID="ID_ALLOW_A_A9" />
+          <FileRuleRef RuleID="ID_ALLOW_A_AA" />
+          <FileRuleRef RuleID="ID_ALLOW_A_AB" />
+          <FileRuleRef RuleID="ID_ALLOW_A_AC" />
+          <FileRuleRef RuleID="ID_ALLOW_A_AD" />
+          <FileRuleRef RuleID="ID_ALLOW_A_AE" />
+          <FileRuleRef RuleID="ID_ALLOW_A_AF" />
+          <FileRuleRef RuleID="ID_ALLOW_A_B0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_B1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_B2" />
+          <FileRuleRef RuleID="ID_ALLOW_A_B3" />
+          <FileRuleRef RuleID="ID_ALLOW_A_B4" />
+          <FileRuleRef RuleID="ID_ALLOW_A_B5" />
+          <FileRuleRef RuleID="ID_ALLOW_A_B6" />
+          <FileRuleRef RuleID="ID_ALLOW_A_B7" />
+          <FileRuleRef RuleID="ID_ALLOW_A_B8" />
+          <FileRuleRef RuleID="ID_ALLOW_A_B9" />
+        </FileRulesRef>
+        <AllowedSigners>
+          <AllowedSigner SignerId="ID_SIGNER_F_3" />
+          <AllowedSigner SignerId="ID_SIGNER_F_AB" />
+          <AllowedSigner SignerId="ID_SIGNER_F_AC" />
+          <AllowedSigner SignerId="ID_SIGNER_F_B3" />
+        </AllowedSigners>
+      </ProductSigners>
+    </SigningScenario>
+  </SigningScenarios>
+  <UpdatePolicySigners />
+  <CiSigners>
+    <CiSigner SignerId="ID_SIGNER_F_3" />
+    <CiSigner SignerId="ID_SIGNER_F_AB" />
+    <CiSigner SignerId="ID_SIGNER_F_AC" />
+    <CiSigner SignerId="ID_SIGNER_F_B3" />
+  </CiSigners>
+  <HvciOptions>0</HvciOptions>
+  <BasePolicyID>{488E7D72-DA1E-4219-BB58-22EEBCBB2CFE}</BasePolicyID>
+  <PolicyID>{08794066-CDF7-4252-865E-9CC9C1426E64}</PolicyID>
+  <Settings>
+    <Setting Provider="PolicyInfo" Key="Information" ValueName="Name">
+      <Value>
+        <String>Supplemental-EpicGamesLauncher-1570-V01 - 22-01-2025</String>
+      </Value>
+    </Setting>
+  </Settings>
+</SiPolicy>

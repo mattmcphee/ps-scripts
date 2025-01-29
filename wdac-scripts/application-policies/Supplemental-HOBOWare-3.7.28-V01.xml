@@ -1,0 +1,1300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SiPolicy xmlns="urn:schemas-microsoft-com:sipolicy" PolicyType="Supplemental Policy">
+  <VersionEx>10.0.0.0</VersionEx>
+  <PlatformID>{2E07F7E4-194C-4D20-B7C9-6F44A6C5A234}</PlatformID>
+  <Rules>
+    <Rule>
+      <Option>Enabled:Unsigned System Integrity Policy</Option>
+    </Rule>
+  </Rules>
+  <!--EKUS-->
+  <EKUs>
+    <EKU ID="ID_EKU_E_1" Value="010A2B0601040182370A0305" FriendlyName="Windows Hardware Driver Verification" />
+  </EKUs>
+  <!--File Rules-->
+  <FileRules>
+    <Allow ID="ID_ALLOW_A_105" FriendlyName="C:\source\hoboware_files\ftser2k.sys Hash Sha1" Hash="20DEAB8C4650B2C055A587A1CD7D8D824B56612F" />
+    <Allow ID="ID_ALLOW_A_106" FriendlyName="C:\source\hoboware_files\ftser2k.sys Hash Sha256" Hash="61B582CA4533849C67A9B7D7F6ED441AD0B61573C21D6BF7FECF28DE454F2E48" />
+    <Allow ID="ID_ALLOW_A_107" FriendlyName="C:\source\hoboware_files\ftser2k.sys Hash Page Sha1" Hash="4793297C93544D30AE53349BC57D1502C4EDA26C" />
+    <Allow ID="ID_ALLOW_A_108" FriendlyName="C:\source\hoboware_files\ftser2k.sys Hash Page Sha256" Hash="3E8FA3DD41A96F5C3E23DB94429C4FB92791014B2DD9A495474EAE42DD86D433" />
+    <Allow ID="ID_ALLOW_A_F0" FriendlyName="C:\source\hoboware_files\Alias.js Hash Sha1" Hash="99037952D17D13A4DC41DC2B3D61F78CD4ADCFC2" />
+    <Allow ID="ID_ALLOW_A_F1" FriendlyName="C:\source\hoboware_files\Alias.js Hash Sha256" Hash="25A84BF63E5384D097C6E2D7A6B79220CA536975B0900FEE92C75434E9F4BFD2" />
+    <Allow ID="ID_ALLOW_A_F2" FriendlyName="C:\source\hoboware_files\Alias.js Hash Authenticode SIP Sha256" Hash="0000000000000000000000000000000000000000000000000000000000000000" />
+    <Allow ID="ID_ALLOW_A_F3" FriendlyName="C:\source\hoboware_files\Breakpoints.js Hash Sha1" Hash="4E25A4B49C564A28F6FB5D9A370E90810D7BAF90" />
+    <Allow ID="ID_ALLOW_A_F4" FriendlyName="C:\source\hoboware_files\Breakpoints.js Hash Sha256" Hash="C62CFB7BA968FD10F832C3A86A7C70B57B0BA3808FC5DCC28FC8CBD39DF8B551" />
+    <Allow ID="ID_ALLOW_A_F5" FriendlyName="C:\source\hoboware_files\browse.js Hash Sha1" Hash="CB79BDA66C73447CAC42DA8BBC0EF8BCABFA90B3" />
+    <Allow ID="ID_ALLOW_A_F6" FriendlyName="C:\source\hoboware_files\browse.js Hash Sha256" Hash="2CCA82B6D3460CB7CFF983421596C9C1675F270CF5412578FEB17B97B7BF204A" />
+    <Allow ID="ID_ALLOW_A_F7" FriendlyName="C:\source\hoboware_files\conc.js Hash Sha1" Hash="00AF5B88E726366480EE1B4CF843B353C545C072" />
+    <Allow ID="ID_ALLOW_A_F8" FriendlyName="C:\source\hoboware_files\conc.js Hash Sha256" Hash="E8ADFDF05881632392B40F30EADF615B285C49B134DF8D3FD2375FB1C850F09D" />
+    <Allow ID="ID_ALLOW_A_F9" FriendlyName="C:\source\hoboware_files\Concepts.js Hash Sha1" Hash="4225B4AF3114CDD6294DBD908C07FB09CFA5D3A7" />
+    <Allow ID="ID_ALLOW_A_FA" FriendlyName="C:\source\hoboware_files\Concepts.js Hash Sha256" Hash="0089AA050B89192E6BB4F33C9CA831D4215F30A24CFF294ED17A1A187131E267" />
+    <Allow ID="ID_ALLOW_A_FB" FriendlyName="C:\source\hoboware_files\csh.js Hash Sha1" Hash="EA0F39E3205629E01C470A2A14F1F761D0A4A1E5" />
+    <Allow ID="ID_ALLOW_A_FC" FriendlyName="C:\source\hoboware_files\csh.js Hash Sha256" Hash="AFE267313D6C9C1368867298E4B45F0B15A60A368906DE0B401648CB85501B47" />
+    <Allow ID="ID_ALLOW_A_FD" FriendlyName="C:\source\hoboware_files\custom.modernizr.js Hash Sha1" Hash="DF1B4BFF3D99455348493ED7417BCDFC37499257" />
+    <Allow ID="ID_ALLOW_A_FE" FriendlyName="C:\source\hoboware_files\custom.modernizr.js Hash Sha256" Hash="E2E9C2A8CAF63E6916FFEE45F802B86532D1C13B5A480267DBC99C000D6D63B7" />
+    <Allow ID="ID_ALLOW_A_FF" FriendlyName="C:\source\hoboware_files\ehlpdhtm.js Hash Sha1" Hash="95AEA4990FA042DFD2F8F0F4D26F7347189EE268" />
+    <Allow ID="ID_ALLOW_A_100" FriendlyName="C:\source\hoboware_files\ehlpdhtm.js Hash Sha256" Hash="BDB0518DE2787C416A9E3A7A17D4DDAE4DBA9C4A0C3E10819ADDB47E2BF0B627" />
+    <Allow ID="ID_ALLOW_A_101" FriendlyName="C:\source\hoboware_files\Filters.js Hash Sha1" Hash="96A18AA05F798C151894C204D9C8F167F198D000" />
+    <Allow ID="ID_ALLOW_A_102" FriendlyName="C:\source\hoboware_files\Filters.js Hash Sha256" Hash="ABFA4DB7DDDF77B39A1CB8F28EF4B713A29DBBC14A9A20A07C0498810B12C3B6" />
+    <Allow ID="ID_ALLOW_A_103" FriendlyName="C:\source\hoboware_files\foundation.min.js Hash Sha1" Hash="B4E791985690F8F9D3A20F2399A2409E57636CDF" />
+    <Allow ID="ID_ALLOW_A_104" FriendlyName="C:\source\hoboware_files\foundation.min.js Hash Sha256" Hash="BFEA62BA9211CA7F91BA83C8A92CE8A60EB255EF6C3C1DD69426DA8DB917367C" />
+    <Allow ID="ID_ALLOW_A_109" FriendlyName="C:\source\hoboware_files\ftser2k.sys Hash Sha1" Hash="20DEAB8C4650B2C055A587A1CD7D8D824B56612F" />
+    <Allow ID="ID_ALLOW_A_10A" FriendlyName="C:\source\hoboware_files\ftser2k.sys Hash Sha256" Hash="61B582CA4533849C67A9B7D7F6ED441AD0B61573C21D6BF7FECF28DE454F2E48" />
+    <Allow ID="ID_ALLOW_A_10B" FriendlyName="C:\source\hoboware_files\ftser2k.sys Hash Page Sha1" Hash="4793297C93544D30AE53349BC57D1502C4EDA26C" />
+    <Allow ID="ID_ALLOW_A_10C" FriendlyName="C:\source\hoboware_files\ftser2k.sys Hash Page Sha256" Hash="3E8FA3DD41A96F5C3E23DB94429C4FB92791014B2DD9A495474EAE42DD86D433" />
+    <Allow ID="ID_ALLOW_A_10D" FriendlyName="C:\source\hoboware_files\Glossary.js Hash Sha1" Hash="2CAD6520DB2BE9DFA4AFE08F338441A0842B68E7" />
+    <Allow ID="ID_ALLOW_A_10E" FriendlyName="C:\source\hoboware_files\Glossary.js Hash Sha256" Hash="D2EC510632BDB7BFFE82CEB58606A4BFFEA7DAD7DA04BA57238B3AA93A456ED0" />
+    <Allow ID="ID_ALLOW_A_10F" FriendlyName="C:\source\hoboware_files\Glossary_Chunk0.js Hash Sha1" Hash="334A570AE21B58EEE56DDB86E1DB4FCB51EFA420" />
+    <Allow ID="ID_ALLOW_A_110" FriendlyName="C:\source\hoboware_files\Glossary_Chunk0.js Hash Sha256" Hash="FC81B84E551D2ECA70203EE1B5CFFE3D42D6090AEBE60405D619853707137A90" />
+    <Allow ID="ID_ALLOW_A_111" FriendlyName="C:\source\hoboware_files\gui.js Hash Sha1" Hash="52B4654A52F6443D55303B02563B1FD7A9168BE3" />
+    <Allow ID="ID_ALLOW_A_112" FriendlyName="C:\source\hoboware_files\gui.js Hash Sha256" Hash="A3A6AD74D429C83F2AFE3E8F11AC4D0510D729785E2D3664FA0810C7DB03B9B5" />
+    <Allow ID="ID_ALLOW_A_113" FriendlyName="C:\source\hoboware_files\HelpSystem.js Hash Sha1" Hash="E33AFBEE27E58FF0C46D808515F123A999F93E24" />
+    <Allow ID="ID_ALLOW_A_114" FriendlyName="C:\source\hoboware_files\HelpSystem.js Hash Sha256" Hash="0DC1E5CFAA83F29FF70962AE9015E9520E49C288BCA78F55D5A5E0C0DFB2D969" />
+    <Allow ID="ID_ALLOW_A_115" FriendlyName="C:\source\hoboware_files\HOBOware_Free_Setup.exe Hash Sha1" Hash="4926DF5B0CCBE8FEB715A3F1749D49946D49C665" />
+    <Allow ID="ID_ALLOW_A_116" FriendlyName="C:\source\hoboware_files\HOBOware_Free_Setup.exe Hash Sha256" Hash="7385F1A85B7FCC106B1DAB241628477F991637E9C11E82BE3BBA3034A8A4973E" />
+    <Allow ID="ID_ALLOW_A_117" FriendlyName="C:\source\hoboware_files\HOBOware_Free_Setup.exe Hash Page Sha1" Hash="97A95CEBFA9F77EB4BA7D5B0824ADEF670304443" />
+    <Allow ID="ID_ALLOW_A_118" FriendlyName="C:\source\hoboware_files\HOBOware_Free_Setup.exe Hash Page Sha256" Hash="33AF2C7AEC327B7BD7BA8CCACED04A5ECF825870E062D5B8A8976469DC608D4A" />
+    <Allow ID="ID_ALLOW_A_119" FriendlyName="C:\source\hoboware_files\HTML5 - Tripane.js Hash Sha1" Hash="78F375A78263170181D41A273A23DABCB5FE7AB9" />
+    <Allow ID="ID_ALLOW_A_11A" FriendlyName="C:\source\hoboware_files\HTML5 - Tripane.js Hash Sha256" Hash="9EDAA128C48EE1DE8F17DDE34EC8D543522C1E47185C607C1994DE457336C6D6" />
+    <Allow ID="ID_ALLOW_A_11B" FriendlyName="C:\source\hoboware_files\hwhelp.js Hash Sha1" Hash="86A3CC238B7CD705E2DBD5659575F7F2A01D94BA" />
+    <Allow ID="ID_ALLOW_A_11C" FriendlyName="C:\source\hoboware_files\hwhelp.js Hash Sha256" Hash="7CEB4D799D90FFB17F71FCD81AEAE2106A7E3078C7C3AC6EF7718A0BD6C5B22D" />
+    <Allow ID="ID_ALLOW_A_11D" FriendlyName="C:\source\hoboware_files\ICE_JNIRegistry.dll Hash Sha1" Hash="7D9F99C9096822C67273A7D9B6E7A4E3EB5C31A8" />
+    <Allow ID="ID_ALLOW_A_11E" FriendlyName="C:\source\hoboware_files\ICE_JNIRegistry.dll Hash Sha256" Hash="1A8A3807EEB7D9D6D7F8C01A2CE0834061ECA3A97C10B935CD1AA85A1F0BE1C4" />
+    <Allow ID="ID_ALLOW_A_11F" FriendlyName="C:\source\hoboware_files\ICE_JNIRegistry.dll Hash Page Sha1" Hash="E55DD2CF38DCE5F6A8644EB4EABC762208404E02" />
+    <Allow ID="ID_ALLOW_A_120" FriendlyName="C:\source\hoboware_files\ICE_JNIRegistry.dll Hash Page Sha256" Hash="16B7ED4E3DBC298876E9AE6DC153D70D3FA86A3C0D2DE72E7D2E09B6D6B9E512" />
+    <Allow ID="ID_ALLOW_A_121" FriendlyName="C:\source\hoboware_files\Index.js Hash Sha1" Hash="C60BFEE7724C6C7E84F8A890F44443E2F7459477" />
+    <Allow ID="ID_ALLOW_A_122" FriendlyName="C:\source\hoboware_files\Index.js Hash Sha256" Hash="1450067B36CDF4D7ABDE4E43D3070744D61A09CCC5C671691FF42E1E1174D843" />
+    <Allow ID="ID_ALLOW_A_123" FriendlyName="C:\source\hoboware_files\Index_Chunk0.js Hash Sha1" Hash="3909AED8F84C9921A7B14FC9E636A29E22617872" />
+    <Allow ID="ID_ALLOW_A_124" FriendlyName="C:\source\hoboware_files\Index_Chunk0.js Hash Sha256" Hash="4F8218261A6F4E5A0BE18D9BBDF62D052C9118A5370A3E4DABD0C1AC1C9CFB50" />
+    <Allow ID="ID_ALLOW_A_125" FriendlyName="C:\source\hoboware_files\Index_Chunk1.js Hash Sha1" Hash="F38B8636080BF172BA201AD9F288E531A989B4A1" />
+    <Allow ID="ID_ALLOW_A_126" FriendlyName="C:\source\hoboware_files\Index_Chunk1.js Hash Sha256" Hash="3A1397466DC97C7107B421031BEEEED2C6C74F72826ABAF278ECF91E31F4EF13" />
+    <Allow ID="ID_ALLOW_A_127" FriendlyName="C:\source\hoboware_files\Index_Chunk2.js Hash Sha1" Hash="5BCF7C201CC76B2D891B45708E9F72DC90901244" />
+    <Allow ID="ID_ALLOW_A_128" FriendlyName="C:\source\hoboware_files\Index_Chunk2.js Hash Sha256" Hash="A5FF67D4346431A55BEB801E343F96BF3B3D5871FE34DA21D8C1CFE51CC43B0A" />
+    <Allow ID="ID_ALLOW_A_129" FriendlyName="C:\source\hoboware_files\Index_Chunk3.js Hash Sha1" Hash="D25212491857E449FB2B475B4398A59E9040DA67" />
+    <Allow ID="ID_ALLOW_A_12A" FriendlyName="C:\source\hoboware_files\Index_Chunk3.js Hash Sha256" Hash="A38DC82B00E6C9CD5D318DC1FEDE7A7A0292D3179BE0BB6571E90AD4396A0D79" />
+    <Allow ID="ID_ALLOW_A_12B" FriendlyName="C:\source\hoboware_files\Index_Chunk4.js Hash Sha1" Hash="28B9CA1A4960B3CAACA6AC779D29D0AE6D31F627" />
+    <Allow ID="ID_ALLOW_A_12C" FriendlyName="C:\source\hoboware_files\Index_Chunk4.js Hash Sha256" Hash="5F6D6615D5AD8A4110FE11A33E4D00AF22CDDBAB1AD1CF6B8CAC9D112755A764" />
+    <Allow ID="ID_ALLOW_A_12D" FriendlyName="C:\source\hoboware_files\Index_Chunk5.js Hash Sha1" Hash="4BBCBE47F54C1DABFF229E077666891E797E0179" />
+    <Allow ID="ID_ALLOW_A_12E" FriendlyName="C:\source\hoboware_files\Index_Chunk5.js Hash Sha256" Hash="A8323BF7BF9A4675ECC02A547C527A05ABD581A6E3292D03CF7E649227C276B3" />
+    <Allow ID="ID_ALLOW_A_12F" FriendlyName="C:\source\hoboware_files\insertfile.js Hash Sha1" Hash="797E5EFADFC4F084F6036B734F547A703265811C" />
+    <Allow ID="ID_ALLOW_A_130" FriendlyName="C:\source\hoboware_files\insertfile.js Hash Sha256" Hash="F913D131CDD70CED6F0BFCDC973646A61DA60083C38EE64A0605264618F392FE" />
+    <Allow ID="ID_ALLOW_A_131" FriendlyName="C:\source\hoboware_files\JavaDLL.dll Hash Sha1" Hash="8F3C309BCFCB0B6185EF841339DADE9B0B9B2CB4" />
+    <Allow ID="ID_ALLOW_A_132" FriendlyName="C:\source\hoboware_files\JavaDLL.dll Hash Sha256" Hash="0443AD0EBB8B3D092780BD85D53BD33D5B29CCBE00901321C6064973F3D346CB" />
+    <Allow ID="ID_ALLOW_A_133" FriendlyName="C:\source\hoboware_files\JavaDLL.dll Hash Page Sha1" Hash="F2D49C889DC6101F75B3945B8EBC05F465623A23" />
+    <Allow ID="ID_ALLOW_A_134" FriendlyName="C:\source\hoboware_files\JavaDLL.dll Hash Page Sha256" Hash="B1A867385B3733BCCCC3C4F84DE16A0C4119C03AB7E9E9DFC1286274FDFE8716" />
+    <Allow ID="ID_ALLOW_A_135" FriendlyName="C:\source\hoboware_files\jquery.min.js Hash Sha1" Hash="FB9C0A10BB7DE33179C643FF40054F2BD740DB13" />
+    <Allow ID="ID_ALLOW_A_136" FriendlyName="C:\source\hoboware_files\jquery.min.js Hash Sha256" Hash="C1CD2D68BF3D0F424987EE9B2B8D59568404C40383E6858B4717379B372E6120" />
+    <Allow ID="ID_ALLOW_A_137" FriendlyName="C:\source\hoboware_files\jquery.offcanvas.js Hash Sha1" Hash="923E275729FD6D1D4624A9A6983C7D2D4A76E741" />
+    <Allow ID="ID_ALLOW_A_138" FriendlyName="C:\source\hoboware_files\jquery.offcanvas.js Hash Sha256" Hash="83904CC9493D1BF70AFB36D88D1FDAEEB6C1C4DAB69D617D158C2982AE9E358D" />
+    <Allow ID="ID_ALLOW_A_139" FriendlyName="C:\source\hoboware_files\jspWin.dll Hash Sha1" Hash="47A2722B78BA01996E495C50202D54FE55837FC9" />
+    <Allow ID="ID_ALLOW_A_13A" FriendlyName="C:\source\hoboware_files\jspWin.dll Hash Sha256" Hash="C86BAF368AF94EBA9A705CFD09A791402E5DB248055691D521B8F444660C5C8C" />
+    <Allow ID="ID_ALLOW_A_13B" FriendlyName="C:\source\hoboware_files\jspWin.dll Hash Page Sha1" Hash="98205507DFCEFA0D6FCDE011FACB415467621C34" />
+    <Allow ID="ID_ALLOW_A_13C" FriendlyName="C:\source\hoboware_files\jspWin.dll Hash Page Sha256" Hash="66CE1855F5C519926E3142A977C2AC0BD6D5595CDF059C5851EBFD031D38A62E" />
+    <Allow ID="ID_ALLOW_A_13D" FriendlyName="C:\source\hoboware_files\Language.js Hash Sha1" Hash="8FB62635D6B762EF0BADD6561DA06B572782FCA6" />
+    <Allow ID="ID_ALLOW_A_13E" FriendlyName="C:\source\hoboware_files\Language.js Hash Sha256" Hash="C60934161A3B1AB590521D3A77CD9663AA6FA814D2935FAFCB51B02EE8C86860" />
+    <Allow ID="ID_ALLOW_A_13F" FriendlyName="C:\source\hoboware_files\linewrap.js Hash Sha1" Hash="E536AD653B2EE488B82F71CEE1B9638A4CB19018" />
+    <Allow ID="ID_ALLOW_A_140" FriendlyName="C:\source\hoboware_files\linewrap.js Hash Sha256" Hash="FE815E4621F8AE816757E428DD2FF77B2CDE4AC452D5766C5B8581133E8871F1" />
+    <Allow ID="ID_ALLOW_A_141" FriendlyName="C:\source\hoboware_files\MadCapAll.js Hash Sha1" Hash="EEEC1C0C7FCDC2E37A9F34143A1504A1D585465E" />
+    <Allow ID="ID_ALLOW_A_142" FriendlyName="C:\source\hoboware_files\MadCapAll.js Hash Sha256" Hash="73278083C1FEC8605ABD8507A929BD6DFDC23365A170218D5A547B75BF8AD174" />
+    <Allow ID="ID_ALLOW_A_143" FriendlyName="C:\source\hoboware_files\mail.js Hash Sha1" Hash="DD73B826695863FFB45E138538C795CA7B69E65C" />
+    <Allow ID="ID_ALLOW_A_144" FriendlyName="C:\source\hoboware_files\mail.js Hash Sha256" Hash="A3BB13C32AA77445DA4C3AD4562D8BE6BA51088CF77D5819B251DEC6A29988BD" />
+    <Allow ID="ID_ALLOW_A_145" FriendlyName="C:\source\hoboware_files\Main.js Hash Sha1" Hash="6AFA1B2A123893BD3E0F39AA8C3C12C1DDCA43B0" />
+    <Allow ID="ID_ALLOW_A_146" FriendlyName="C:\source\hoboware_files\Main.js Hash Sha256" Hash="8D1B94EFCDCE2B0F66CF1859BC02A3AB3888D437308825809B99EBD8BDDBCF0E" />
+    <Allow ID="ID_ALLOW_A_147" FriendlyName="C:\source\hoboware_files\Master.js Hash Sha1" Hash="90566B33D3347564540AB293DC58D6210273FC65" />
+    <Allow ID="ID_ALLOW_A_148" FriendlyName="C:\source\hoboware_files\Master.js Hash Sha256" Hash="9F65B8614CC62B4EBBAF6BC244F39778709AF54A68574C6C8D0C928693093D2D" />
+    <Allow ID="ID_ALLOW_A_149" FriendlyName="C:\source\hoboware_files\Master_Chunk0.js Hash Sha1" Hash="94F6A49FAA2AD389B7B5D5741DA9821A73704721" />
+    <Allow ID="ID_ALLOW_A_14A" FriendlyName="C:\source\hoboware_files\Master_Chunk0.js Hash Sha256" Hash="107D82B93FB9170D37C24F8CF0FA64EC5C5BCE42D2D96CFA59AC99A765C5E5D2" />
+    <Allow ID="ID_ALLOW_A_14B" FriendlyName="C:\source\hoboware_files\memmonitor.js Hash Sha1" Hash="9EA86B3739E42F513BF352CD02CB6AE9A8270892" />
+    <Allow ID="ID_ALLOW_A_14C" FriendlyName="C:\source\hoboware_files\memmonitor.js Hash Sha256" Hash="3C11D3984C482428E7511E8B2B29A3E10ECC20F02FA1798AE3DEE114FA510937" />
+    <Allow ID="ID_ALLOW_A_14D" FriendlyName="C:\source\hoboware_files\memory.js Hash Sha1" Hash="5FDF746F52A83AE4631D5B5432555984485E5070" />
+    <Allow ID="ID_ALLOW_A_14E" FriendlyName="C:\source\hoboware_files\memory.js Hash Sha256" Hash="F8160B887DBB3EE593CD150E0C5B06EB01D6614A622C4DAD9972EB86897418EF" />
+    <Allow ID="ID_ALLOW_A_14F" FriendlyName="C:\source\hoboware_files\mm.js Hash Sha1" Hash="DFC3BBAFDEA45CE62EAE44693F86BFD50E4AD4FC" />
+    <Allow ID="ID_ALLOW_A_150" FriendlyName="C:\source\hoboware_files\mm.js Hash Sha256" Hash="795B3F9E0229E540D0A5C3B8E2DBC83EFD92BF9EE79AB5401B515F0E37997EC0" />
+    <Allow ID="ID_ALLOW_A_151" FriendlyName="C:\source\hoboware_files\msvcm80.dll Hash Sha1" Hash="2C2E58C49194F63F6F8235BC97752818CEBA1743" />
+    <Allow ID="ID_ALLOW_A_152" FriendlyName="C:\source\hoboware_files\msvcm80.dll Hash Sha256" Hash="D233E21E6CEDB7A29D194F997C103A0DF9F8BCF122F316CC7047F9E039C1CB8D" />
+    <Allow ID="ID_ALLOW_A_153" FriendlyName="C:\source\hoboware_files\msvcm80.dll Hash Page Sha1" Hash="B338836B0FFD8C51B8D580BF291B37240FFB377D" />
+    <Allow ID="ID_ALLOW_A_154" FriendlyName="C:\source\hoboware_files\msvcm80.dll Hash Page Sha256" Hash="9B57DD838B487AAB11399390402AA7427B830FEE6DA4DFB9902DCB8518988E76" />
+    <Allow ID="ID_ALLOW_A_155" FriendlyName="C:\source\hoboware_files\ousb.dll Hash Sha1" Hash="5315783582743DA8F79B3ABB92179BD5582505E6" />
+    <Allow ID="ID_ALLOW_A_156" FriendlyName="C:\source\hoboware_files\ousb.dll Hash Sha256" Hash="F2617CBDADFD6DB0BCCB367C0AEA29EBFC33D43A3B10586723C80E45679D00FF" />
+    <Allow ID="ID_ALLOW_A_157" FriendlyName="C:\source\hoboware_files\ousb.dll Hash Page Sha1" Hash="338EA0ECFA0BC85E145F27D824B43982242445D8" />
+    <Allow ID="ID_ALLOW_A_158" FriendlyName="C:\source\hoboware_files\ousb.dll Hash Page Sha256" Hash="204C8F6219701F0E8C11A88886FE07589B7167EF6BA15AA4A14C14F08BE633B8" />
+    <Allow ID="ID_ALLOW_A_159" FriendlyName="C:\source\hoboware_files\ousbce.dll Hash Sha1" Hash="14473DB703E12FA00CD40A9837BCE9B5A8A58707" />
+    <Allow ID="ID_ALLOW_A_15A" FriendlyName="C:\source\hoboware_files\ousbce.dll Hash Sha256" Hash="22FF30AE0E4B97A2DF79BF41905AF91BA6E4AF3996508D6CA9420AA1B30B40FB" />
+    <Allow ID="ID_ALLOW_A_15B" FriendlyName="C:\source\hoboware_files\ousbce.dll Hash Page Sha1" Hash="A6EF552364EE8B94D3F29D3C17B20CA53360061C" />
+    <Allow ID="ID_ALLOW_A_15C" FriendlyName="C:\source\hoboware_files\ousbce.dll Hash Page Sha256" Hash="AA12769B673F9E2C5C2CB7D5D0FC407D5C377F32FC25C6129C8F1EC198D2B3C4" />
+    <Allow ID="ID_ALLOW_A_15D" FriendlyName="C:\source\hoboware_files\plugins.min.js Hash Sha1" Hash="243C804F412508FA2A1C9A8F2EBC5C941E0A0621" />
+    <Allow ID="ID_ALLOW_A_15E" FriendlyName="C:\source\hoboware_files\plugins.min.js Hash Sha256" Hash="9B6C39576B25B7F17FE806AB2D82B7DE8D2C1144045564756B96585529677A19" />
+    <Allow ID="ID_ALLOW_A_15F" FriendlyName="C:\source\hoboware_files\require.config.js Hash Sha1" Hash="EB8653ADCC733924929062B8B5D534B6BE7C28E8" />
+    <Allow ID="ID_ALLOW_A_160" FriendlyName="C:\source\hoboware_files\require.config.js Hash Sha256" Hash="DB18056B7DE1C3B983491D1B87598BDC84A3382E69B2EE4C3D8FB78D8C1C14CF" />
+    <Allow ID="ID_ALLOW_A_161" FriendlyName="C:\source\hoboware_files\require.min.js Hash Sha1" Hash="DE5C4718AED69B153F51672C7D19605C1C8C451F" />
+    <Allow ID="ID_ALLOW_A_162" FriendlyName="C:\source\hoboware_files\require.min.js Hash Sha256" Hash="4BDCAC2C695DEF051249C6A0A1E7A3AFA73DD7C7A4851BC8B75B737D20483E7F" />
+    <Allow ID="ID_ALLOW_A_163" FriendlyName="C:\source\hoboware_files\sanitize-html.min.js Hash Sha1" Hash="5F9970CE7B0075AE4C9F173349B76C1CE15BCA86" />
+    <Allow ID="ID_ALLOW_A_164" FriendlyName="C:\source\hoboware_files\sanitize-html.min.js Hash Sha256" Hash="D822C90205A27C4D4884F48F13C1E79814FCCFA8C9BC91E1DD2CDE382BFC0E07" />
+    <Allow ID="ID_ALLOW_A_165" FriendlyName="C:\source\hoboware_files\sawindbg.dll Hash Sha1" Hash="795390F77A36B592D2AD55C8C3BEE459BE7D6046" />
+    <Allow ID="ID_ALLOW_A_166" FriendlyName="C:\source\hoboware_files\sawindbg.dll Hash Sha256" Hash="956B82927A148C7FDC92B2A43563C1EF480DCCB4F41C6A1F9A5581406C9B2F5F" />
+    <Allow ID="ID_ALLOW_A_167" FriendlyName="C:\source\hoboware_files\sawindbg.dll Hash Page Sha1" Hash="531D2B30F5867D4784643198FFBC249EEBE1C80B" />
+    <Allow ID="ID_ALLOW_A_168" FriendlyName="C:\source\hoboware_files\sawindbg.dll Hash Page Sha256" Hash="CB5566CF3C368429DDA4B1437D4ACD1AE88BA8B06DCD913BB4C75619EDBFDDB6" />
+    <Allow ID="ID_ALLOW_A_169" FriendlyName="C:\source\hoboware_files\scriptpad.js Hash Sha1" Hash="09E7CE7066616F45645649BCDCB2AA08FA3443BA" />
+    <Allow ID="ID_ALLOW_A_16A" FriendlyName="C:\source\hoboware_files\scriptpad.js Hash Sha256" Hash="B8B3CAF773AF83BB7516F601C9FD3E8864D515981C7BE36A5785DBC0B1948146" />
+    <Allow ID="ID_ALLOW_A_16B" FriendlyName="C:\source\hoboware_files\Search.js Hash Sha1" Hash="6C2F799B2120906FC8E8299CEB29A4EEAD491A35" />
+    <Allow ID="ID_ALLOW_A_16C" FriendlyName="C:\source\hoboware_files\Search.js Hash Sha256" Hash="03639B6E31FB9CCAB7106932A515DBEE889D6C757505D5F53DB8BE57786B4334" />
+    <Allow ID="ID_ALLOW_A_16D" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk0.js Hash Sha1" Hash="61E6FEFFD4ED1C9ACBB691935FAB72E23D4A575F" />
+    <Allow ID="ID_ALLOW_A_16E" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk0.js Hash Sha256" Hash="60E28D07AE6E0ABFA301C82C54DBC888112F65CFF49EB0B4850D326907CC5FD3" />
+    <Allow ID="ID_ALLOW_A_16F" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk1.js Hash Sha1" Hash="EE308DA8AF24C351C89D8EED77F35D35BE352378" />
+    <Allow ID="ID_ALLOW_A_170" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk1.js Hash Sha256" Hash="FD161C4892B8451C01076B7C4CB60DFD99B87AB24740FFFFC0C7E54C15304D8A" />
+    <Allow ID="ID_ALLOW_A_171" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk10.js Hash Sha1" Hash="4236ECCE6F143199B05B3CB501A329EF254D9ABF" />
+    <Allow ID="ID_ALLOW_A_172" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk10.js Hash Sha256" Hash="88D3027CBD35ADA626A463DB298647403DECEFECF65DC83DEB5288547797C553" />
+    <Allow ID="ID_ALLOW_A_173" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk11.js Hash Sha1" Hash="12E9AD679ADD31CC303C1B5380AB99A295CDF522" />
+    <Allow ID="ID_ALLOW_A_174" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk11.js Hash Sha256" Hash="70474E3F5AE6A7AE85BDA1F449F96E36F60A99CC7F0E6581A32BD43C2B710CFD" />
+    <Allow ID="ID_ALLOW_A_175" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk12.js Hash Sha1" Hash="5F74B5134A95BFCAAFCF4C9521C7A3FF451A1662" />
+    <Allow ID="ID_ALLOW_A_176" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk12.js Hash Sha256" Hash="47271BB658AFF6C5992477C447A8DA668B05B484FAB900B98401BE2474DEB9D4" />
+    <Allow ID="ID_ALLOW_A_177" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk13.js Hash Sha1" Hash="1B999A8123C6FC0D9A07D87F6DBE4114F6F8C3F1" />
+    <Allow ID="ID_ALLOW_A_178" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk13.js Hash Sha256" Hash="1CF3466953C9D12E7CAFAD732C53A5838A44748CE40C7174C9701C81C6EA035F" />
+    <Allow ID="ID_ALLOW_A_179" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk14.js Hash Sha1" Hash="D96CA67B3A4BFD0FDB599DECEBFCCEE23BCDA0A9" />
+    <Allow ID="ID_ALLOW_A_17A" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk14.js Hash Sha256" Hash="788FD6AA0A33C2DD08D3FB20222A228E5B58DA17693C7FED71DDFA6B1ADBB4C6" />
+    <Allow ID="ID_ALLOW_A_17B" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk15.js Hash Sha1" Hash="097B8A1DCF8C84FF80149A8408C5262F50D4408C" />
+    <Allow ID="ID_ALLOW_A_17C" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk15.js Hash Sha256" Hash="9826BE72B63DAB51E3954DA9B9D0933EAB147F0ED30C61AD82599E25D7518C15" />
+    <Allow ID="ID_ALLOW_A_17D" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk16.js Hash Sha1" Hash="E18EA8433EB634B813F8EAAC231D867DE523E20E" />
+    <Allow ID="ID_ALLOW_A_17E" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk16.js Hash Sha256" Hash="33020467A11D52FB244AAF90D6990FDD2B03E184FFAA8DDDAC4AF838CAF3FBD9" />
+    <Allow ID="ID_ALLOW_A_17F" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk17.js Hash Sha1" Hash="134FA70BAA90341D70F101A92E859EFA0FB58A8D" />
+    <Allow ID="ID_ALLOW_A_180" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk17.js Hash Sha256" Hash="2B2BC3A6DA4B4B16BA8707C561DD705585E96953C6B35A1C1CAFC7443A1232D4" />
+    <Allow ID="ID_ALLOW_A_181" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk18.js Hash Sha1" Hash="75A48D475E12B551525E0C074D1EEFE2735EDD6A" />
+    <Allow ID="ID_ALLOW_A_182" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk18.js Hash Sha256" Hash="3D0EFB0629D6E703371E0585D904F79E74D948309FEA8A9E9667F0535C32D23F" />
+    <Allow ID="ID_ALLOW_A_183" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk19.js Hash Sha1" Hash="68847B9A493E618EF6EB09CA6B9FE47A8663B6ED" />
+    <Allow ID="ID_ALLOW_A_184" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk19.js Hash Sha256" Hash="C1210B1F666B8896F1077CF0E5292B68C4A0B1178BFDC330202D26EE063448FA" />
+    <Allow ID="ID_ALLOW_A_185" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk2.js Hash Sha1" Hash="7160AD7B9F0650EF41206709CDCD1C03C748417D" />
+    <Allow ID="ID_ALLOW_A_186" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk2.js Hash Sha256" Hash="7ACBD0E58D9D2A94DB49CA98112C6F748A0CE75ADD0F0BCBC04E9A14285D14A9" />
+    <Allow ID="ID_ALLOW_A_187" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk20.js Hash Sha1" Hash="B5082702CA837E36381F47BB4F7C66911938602E" />
+    <Allow ID="ID_ALLOW_A_188" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk20.js Hash Sha256" Hash="9763AEC638B97F31B08C57CA11983F4FAC53C9ED961FC2B05C19B7B202235B44" />
+    <Allow ID="ID_ALLOW_A_189" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk21.js Hash Sha1" Hash="C61180509F01E9CD1F9F4482A18BE60F6D453BE8" />
+    <Allow ID="ID_ALLOW_A_18A" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk21.js Hash Sha256" Hash="A062A5F42B7689085DD33D54A98E91BFA4542FF183374F6663C47587464CCBF1" />
+    <Allow ID="ID_ALLOW_A_18B" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk22.js Hash Sha1" Hash="50B3C9EC24ABAF8733F4904428AC71151707B7D3" />
+    <Allow ID="ID_ALLOW_A_18C" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk22.js Hash Sha256" Hash="AC29D9B3D348F5EED6A6CE38B579083BC1665EE94FEBDEC135CFDBCDB7974709" />
+    <Allow ID="ID_ALLOW_A_18D" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk23.js Hash Sha1" Hash="D662C06F88D17CE32E18474FD3AF48970A66FD13" />
+    <Allow ID="ID_ALLOW_A_18E" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk23.js Hash Sha256" Hash="B6737685DAE6A74FC9E7FDB3315D36716E85A4571D0968B7247F000000905430" />
+    <Allow ID="ID_ALLOW_A_18F" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk24.js Hash Sha1" Hash="BDA2F46E5C3AA2B6C5A6231F82A06DD98918DF65" />
+    <Allow ID="ID_ALLOW_A_190" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk24.js Hash Sha256" Hash="6145032EDC39ECB83D99334C1E5AB5DEFB56976CFBB383EB0B69A00E7E2E3E26" />
+    <Allow ID="ID_ALLOW_A_191" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk25.js Hash Sha1" Hash="2A80CDC3094BC0AF94FF291F58F9EFDFCD46C9E4" />
+    <Allow ID="ID_ALLOW_A_192" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk25.js Hash Sha256" Hash="880E466E95AB4AE372C98251A8B55721FB5DCF67EA8B7D5089C9C3FC484C6A2F" />
+    <Allow ID="ID_ALLOW_A_193" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk26.js Hash Sha1" Hash="05D43087C402DE27F6CE76B4F7A00B12A5F6A96F" />
+    <Allow ID="ID_ALLOW_A_194" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk26.js Hash Sha256" Hash="A470F9D206763329D8BCF05438373ADCFEDC7133CC3E4CB2B5CC2C8A54E55351" />
+    <Allow ID="ID_ALLOW_A_195" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk27.js Hash Sha1" Hash="4519F30FF141D6323B94BED46BA8C0FEA364BD90" />
+    <Allow ID="ID_ALLOW_A_196" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk27.js Hash Sha256" Hash="99E1565676381955B63C946072567BA6F7D091CC2238B4EED78BB7B8A6CB4EF0" />
+    <Allow ID="ID_ALLOW_A_197" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk28.js Hash Sha1" Hash="E603DD418099387E98B1C246285138FD80F0EBB1" />
+    <Allow ID="ID_ALLOW_A_198" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk28.js Hash Sha256" Hash="81B6DB279F79873667A911DAFFA705F6774BE8CDAE387E0C0BF023A0CE9E8554" />
+    <Allow ID="ID_ALLOW_A_199" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk29.js Hash Sha1" Hash="5B1E8AA3947CA7BAFBEF227791C6A9FFACA2376A" />
+    <Allow ID="ID_ALLOW_A_19A" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk29.js Hash Sha256" Hash="DF0B89FE84CDBFE8F829465F27E285F67800DE6036C81B4119064CD3048CA084" />
+    <Allow ID="ID_ALLOW_A_19B" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk3.js Hash Sha1" Hash="22535F9A54033A3E797DFBCFB9431CC053D00F6D" />
+    <Allow ID="ID_ALLOW_A_19C" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk3.js Hash Sha256" Hash="F50C6C634AA18601CAC2B2AD2B8C46C5BD7AE33EC12EAC32E7C933B243625D38" />
+    <Allow ID="ID_ALLOW_A_19D" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk30.js Hash Sha1" Hash="ABCDE4A21000759968F794759782391CE24B1673" />
+    <Allow ID="ID_ALLOW_A_19E" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk30.js Hash Sha256" Hash="FD229DD332811B3D15970D675617F9EAFA248633C4694D93CB67F2FEFE30A1D3" />
+    <Allow ID="ID_ALLOW_A_19F" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk31.js Hash Sha1" Hash="C6FD356B3B66112CBEF2AEC5B1BF44365BF8937E" />
+    <Allow ID="ID_ALLOW_A_1A0" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk31.js Hash Sha256" Hash="CF88903D2DFE05DBC6F921CB2C73CBED46CC7FE4A9C35EE774A7E94E14A810C0" />
+    <Allow ID="ID_ALLOW_A_1A1" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk32.js Hash Sha1" Hash="2C045E79076FE1ECB66D450FBB2508E36DFD94A3" />
+    <Allow ID="ID_ALLOW_A_1A2" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk32.js Hash Sha256" Hash="9DEED5C9EC6410B56267980E34BCEE0C3142FB6A91024966E7CB2BB4B969DF0C" />
+    <Allow ID="ID_ALLOW_A_1A3" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk33.js Hash Sha1" Hash="490F2B2DE1147A991BD1C3BD9CB56CC7EA36BCB1" />
+    <Allow ID="ID_ALLOW_A_1A4" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk33.js Hash Sha256" Hash="47A127EC8FCE837CB4B8CBC58AEEEDA27EB0C241233EA2678F95E3DA972A6451" />
+    <Allow ID="ID_ALLOW_A_1A5" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk34.js Hash Sha1" Hash="DC672E506481EF9AB5B46F4EBC9860D281CCDD93" />
+    <Allow ID="ID_ALLOW_A_1A6" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk34.js Hash Sha256" Hash="56CEC89803F02AAD2C6D6076A5B931ADB2964763524577B5B1E7FA15E49ADA26" />
+    <Allow ID="ID_ALLOW_A_1A7" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk35.js Hash Sha1" Hash="E27FD646FD4A75BB232C7021547BDD9EC574F103" />
+    <Allow ID="ID_ALLOW_A_1A8" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk35.js Hash Sha256" Hash="163E43C1D42DC20C803281C15B3EC924DBF1F25A622BEF176B5009DC939A2784" />
+    <Allow ID="ID_ALLOW_A_1A9" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk4.js Hash Sha1" Hash="086BD164AD548CF1EDC58E7A8B934079733DDB70" />
+    <Allow ID="ID_ALLOW_A_1AA" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk4.js Hash Sha256" Hash="5A433545517841E9A62F15FE437F9C7494ED89D9018D2B1FFF996889017F8C61" />
+    <Allow ID="ID_ALLOW_A_1AB" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk5.js Hash Sha1" Hash="45CB66D212CAED8F6A309272D31FD81A1D22592B" />
+    <Allow ID="ID_ALLOW_A_1AC" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk5.js Hash Sha256" Hash="0991EF047407F127B60B8ED5D20913D7D4B0D5940AAB41F3C7F5A3D361185394" />
+    <Allow ID="ID_ALLOW_A_1AD" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk6.js Hash Sha1" Hash="14E72DCA9FF3E44DD558F585F8A219D9DD1B3925" />
+    <Allow ID="ID_ALLOW_A_1AE" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk6.js Hash Sha256" Hash="1F7988309E332229744E8F0ED56D603CC3DF2DCD8AB7599B0A7F271A23D08FFE" />
+    <Allow ID="ID_ALLOW_A_1AF" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk7.js Hash Sha1" Hash="F26CFE184512837CE544D4BA0FF3B65C8936431B" />
+    <Allow ID="ID_ALLOW_A_1B0" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk7.js Hash Sha256" Hash="46FC5CC83486CE4E5897DB317DA773C29476084286B61DAA6F400BF68DE82FAA" />
+    <Allow ID="ID_ALLOW_A_1B1" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk8.js Hash Sha1" Hash="06FE0D2DD9E201D02DD536578ACBB509541BE511" />
+    <Allow ID="ID_ALLOW_A_1B2" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk8.js Hash Sha256" Hash="2734BC74DC84F66E265090397ED614ACE56AAD694879E0462F84E74E0FFC75A3" />
+    <Allow ID="ID_ALLOW_A_1B3" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk9.js Hash Sha1" Hash="729F083BEC331A8DCC40B2B21C8499FDD42B97D9" />
+    <Allow ID="ID_ALLOW_A_1B4" FriendlyName="C:\source\hoboware_files\SearchPhrase_Chunk9.js Hash Sha256" Hash="38BF031149159ADDA8D5D32C507F890ABC28304592D984E8F9B2260D1924A1DC" />
+    <Allow ID="ID_ALLOW_A_1B5" FriendlyName="C:\source\hoboware_files\SearchStem_Chunk0.js Hash Sha1" Hash="1ADAB9B8205490B37C2F80906C6AD482BF966923" />
+    <Allow ID="ID_ALLOW_A_1B6" FriendlyName="C:\source\hoboware_files\SearchStem_Chunk0.js Hash Sha256" Hash="E6EE7B20D393C591974A2E21BC70AA01F13A741B80842FB321B7CEFB8303FB62" />
+    <Allow ID="ID_ALLOW_A_1B7" FriendlyName="C:\source\hoboware_files\SearchStem_Chunk1.js Hash Sha1" Hash="CAFF269861811A989054889B921A9BF36F6EBD06" />
+    <Allow ID="ID_ALLOW_A_1B8" FriendlyName="C:\source\hoboware_files\SearchStem_Chunk1.js Hash Sha256" Hash="56E6E8270EF7068B9347CECFC40896BFA64A3090E4A414F70911BBD4DF601412" />
+    <Allow ID="ID_ALLOW_A_1B9" FriendlyName="C:\source\hoboware_files\SearchStem_Chunk2.js Hash Sha1" Hash="EF777079E9553CD17DD8F41227B015DBC84899B1" />
+    <Allow ID="ID_ALLOW_A_1BA" FriendlyName="C:\source\hoboware_files\SearchStem_Chunk2.js Hash Sha256" Hash="E9688FA2938C5DE2C67DE91950737FC887CED7906950BE76DFDECA74F7F3DC2E" />
+    <Allow ID="ID_ALLOW_A_1BB" FriendlyName="C:\source\hoboware_files\SearchStem_Chunk3.js Hash Sha1" Hash="1FA66FA670B854028E2B5B1528100B26BEB8F23D" />
+    <Allow ID="ID_ALLOW_A_1BC" FriendlyName="C:\source\hoboware_files\SearchStem_Chunk3.js Hash Sha256" Hash="6352F401CD77FDA6B2611B372D558A058CD3F2A083EF71C87CDB770955F67E8B" />
+    <Allow ID="ID_ALLOW_A_1BD" FriendlyName="C:\source\hoboware_files\SearchStem_Chunk4.js Hash Sha1" Hash="EF1E012F01AC4B8FDA4C00A83EB4B350840FCF4B" />
+    <Allow ID="ID_ALLOW_A_1BE" FriendlyName="C:\source\hoboware_files\SearchStem_Chunk4.js Hash Sha256" Hash="D687F9B4BAC2DAF5CB125A6F0897A001B6B90A78553CEE841F959461202D9848" />
+    <Allow ID="ID_ALLOW_A_1BF" FriendlyName="C:\source\hoboware_files\SearchStem_Chunk5.js Hash Sha1" Hash="CBDFD5FE167BE440ADE58E08C4A3C6BEDC5B1CF8" />
+    <Allow ID="ID_ALLOW_A_1C0" FriendlyName="C:\source\hoboware_files\SearchStem_Chunk5.js Hash Sha256" Hash="BF9221ACC457E1F61D9071B58B36B3F9DDBEAB5C0157A942CC47F2F44F9F7183" />
+    <Allow ID="ID_ALLOW_A_1C1" FriendlyName="C:\source\hoboware_files\SearchTopic_Chunk0.js Hash Sha1" Hash="CA478239C2D91F70EA9385F835EB0F269166D7E5" />
+    <Allow ID="ID_ALLOW_A_1C2" FriendlyName="C:\source\hoboware_files\SearchTopic_Chunk0.js Hash Sha256" Hash="9D02F8EF41A01A03937D66A9CAAC177C52AF093A6CE344B464362C7CA9C868CC" />
+    <Allow ID="ID_ALLOW_A_1C3" FriendlyName="C:\source\hoboware_files\SearchTopic_Chunk1.js Hash Sha1" Hash="0903FB478ADCE550B9C9F6275C1EED6BED0E7166" />
+    <Allow ID="ID_ALLOW_A_1C4" FriendlyName="C:\source\hoboware_files\SearchTopic_Chunk1.js Hash Sha256" Hash="3088B7C95118629ED18AA4632DC4F843477DC0CCF9FC2A37710926970ECD6A9D" />
+    <Allow ID="ID_ALLOW_A_1C5" FriendlyName="C:\source\hoboware_files\SearchTopic_Chunk2.js Hash Sha1" Hash="F9E10E19C6F045E39E2378B38F9AD968FD112103" />
+    <Allow ID="ID_ALLOW_A_1C6" FriendlyName="C:\source\hoboware_files\SearchTopic_Chunk2.js Hash Sha256" Hash="4DC2236C47B66D63EC5070DDB9050D22528CE02845AC14513B52B5601B047874" />
+    <Allow ID="ID_ALLOW_A_1C7" FriendlyName="C:\source\hoboware_files\SearchUrl_Chunk0.js Hash Sha1" Hash="9C721F31BB9E0F8E25BC70EB430EF95875277599" />
+    <Allow ID="ID_ALLOW_A_1C8" FriendlyName="C:\source\hoboware_files\SearchUrl_Chunk0.js Hash Sha256" Hash="5CEB0A4E9FB996181A2EA3C4CBB905FF59347332347D10EB90306ABD4A81F43F" />
+    <Allow ID="ID_ALLOW_A_1C9" FriendlyName="C:\source\hoboware_files\Search_Chunk1.js Hash Sha1" Hash="A5D2B3F820484E409B56D8D9616FBC3D50257380" />
+    <Allow ID="ID_ALLOW_A_1CA" FriendlyName="C:\source\hoboware_files\Search_Chunk1.js Hash Sha256" Hash="7158B2B1C4E8556A28271E40E7C538AE2BB546F565C91AEFEA13D68DE5616A95" />
+    <Allow ID="ID_ALLOW_A_1CB" FriendlyName="C:\source\hoboware_files\Search_Chunk10.js Hash Sha1" Hash="66E010967E7F26384BB5787E48C7E4C5EC55115D" />
+    <Allow ID="ID_ALLOW_A_1CC" FriendlyName="C:\source\hoboware_files\Search_Chunk10.js Hash Sha256" Hash="4217051FF4EE028ACB5D6326D3B8B9247574CABCE9A1640747D79146C9B65AF6" />
+    <Allow ID="ID_ALLOW_A_1CD" FriendlyName="C:\source\hoboware_files\Search_Chunk11.js Hash Sha1" Hash="C7FC8FB2C05157206EAED9B9136148A985E18363" />
+    <Allow ID="ID_ALLOW_A_1CE" FriendlyName="C:\source\hoboware_files\Search_Chunk11.js Hash Sha256" Hash="B14496F886EC50790CA8651E983EFD848946B8C38ED3D35128E61CFBFD017CBA" />
+    <Allow ID="ID_ALLOW_A_1CF" FriendlyName="C:\source\hoboware_files\Search_Chunk12.js Hash Sha1" Hash="AB6DAB3726BE08FB91FB0E5E03B2EB3C1D798B0A" />
+    <Allow ID="ID_ALLOW_A_1D0" FriendlyName="C:\source\hoboware_files\Search_Chunk12.js Hash Sha256" Hash="6666576E291D244FD330FBCEA413E3766A3C49BACB48E63B64A9188B463C1416" />
+    <Allow ID="ID_ALLOW_A_1D1" FriendlyName="C:\source\hoboware_files\Search_Chunk13.js Hash Sha1" Hash="2EC3EF7F873D9FA792AF17C97C01405BCE10982D" />
+    <Allow ID="ID_ALLOW_A_1D2" FriendlyName="C:\source\hoboware_files\Search_Chunk13.js Hash Sha256" Hash="AF912C03B2204CD999028005CA708CB72257C8E4124C09B5F38B1200999815E8" />
+    <Allow ID="ID_ALLOW_A_1D3" FriendlyName="C:\source\hoboware_files\Search_Chunk14.js Hash Sha1" Hash="60B187706EE0BE083A7237CFE9A0722D6C724753" />
+    <Allow ID="ID_ALLOW_A_1D4" FriendlyName="C:\source\hoboware_files\Search_Chunk14.js Hash Sha256" Hash="820B15F3B2DD6D27BC8E8A4B44376AAAE0E04781225B2F0BD22B6A4870387A28" />
+    <Allow ID="ID_ALLOW_A_1D5" FriendlyName="C:\source\hoboware_files\Search_Chunk15.js Hash Sha1" Hash="6C85075456FCBCA0A24E9753BF6B54B0CF0B2C72" />
+    <Allow ID="ID_ALLOW_A_1D6" FriendlyName="C:\source\hoboware_files\Search_Chunk15.js Hash Sha256" Hash="7682B4FC089B4BD20EE4819058628068F334B4A7B950249684A6D292AF473234" />
+    <Allow ID="ID_ALLOW_A_1D7" FriendlyName="C:\source\hoboware_files\Search_Chunk16.js Hash Sha1" Hash="E3479222CBB50F03F35BE7CB402C3AAB4C936BE3" />
+    <Allow ID="ID_ALLOW_A_1D8" FriendlyName="C:\source\hoboware_files\Search_Chunk16.js Hash Sha256" Hash="BAB33233273663EECE509762E941906DA89B39484165DA8629A925DCD120E683" />
+    <Allow ID="ID_ALLOW_A_1D9" FriendlyName="C:\source\hoboware_files\Search_Chunk17.js Hash Sha1" Hash="E96DB631D771F3938058C646E38D4103B6435E08" />
+    <Allow ID="ID_ALLOW_A_1DA" FriendlyName="C:\source\hoboware_files\Search_Chunk17.js Hash Sha256" Hash="385E635DEE13DB5EA03CA5994470340D9E255C78A39C5FD1D5D2D6215E3FDB9F" />
+    <Allow ID="ID_ALLOW_A_1DB" FriendlyName="C:\source\hoboware_files\Search_Chunk18.js Hash Sha1" Hash="ACC8DC49D2639D8A531FF125226A62A562B41CA9" />
+    <Allow ID="ID_ALLOW_A_1DC" FriendlyName="C:\source\hoboware_files\Search_Chunk18.js Hash Sha256" Hash="3504DC6005C6CA89D4C6FCDB022F86BB2BA11AAEF058B431347D15208CC14474" />
+    <Allow ID="ID_ALLOW_A_1DD" FriendlyName="C:\source\hoboware_files\Search_Chunk19.js Hash Sha1" Hash="E5AC0A2BCF5C8AFA12C39D7E9CEC69FF3D1B8CD9" />
+    <Allow ID="ID_ALLOW_A_1DE" FriendlyName="C:\source\hoboware_files\Search_Chunk19.js Hash Sha256" Hash="0F751C013C7E89087C53F93E995192BFFE96E62D5B4103E66AA0233FE9DEBD66" />
+    <Allow ID="ID_ALLOW_A_1DF" FriendlyName="C:\source\hoboware_files\Search_Chunk2.js Hash Sha1" Hash="088EF5D34A66485DE95347845D2FEDCAE494A29E" />
+    <Allow ID="ID_ALLOW_A_1E0" FriendlyName="C:\source\hoboware_files\Search_Chunk2.js Hash Sha256" Hash="8FC7F7187B400FC4F6269D48E82B5C5DD035EBDFF0E43DD3DC4C09F559AB5A5D" />
+    <Allow ID="ID_ALLOW_A_1E1" FriendlyName="C:\source\hoboware_files\Search_Chunk20.js Hash Sha1" Hash="218C017A30142E143C3A05557A388562479FD1F2" />
+    <Allow ID="ID_ALLOW_A_1E2" FriendlyName="C:\source\hoboware_files\Search_Chunk20.js Hash Sha256" Hash="835C8D776228B597B4CDD6FB608A242F2177ED49FF6160035F31BFF36AEEC774" />
+    <Allow ID="ID_ALLOW_A_1E3" FriendlyName="C:\source\hoboware_files\Search_Chunk21.js Hash Sha1" Hash="8A0B333B3912A460E8ABA5EB3B6D4AC0F6B200E1" />
+    <Allow ID="ID_ALLOW_A_1E4" FriendlyName="C:\source\hoboware_files\Search_Chunk21.js Hash Sha256" Hash="A7C98C3C88E569B4C45F3CD3ADF4D77B45EC10D5DFC7D87129463D4C6ADB486F" />
+    <Allow ID="ID_ALLOW_A_1E5" FriendlyName="C:\source\hoboware_files\Search_Chunk22.js Hash Sha1" Hash="877913285D2F857AE125DAEB3AF582095FDC8F44" />
+    <Allow ID="ID_ALLOW_A_1E6" FriendlyName="C:\source\hoboware_files\Search_Chunk22.js Hash Sha256" Hash="AD73A4CD898D918AFDBBC599D04CA8DC9C0B15FBAF2ADF1E3292E3B9EDC8C5C6" />
+    <Allow ID="ID_ALLOW_A_1E7" FriendlyName="C:\source\hoboware_files\Search_Chunk23.js Hash Sha1" Hash="89552FA89A393AB659896B0541643FF923C67DA3" />
+    <Allow ID="ID_ALLOW_A_1E8" FriendlyName="C:\source\hoboware_files\Search_Chunk23.js Hash Sha256" Hash="E86CFA1FC6E2DB13DC36CFC6F1AF1FD3DFBA43FF67B47D413035C76D83EFBD0A" />
+    <Allow ID="ID_ALLOW_A_1E9" FriendlyName="C:\source\hoboware_files\Search_Chunk24.js Hash Sha1" Hash="83FF54D9F832B576CA880D0B29F41956877FDD15" />
+    <Allow ID="ID_ALLOW_A_1EA" FriendlyName="C:\source\hoboware_files\Search_Chunk24.js Hash Sha256" Hash="674F8D0404225BF08F2353D8CB945223505D679F958C510D6CAFDB50EB142913" />
+    <Allow ID="ID_ALLOW_A_1EB" FriendlyName="C:\source\hoboware_files\Search_Chunk25.js Hash Sha1" Hash="BB5690235678BC2542703F5DC2DC153CC46A079F" />
+    <Allow ID="ID_ALLOW_A_1EC" FriendlyName="C:\source\hoboware_files\Search_Chunk25.js Hash Sha256" Hash="561589ED8EBBCFE2687C8003D6C3AF9864DBB69090190302C7AD666CF8753F94" />
+    <Allow ID="ID_ALLOW_A_1ED" FriendlyName="C:\source\hoboware_files\Search_Chunk26.js Hash Sha1" Hash="5D9BAA12C22CDACA0A47F7171B2523C261CAD4A9" />
+    <Allow ID="ID_ALLOW_A_1EE" FriendlyName="C:\source\hoboware_files\Search_Chunk26.js Hash Sha256" Hash="553B0F0EA8F4F80483E47E7E01B5C76330AF6DA66AE5604EC184512C4C3A59C3" />
+    <Allow ID="ID_ALLOW_A_1EF" FriendlyName="C:\source\hoboware_files\Search_Chunk27.js Hash Sha1" Hash="1C108E90E169DD87CEB61479B0A2A0E23DCB80AE" />
+    <Allow ID="ID_ALLOW_A_1F0" FriendlyName="C:\source\hoboware_files\Search_Chunk27.js Hash Sha256" Hash="0E29B2274003860D7BF562EFCFD0481510EF59EF57A758C27930F4D4BDC7F9AC" />
+    <Allow ID="ID_ALLOW_A_1F1" FriendlyName="C:\source\hoboware_files\Search_Chunk28.js Hash Sha1" Hash="6E32BA903F78360A55F51AE715219961B077ACCF" />
+    <Allow ID="ID_ALLOW_A_1F2" FriendlyName="C:\source\hoboware_files\Search_Chunk28.js Hash Sha256" Hash="24F447980CFAC4753FA036E7D170466AB70DAF97864289216EA926F8DA975F78" />
+    <Allow ID="ID_ALLOW_A_1F3" FriendlyName="C:\source\hoboware_files\Search_Chunk29.js Hash Sha1" Hash="B8C5E5053FBA3B174A611F055B81711037EBACDE" />
+    <Allow ID="ID_ALLOW_A_1F4" FriendlyName="C:\source\hoboware_files\Search_Chunk29.js Hash Sha256" Hash="F7973579564DD9BBCEACEECBBA30D1F867546FF5000BF24B9DED178AC40A01C4" />
+    <Allow ID="ID_ALLOW_A_1F5" FriendlyName="C:\source\hoboware_files\Search_Chunk3.js Hash Sha1" Hash="DBE0B82B6E26ADCAB891382629315F7FE36DFFE4" />
+    <Allow ID="ID_ALLOW_A_1F6" FriendlyName="C:\source\hoboware_files\Search_Chunk3.js Hash Sha256" Hash="7B2CEA62B78BD059DBED8BAD28AFE189E52E76934D64C64E88C54F3AF34C7BF4" />
+    <Allow ID="ID_ALLOW_A_1F7" FriendlyName="C:\source\hoboware_files\Search_Chunk30.js Hash Sha1" Hash="8C6BBB8C68B3AC8BFBDAAC21C6972C568EC0EA52" />
+    <Allow ID="ID_ALLOW_A_1F8" FriendlyName="C:\source\hoboware_files\Search_Chunk30.js Hash Sha256" Hash="4E73022E3A1CD34500000073D4976E6A53C23980D55F902C5513355F08226FDE" />
+    <Allow ID="ID_ALLOW_A_1F9" FriendlyName="C:\source\hoboware_files\Search_Chunk31.js Hash Sha1" Hash="2C95EC5DD4FF1C158ABD251B162AAC97196D00F4" />
+    <Allow ID="ID_ALLOW_A_1FA" FriendlyName="C:\source\hoboware_files\Search_Chunk31.js Hash Sha256" Hash="98BF39EF56843572930BFE72F95A8E0273D8C9CF026B32E3E0477E65402405CC" />
+    <Allow ID="ID_ALLOW_A_1FB" FriendlyName="C:\source\hoboware_files\Search_Chunk32.js Hash Sha1" Hash="D0C194969868B7C2C76BAD8134DC741C4869803C" />
+    <Allow ID="ID_ALLOW_A_1FC" FriendlyName="C:\source\hoboware_files\Search_Chunk32.js Hash Sha256" Hash="7550BED0CD90A13AE74AB36C2E12D7E482DD9C66B45A8C28B7F1E88F0E66986C" />
+    <Allow ID="ID_ALLOW_A_1FD" FriendlyName="C:\source\hoboware_files\Search_Chunk33.js Hash Sha1" Hash="E11ED66C9B4CF19E3B39F59FB02FA7A92C384640" />
+    <Allow ID="ID_ALLOW_A_1FE" FriendlyName="C:\source\hoboware_files\Search_Chunk33.js Hash Sha256" Hash="E5854983213E225846175A6114E3D49B258BA94B72EE63DC23B0ADDB11F8FC02" />
+    <Allow ID="ID_ALLOW_A_1FF" FriendlyName="C:\source\hoboware_files\Search_Chunk34.js Hash Sha1" Hash="8139438E1743FE556C2C9C41CAA0ACC584E8ACD5" />
+    <Allow ID="ID_ALLOW_A_200" FriendlyName="C:\source\hoboware_files\Search_Chunk34.js Hash Sha256" Hash="6296D225039222CE243C519024485058FA8D45CD0C231736AC507FE71FACEC3C" />
+    <Allow ID="ID_ALLOW_A_201" FriendlyName="C:\source\hoboware_files\Search_Chunk35.js Hash Sha1" Hash="4FB57101FB0538203D9B8AC07BDCDF617C6B31DF" />
+    <Allow ID="ID_ALLOW_A_202" FriendlyName="C:\source\hoboware_files\Search_Chunk35.js Hash Sha256" Hash="48BEE6E2AD1CA5035B90D8C0EF5F9EC9EDAB7F5E2CBD4B41E1393E568FD5D4E9" />
+    <Allow ID="ID_ALLOW_A_203" FriendlyName="C:\source\hoboware_files\Search_Chunk36.js Hash Sha1" Hash="61DF6B01AA74A0CD7F1198767B59810A1D12BD70" />
+    <Allow ID="ID_ALLOW_A_204" FriendlyName="C:\source\hoboware_files\Search_Chunk36.js Hash Sha256" Hash="139A25400BE249C1B70C766A623AB81E2999CAEB10C8AC95B0B3AC19F4D886BF" />
+    <Allow ID="ID_ALLOW_A_205" FriendlyName="C:\source\hoboware_files\Search_Chunk37.js Hash Sha1" Hash="2C04450E595E5FC8277ED51F611C372F768E994F" />
+    <Allow ID="ID_ALLOW_A_206" FriendlyName="C:\source\hoboware_files\Search_Chunk37.js Hash Sha256" Hash="8D91F0867FF6D41246B43D3485F109ACA97681CB4E21D8C12AB62DEB785F19A9" />
+    <Allow ID="ID_ALLOW_A_207" FriendlyName="C:\source\hoboware_files\Search_Chunk38.js Hash Sha1" Hash="E09E285DB813B6575A430EFD877C20F3BBFD5436" />
+    <Allow ID="ID_ALLOW_A_208" FriendlyName="C:\source\hoboware_files\Search_Chunk38.js Hash Sha256" Hash="9D82A04DDD672C6A8B2C56881C094C2EBC386761B6FACF3E3E65175D2AA370E5" />
+    <Allow ID="ID_ALLOW_A_209" FriendlyName="C:\source\hoboware_files\Search_Chunk39.js Hash Sha1" Hash="CE2C6FAC885889958A027CF23A9BD830A782702A" />
+    <Allow ID="ID_ALLOW_A_20A" FriendlyName="C:\source\hoboware_files\Search_Chunk39.js Hash Sha256" Hash="325EB169832897B44499A2EE804B0207720F6C57991283770DFA0F71B75588F9" />
+    <Allow ID="ID_ALLOW_A_20B" FriendlyName="C:\source\hoboware_files\Search_Chunk4.js Hash Sha1" Hash="24D3BA2F82C809ADF56FA1CE3697B24F25F1B0E4" />
+    <Allow ID="ID_ALLOW_A_20C" FriendlyName="C:\source\hoboware_files\Search_Chunk4.js Hash Sha256" Hash="62A3DB8360820D9215359202EA2524B2AC4596399DD97B928BFF9FBAAF9A60AB" />
+    <Allow ID="ID_ALLOW_A_20D" FriendlyName="C:\source\hoboware_files\Search_Chunk40.js Hash Sha1" Hash="353FFB3E0374EA7E012FC24B4CA68E69939D94C4" />
+    <Allow ID="ID_ALLOW_A_20E" FriendlyName="C:\source\hoboware_files\Search_Chunk40.js Hash Sha256" Hash="C5ED79001BAAEFEF8826EA9C38ADA480CECACE83CCA38D47E4E9E18DA2646A4F" />
+    <Allow ID="ID_ALLOW_A_20F" FriendlyName="C:\source\hoboware_files\Search_Chunk41.js Hash Sha1" Hash="3D1689B35F5470C65FE8F3407132F7560B5CF111" />
+    <Allow ID="ID_ALLOW_A_210" FriendlyName="C:\source\hoboware_files\Search_Chunk41.js Hash Sha256" Hash="16BA1D59E42C30B8631C530029E994A06D42F0EB0631C66E8BBB2D9ADF478250" />
+    <Allow ID="ID_ALLOW_A_211" FriendlyName="C:\source\hoboware_files\Search_Chunk42.js Hash Sha1" Hash="51D4A8CF68824BD7D1D0FD66D6940B833488F678" />
+    <Allow ID="ID_ALLOW_A_212" FriendlyName="C:\source\hoboware_files\Search_Chunk42.js Hash Sha256" Hash="F6069F38008DCD63DA0B7D31F190051C27C5B0B3F01124A1D6D7A696D36DF1D1" />
+    <Allow ID="ID_ALLOW_A_213" FriendlyName="C:\source\hoboware_files\Search_Chunk43.js Hash Sha1" Hash="CA1A15AB8EFABA581EDDD306C074701C75F0108E" />
+    <Allow ID="ID_ALLOW_A_214" FriendlyName="C:\source\hoboware_files\Search_Chunk43.js Hash Sha256" Hash="CD35D02C23596CC396C8F3CCCA8C123905A6160153199A8C2B3CCA2027F540D1" />
+    <Allow ID="ID_ALLOW_A_215" FriendlyName="C:\source\hoboware_files\Search_Chunk44.js Hash Sha1" Hash="BCAAF931DE44A60D0E8FA80FE3EE50DD156EF6C6" />
+    <Allow ID="ID_ALLOW_A_216" FriendlyName="C:\source\hoboware_files\Search_Chunk44.js Hash Sha256" Hash="9563D052FF86B1301E54B55739924FF48BD1D72E79D4EEEB3EA2042FF392CC0D" />
+    <Allow ID="ID_ALLOW_A_217" FriendlyName="C:\source\hoboware_files\Search_Chunk45.js Hash Sha1" Hash="DA937E86C51E44A589AF8D2BF4BF067E1829F47E" />
+    <Allow ID="ID_ALLOW_A_218" FriendlyName="C:\source\hoboware_files\Search_Chunk45.js Hash Sha256" Hash="DC1AC2D5704D8028B7A690C121A189854009F15AFE29284E1DD5FF522CF98BF3" />
+    <Allow ID="ID_ALLOW_A_219" FriendlyName="C:\source\hoboware_files\Search_Chunk46.js Hash Sha1" Hash="F22EBFCF3B29D438DB0663611B5A907C19002AD1" />
+    <Allow ID="ID_ALLOW_A_21A" FriendlyName="C:\source\hoboware_files\Search_Chunk46.js Hash Sha256" Hash="E6B2360102E6CE83EC06BB4FC267972CCF1188578DD177CFA22BA5A52563AB6A" />
+    <Allow ID="ID_ALLOW_A_21B" FriendlyName="C:\source\hoboware_files\Search_Chunk47.js Hash Sha1" Hash="7CFE3FB0FF877906C754594A113D62E23D0B8DA0" />
+    <Allow ID="ID_ALLOW_A_21C" FriendlyName="C:\source\hoboware_files\Search_Chunk47.js Hash Sha256" Hash="E45BDC39A746B8A3F17310484D82058C5BE8D1699F2C4E4FDC83A786AE6FCD59" />
+    <Allow ID="ID_ALLOW_A_21D" FriendlyName="C:\source\hoboware_files\Search_Chunk48.js Hash Sha1" Hash="159C405C0EA2BB11A2C1B85E5F5E3CC44A21882F" />
+    <Allow ID="ID_ALLOW_A_21E" FriendlyName="C:\source\hoboware_files\Search_Chunk48.js Hash Sha256" Hash="88DA16B3A76E8646F2705F0A7AB21992E434AC892983579048E3EA1024D99BA2" />
+    <Allow ID="ID_ALLOW_A_21F" FriendlyName="C:\source\hoboware_files\Search_Chunk49.js Hash Sha1" Hash="EDC9136A51108BD2803B4CF772CACD765FF122CB" />
+    <Allow ID="ID_ALLOW_A_220" FriendlyName="C:\source\hoboware_files\Search_Chunk49.js Hash Sha256" Hash="D95FA69FBAAD61FCE6C42A0EC396106E143695AE271B3D646F35B452F563A194" />
+    <Allow ID="ID_ALLOW_A_221" FriendlyName="C:\source\hoboware_files\Search_Chunk5.js Hash Sha1" Hash="6119AA5EDC76CFAFED51975276CE2DB7111F6ABF" />
+    <Allow ID="ID_ALLOW_A_222" FriendlyName="C:\source\hoboware_files\Search_Chunk5.js Hash Sha256" Hash="8169A038ED18396F1588C1DA2ECCCF683F7CF65DD3D3479806A915083ECF00E5" />
+    <Allow ID="ID_ALLOW_A_223" FriendlyName="C:\source\hoboware_files\Search_Chunk50.js Hash Sha1" Hash="28E0501DBC51421EF7965BB50AB18C4DA606E6C0" />
+    <Allow ID="ID_ALLOW_A_224" FriendlyName="C:\source\hoboware_files\Search_Chunk50.js Hash Sha256" Hash="4B064C74E9CCC4848B1655649732C2526F36DD195AA66E5930CFA1FF5C9045C4" />
+    <Allow ID="ID_ALLOW_A_225" FriendlyName="C:\source\hoboware_files\Search_Chunk51.js Hash Sha1" Hash="50589787A2886C48DEA074A2A604D141B541821E" />
+    <Allow ID="ID_ALLOW_A_226" FriendlyName="C:\source\hoboware_files\Search_Chunk51.js Hash Sha256" Hash="D82C87FBE1128655A728A9DD426FC863BFEFCC81F77E863A108BB96020B06775" />
+    <Allow ID="ID_ALLOW_A_227" FriendlyName="C:\source\hoboware_files\Search_Chunk52.js Hash Sha1" Hash="549AB198B80C6D7FA8CFAF28C29A85C8D97FB295" />
+    <Allow ID="ID_ALLOW_A_228" FriendlyName="C:\source\hoboware_files\Search_Chunk52.js Hash Sha256" Hash="EDB41425D03B6204E8F8BF2C434EA4F2331E0A9659C4A57D6705BC287B014257" />
+    <Allow ID="ID_ALLOW_A_229" FriendlyName="C:\source\hoboware_files\Search_Chunk53.js Hash Sha1" Hash="EF99B1438DE1A05935CAC2EC884DA3D214EE9159" />
+    <Allow ID="ID_ALLOW_A_22A" FriendlyName="C:\source\hoboware_files\Search_Chunk53.js Hash Sha256" Hash="F57887B60103D07A0B05B59D569415AAE7C5E3DD609FF50FCAE4B9E19656C7C9" />
+    <Allow ID="ID_ALLOW_A_22B" FriendlyName="C:\source\hoboware_files\Search_Chunk54.js Hash Sha1" Hash="157C4BD3C75CA97F7DE33812AB12028E67461D13" />
+    <Allow ID="ID_ALLOW_A_22C" FriendlyName="C:\source\hoboware_files\Search_Chunk54.js Hash Sha256" Hash="8DFB890470D107AF285900DC92C831B4BCAEA64A90D5A2342FBCC8E6FA353D06" />
+    <Allow ID="ID_ALLOW_A_22D" FriendlyName="C:\source\hoboware_files\Search_Chunk55.js Hash Sha1" Hash="03F92D3097D4CD7209E76A0AE147E2234EFF57CA" />
+    <Allow ID="ID_ALLOW_A_22E" FriendlyName="C:\source\hoboware_files\Search_Chunk55.js Hash Sha256" Hash="F704679FA2892FAD965A2E8EC661137F573CD02343355CA70EAF73CB9B4348EF" />
+    <Allow ID="ID_ALLOW_A_22F" FriendlyName="C:\source\hoboware_files\Search_Chunk56.js Hash Sha1" Hash="A38EAA393E5467DEC95F11ACFFA72C3425C4398A" />
+    <Allow ID="ID_ALLOW_A_230" FriendlyName="C:\source\hoboware_files\Search_Chunk56.js Hash Sha256" Hash="A27B91ECCC317A723CD25D09F47720F471A7C568676F9F00B45427E36E4AB6D7" />
+    <Allow ID="ID_ALLOW_A_231" FriendlyName="C:\source\hoboware_files\Search_Chunk57.js Hash Sha1" Hash="FB6597183C3AD1C1EBD09F4AFFB3F16A8F275D30" />
+    <Allow ID="ID_ALLOW_A_232" FriendlyName="C:\source\hoboware_files\Search_Chunk57.js Hash Sha256" Hash="0BE7AED4CD92F0B13CEF15BFFD218EC399F510A1866C867174A2261B8E4F609F" />
+    <Allow ID="ID_ALLOW_A_233" FriendlyName="C:\source\hoboware_files\Search_Chunk58.js Hash Sha1" Hash="8916FB450377FC88C34893E3D42C9161C9B9312A" />
+    <Allow ID="ID_ALLOW_A_234" FriendlyName="C:\source\hoboware_files\Search_Chunk58.js Hash Sha256" Hash="B9A26D4BCB07D5767CE52FD2A6AC4702C34C727E5A60806A1B22618A579491C1" />
+    <Allow ID="ID_ALLOW_A_235" FriendlyName="C:\source\hoboware_files\Search_Chunk59.js Hash Sha1" Hash="CF523B07D422AEF2F367CBD1492A293EEB5C432A" />
+    <Allow ID="ID_ALLOW_A_236" FriendlyName="C:\source\hoboware_files\Search_Chunk59.js Hash Sha256" Hash="3E07826EE2702D4CCEE70A0632D6C343F8BB239E4CF12263125AC0C10625FB7E" />
+    <Allow ID="ID_ALLOW_A_237" FriendlyName="C:\source\hoboware_files\Search_Chunk6.js Hash Sha1" Hash="A6F3378D943C7AA5173CB46BBB08921A2240482B" />
+    <Allow ID="ID_ALLOW_A_238" FriendlyName="C:\source\hoboware_files\Search_Chunk6.js Hash Sha256" Hash="7FE54248C3DB58BB9726A59D7829BE6EA1F763784566533392D42C3768BA3064" />
+    <Allow ID="ID_ALLOW_A_239" FriendlyName="C:\source\hoboware_files\Search_Chunk60.js Hash Sha1" Hash="92111AEA6FBE2879D395B22F7AFD7704841E4851" />
+    <Allow ID="ID_ALLOW_A_23A" FriendlyName="C:\source\hoboware_files\Search_Chunk60.js Hash Sha256" Hash="FDA8DF0CDDCD8E1AF5A871DA664A7858CA6F2C5CC5F14BA161FEFD125AC88A7E" />
+    <Allow ID="ID_ALLOW_A_23B" FriendlyName="C:\source\hoboware_files\Search_Chunk61.js Hash Sha1" Hash="35E823F3D7E3C8B3F44EB574EE3BAA000092B1A4" />
+    <Allow ID="ID_ALLOW_A_23C" FriendlyName="C:\source\hoboware_files\Search_Chunk61.js Hash Sha256" Hash="6047B3C612E6BA6D793478C9A8457D01359B6AEF3617604D47A6E623BCBCF17A" />
+    <Allow ID="ID_ALLOW_A_23D" FriendlyName="C:\source\hoboware_files\Search_Chunk62.js Hash Sha1" Hash="03ACF286C5BB9427C31AEACCE63F4F9B37600EF8" />
+    <Allow ID="ID_ALLOW_A_23E" FriendlyName="C:\source\hoboware_files\Search_Chunk62.js Hash Sha256" Hash="0CC5396CDB9B3F5FFA96F34D1EE7D7BFBC445B1FA48CB5F8389FF4964B98CA79" />
+    <Allow ID="ID_ALLOW_A_23F" FriendlyName="C:\source\hoboware_files\Search_Chunk63.js Hash Sha1" Hash="6FE2147D16B16B4E7ECDD60995753DEA0406C54E" />
+    <Allow ID="ID_ALLOW_A_240" FriendlyName="C:\source\hoboware_files\Search_Chunk63.js Hash Sha256" Hash="B7A0F84EF0775340344A9107B8EAB35147C3D123795ACEF2E14F69F168E390D9" />
+    <Allow ID="ID_ALLOW_A_241" FriendlyName="C:\source\hoboware_files\Search_Chunk64.js Hash Sha1" Hash="5B7DC33BDC9223E5F41D65C6B7D8811D797250D2" />
+    <Allow ID="ID_ALLOW_A_242" FriendlyName="C:\source\hoboware_files\Search_Chunk64.js Hash Sha256" Hash="AD67985AEB215F9DC60C7600EC5784CCD7C142C59783C1B7154C14A1B353C75E" />
+    <Allow ID="ID_ALLOW_A_243" FriendlyName="C:\source\hoboware_files\Search_Chunk65.js Hash Sha1" Hash="A6900CB268D7BB02BF1CFA86A97C55DC862294A1" />
+    <Allow ID="ID_ALLOW_A_244" FriendlyName="C:\source\hoboware_files\Search_Chunk65.js Hash Sha256" Hash="F1C28519BD18152217AD80956D4931B6CD2CE2D390176F005A935CFCF8B7764B" />
+    <Allow ID="ID_ALLOW_A_245" FriendlyName="C:\source\hoboware_files\Search_Chunk66.js Hash Sha1" Hash="778CF53A61003DDC779C0A2AF0E58F60C38DF150" />
+    <Allow ID="ID_ALLOW_A_246" FriendlyName="C:\source\hoboware_files\Search_Chunk66.js Hash Sha256" Hash="BFA4D5DFA5D2A22DDE75EC526048D35AF60E9B6BC98EEA29E7F8E580083E1AC5" />
+    <Allow ID="ID_ALLOW_A_247" FriendlyName="C:\source\hoboware_files\Search_Chunk67.js Hash Sha1" Hash="53E1E4FECA24642A3C9871AA67D299C442E27B7A" />
+    <Allow ID="ID_ALLOW_A_248" FriendlyName="C:\source\hoboware_files\Search_Chunk67.js Hash Sha256" Hash="11543C1CAF693B6D26B1E4E4918A697B04FB12A923E8D725025AC24E4E3ADCA8" />
+    <Allow ID="ID_ALLOW_A_249" FriendlyName="C:\source\hoboware_files\Search_Chunk68.js Hash Sha1" Hash="6F2302DC09BE86353D62262B3FF57840D991EB7B" />
+    <Allow ID="ID_ALLOW_A_24A" FriendlyName="C:\source\hoboware_files\Search_Chunk68.js Hash Sha256" Hash="5CA560529EE93784107FA8F3E162213FE3BCFA6C184C65A223600F61A15EEB29" />
+    <Allow ID="ID_ALLOW_A_24B" FriendlyName="C:\source\hoboware_files\Search_Chunk69.js Hash Sha1" Hash="214178AA95FE125BB3DE57C93E8D50B63E0F684C" />
+    <Allow ID="ID_ALLOW_A_24C" FriendlyName="C:\source\hoboware_files\Search_Chunk69.js Hash Sha256" Hash="BAAC107A0B6960B3A95483124FCD8104EF46E8D9C016BCFA1306FDEAB7DB8BE1" />
+    <Allow ID="ID_ALLOW_A_24D" FriendlyName="C:\source\hoboware_files\Search_Chunk7.js Hash Sha1" Hash="F4761484205B33576BA7CFAA7495B19F64601D20" />
+    <Allow ID="ID_ALLOW_A_24E" FriendlyName="C:\source\hoboware_files\Search_Chunk7.js Hash Sha256" Hash="210E205A1F8DF883D876D5056B8FC89A9FD8C7AE8510CBF4B39568B9204D34F5" />
+    <Allow ID="ID_ALLOW_A_24F" FriendlyName="C:\source\hoboware_files\Search_Chunk70.js Hash Sha1" Hash="E1749F0B61807C27E92EA630276067D087CD7AFC" />
+    <Allow ID="ID_ALLOW_A_250" FriendlyName="C:\source\hoboware_files\Search_Chunk70.js Hash Sha256" Hash="7014872AF1B2E7D924E2E0C1A5AEF542FD4D3D030E7779DB6FBCBA1858A35123" />
+    <Allow ID="ID_ALLOW_A_251" FriendlyName="C:\source\hoboware_files\Search_Chunk71.js Hash Sha1" Hash="D362F2EF859CD3A133E1CC332D74D4F7D51EC954" />
+    <Allow ID="ID_ALLOW_A_252" FriendlyName="C:\source\hoboware_files\Search_Chunk71.js Hash Sha256" Hash="3ABCBEF2EA5D07A295CBF77FE4F695CF31855C440E68F1731ED8EB42CEA6CBD6" />
+    <Allow ID="ID_ALLOW_A_253" FriendlyName="C:\source\hoboware_files\Search_Chunk72.js Hash Sha1" Hash="058F0473B2C27AE3511D68F96D0FF2698FFC4622" />
+    <Allow ID="ID_ALLOW_A_254" FriendlyName="C:\source\hoboware_files\Search_Chunk72.js Hash Sha256" Hash="A8E731791F2ACD9F99CEF87E0E795D4E4EB2AB3DC2A768C27A7A16D0624590A5" />
+    <Allow ID="ID_ALLOW_A_255" FriendlyName="C:\source\hoboware_files\Search_Chunk73.js Hash Sha1" Hash="7BB2B3C0413A14DB4BA3BF92FC6FB5951EC97FFC" />
+    <Allow ID="ID_ALLOW_A_256" FriendlyName="C:\source\hoboware_files\Search_Chunk73.js Hash Sha256" Hash="FA82BE057D0CF99E0082ABED7C9684F0A2F725EA022BAA0DAFCE9811EB7E83BC" />
+    <Allow ID="ID_ALLOW_A_257" FriendlyName="C:\source\hoboware_files\Search_Chunk74.js Hash Sha1" Hash="8303C6D74388AF47CC764D2E3C230A47A5351DCC" />
+    <Allow ID="ID_ALLOW_A_258" FriendlyName="C:\source\hoboware_files\Search_Chunk74.js Hash Sha256" Hash="05987D87357FD3D318C6309A0CAAECBE48D878A5D89178EFBE43BF7290FDC02B" />
+    <Allow ID="ID_ALLOW_A_259" FriendlyName="C:\source\hoboware_files\Search_Chunk75.js Hash Sha1" Hash="F08FC0A5E7856FA71CEB6AD3CE3D0858F21C0855" />
+    <Allow ID="ID_ALLOW_A_25A" FriendlyName="C:\source\hoboware_files\Search_Chunk75.js Hash Sha256" Hash="7F1D92AF56D33F5E38A632FAFD12C1A24401A8075D7C93243237ABBFD3312DEF" />
+    <Allow ID="ID_ALLOW_A_25B" FriendlyName="C:\source\hoboware_files\Search_Chunk76.js Hash Sha1" Hash="F8A082DDAF6FF5F8C985B0F771838485BDB62334" />
+    <Allow ID="ID_ALLOW_A_25C" FriendlyName="C:\source\hoboware_files\Search_Chunk76.js Hash Sha256" Hash="A44B5DF6CDC75B0D63FC82E90E65A3110271345E2968A3D706E73C0846A6100D" />
+    <Allow ID="ID_ALLOW_A_25D" FriendlyName="C:\source\hoboware_files\Search_Chunk77.js Hash Sha1" Hash="C797B0090939703017603BED723E9F7AFBDB94FA" />
+    <Allow ID="ID_ALLOW_A_25E" FriendlyName="C:\source\hoboware_files\Search_Chunk77.js Hash Sha256" Hash="0E5EDB4B3286A01E2AB38870A89669BDF6A618E393B614AECC0609C3A23232F4" />
+    <Allow ID="ID_ALLOW_A_25F" FriendlyName="C:\source\hoboware_files\Search_Chunk78.js Hash Sha1" Hash="B439E6C81BF5C2D039D67D1D371A29B421E5B401" />
+    <Allow ID="ID_ALLOW_A_260" FriendlyName="C:\source\hoboware_files\Search_Chunk78.js Hash Sha256" Hash="8B33F9BF2E2131B03BDA2E6620D3C445A98E7141005975F8DB43FA06DD19258C" />
+    <Allow ID="ID_ALLOW_A_261" FriendlyName="C:\source\hoboware_files\Search_Chunk79.js Hash Sha1" Hash="BA284498EE332B77FDC8F4F48D78EA6866D15D14" />
+    <Allow ID="ID_ALLOW_A_262" FriendlyName="C:\source\hoboware_files\Search_Chunk79.js Hash Sha256" Hash="C8A458F8F2C357C16056D62D0303FBD35D43C7005F60D04E05E29D2176BA9900" />
+    <Allow ID="ID_ALLOW_A_263" FriendlyName="C:\source\hoboware_files\Search_Chunk8.js Hash Sha1" Hash="BE32B7BE5DCC286F97443BED1F235FA12DFF2FB1" />
+    <Allow ID="ID_ALLOW_A_264" FriendlyName="C:\source\hoboware_files\Search_Chunk8.js Hash Sha256" Hash="DA976AE607359840126B3D92A8638CA15316FEC0FEDF2350BFCAEE7DBCD9A9DD" />
+    <Allow ID="ID_ALLOW_A_265" FriendlyName="C:\source\hoboware_files\Search_Chunk80.js Hash Sha1" Hash="81FC94A36FC81BD8D3A60C3328CBB71A859EA9BF" />
+    <Allow ID="ID_ALLOW_A_266" FriendlyName="C:\source\hoboware_files\Search_Chunk80.js Hash Sha256" Hash="BBE1EA9EDA6C3A1E85885E06B28576A55E6EC17698247B441C51C6198B3C8ED0" />
+    <Allow ID="ID_ALLOW_A_267" FriendlyName="C:\source\hoboware_files\Search_Chunk81.js Hash Sha1" Hash="9FBD154542BAB8F8AFD2D3758C01FF5D4CB6F7E2" />
+    <Allow ID="ID_ALLOW_A_268" FriendlyName="C:\source\hoboware_files\Search_Chunk81.js Hash Sha256" Hash="4E4075572032BB6D1BA332C0501D18D3CFB5CA7EF0FCC95E6413F3702E0BECFE" />
+    <Allow ID="ID_ALLOW_A_269" FriendlyName="C:\source\hoboware_files\Search_Chunk82.js Hash Sha1" Hash="0A6E76B125578CF131654022790C0234850967DD" />
+    <Allow ID="ID_ALLOW_A_26A" FriendlyName="C:\source\hoboware_files\Search_Chunk82.js Hash Sha256" Hash="664CEA18C8F94A058E65F6EBC7524404F425A1CE862361DC67A0B201A7E035D5" />
+    <Allow ID="ID_ALLOW_A_26B" FriendlyName="C:\source\hoboware_files\Search_Chunk83.js Hash Sha1" Hash="14BF5F41F27D09D1E64FA7970605D95283E41209" />
+    <Allow ID="ID_ALLOW_A_26C" FriendlyName="C:\source\hoboware_files\Search_Chunk83.js Hash Sha256" Hash="5796E39D344B1C163140109BD07C86B59E7B54444F616B5BFAB56F6988F32B44" />
+    <Allow ID="ID_ALLOW_A_26D" FriendlyName="C:\source\hoboware_files\Search_Chunk84.js Hash Sha1" Hash="D5D3A23BAB8CADC282EB8397FEFEBB9A6A652404" />
+    <Allow ID="ID_ALLOW_A_26E" FriendlyName="C:\source\hoboware_files\Search_Chunk84.js Hash Sha256" Hash="A44036898F3AFC671D6F42BF6890105E8F264FB0491BA03EBC66155D13A480E6" />
+    <Allow ID="ID_ALLOW_A_26F" FriendlyName="C:\source\hoboware_files\Search_Chunk85.js Hash Sha1" Hash="DE1F163C01D456D903AE5D5FFD1FD63076743582" />
+    <Allow ID="ID_ALLOW_A_270" FriendlyName="C:\source\hoboware_files\Search_Chunk85.js Hash Sha256" Hash="C11E7465E0D7B85D33E46CE6AB533DA20F1EFFD1DCE1DC7C7B762F92919008E7" />
+    <Allow ID="ID_ALLOW_A_271" FriendlyName="C:\source\hoboware_files\Search_Chunk86.js Hash Sha1" Hash="91826C9CE3079628A9CECC83D526BA2B821DDA44" />
+    <Allow ID="ID_ALLOW_A_272" FriendlyName="C:\source\hoboware_files\Search_Chunk86.js Hash Sha256" Hash="2ACADCE57EF63C17E84249257D153F5D6A31974177E2CD541AFDA0F7764D7BC5" />
+    <Allow ID="ID_ALLOW_A_273" FriendlyName="C:\source\hoboware_files\Search_Chunk87.js Hash Sha1" Hash="2924A35DD8277417B976BE921609D7084DD7040A" />
+    <Allow ID="ID_ALLOW_A_274" FriendlyName="C:\source\hoboware_files\Search_Chunk87.js Hash Sha256" Hash="0DBDCB7C4756BA93BEC7E7D738ED6EA62D05EF47510EFD2F8770C7CD3CE724C6" />
+    <Allow ID="ID_ALLOW_A_275" FriendlyName="C:\source\hoboware_files\Search_Chunk88.js Hash Sha1" Hash="3B0CA41C49C7CF90FB2100D8FA0BB716965E3B73" />
+    <Allow ID="ID_ALLOW_A_276" FriendlyName="C:\source\hoboware_files\Search_Chunk88.js Hash Sha256" Hash="F54BFE5051B993F3C4D1815CB7747008EAFF6C5957A80693C0A518B5847A5D38" />
+    <Allow ID="ID_ALLOW_A_277" FriendlyName="C:\source\hoboware_files\Search_Chunk89.js Hash Sha1" Hash="E17E161DA2AAAC63BA04AEA7A36ABF35E2D1C425" />
+    <Allow ID="ID_ALLOW_A_278" FriendlyName="C:\source\hoboware_files\Search_Chunk89.js Hash Sha256" Hash="08B082654D235209D3DD1C6C681F6AD3433E9D23FF3D696F222E8B38EBCADDEA" />
+    <Allow ID="ID_ALLOW_A_279" FriendlyName="C:\source\hoboware_files\Search_Chunk9.js Hash Sha1" Hash="EB161A12006DC94882666F44813E662089AAAD4E" />
+    <Allow ID="ID_ALLOW_A_27A" FriendlyName="C:\source\hoboware_files\Search_Chunk9.js Hash Sha256" Hash="2623BBD48FC64580916499794DAECB608B787C9820D691CC33B09458A5AD8833" />
+    <Allow ID="ID_ALLOW_A_27B" FriendlyName="C:\source\hoboware_files\Search_Chunk90.js Hash Sha1" Hash="1985CA0D94F701B8C3ED6FDA30A2B78166D78AE3" />
+    <Allow ID="ID_ALLOW_A_27C" FriendlyName="C:\source\hoboware_files\Search_Chunk90.js Hash Sha256" Hash="835AA26EC012636E9300114EEDA030462920C6DDAEFB9266B49E1DB1F8579102" />
+    <Allow ID="ID_ALLOW_A_27D" FriendlyName="C:\source\hoboware_files\Search_Chunk91.js Hash Sha1" Hash="7D42E5D535836F9A8261ACFCB4AAD503E4CEE216" />
+    <Allow ID="ID_ALLOW_A_27E" FriendlyName="C:\source\hoboware_files\Search_Chunk91.js Hash Sha256" Hash="FE258F331429313976D1E434825D1FD7939D4742F9D914E159981ACB14F4B431" />
+    <Allow ID="ID_ALLOW_A_27F" FriendlyName="C:\source\hoboware_files\Skin.js Hash Sha1" Hash="AECC5EC9880A12406F9808B57A288AA5F27AB12E" />
+    <Allow ID="ID_ALLOW_A_280" FriendlyName="C:\source\hoboware_files\Skin.js Hash Sha256" Hash="A2449F30AB360012B70BEE3B7898E8023970F078947B9445CA39804572E5793C" />
+    <Allow ID="ID_ALLOW_A_281" FriendlyName="C:\source\hoboware_files\stemmer-english.amd.min.js Hash Sha1" Hash="C494687F0C8A9577AA2EC481D80226EA47B84E53" />
+    <Allow ID="ID_ALLOW_A_282" FriendlyName="C:\source\hoboware_files\stemmer-english.amd.min.js Hash Sha256" Hash="B5139CBA38A536C39DEE453DDB34BD82E3A2F51B07E1A98EAB0D171E65FBC20E" />
+    <Allow ID="ID_ALLOW_A_283" FriendlyName="C:\source\hoboware_files\Synonyms.js Hash Sha1" Hash="923D743D20F2ABFA5C7043F0DA38987313C0049A" />
+    <Allow ID="ID_ALLOW_A_284" FriendlyName="C:\source\hoboware_files\Synonyms.js Hash Sha256" Hash="73675F436B022538A06D12351A9DC679273F91CCE4E29A9C5ECD2B11381649F0" />
+    <Allow ID="ID_ALLOW_A_285" FriendlyName="C:\source\hoboware_files\textcolor.js Hash Sha1" Hash="DB1DF089BC482C51B47E3A155F2C2580675F53E7" />
+    <Allow ID="ID_ALLOW_A_286" FriendlyName="C:\source\hoboware_files\textcolor.js Hash Sha256" Hash="70AED0CF687A2AB66601C14FC782528B36FF7137758C3238E51374CC49FF4CE7" />
+    <Allow ID="ID_ALLOW_A_287" FriendlyName="C:\source\hoboware_files\Toc.js Hash Sha1" Hash="74C067D1D383B3B2B69ECF2A135EAA41DF4A5877" />
+    <Allow ID="ID_ALLOW_A_288" FriendlyName="C:\source\hoboware_files\Toc.js Hash Sha256" Hash="D011AFBF0722D2697AC62C81C52838FCC741099F642C5390B0B654BE9ED19776" />
+    <Allow ID="ID_ALLOW_A_289" FriendlyName="C:\source\hoboware_files\Toc_Chunk0.js Hash Sha1" Hash="917B8E9918A5EBB65410DCC81CFF0F9A5EB289F4" />
+    <Allow ID="ID_ALLOW_A_28A" FriendlyName="C:\source\hoboware_files\Toc_Chunk0.js Hash Sha256" Hash="45BE6FC91A1CCBAA805863D0F5C9DEBAA8F185E40006F8C04C8CE2BB743CB030" />
+    <Allow ID="ID_ALLOW_A_28B" FriendlyName="C:\source\hoboware_files\unins000.exe Hash Sha1" Hash="9657E44AB3F679622DF2188413280F0D5034ADA0" />
+    <Allow ID="ID_ALLOW_A_28C" FriendlyName="C:\source\hoboware_files\unins000.exe Hash Sha256" Hash="8AACAE9538676D1C108455F7575159EDBCB52DCD42277AB664426110B84196F4" />
+    <Allow ID="ID_ALLOW_A_28D" FriendlyName="C:\source\hoboware_files\unins000.exe Hash Page Sha1" Hash="8DC1F99BDF6BBE14D3FEF3138E0AAFDD228BFF9A" />
+    <Allow ID="ID_ALLOW_A_28E" FriendlyName="C:\source\hoboware_files\unins000.exe Hash Page Sha256" Hash="D416F06DE8001E9ABDFB6398D67B8056D59E66DFC01228B2B97FADB3BC10B6AB" />
+    <Allow ID="ID_ALLOW_A_28F" FriendlyName="C:\source\hoboware_files\WinFoldersJava_x64-1.1.dll Hash Sha1" Hash="11B3A1EDC778EC457A0985224BDC3962C84F8BD2" />
+    <Allow ID="ID_ALLOW_A_290" FriendlyName="C:\source\hoboware_files\WinFoldersJava_x64-1.1.dll Hash Sha256" Hash="E75D89988057831E7025ADB703BAE32EDE592B694A787623573D712747D60174" />
+    <Allow ID="ID_ALLOW_A_291" FriendlyName="C:\source\hoboware_files\WinFoldersJava_x64-1.1.dll Hash Page Sha1" Hash="6B518E8DBD5C3D819FFD09159BAA4A3689BFFC85" />
+    <Allow ID="ID_ALLOW_A_292" FriendlyName="C:\source\hoboware_files\WinFoldersJava_x64-1.1.dll Hash Page Sha256" Hash="791DDE2EA3A136633EEFA0872D25FAD0F1FE545C64AFE6B120FB1B5431588B85" />
+    <FileAttrib ID="ID_FILEATTRIB_F_7C" FriendlyName="C:\source\hoboware_files\api-ms-win-core-console-l1-1-0.dll FileAttribute" FileName="apisetstub" MinimumFileVersion="10.0.10240.16384" />
+    <FileAttrib ID="ID_FILEATTRIB_F_E2" FriendlyName="C:\source\hoboware_files\ucrtbase.dll FileAttribute" FileName="ucrtbase.dll" MinimumFileVersion="10.0.10240.16384" />
+    <FileAttrib ID="ID_FILEATTRIB_F_7D" FriendlyName="C:\source\hoboware_files\api-ms-win-core-console-l1-1-0.dll FileAttribute" FileName="apisetstub" MinimumFileVersion="10.0.10240.16384" />
+    <FileAttrib ID="ID_FILEATTRIB_F_7E" FriendlyName="C:\source\hoboware_files\appletviewer.exe FileAttribute" FileName="appletviewer.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_7F" FriendlyName="C:\source\hoboware_files\attach.dll FileAttribute" FileName="attach.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_80" FriendlyName="C:\source\hoboware_files\awt.dll FileAttribute" FileName="awt.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_81" FriendlyName="C:\source\hoboware_files\clhsdb.exe FileAttribute" FileName="clhsdb.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_82" FriendlyName="C:\source\hoboware_files\compiledMethodLoad.dll FileAttribute" FileName="compiledMethodLoad.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_83" FriendlyName="C:\source\hoboware_files\concrt140.dll FileAttribute" FileName="concrt140.dll" MinimumFileVersion="14.16.27012.6" />
+    <FileAttrib ID="ID_FILEATTRIB_F_84" FriendlyName="C:\source\hoboware_files\decora_sse.dll FileAttribute" FileName="decora_sse.dll" MinimumFileVersion="8.0.2020.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_85" FriendlyName="C:\source\hoboware_files\dt_shmem.dll FileAttribute" FileName="dt_shmem.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_86" FriendlyName="C:\source\hoboware_files\dt_socket.dll FileAttribute" FileName="dt_socket.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_87" FriendlyName="C:\source\hoboware_files\extcheck.exe FileAttribute" FileName="extcheck.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_88" FriendlyName="C:\source\hoboware_files\fontmanager.dll FileAttribute" FileName="fontmanager.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_89" FriendlyName="C:\source\hoboware_files\freetype.dll FileAttribute" FileName="freetype.dll" MinimumFileVersion="2.12.1.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_8A" FriendlyName="C:\source\hoboware_files\gctest.dll FileAttribute" FileName="gctest.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_8B" FriendlyName="C:\source\hoboware_files\glass.dll FileAttribute" FileName="glass.dll" MinimumFileVersion="8.0.2020.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_8C" FriendlyName="C:\source\hoboware_files\heapTracker.dll FileAttribute" FileName="heapTracker.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_8D" FriendlyName="C:\source\hoboware_files\heapViewer.dll FileAttribute" FileName="heapViewer.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_8E" FriendlyName="C:\source\hoboware_files\HOBOware.exe FileAttribute" FileName="HOBOware.exe" MinimumFileVersion="3.7.28.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_8F" FriendlyName="C:\source\hoboware_files\hprof.dll FileAttribute" FileName="hprof.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_90" FriendlyName="C:\source\hoboware_files\hsdb.exe FileAttribute" FileName="hsdb.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_91" FriendlyName="C:\source\hoboware_files\idlj.exe FileAttribute" FileName="idlj.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_92" FriendlyName="C:\source\hoboware_files\instrument.dll FileAttribute" FileName="instrument.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_93" FriendlyName="C:\source\hoboware_files\j2pcsc.dll FileAttribute" FileName="j2pcsc.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_94" FriendlyName="C:\source\hoboware_files\j2pkcs11.dll FileAttribute" FileName="j2pkcs11.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_95" FriendlyName="C:\source\hoboware_files\jaas_nt.dll FileAttribute" FileName="jaas_nt.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_96" FriendlyName="C:\source\hoboware_files\jabswitch.exe FileAttribute" FileName="jabswitch.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_97" FriendlyName="C:\source\hoboware_files\jar.exe FileAttribute" FileName="jar.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_98" FriendlyName="C:\source\hoboware_files\jarsigner.exe FileAttribute" FileName="jarsigner.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_99" FriendlyName="C:\source\hoboware_files\java-rmi.exe FileAttribute" FileName="java-rmi.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_9A" FriendlyName="C:\source\hoboware_files\java.dll FileAttribute" FileName="java.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_9B" FriendlyName="C:\source\hoboware_files\java.exe FileAttribute" FileName="java.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_9C" FriendlyName="C:\source\hoboware_files\JavaAccessBridge-64.dll FileAttribute" FileName="JavaAccessBridge-64.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_9D" FriendlyName="C:\source\hoboware_files\javac.exe FileAttribute" FileName="javac.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_9E" FriendlyName="C:\source\hoboware_files\javadoc.exe FileAttribute" FileName="javadoc.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_9F" FriendlyName="C:\source\hoboware_files\javafxpackager.exe FileAttribute" FileName="javapackager.exe" MinimumFileVersion="8.0.2020.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_A0" FriendlyName="C:\source\hoboware_files\javafx_font.dll FileAttribute" FileName="javafx_font.dll" MinimumFileVersion="8.0.2020.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_A1" FriendlyName="C:\source\hoboware_files\javafx_iio.dll FileAttribute" FileName="javafx_iio.dll" MinimumFileVersion="8.0.2020.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_A2" FriendlyName="C:\source\hoboware_files\javah.exe FileAttribute" FileName="javah.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_A3" FriendlyName="C:\source\hoboware_files\javap.exe FileAttribute" FileName="javap.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_A4" FriendlyName="C:\source\hoboware_files\javaw.exe FileAttribute" FileName="javaw.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_A5" FriendlyName="C:\source\hoboware_files\java_crw_demo.dll FileAttribute" FileName="java_crw_demo.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_A6" FriendlyName="C:\source\hoboware_files\jawt.dll FileAttribute" FileName="jawt.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_A7" FriendlyName="C:\source\hoboware_files\JAWTAccessBridge-64.dll FileAttribute" FileName="JAWTAccessBridge-64.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_A8" FriendlyName="C:\source\hoboware_files\jcmd.exe FileAttribute" FileName="jcmd.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_A9" FriendlyName="C:\source\hoboware_files\jconsole.exe FileAttribute" FileName="jconsole.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_AA" FriendlyName="C:\source\hoboware_files\jdb.exe FileAttribute" FileName="jdb.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_AB" FriendlyName="C:\source\hoboware_files\jdeps.exe FileAttribute" FileName="jdeps.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_AC" FriendlyName="C:\source\hoboware_files\jdwp.dll FileAttribute" FileName="jdwp.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_AD" FriendlyName="C:\source\hoboware_files\jfr.exe FileAttribute" FileName="jfr.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_AE" FriendlyName="C:\source\hoboware_files\jhat.exe FileAttribute" FileName="jhat.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_AF" FriendlyName="C:\source\hoboware_files\jinfo.exe FileAttribute" FileName="jinfo.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_B0" FriendlyName="C:\source\hoboware_files\jjs.exe FileAttribute" FileName="jjs.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_B1" FriendlyName="C:\source\hoboware_files\jli.dll FileAttribute" FileName="jli.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_B2" FriendlyName="C:\source\hoboware_files\jmap.exe FileAttribute" FileName="jmap.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_B3" FriendlyName="C:\source\hoboware_files\jpeg.dll FileAttribute" FileName="jpeg.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_B4" FriendlyName="C:\source\hoboware_files\jps.exe FileAttribute" FileName="jps.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_B5" FriendlyName="C:\source\hoboware_files\jrunscript.exe FileAttribute" FileName="jrunscript.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_B6" FriendlyName="C:\source\hoboware_files\jsadebugd.exe FileAttribute" FileName="jsadebugd.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_B7" FriendlyName="C:\source\hoboware_files\jsdt.dll FileAttribute" FileName="jsdt.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_B8" FriendlyName="C:\source\hoboware_files\jsound.dll FileAttribute" FileName="jsound.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_B9" FriendlyName="C:\source\hoboware_files\jsoundds.dll FileAttribute" FileName="jsoundds.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_BA" FriendlyName="C:\source\hoboware_files\jstack.exe FileAttribute" FileName="jstack.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_BB" FriendlyName="C:\source\hoboware_files\jstat.exe FileAttribute" FileName="jstat.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_BC" FriendlyName="C:\source\hoboware_files\jstatd.exe FileAttribute" FileName="jstatd.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_BD" FriendlyName="C:\source\hoboware_files\jvm.dll FileAttribute" FileName="jvm.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_BE" FriendlyName="C:\source\hoboware_files\keytool.exe FileAttribute" FileName="keytool.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_BF" FriendlyName="C:\source\hoboware_files\kinit.exe FileAttribute" FileName="kinit.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_C0" FriendlyName="C:\source\hoboware_files\klist.exe FileAttribute" FileName="klist.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_C1" FriendlyName="C:\source\hoboware_files\ktab.exe FileAttribute" FileName="ktab.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_C2" FriendlyName="C:\source\hoboware_files\lcms.dll FileAttribute" FileName="lcms.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_C3" FriendlyName="C:\source\hoboware_files\management.dll FileAttribute" FileName="management.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_C4" FriendlyName="C:\source\hoboware_files\minst.dll FileAttribute" FileName="minst.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_C5" FriendlyName="C:\source\hoboware_files\mlib_image.dll FileAttribute" FileName="mlib_image.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_C6" FriendlyName="C:\source\hoboware_files\msvcm80.dll FileAttribute" FileName="MSVCM80.DLL" MinimumFileVersion="8.0.50727.6195" />
+    <FileAttrib ID="ID_FILEATTRIB_F_C7" FriendlyName="C:\source\hoboware_files\msvcp120.dll FileAttribute" FileName="msvcp120.dll" MinimumFileVersion="12.0.40660.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_C8" FriendlyName="C:\source\hoboware_files\msvcp140.dll FileAttribute" FileName="msvcp140.dll" MinimumFileVersion="14.16.27012.6" />
+    <FileAttrib ID="ID_FILEATTRIB_F_C9" FriendlyName="C:\source\hoboware_files\msvcp80.dll FileAttribute" FileName="MSVCP80.DLL" MinimumFileVersion="8.0.50727.6195" />
+    <FileAttrib ID="ID_FILEATTRIB_F_CA" FriendlyName="C:\source\hoboware_files\msvcr120.dll FileAttribute" FileName="msvcr120.dll" MinimumFileVersion="12.0.40660.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_CB" FriendlyName="C:\source\hoboware_files\msvcr80.dll FileAttribute" FileName="MSVCR80.DLL" MinimumFileVersion="8.0.50727.6195" />
+    <FileAttrib ID="ID_FILEATTRIB_F_CC" FriendlyName="C:\source\hoboware_files\mtrace.dll FileAttribute" FileName="mtrace.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_CD" FriendlyName="C:\source\hoboware_files\native2ascii.exe FileAttribute" FileName="native2ascii.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_CE" FriendlyName="C:\source\hoboware_files\net.dll FileAttribute" FileName="net.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_CF" FriendlyName="C:\source\hoboware_files\nio.dll FileAttribute" FileName="nio.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_D0" FriendlyName="C:\source\hoboware_files\npt.dll FileAttribute" FileName="npt.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_D1" FriendlyName="C:\source\hoboware_files\orbd.exe FileAttribute" FileName="orbd.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_D2" FriendlyName="C:\source\hoboware_files\pack200.exe FileAttribute" FileName="pack200.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_D3" FriendlyName="C:\source\hoboware_files\policytool.exe FileAttribute" FileName="policytool.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_D4" FriendlyName="C:\source\hoboware_files\prism_common.dll FileAttribute" FileName="prism_common.dll" MinimumFileVersion="8.0.2020.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_D5" FriendlyName="C:\source\hoboware_files\prism_d3d.dll FileAttribute" FileName="prism_d3d.dll" MinimumFileVersion="8.0.2020.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_D6" FriendlyName="C:\source\hoboware_files\prism_es2.dll FileAttribute" FileName="prism_es2.dll" MinimumFileVersion="8.0.2020.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_D7" FriendlyName="C:\source\hoboware_files\prism_sw.dll FileAttribute" FileName="prism_sw.dll" MinimumFileVersion="8.0.2020.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_D8" FriendlyName="C:\source\hoboware_files\rmic.exe FileAttribute" FileName="rmic.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_D9" FriendlyName="C:\source\hoboware_files\rmid.exe FileAttribute" FileName="rmid.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_DA" FriendlyName="C:\source\hoboware_files\rmiregistry.exe FileAttribute" FileName="rmiregistry.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_DB" FriendlyName="C:\source\hoboware_files\schemagen.exe FileAttribute" FileName="schemagen.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_DC" FriendlyName="C:\source\hoboware_files\serialver.exe FileAttribute" FileName="serialver.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_DD" FriendlyName="C:\source\hoboware_files\servertool.exe FileAttribute" FileName="servertool.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_DE" FriendlyName="C:\source\hoboware_files\splashscreen.dll FileAttribute" FileName="splashscreen.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_DF" FriendlyName="C:\source\hoboware_files\sunec.dll FileAttribute" FileName="sunec.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_E0" FriendlyName="C:\source\hoboware_files\sunmscapi.dll FileAttribute" FileName="sunmscapi.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_E1" FriendlyName="C:\source\hoboware_files\tnameserv.exe FileAttribute" FileName="tnameserv.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_E3" FriendlyName="C:\source\hoboware_files\ucrtbase.dll FileAttribute" FileName="ucrtbase.dll" MinimumFileVersion="10.0.10240.16384" />
+    <FileAttrib ID="ID_FILEATTRIB_F_E4" FriendlyName="C:\source\hoboware_files\unpack.dll FileAttribute" FileName="unpack.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_E5" FriendlyName="C:\source\hoboware_files\unpack200.exe FileAttribute" FileName="unpack200.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_E6" FriendlyName="C:\source\hoboware_files\vcruntime140.dll FileAttribute" FileName="vcruntime140.dll" MinimumFileVersion="14.16.27012.6" />
+    <FileAttrib ID="ID_FILEATTRIB_F_E7" FriendlyName="C:\source\hoboware_files\verify.dll FileAttribute" FileName="verify.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_E8" FriendlyName="C:\source\hoboware_files\versionCheck.dll FileAttribute" FileName="versionCheck.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_E9" FriendlyName="C:\source\hoboware_files\w2k_lsa_auth.dll FileAttribute" FileName="w2k_lsa_auth.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_EA" FriendlyName="C:\source\hoboware_files\waiters.dll FileAttribute" FileName="waiters.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_EB" FriendlyName="C:\source\hoboware_files\WindowsAccessBridge-64.dll FileAttribute" FileName="WindowsAccessBridge-64.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_EC" FriendlyName="C:\source\hoboware_files\wsgen.exe FileAttribute" FileName="wsgen.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_ED" FriendlyName="C:\source\hoboware_files\wsimport.exe FileAttribute" FileName="wsimport.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_EE" FriendlyName="C:\source\hoboware_files\xjc.exe FileAttribute" FileName="xjc.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_EF" FriendlyName="C:\source\hoboware_files\zip.dll FileAttribute" FileName="zip.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_1" FriendlyName="C:\source\hoboware_files\api-ms-win-core-console-l1-1-0.dll FileAttribute" FileName="apisetstub" MinimumFileVersion="10.0.10240.16384" />
+    <FileAttrib ID="ID_FILEATTRIB_F_12" FriendlyName="C:\source\hoboware_files\ftdibus.sys FileAttribute" FileName="FTDIBUS" MinimumFileVersion="2.12.24.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_6E" FriendlyName="C:\source\hoboware_files\ucrtbase.dll FileAttribute" FileName="ucrtbase.dll" MinimumFileVersion="10.0.10240.16384" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2" FriendlyName="C:\source\hoboware_files\api-ms-win-core-console-l1-1-0.dll FileAttribute" FileName="apisetstub" MinimumFileVersion="10.0.10240.16384" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3" FriendlyName="C:\source\hoboware_files\appletviewer.exe FileAttribute" FileName="appletviewer.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_4" FriendlyName="C:\source\hoboware_files\attach.dll FileAttribute" FileName="attach.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_5" FriendlyName="C:\source\hoboware_files\awt.dll FileAttribute" FileName="awt.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_6" FriendlyName="C:\source\hoboware_files\clhsdb.exe FileAttribute" FileName="clhsdb.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_7" FriendlyName="C:\source\hoboware_files\compiledMethodLoad.dll FileAttribute" FileName="compiledMethodLoad.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_8" FriendlyName="C:\source\hoboware_files\concrt140.dll FileAttribute" FileName="concrt140.dll" MinimumFileVersion="14.16.27012.6" />
+    <FileAttrib ID="ID_FILEATTRIB_F_9" FriendlyName="C:\source\hoboware_files\decora_sse.dll FileAttribute" FileName="decora_sse.dll" MinimumFileVersion="8.0.2020.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_A" FriendlyName="C:\source\hoboware_files\dt_shmem.dll FileAttribute" FileName="dt_shmem.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_B" FriendlyName="C:\source\hoboware_files\dt_socket.dll FileAttribute" FileName="dt_socket.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_C" FriendlyName="C:\source\hoboware_files\extcheck.exe FileAttribute" FileName="extcheck.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_D" FriendlyName="C:\source\hoboware_files\fontmanager.dll FileAttribute" FileName="fontmanager.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_E" FriendlyName="C:\source\hoboware_files\freetype.dll FileAttribute" FileName="freetype.dll" MinimumFileVersion="2.12.1.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_F" FriendlyName="C:\source\hoboware_files\ftbusui.dll FileAttribute" FileName="FTBUSUI.dll" MinimumFileVersion="1.3.0.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_10" FriendlyName="C:\source\hoboware_files\ftcserco.dll FileAttribute" FileName="ftcserco.dll" MinimumFileVersion="2.1.3.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_11" FriendlyName="C:\source\hoboware_files\ftd2xx.dll FileAttribute" FileName="FTD2XX.DLL" MinimumFileVersion="3.2.12.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_13" FriendlyName="C:\source\hoboware_files\ftdibus.sys FileAttribute" FileName="FTDIBUS" MinimumFileVersion="2.12.24.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_14" FriendlyName="C:\source\hoboware_files\ftlang.dll FileAttribute" FileName="FTLang.dll" MinimumFileVersion="1.5.2.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_15" FriendlyName="C:\source\hoboware_files\ftserui2.dll FileAttribute" FileName="ftserui2.dll" MinimumFileVersion="2.12.24.1" />
+    <FileAttrib ID="ID_FILEATTRIB_F_16" FriendlyName="C:\source\hoboware_files\gctest.dll FileAttribute" FileName="gctest.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_17" FriendlyName="C:\source\hoboware_files\glass.dll FileAttribute" FileName="glass.dll" MinimumFileVersion="8.0.2020.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_18" FriendlyName="C:\source\hoboware_files\heapTracker.dll FileAttribute" FileName="heapTracker.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_19" FriendlyName="C:\source\hoboware_files\heapViewer.dll FileAttribute" FileName="heapViewer.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_1A" FriendlyName="C:\source\hoboware_files\HOBOware.exe FileAttribute" FileName="HOBOware.exe" MinimumFileVersion="3.7.28.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_1B" FriendlyName="C:\source\hoboware_files\hprof.dll FileAttribute" FileName="hprof.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_1C" FriendlyName="C:\source\hoboware_files\hsdb.exe FileAttribute" FileName="hsdb.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_1D" FriendlyName="C:\source\hoboware_files\idlj.exe FileAttribute" FileName="idlj.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_1E" FriendlyName="C:\source\hoboware_files\instrument.dll FileAttribute" FileName="instrument.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_1F" FriendlyName="C:\source\hoboware_files\j2pcsc.dll FileAttribute" FileName="j2pcsc.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_20" FriendlyName="C:\source\hoboware_files\j2pkcs11.dll FileAttribute" FileName="j2pkcs11.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_21" FriendlyName="C:\source\hoboware_files\jaas_nt.dll FileAttribute" FileName="jaas_nt.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_22" FriendlyName="C:\source\hoboware_files\jabswitch.exe FileAttribute" FileName="jabswitch.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_23" FriendlyName="C:\source\hoboware_files\jar.exe FileAttribute" FileName="jar.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_24" FriendlyName="C:\source\hoboware_files\jarsigner.exe FileAttribute" FileName="jarsigner.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_25" FriendlyName="C:\source\hoboware_files\java-rmi.exe FileAttribute" FileName="java-rmi.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_26" FriendlyName="C:\source\hoboware_files\java.dll FileAttribute" FileName="java.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_27" FriendlyName="C:\source\hoboware_files\java.exe FileAttribute" FileName="java.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_28" FriendlyName="C:\source\hoboware_files\JavaAccessBridge-64.dll FileAttribute" FileName="JavaAccessBridge-64.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_29" FriendlyName="C:\source\hoboware_files\javac.exe FileAttribute" FileName="javac.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2A" FriendlyName="C:\source\hoboware_files\javadoc.exe FileAttribute" FileName="javadoc.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2B" FriendlyName="C:\source\hoboware_files\javafxpackager.exe FileAttribute" FileName="javapackager.exe" MinimumFileVersion="8.0.2020.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2C" FriendlyName="C:\source\hoboware_files\javafx_font.dll FileAttribute" FileName="javafx_font.dll" MinimumFileVersion="8.0.2020.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2D" FriendlyName="C:\source\hoboware_files\javafx_iio.dll FileAttribute" FileName="javafx_iio.dll" MinimumFileVersion="8.0.2020.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2E" FriendlyName="C:\source\hoboware_files\javah.exe FileAttribute" FileName="javah.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_2F" FriendlyName="C:\source\hoboware_files\javap.exe FileAttribute" FileName="javap.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_30" FriendlyName="C:\source\hoboware_files\javaw.exe FileAttribute" FileName="javaw.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_31" FriendlyName="C:\source\hoboware_files\java_crw_demo.dll FileAttribute" FileName="java_crw_demo.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_32" FriendlyName="C:\source\hoboware_files\jawt.dll FileAttribute" FileName="jawt.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_33" FriendlyName="C:\source\hoboware_files\JAWTAccessBridge-64.dll FileAttribute" FileName="JAWTAccessBridge-64.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_34" FriendlyName="C:\source\hoboware_files\jcmd.exe FileAttribute" FileName="jcmd.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_35" FriendlyName="C:\source\hoboware_files\jconsole.exe FileAttribute" FileName="jconsole.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_36" FriendlyName="C:\source\hoboware_files\jdb.exe FileAttribute" FileName="jdb.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_37" FriendlyName="C:\source\hoboware_files\jdeps.exe FileAttribute" FileName="jdeps.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_38" FriendlyName="C:\source\hoboware_files\jdwp.dll FileAttribute" FileName="jdwp.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_39" FriendlyName="C:\source\hoboware_files\jfr.exe FileAttribute" FileName="jfr.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3A" FriendlyName="C:\source\hoboware_files\jhat.exe FileAttribute" FileName="jhat.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3B" FriendlyName="C:\source\hoboware_files\jinfo.exe FileAttribute" FileName="jinfo.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3C" FriendlyName="C:\source\hoboware_files\jjs.exe FileAttribute" FileName="jjs.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3D" FriendlyName="C:\source\hoboware_files\jli.dll FileAttribute" FileName="jli.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3E" FriendlyName="C:\source\hoboware_files\jmap.exe FileAttribute" FileName="jmap.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_3F" FriendlyName="C:\source\hoboware_files\jpeg.dll FileAttribute" FileName="jpeg.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_40" FriendlyName="C:\source\hoboware_files\jps.exe FileAttribute" FileName="jps.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_41" FriendlyName="C:\source\hoboware_files\jrunscript.exe FileAttribute" FileName="jrunscript.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_42" FriendlyName="C:\source\hoboware_files\jsadebugd.exe FileAttribute" FileName="jsadebugd.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_43" FriendlyName="C:\source\hoboware_files\jsdt.dll FileAttribute" FileName="jsdt.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_44" FriendlyName="C:\source\hoboware_files\jsound.dll FileAttribute" FileName="jsound.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_45" FriendlyName="C:\source\hoboware_files\jsoundds.dll FileAttribute" FileName="jsoundds.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_46" FriendlyName="C:\source\hoboware_files\jstack.exe FileAttribute" FileName="jstack.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_47" FriendlyName="C:\source\hoboware_files\jstat.exe FileAttribute" FileName="jstat.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_48" FriendlyName="C:\source\hoboware_files\jstatd.exe FileAttribute" FileName="jstatd.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_49" FriendlyName="C:\source\hoboware_files\jvm.dll FileAttribute" FileName="jvm.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_4A" FriendlyName="C:\source\hoboware_files\keytool.exe FileAttribute" FileName="keytool.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_4B" FriendlyName="C:\source\hoboware_files\kinit.exe FileAttribute" FileName="kinit.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_4C" FriendlyName="C:\source\hoboware_files\klist.exe FileAttribute" FileName="klist.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_4D" FriendlyName="C:\source\hoboware_files\ktab.exe FileAttribute" FileName="ktab.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_4E" FriendlyName="C:\source\hoboware_files\lcms.dll FileAttribute" FileName="lcms.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_4F" FriendlyName="C:\source\hoboware_files\management.dll FileAttribute" FileName="management.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_50" FriendlyName="C:\source\hoboware_files\minst.dll FileAttribute" FileName="minst.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_51" FriendlyName="C:\source\hoboware_files\mlib_image.dll FileAttribute" FileName="mlib_image.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_52" FriendlyName="C:\source\hoboware_files\msvcm80.dll FileAttribute" FileName="MSVCM80.DLL" MinimumFileVersion="8.0.50727.6195" />
+    <FileAttrib ID="ID_FILEATTRIB_F_53" FriendlyName="C:\source\hoboware_files\msvcp120.dll FileAttribute" FileName="msvcp120.dll" MinimumFileVersion="12.0.40660.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_54" FriendlyName="C:\source\hoboware_files\msvcp140.dll FileAttribute" FileName="msvcp140.dll" MinimumFileVersion="14.16.27012.6" />
+    <FileAttrib ID="ID_FILEATTRIB_F_55" FriendlyName="C:\source\hoboware_files\msvcp80.dll FileAttribute" FileName="MSVCP80.DLL" MinimumFileVersion="8.0.50727.6195" />
+    <FileAttrib ID="ID_FILEATTRIB_F_56" FriendlyName="C:\source\hoboware_files\msvcr120.dll FileAttribute" FileName="msvcr120.dll" MinimumFileVersion="12.0.40660.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_57" FriendlyName="C:\source\hoboware_files\msvcr80.dll FileAttribute" FileName="MSVCR80.DLL" MinimumFileVersion="8.0.50727.6195" />
+    <FileAttrib ID="ID_FILEATTRIB_F_58" FriendlyName="C:\source\hoboware_files\mtrace.dll FileAttribute" FileName="mtrace.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_59" FriendlyName="C:\source\hoboware_files\native2ascii.exe FileAttribute" FileName="native2ascii.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_5A" FriendlyName="C:\source\hoboware_files\net.dll FileAttribute" FileName="net.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_5B" FriendlyName="C:\source\hoboware_files\nio.dll FileAttribute" FileName="nio.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_5C" FriendlyName="C:\source\hoboware_files\npt.dll FileAttribute" FileName="npt.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_5D" FriendlyName="C:\source\hoboware_files\orbd.exe FileAttribute" FileName="orbd.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_5E" FriendlyName="C:\source\hoboware_files\pack200.exe FileAttribute" FileName="pack200.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_5F" FriendlyName="C:\source\hoboware_files\policytool.exe FileAttribute" FileName="policytool.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_60" FriendlyName="C:\source\hoboware_files\prism_common.dll FileAttribute" FileName="prism_common.dll" MinimumFileVersion="8.0.2020.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_61" FriendlyName="C:\source\hoboware_files\prism_d3d.dll FileAttribute" FileName="prism_d3d.dll" MinimumFileVersion="8.0.2020.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_62" FriendlyName="C:\source\hoboware_files\prism_es2.dll FileAttribute" FileName="prism_es2.dll" MinimumFileVersion="8.0.2020.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_63" FriendlyName="C:\source\hoboware_files\prism_sw.dll FileAttribute" FileName="prism_sw.dll" MinimumFileVersion="8.0.2020.0" />
+    <FileAttrib ID="ID_FILEATTRIB_F_64" FriendlyName="C:\source\hoboware_files\rmic.exe FileAttribute" FileName="rmic.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_65" FriendlyName="C:\source\hoboware_files\rmid.exe FileAttribute" FileName="rmid.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_66" FriendlyName="C:\source\hoboware_files\rmiregistry.exe FileAttribute" FileName="rmiregistry.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_67" FriendlyName="C:\source\hoboware_files\schemagen.exe FileAttribute" FileName="schemagen.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_68" FriendlyName="C:\source\hoboware_files\serialver.exe FileAttribute" FileName="serialver.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_69" FriendlyName="C:\source\hoboware_files\servertool.exe FileAttribute" FileName="servertool.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_6A" FriendlyName="C:\source\hoboware_files\splashscreen.dll FileAttribute" FileName="splashscreen.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_6B" FriendlyName="C:\source\hoboware_files\sunec.dll FileAttribute" FileName="sunec.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_6C" FriendlyName="C:\source\hoboware_files\sunmscapi.dll FileAttribute" FileName="sunmscapi.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_6D" FriendlyName="C:\source\hoboware_files\tnameserv.exe FileAttribute" FileName="tnameserv.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_6F" FriendlyName="C:\source\hoboware_files\ucrtbase.dll FileAttribute" FileName="ucrtbase.dll" MinimumFileVersion="10.0.10240.16384" />
+    <FileAttrib ID="ID_FILEATTRIB_F_70" FriendlyName="C:\source\hoboware_files\unpack.dll FileAttribute" FileName="unpack.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_71" FriendlyName="C:\source\hoboware_files\unpack200.exe FileAttribute" FileName="unpack200.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_72" FriendlyName="C:\source\hoboware_files\vcruntime140.dll FileAttribute" FileName="vcruntime140.dll" MinimumFileVersion="14.16.27012.6" />
+    <FileAttrib ID="ID_FILEATTRIB_F_73" FriendlyName="C:\source\hoboware_files\verify.dll FileAttribute" FileName="verify.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_74" FriendlyName="C:\source\hoboware_files\versionCheck.dll FileAttribute" FileName="versionCheck.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_75" FriendlyName="C:\source\hoboware_files\w2k_lsa_auth.dll FileAttribute" FileName="w2k_lsa_auth.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_76" FriendlyName="C:\source\hoboware_files\waiters.dll FileAttribute" FileName="waiters.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_77" FriendlyName="C:\source\hoboware_files\WindowsAccessBridge-64.dll FileAttribute" FileName="WindowsAccessBridge-64.dll" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_78" FriendlyName="C:\source\hoboware_files\wsgen.exe FileAttribute" FileName="wsgen.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_79" FriendlyName="C:\source\hoboware_files\wsimport.exe FileAttribute" FileName="wsimport.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_7A" FriendlyName="C:\source\hoboware_files\xjc.exe FileAttribute" FileName="xjc.exe" MinimumFileVersion="8.0.3820.5" />
+    <FileAttrib ID="ID_FILEATTRIB_F_7B" FriendlyName="C:\source\hoboware_files\zip.dll FileAttribute" FileName="zip.dll" MinimumFileVersion="8.0.3820.5" />
+  </FileRules>
+  <!--Signers-->
+  <Signers>
+    <Signer ID="ID_SIGNER_F_9" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="Amazon.com Services LLC" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_7C" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_E2" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_A" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="Amazon.com Services LLC" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_7D" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_7E" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_7F" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_80" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_81" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_82" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_83" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_84" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_85" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_86" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_87" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_88" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_89" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_8A" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_8B" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_8C" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_8D" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_8F" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_90" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_91" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_92" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_93" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_94" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_95" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_96" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_97" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_98" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_99" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_9A" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_9B" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_9C" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_9D" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_9E" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_9F" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_A0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_A1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_A2" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_A3" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_A4" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_A5" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_A6" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_A7" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_A8" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_A9" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_AA" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_AB" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_AC" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_AD" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_AE" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_AF" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_B0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_B1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_B2" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_B3" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_B4" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_B5" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_B6" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_B7" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_B8" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_B9" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_BA" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_BB" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_BC" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_BD" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_BE" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_BF" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_C0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_C1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_C2" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_C3" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_C4" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_C5" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_C7" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_C8" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_CA" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_CC" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_CD" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_CE" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_CF" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_D0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_D1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_D2" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_D3" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_D4" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_D5" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_D6" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_D7" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_D8" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_D9" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_DA" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_DB" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_DC" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_DD" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_DE" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_DF" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_E0" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_E1" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_E3" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_E4" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_E5" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_E6" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_E7" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_E8" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_E9" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_EA" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_EB" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_EC" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_ED" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_EE" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_EF" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_14" Name="Microsoft Code Signing PCA 2011">
+      <CertRoot Type="TBS" Value="F6F717A43AD9ABDDC8CEFDDE1C505462535E7D1307E630F9544A2D14FE8BF26E" />
+      <CertPublisher Value="Microsoft Corporation" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_7C" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_37" Name="Microsoft Code Signing PCA 2011">
+      <CertRoot Type="TBS" Value="F6F717A43AD9ABDDC8CEFDDE1C505462535E7D1307E630F9544A2D14FE8BF26E" />
+      <CertPublisher Value="Microsoft Corporation" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_7D" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_5FD" Name="Onset Computer Corporation">
+      <CertRoot Type="TBS" Value="9F8B7DEF6BA817AE2A924436B276FEB2EBC0EA67A4512F635C053A27DE2761993EEE4A1CE450E28524297137162515BB" />
+      <CertPublisher Value="Onset Computer Corporation" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_8E" />
+    </Signer>
+    <Signer ID="ID_SIGNER_F_638" Name="Microsoft Code Signing PCA">
+      <CertRoot Type="TBS" Value="7251ADC0F732CF409EE462E335BB99544F2DD40F" />
+      <CertPublisher Value="Microsoft Corporation" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_C9" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_CB" />
+    </Signer>
+    <Signer ID="ID_SIGNER_W_1" Name="Microsoft Windows Third Party Component CA 2012">
+      <CertRoot Type="TBS" Value="CEC1AFD0E310C55C1DCC601AB8E172917706AA32FB5EAF826813547FDF02DD46" />
+      <CertEKU ID="ID_EKU_E_1" />
+      <CertOemID Value="Future Technology Devices International Ltd" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_F" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_10" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_11" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_13" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_14" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_15" />
+    </Signer>
+    <Signer ID="ID_SIGNER_W_5" Name="Microsoft Windows Third Party Component CA 2012">
+      <CertRoot Type="TBS" Value="CEC1AFD0E310C55C1DCC601AB8E172917706AA32FB5EAF826813547FDF02DD46" />
+      <CertEKU ID="ID_EKU_E_1" />
+      <CertOemID Value="Future Technology Devices International Ltd" />
+      <FileAttribRef RuleID="ID_FILEATTRIB_F_12" />
+    </Signer>
+  </Signers>
+  <!--Driver Signing Scenarios-->
+  <SigningScenarios>
+    <SigningScenario Value="131" ID="ID_SIGNINGSCENARIO_DRIVERS_1" FriendlyName="Auto generated policy on 01-23-2025">
+      <ProductSigners>
+        <FileRulesRef>
+          <FileRuleRef RuleID="ID_ALLOW_A_105" />
+          <FileRuleRef RuleID="ID_ALLOW_A_106" />
+          <FileRuleRef RuleID="ID_ALLOW_A_107" />
+          <FileRuleRef RuleID="ID_ALLOW_A_108" />
+        </FileRulesRef>
+        <AllowedSigners>
+          <AllowedSigner SignerId="ID_SIGNER_F_9" />
+          <AllowedSigner SignerId="ID_SIGNER_F_14" />
+          <AllowedSigner SignerId="ID_SIGNER_W_5" />
+        </AllowedSigners>
+      </ProductSigners>
+    </SigningScenario>
+    <SigningScenario Value="12" ID="ID_SIGNINGSCENARIO_WINDOWS" FriendlyName="Auto generated policy on 01-23-2025">
+      <ProductSigners>
+        <FileRulesRef>
+          <FileRuleRef RuleID="ID_ALLOW_A_F0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_F1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_F2" />
+          <FileRuleRef RuleID="ID_ALLOW_A_F3" />
+          <FileRuleRef RuleID="ID_ALLOW_A_F4" />
+          <FileRuleRef RuleID="ID_ALLOW_A_F5" />
+          <FileRuleRef RuleID="ID_ALLOW_A_F6" />
+          <FileRuleRef RuleID="ID_ALLOW_A_F7" />
+          <FileRuleRef RuleID="ID_ALLOW_A_F8" />
+          <FileRuleRef RuleID="ID_ALLOW_A_F9" />
+          <FileRuleRef RuleID="ID_ALLOW_A_FA" />
+          <FileRuleRef RuleID="ID_ALLOW_A_FB" />
+          <FileRuleRef RuleID="ID_ALLOW_A_FC" />
+          <FileRuleRef RuleID="ID_ALLOW_A_FD" />
+          <FileRuleRef RuleID="ID_ALLOW_A_FE" />
+          <FileRuleRef RuleID="ID_ALLOW_A_FF" />
+          <FileRuleRef RuleID="ID_ALLOW_A_100" />
+          <FileRuleRef RuleID="ID_ALLOW_A_101" />
+          <FileRuleRef RuleID="ID_ALLOW_A_102" />
+          <FileRuleRef RuleID="ID_ALLOW_A_103" />
+          <FileRuleRef RuleID="ID_ALLOW_A_104" />
+          <FileRuleRef RuleID="ID_ALLOW_A_109" />
+          <FileRuleRef RuleID="ID_ALLOW_A_10A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_10B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_10C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_10D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_10E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_10F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_110" />
+          <FileRuleRef RuleID="ID_ALLOW_A_111" />
+          <FileRuleRef RuleID="ID_ALLOW_A_112" />
+          <FileRuleRef RuleID="ID_ALLOW_A_113" />
+          <FileRuleRef RuleID="ID_ALLOW_A_114" />
+          <FileRuleRef RuleID="ID_ALLOW_A_115" />
+          <FileRuleRef RuleID="ID_ALLOW_A_116" />
+          <FileRuleRef RuleID="ID_ALLOW_A_117" />
+          <FileRuleRef RuleID="ID_ALLOW_A_118" />
+          <FileRuleRef RuleID="ID_ALLOW_A_119" />
+          <FileRuleRef RuleID="ID_ALLOW_A_11A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_11B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_11C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_11D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_11E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_11F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_120" />
+          <FileRuleRef RuleID="ID_ALLOW_A_121" />
+          <FileRuleRef RuleID="ID_ALLOW_A_122" />
+          <FileRuleRef RuleID="ID_ALLOW_A_123" />
+          <FileRuleRef RuleID="ID_ALLOW_A_124" />
+          <FileRuleRef RuleID="ID_ALLOW_A_125" />
+          <FileRuleRef RuleID="ID_ALLOW_A_126" />
+          <FileRuleRef RuleID="ID_ALLOW_A_127" />
+          <FileRuleRef RuleID="ID_ALLOW_A_128" />
+          <FileRuleRef RuleID="ID_ALLOW_A_129" />
+          <FileRuleRef RuleID="ID_ALLOW_A_12A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_12B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_12C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_12D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_12E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_12F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_130" />
+          <FileRuleRef RuleID="ID_ALLOW_A_131" />
+          <FileRuleRef RuleID="ID_ALLOW_A_132" />
+          <FileRuleRef RuleID="ID_ALLOW_A_133" />
+          <FileRuleRef RuleID="ID_ALLOW_A_134" />
+          <FileRuleRef RuleID="ID_ALLOW_A_135" />
+          <FileRuleRef RuleID="ID_ALLOW_A_136" />
+          <FileRuleRef RuleID="ID_ALLOW_A_137" />
+          <FileRuleRef RuleID="ID_ALLOW_A_138" />
+          <FileRuleRef RuleID="ID_ALLOW_A_139" />
+          <FileRuleRef RuleID="ID_ALLOW_A_13A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_13B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_13C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_13D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_13E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_13F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_140" />
+          <FileRuleRef RuleID="ID_ALLOW_A_141" />
+          <FileRuleRef RuleID="ID_ALLOW_A_142" />
+          <FileRuleRef RuleID="ID_ALLOW_A_143" />
+          <FileRuleRef RuleID="ID_ALLOW_A_144" />
+          <FileRuleRef RuleID="ID_ALLOW_A_145" />
+          <FileRuleRef RuleID="ID_ALLOW_A_146" />
+          <FileRuleRef RuleID="ID_ALLOW_A_147" />
+          <FileRuleRef RuleID="ID_ALLOW_A_148" />
+          <FileRuleRef RuleID="ID_ALLOW_A_149" />
+          <FileRuleRef RuleID="ID_ALLOW_A_14A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_14B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_14C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_14D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_14E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_14F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_150" />
+          <FileRuleRef RuleID="ID_ALLOW_A_151" />
+          <FileRuleRef RuleID="ID_ALLOW_A_152" />
+          <FileRuleRef RuleID="ID_ALLOW_A_153" />
+          <FileRuleRef RuleID="ID_ALLOW_A_154" />
+          <FileRuleRef RuleID="ID_ALLOW_A_155" />
+          <FileRuleRef RuleID="ID_ALLOW_A_156" />
+          <FileRuleRef RuleID="ID_ALLOW_A_157" />
+          <FileRuleRef RuleID="ID_ALLOW_A_158" />
+          <FileRuleRef RuleID="ID_ALLOW_A_159" />
+          <FileRuleRef RuleID="ID_ALLOW_A_15A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_15B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_15C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_15D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_15E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_15F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_160" />
+          <FileRuleRef RuleID="ID_ALLOW_A_161" />
+          <FileRuleRef RuleID="ID_ALLOW_A_162" />
+          <FileRuleRef RuleID="ID_ALLOW_A_163" />
+          <FileRuleRef RuleID="ID_ALLOW_A_164" />
+          <FileRuleRef RuleID="ID_ALLOW_A_165" />
+          <FileRuleRef RuleID="ID_ALLOW_A_166" />
+          <FileRuleRef RuleID="ID_ALLOW_A_167" />
+          <FileRuleRef RuleID="ID_ALLOW_A_168" />
+          <FileRuleRef RuleID="ID_ALLOW_A_169" />
+          <FileRuleRef RuleID="ID_ALLOW_A_16A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_16B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_16C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_16D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_16E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_16F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_170" />
+          <FileRuleRef RuleID="ID_ALLOW_A_171" />
+          <FileRuleRef RuleID="ID_ALLOW_A_172" />
+          <FileRuleRef RuleID="ID_ALLOW_A_173" />
+          <FileRuleRef RuleID="ID_ALLOW_A_174" />
+          <FileRuleRef RuleID="ID_ALLOW_A_175" />
+          <FileRuleRef RuleID="ID_ALLOW_A_176" />
+          <FileRuleRef RuleID="ID_ALLOW_A_177" />
+          <FileRuleRef RuleID="ID_ALLOW_A_178" />
+          <FileRuleRef RuleID="ID_ALLOW_A_179" />
+          <FileRuleRef RuleID="ID_ALLOW_A_17A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_17B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_17C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_17D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_17E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_17F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_180" />
+          <FileRuleRef RuleID="ID_ALLOW_A_181" />
+          <FileRuleRef RuleID="ID_ALLOW_A_182" />
+          <FileRuleRef RuleID="ID_ALLOW_A_183" />
+          <FileRuleRef RuleID="ID_ALLOW_A_184" />
+          <FileRuleRef RuleID="ID_ALLOW_A_185" />
+          <FileRuleRef RuleID="ID_ALLOW_A_186" />
+          <FileRuleRef RuleID="ID_ALLOW_A_187" />
+          <FileRuleRef RuleID="ID_ALLOW_A_188" />
+          <FileRuleRef RuleID="ID_ALLOW_A_189" />
+          <FileRuleRef RuleID="ID_ALLOW_A_18A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_18B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_18C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_18D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_18E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_18F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_190" />
+          <FileRuleRef RuleID="ID_ALLOW_A_191" />
+          <FileRuleRef RuleID="ID_ALLOW_A_192" />
+          <FileRuleRef RuleID="ID_ALLOW_A_193" />
+          <FileRuleRef RuleID="ID_ALLOW_A_194" />
+          <FileRuleRef RuleID="ID_ALLOW_A_195" />
+          <FileRuleRef RuleID="ID_ALLOW_A_196" />
+          <FileRuleRef RuleID="ID_ALLOW_A_197" />
+          <FileRuleRef RuleID="ID_ALLOW_A_198" />
+          <FileRuleRef RuleID="ID_ALLOW_A_199" />
+          <FileRuleRef RuleID="ID_ALLOW_A_19A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_19B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_19C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_19D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_19E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_19F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1A0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1A1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1A2" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1A3" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1A4" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1A5" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1A6" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1A7" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1A8" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1A9" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1AA" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1AB" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1AC" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1AD" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1AE" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1AF" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1B0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1B1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1B2" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1B3" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1B4" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1B5" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1B6" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1B7" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1B8" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1B9" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1BA" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1BB" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1BC" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1BD" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1BE" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1BF" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1C0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1C1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1C2" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1C3" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1C4" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1C5" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1C6" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1C7" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1C8" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1C9" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1CA" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1CB" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1CC" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1CD" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1CE" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1CF" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1D0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1D1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1D2" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1D3" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1D4" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1D5" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1D6" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1D7" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1D8" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1D9" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1DA" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1DB" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1DC" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1DD" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1DE" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1DF" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1E0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1E1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1E2" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1E3" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1E4" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1E5" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1E6" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1E7" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1E8" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1E9" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1EA" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1EB" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1EC" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1ED" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1EE" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1EF" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1F0" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1F1" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1F2" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1F3" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1F4" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1F5" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1F6" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1F7" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1F8" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1F9" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1FA" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1FB" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1FC" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1FD" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1FE" />
+          <FileRuleRef RuleID="ID_ALLOW_A_1FF" />
+          <FileRuleRef RuleID="ID_ALLOW_A_200" />
+          <FileRuleRef RuleID="ID_ALLOW_A_201" />
+          <FileRuleRef RuleID="ID_ALLOW_A_202" />
+          <FileRuleRef RuleID="ID_ALLOW_A_203" />
+          <FileRuleRef RuleID="ID_ALLOW_A_204" />
+          <FileRuleRef RuleID="ID_ALLOW_A_205" />
+          <FileRuleRef RuleID="ID_ALLOW_A_206" />
+          <FileRuleRef RuleID="ID_ALLOW_A_207" />
+          <FileRuleRef RuleID="ID_ALLOW_A_208" />
+          <FileRuleRef RuleID="ID_ALLOW_A_209" />
+          <FileRuleRef RuleID="ID_ALLOW_A_20A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_20B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_20C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_20D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_20E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_20F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_210" />
+          <FileRuleRef RuleID="ID_ALLOW_A_211" />
+          <FileRuleRef RuleID="ID_ALLOW_A_212" />
+          <FileRuleRef RuleID="ID_ALLOW_A_213" />
+          <FileRuleRef RuleID="ID_ALLOW_A_214" />
+          <FileRuleRef RuleID="ID_ALLOW_A_215" />
+          <FileRuleRef RuleID="ID_ALLOW_A_216" />
+          <FileRuleRef RuleID="ID_ALLOW_A_217" />
+          <FileRuleRef RuleID="ID_ALLOW_A_218" />
+          <FileRuleRef RuleID="ID_ALLOW_A_219" />
+          <FileRuleRef RuleID="ID_ALLOW_A_21A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_21B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_21C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_21D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_21E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_21F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_220" />
+          <FileRuleRef RuleID="ID_ALLOW_A_221" />
+          <FileRuleRef RuleID="ID_ALLOW_A_222" />
+          <FileRuleRef RuleID="ID_ALLOW_A_223" />
+          <FileRuleRef RuleID="ID_ALLOW_A_224" />
+          <FileRuleRef RuleID="ID_ALLOW_A_225" />
+          <FileRuleRef RuleID="ID_ALLOW_A_226" />
+          <FileRuleRef RuleID="ID_ALLOW_A_227" />
+          <FileRuleRef RuleID="ID_ALLOW_A_228" />
+          <FileRuleRef RuleID="ID_ALLOW_A_229" />
+          <FileRuleRef RuleID="ID_ALLOW_A_22A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_22B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_22C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_22D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_22E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_22F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_230" />
+          <FileRuleRef RuleID="ID_ALLOW_A_231" />
+          <FileRuleRef RuleID="ID_ALLOW_A_232" />
+          <FileRuleRef RuleID="ID_ALLOW_A_233" />
+          <FileRuleRef RuleID="ID_ALLOW_A_234" />
+          <FileRuleRef RuleID="ID_ALLOW_A_235" />
+          <FileRuleRef RuleID="ID_ALLOW_A_236" />
+          <FileRuleRef RuleID="ID_ALLOW_A_237" />
+          <FileRuleRef RuleID="ID_ALLOW_A_238" />
+          <FileRuleRef RuleID="ID_ALLOW_A_239" />
+          <FileRuleRef RuleID="ID_ALLOW_A_23A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_23B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_23C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_23D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_23E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_23F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_240" />
+          <FileRuleRef RuleID="ID_ALLOW_A_241" />
+          <FileRuleRef RuleID="ID_ALLOW_A_242" />
+          <FileRuleRef RuleID="ID_ALLOW_A_243" />
+          <FileRuleRef RuleID="ID_ALLOW_A_244" />
+          <FileRuleRef RuleID="ID_ALLOW_A_245" />
+          <FileRuleRef RuleID="ID_ALLOW_A_246" />
+          <FileRuleRef RuleID="ID_ALLOW_A_247" />
+          <FileRuleRef RuleID="ID_ALLOW_A_248" />
+          <FileRuleRef RuleID="ID_ALLOW_A_249" />
+          <FileRuleRef RuleID="ID_ALLOW_A_24A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_24B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_24C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_24D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_24E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_24F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_250" />
+          <FileRuleRef RuleID="ID_ALLOW_A_251" />
+          <FileRuleRef RuleID="ID_ALLOW_A_252" />
+          <FileRuleRef RuleID="ID_ALLOW_A_253" />
+          <FileRuleRef RuleID="ID_ALLOW_A_254" />
+          <FileRuleRef RuleID="ID_ALLOW_A_255" />
+          <FileRuleRef RuleID="ID_ALLOW_A_256" />
+          <FileRuleRef RuleID="ID_ALLOW_A_257" />
+          <FileRuleRef RuleID="ID_ALLOW_A_258" />
+          <FileRuleRef RuleID="ID_ALLOW_A_259" />
+          <FileRuleRef RuleID="ID_ALLOW_A_25A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_25B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_25C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_25D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_25E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_25F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_260" />
+          <FileRuleRef RuleID="ID_ALLOW_A_261" />
+          <FileRuleRef RuleID="ID_ALLOW_A_262" />
+          <FileRuleRef RuleID="ID_ALLOW_A_263" />
+          <FileRuleRef RuleID="ID_ALLOW_A_264" />
+          <FileRuleRef RuleID="ID_ALLOW_A_265" />
+          <FileRuleRef RuleID="ID_ALLOW_A_266" />
+          <FileRuleRef RuleID="ID_ALLOW_A_267" />
+          <FileRuleRef RuleID="ID_ALLOW_A_268" />
+          <FileRuleRef RuleID="ID_ALLOW_A_269" />
+          <FileRuleRef RuleID="ID_ALLOW_A_26A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_26B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_26C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_26D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_26E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_26F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_270" />
+          <FileRuleRef RuleID="ID_ALLOW_A_271" />
+          <FileRuleRef RuleID="ID_ALLOW_A_272" />
+          <FileRuleRef RuleID="ID_ALLOW_A_273" />
+          <FileRuleRef RuleID="ID_ALLOW_A_274" />
+          <FileRuleRef RuleID="ID_ALLOW_A_275" />
+          <FileRuleRef RuleID="ID_ALLOW_A_276" />
+          <FileRuleRef RuleID="ID_ALLOW_A_277" />
+          <FileRuleRef RuleID="ID_ALLOW_A_278" />
+          <FileRuleRef RuleID="ID_ALLOW_A_279" />
+          <FileRuleRef RuleID="ID_ALLOW_A_27A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_27B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_27C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_27D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_27E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_27F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_280" />
+          <FileRuleRef RuleID="ID_ALLOW_A_281" />
+          <FileRuleRef RuleID="ID_ALLOW_A_282" />
+          <FileRuleRef RuleID="ID_ALLOW_A_283" />
+          <FileRuleRef RuleID="ID_ALLOW_A_284" />
+          <FileRuleRef RuleID="ID_ALLOW_A_285" />
+          <FileRuleRef RuleID="ID_ALLOW_A_286" />
+          <FileRuleRef RuleID="ID_ALLOW_A_287" />
+          <FileRuleRef RuleID="ID_ALLOW_A_288" />
+          <FileRuleRef RuleID="ID_ALLOW_A_289" />
+          <FileRuleRef RuleID="ID_ALLOW_A_28A" />
+          <FileRuleRef RuleID="ID_ALLOW_A_28B" />
+          <FileRuleRef RuleID="ID_ALLOW_A_28C" />
+          <FileRuleRef RuleID="ID_ALLOW_A_28D" />
+          <FileRuleRef RuleID="ID_ALLOW_A_28E" />
+          <FileRuleRef RuleID="ID_ALLOW_A_28F" />
+          <FileRuleRef RuleID="ID_ALLOW_A_290" />
+          <FileRuleRef RuleID="ID_ALLOW_A_291" />
+          <FileRuleRef RuleID="ID_ALLOW_A_292" />
+        </FileRulesRef>
+        <AllowedSigners>
+          <AllowedSigner SignerId="ID_SIGNER_F_A" />
+          <AllowedSigner SignerId="ID_SIGNER_F_37" />
+          <AllowedSigner SignerId="ID_SIGNER_F_5FD" />
+          <AllowedSigner SignerId="ID_SIGNER_F_638" />
+          <AllowedSigner SignerId="ID_SIGNER_W_1" />
+        </AllowedSigners>
+      </ProductSigners>
+    </SigningScenario>
+  </SigningScenarios>
+  <UpdatePolicySigners />
+  <CiSigners>
+    <CiSigner SignerId="ID_SIGNER_F_A" />
+    <CiSigner SignerId="ID_SIGNER_F_37" />
+    <CiSigner SignerId="ID_SIGNER_F_5FD" />
+    <CiSigner SignerId="ID_SIGNER_F_638" />
+    <CiSigner SignerId="ID_SIGNER_W_1" />
+  </CiSigners>
+  <HvciOptions>0</HvciOptions>
+  <BasePolicyID>{488E7D72-DA1E-4219-BB58-22EEBCBB2CFE}</BasePolicyID>
+  <PolicyID>{56B7A976-68CC-4AC8-921E-FBB26BA84086}</PolicyID>
+  <Settings>
+    <Setting Provider="PolicyInfo" Key="Information" ValueName="Name">
+      <Value>
+        <String>HOBOWare-3.7.28-V01 - 23-01-2025</String>
+      </Value>
+    </Setting>
+  </Settings>
+</SiPolicy>

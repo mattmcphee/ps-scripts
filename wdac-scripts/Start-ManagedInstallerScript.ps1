@@ -37,3 +37,9 @@ $filepath = `
 Invoke-Command -ComputerName "MMWIN11-01" `
 -ArgumentList "AuditOnly","Overwrite" `
 -FilePath $filepath
+
+$filepath = `
+"C:\sources\repos\ps-scripts\wdac-scripts\Set-NoApplocker.ps1"
+Invoke-Command -ComputerName "MMWIN11-03" `
+-ArgumentList "AuditOnly","Overwrite" `
+-FilePath $filepath
