@@ -1,2 +1,6 @@
-[Xml]$xml = Get-Content "C:\sources\Supplemental-EpicGamesLauncher-1570-V01.xml"
-$settingsElement = $xml.CreateElement('Settings')
+$packageName = '*Navisworks Freedom*'
+
+Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
+                         'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `
+                 -ErrorAction:SilentlyContinue | 
+Where-Object   {$_.DisplayName -like $packageName}

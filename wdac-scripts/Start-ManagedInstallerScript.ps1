@@ -8,21 +8,30 @@ foreach($machine in $machines) {
         -FilePath $filepath
 }
 
-$filepath = `
-"C:\sources\repos\ps-scripts\wdac-scripts\Set-WDACApplocker.ps1"
-Invoke-Command -ComputerName "MMWIN11-04" `
--ArgumentList "AuditOnly","Overwrite" `
--FilePath $filepath
+function Set-WDACApplocker {
+    param(
+        # ComputerName
+        [Parameter(Mandatory=$true)]
+        [string]
+        $ComputerName
+    )
+    $filepath = "C:\sources\repos\ps-scripts\wdac-scripts\Set-WDACApplocker.ps1"
+    Invoke-Command -ComputerName $ComputerName -ArgumentList "AuditOnly","Overwrite" -FilePath $filepath
+}
 
-$filepath = `
-"C:\sources\repos\ps-scripts\wdac-scripts\Set-NoApplocker.ps1"
-Invoke-Command -ComputerName "MMWIN11-04" `
--ArgumentList "AuditOnly","Overwrite" `
--FilePath $filepath
+function Set-NoApplocker {
+    param(
+        # ComputerName
+        [Parameter(Mandatory=$true)]
+        [string]
+        $ComputerName
+    )
+    $filepath = "C:\sources\repos\ps-scripts\wdac-scripts\Set-NoApplocker.ps1"
+    Invoke-Command -ComputerName $ComputerName -ArgumentList "AuditOnly","Overwrite" -FilePath $filepath
+}
 
-$filepath = `
-"C:\sources\repos\ps-scripts\wdac-scripts\Set-NoApplocker.ps1"
-Invoke-Command -ComputerName "5CG21386SL" `
+$filepath = "C:\sources\repos\ps-scripts\wdac-scripts\Set-NoApplocker.ps1"
+Invoke-Command -ComputerName "5CD42935N5" `
 -ArgumentList "AuditOnly","Overwrite" `
 -FilePath $filepath
 

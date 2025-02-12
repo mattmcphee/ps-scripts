@@ -1,7 +1,7 @@
-<# 
-.SYNOPSIS 
+<#
+.SYNOPSIS
     Overwriting or Merge with current Managed Installer (MI) AppLocker Rules
-.DESCRIPTION 
+.DESCRIPTION
     Configure AppLocker xml to add Intune and SCCM as a managed installer, sets EnforcementMode="Enabled"
     Include Dll, EXE benign Deny rules for %OSDRIVE%
     Use -Merge to merge with existing rules, otherwise it will overwrite.
@@ -9,13 +9,13 @@
     -Set this will merge the policies. If not used default behaviour will be to merge
 .PARAMETER Mode
     -Mode (AuditOnly or Enabled) configures the managed installer enforcement mode. Defaults to AuditOnly
-.OUTPUTS 
+.OUTPUTS
     C:\Windows\Temp\AppLockerBeforeScript.xml
     C:\Windows\Temp\AppLockerMIPolicy.xml (gets deleted)
     C:\Windows\Temp\AppLockerAfterScript.xml
 .EXAMPLE
     Set-ManagedInstaller-Intune_SCCM_AppLocker_BenignDeny-Signed.ps1
-    Will Merge these settings to the current AppLocker settings 
+    Will Merge these settings to the current AppLocker settings
 .EXAMPLE
     Set-ManagedInstaller-Intune_SCCM_AppLocker_BenignDeny-Signed.ps1 -Mode AuditOnly -Set
     This will overwrite the current settings and Managed installer Enforcement Mode to AuditOnly
@@ -26,7 +26,7 @@
        Creation Date:   1.0 - 18/07/2024
                         1.1 - 19/08/2024 - MM - ManagedInstaller ccm version max changed to any maximum
                         1.2 - 21/08/2024 - MM - IntuneWindowsAgent.exe max version changed to any maximum
-#>     
+#>
 
 [CmdletBinding(DefaultParameterSetName="Default")]
 param (
@@ -122,6 +122,6 @@ if ($Set -eq "Overwrite") {
 Start-Process -FilePath "$env:windir\System32\appidtel.exe" `
     -ArgumentList "start -mionly" | Wait-Process
 Remove-Item -Path C:\Windows\Temp\AppLockerMIPolicy.xml
-Start-Sleep -Seconds 20
+Start-Sleep -Seconds 1
 Get-AppLockerPolicy -Effective -XML > C:\Windows\Temp\AppLockerAfterScript.xml
 Write-Host "Before and After Applocker xml can be found here C:\Windows\Temp\"

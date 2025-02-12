@@ -22,7 +22,7 @@ function New-SuppAppControlPolicy {
         ScanPath = $ScanPath
         FilePath = $FilePath
         Level = "WHQLFilePublisher"
-        Fallback = "FilePublisher","Hash"
+        Fallback = "FilePublisher","Publisher","Hash"
         NoShadowCopy = $true
         UserPEs = $true
         UserWriteablePaths = $true
