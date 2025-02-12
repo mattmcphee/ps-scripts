@@ -24,6 +24,7 @@ function Get-ActiveCIPolicies {
         }
     }
 }
+
 # SIG # Begin signature block
 # MIIl0QYJKoZIhvcNAQcCoIIlwjCCJb4CAQExDzANBglghkgBZQMEAgEFADB5Bgor
 # BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG

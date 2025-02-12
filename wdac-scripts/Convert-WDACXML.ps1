@@ -1,15 +1,15 @@
 function Convert-WDACXML {
     param (
-        # folder path
+        # folder path (no backslash at the end)
         [Parameter(Mandatory=$true)]
         [ValidateScript({ Test-Path -Path $_})]
         [string]
         $XmlFilePath,
-        # output path
-        [Parameter(Mandatory=$false)]
+        # output folder path (no backslash at the end)
+        [Parameter(Mandatory=$true)]
         [ValidateScript({ Test-Path -Path $_})]
         [string]
-        $CipOutputPath = (Get-ChildItem -Path $XmlFilePath).DirectoryName
+        $CipOutputPath
     )
     $xmlFiles = Get-ChildItem -Path $XmlFilePath -Filter '*.xml'
     foreach ($xmlFile in $xmlFiles) {
