@@ -23,30 +23,99 @@ function New-SCCMApplication {
         # IconPath - path to icon file on network drive
         [Parameter(Mandatory=$true)]
         [string]
-        $IconPath
+        $IconPath,
+        # ContentLocation - path to content on network drive
+        [Parameter(Mandatory=$true)]
+        [string]
+        $ContentLocation,
+        # Uninstall content location
+        [Parameter(Mandatory=$true)]
+        [string]
+        $UninstallContentLocation,
+        # Free space required (MB)
+        [Parameter(Mandatory=$true)]
+        [string]
+        $SpaceRequired,
+        # Install exe location
+        [Parameter(Mandatory=$true)]
+        [string]
+        $ExecutableFolder,
+        # Executable name (must include .exe at the end)
+        [Parameter(Mandatory=$true)]
+        [string]
+        $ExecutableName,
+        # is64bit - whether or not the application is 64bit
+        [Parameter(Mandatory=$false)]
+        [switch]
+        $Is64Bit
     )
 
     Set-Location -Path 'A00:\'
 
-    $appArgs = @{
-        Owner = $Owner
-        SupportContact = $Owner
-        DefaultLanguageId = 3081 # en-AU
-        Description = $Description
-        IconLocationFile = $IconPath
-        LocalizedDescription = $Description
-        LocalizedName = $ApplicationName
-        Name = $ApplicationName
-        Publisher = $Publisher
-        SoftwareVersion = $Version
+    # if app doesn't exist, create it
+    if (-not(Get-CMApplication -Name $ApplicationName -Fast)) {
+        New-CMApplication `
+            -Owner $Owner `
+            -SupportContact $Owner `
+            -DefaultLanguageId 3081 <# en-AU #> `
+            -Description $Description `
+            -IconLocationFile $IconPath `
+            -LocalizedDescription $Description `
+            -LocalizedName $ApplicationName `
+            -Name $ApplicationName `
+            -Publisher $Publisher `
+            -SoftwareVersion $Version
     }
-    New-CMApplication @appArgs -ErrorAction Stop
 
     $app = Get-CMApplication -Name $ApplicationName
 
+    # if publisher folder doesn't exist, create it and move app into it
     if (-not(Test-Path -Path ".\Application\$Publisher")) {
         New-CMFolder -Name $Publisher -ParentFolderPath '.\Application'
+        $app | Move-CMObject -FolderPath ".\Application\$Publisher"
     }
 
-    $app | Move-CMObject -FolderPath ".\Application\$Publisher" -ErrorAction Stop
+    # create requirement rules
+    $freeSpaceRule = Get-CMGlobalCondition -Name "Free disk space" |
+        New-CMRequirementRuleFreeDiskSpaceValue `
+            -PartitionOption 'System' `
+            -RuleOperator 'GreaterThan' `
+            -Value1 $SpaceRequired
+    $x64Rule = Get-CMGlobalCondition -Name "Supported Workstation OS x64" |
+        New-CMRequirementRuleBooleanValue -Value $true
+
+    # check to see if application has deployment type
+    # if app has no deployment types, create one
+    if ($app.NumberOfDeploymentTypes -lt 1) {
+        if ($Is64Bit) {
+            $fileDetClause = New-CMDetectionClauseFile `
+            -FileName $ExecutableName `
+            -Path $ExecutableFolder `
+            -Existence `
+            -Is64Bit
+        } else {
+            $fileDetClause = New-CMDetectionClauseFile `
+            -FileName $ExecutableName `
+            -Path $ExecutableFolder `
+            -Existence
+        }
+
+        Add-CMScriptDeploymentType `
+            -DeploymentTypeName $ApplicationName `
+            -ApplicationName $ApplicationName `
+            -InstallationBehaviorType 'InstallForSystem' `
+            -LogonRequirementType 'WhetherOrNotUserLoggedOn' `
+            -MaximumRuntimeMins 30 `
+            -EstimatedRuntimeMins 10 `
+            -AddRequirement @($freeSpaceRule,$x64Rule) `
+            -ContentLocation $ContentLocation `
+            -UninstallOption 'Different' `
+            -UninstallContentLocation $UninstallContentLocation `
+            -InstallCommand "Deploy-Application.exe -AllowRebootPassThru -DeploymentType 'Install'" `
+            -UninstallCommand "Deploy-Application.exe -AllowRebootPassThru -DeploymentType 'Uninstall'" `
+            -AddDetectionClause $fileDetClause
+    } else {
+        # app already has deployment types, let's exit
+        throw -Message "This app already has at least one deployment type. Exiting..."
+    }
 }
