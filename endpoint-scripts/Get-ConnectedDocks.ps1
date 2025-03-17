@@ -5,12 +5,12 @@ function Get-ConnectedDocks {
         [string]
         $ComputerName
     )
-    
+
     $pnpSignedDrivers = Get-CimInstance `
                             -ClassName Win32_PnPSignedDriver `
                             -ComputerName $ComputerName
     $connectedDocks = @()
-    
+
     foreach ($driver in $pnpSignedDrivers) {
         $installedDeviceID = "$($driver.DeviceID)"
 

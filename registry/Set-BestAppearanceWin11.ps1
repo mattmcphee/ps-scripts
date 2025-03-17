@@ -9,13 +9,13 @@ function Set-BestAppearanceWin11 {
     Invoke-Command -ComputerName $ComputerName -ScriptBlock {
         New-PSDrive -PSProvider Registry -Name HKU -Root HKEY_USERS
 
-        # $themePath = 'HKU:\S-1-5-21-36468863-1111239545-1232828436-70408\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize'
-        # $explorerPath = 'HKU:\S-1-5-21-36468863-1111239545-1232828436-70408\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
-        # $searchPath = 'HKU:\S-1-5-21-36468863-1111239545-1232828436-70408\Software\Microsoft\Windows\CurrentVersion\Search'
+        $themePath = 'HKU:\S-1-5-21-36468863-1111239545-1232828436-70408\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize'
+        $explorerPath = 'HKU:\S-1-5-21-36468863-1111239545-1232828436-70408\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
+        $searchPath = 'HKU:\S-1-5-21-36468863-1111239545-1232828436-70408\Software\Microsoft\Windows\CurrentVersion\Search'
 
-        $themePath = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize'
-        $explorerPath = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
-        $searchPath = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Search'
+        # $themePath = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize'
+        # $explorerPath = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
+        # $searchPath = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Search'
 
         Set-ItemProperty -Path $themePath -Name AppsUseLightTheme -Value 0
         Set-ItemProperty -Path $themePath -Name SystemUsesLightTheme -Value 0
