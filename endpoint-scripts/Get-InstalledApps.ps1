@@ -1,18 +1,22 @@
 function Get-InstalledApps {
     [CmdletBinding()]
-    param (
+    param(
         # ComputerName
-        [Parameter(Mandatory)]
+        [Parameter(Mandatory=$false)]
         [string]
         $ComputerName
     )
 
-    $apps = Invoke-Command -ComputerName $ComputerName -ScriptBlock {
-        $Apps = @()
-        $Apps += Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" # 32 Bit
-        $Apps += Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*"             # 64 Bit
-        return $Apps
+    if (!$ComputerName) {
+        Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" # 32 Bit
+        Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*"             # 64 Bit
+    } else {
+        $apps = Invoke-Command -ComputerName $ComputerName -ScriptBlock {
+            $remoteMachineApps = @()
+            $remoteMachineApps += Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" # 32 Bit
+            $remoteMachineApps += Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*"             # 64 Bit
+            $remoteMachineApps
+        }
+        $apps
     }
-
-    $apps
 }

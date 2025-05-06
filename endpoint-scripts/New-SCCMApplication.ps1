@@ -28,10 +28,6 @@ function New-SCCMApplication {
         [Parameter(Mandatory=$true)]
         [string]
         $ContentLocation,
-        # Uninstall content location
-        [Parameter(Mandatory=$false)]
-        [string]
-        $UninstallContentLocation,
         # Free space required (MB)
         [Parameter(Mandatory=$true)]
         [string]
@@ -44,6 +40,18 @@ function New-SCCMApplication {
         [Parameter(Mandatory=$true)]
         [string]
         $InstalledFile,
+        # Registry key path (don't include root e.g. hklm or hkey_local_machine)
+        [Parameter(Mandatory=$true)]
+        [string]
+        $RegKeyPath,
+        # Registry key name
+        [Parameter(Mandatory=$true)]
+        [string]
+        $RegKeyName,
+        # Registry key value
+        [Parameter(Mandatory=$true)]
+        [string]
+        $RegKeyValue,
         # is64bit - whether or not the application is 64bit
         [Parameter(Mandatory=$false)]
         [switch]
@@ -55,7 +63,11 @@ function New-SCCMApplication {
         # Estimated run time
         [Parameter(Mandatory=$true)]
         [string]
-        $EstimatedRunTime
+        $EstimatedRunTime,
+        # Uninstall content location
+        [Parameter(Mandatory=$false)]
+        [string]
+        $UninstallContentLocation
     )
 
     Set-Location -Path 'A00:\'
@@ -96,6 +108,7 @@ function New-SCCMApplication {
     # check to see if application has deployment type
     # if app has no deployment types, create one
     if ($app.NumberOfDeploymentTypes -lt 1) {
+        # file detection clause
         if ($Is64Bit) {
             $fileDetClause = New-CMDetectionClauseFile `
             -FileName $InstalledFile `
@@ -108,6 +121,17 @@ function New-SCCMApplication {
             -Path $InstallFolder `
             -Existence
         }
+
+        # registry detection clause
+        $regDetClause = New-CMDetectionClauseRegistryKeyValue `
+        -Hive 'LocalMachine' `
+        -KeyName $RegKeyPath `
+        -PropertyType 'String' `
+        -ValueName $RegKeyName `
+        -Value `
+        -ExpectedValue $RegKeyValue `
+        -ExpressionOperator 'IsEquals' `
+        -Is64Bit
 
         # if uninstall location has been provided then set the uninstall
         # if not then set same for install and uninstall
@@ -125,7 +149,7 @@ function New-SCCMApplication {
             -UninstallContentLocation $UninstallContentLocation `
             -InstallCommand "Deploy-Application.exe -AllowRebootPassThru -DeploymentType 'Install'" `
             -UninstallCommand "Deploy-Application.exe -AllowRebootPassThru -DeploymentType 'Uninstall'" `
-            -AddDetectionClause $fileDetClause
+            -AddDetectionClause $fileDetClause,$regDetClause
         } else {
             Add-CMScriptDeploymentType `
             -DeploymentTypeName $ApplicationName `
@@ -138,7 +162,7 @@ function New-SCCMApplication {
             -ContentLocation $ContentLocation `
             -InstallCommand "Deploy-Application.exe -AllowRebootPassThru -DeploymentType 'Install'" `
             -UninstallCommand "Deploy-Application.exe -AllowRebootPassThru -DeploymentType 'Uninstall'" `
-            -AddDetectionClause $fileDetClause
+            -AddDetectionClause $fileDetClause,$regDetClause
         }
     } else {
         # app already has deployment types, let's exit
