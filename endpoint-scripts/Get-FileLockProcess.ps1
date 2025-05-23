@@ -272,5 +272,3 @@ function Get-FileLockProcess {
     ##### END Main Body #####
 
 }
-
-Get-FileLockProcess -FilePath "C:\Windows\CCM\CcmStore.sdf"

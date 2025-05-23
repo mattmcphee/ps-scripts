@@ -7,5 +7,5 @@ function Open-CMLog {
     )
 
     # log file to open
-    & "C:\Program Files\CMTrace\CMTrace.exe" "\\$ComputerName\c$\Windows\Temp\RemoteUpdateManager.log"
+    & "C:\Program Files\CMTrace\CMTrace.exe" "\\$ComputerName\c$\Windows\Logs\Software\Uninstall-AdobeApps.log"
 }
