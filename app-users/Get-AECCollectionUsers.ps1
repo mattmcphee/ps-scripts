@@ -17,5 +17,6 @@ ForEach-Object {
     }
 }
 
-$users | Export-Csv -Path 'C:\sources\csv\aec-collection-users-23052025.csv' -NoTypeInformation -Encoding 'utf8' -Force
-$users | Export-Excel -Path 'C:\sources\csv\aec-collection-users-23052025.xlsx'
+$users | Export-Csv -Path 'C:\sources\csv\aec-collection-users-26052025.csv' -NoTypeInformation -Encoding 'utf8' -Force
+$users | Export-Excel -Path 'C:\sources\csv\aec-collection-users-26052025.xlsx'
+
