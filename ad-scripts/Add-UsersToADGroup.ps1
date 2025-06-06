@@ -10,7 +10,7 @@ function Add-UsersToADGroup {
     [string]
     $Group
   )
-  
+
   $ADGroup = Get-ADGroup -Filter {Name -like $Group} | Select-Object Name
 
   if ($ADGroup.Count -eq 0) {

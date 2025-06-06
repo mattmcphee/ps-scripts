@@ -1,7 +1,7 @@
 <#
 .SYNOPSIS
-    Gets a list of computers then compares the computer's actual BitLocker key to 
-    the key listed in ActiveDirectory. 
+    Gets a list of computers then compares the computer's actual BitLocker key to
+    the key listed in ActiveDirectory.
     Uses ADComputer object information and information from Get-BitLockerVolume
     to compare.
 .NOTES
@@ -15,11 +15,11 @@
 .INPUTS
     A file path to a list of computer names in .txt format
 .OUTPUTS
-    Information to the console about the computer's AD bitlocker key and the 
+    Information to the console about the computer's AD bitlocker key and the
     actual key from manage-bde.
     If the ExportCsvPath parameter is set it will output a csv to the location
     specified.
-    If the computer is offline at the time of script execution then it will skip 
+    If the computer is offline at the time of script execution then it will skip
     that computer.
 .EXAMPLE
     Compare-ADBitLockerToActualBitLocker -ComputerListPath 'C:\sources\computers.csv'
@@ -84,7 +84,7 @@ function Compare-ADBitLockerToActualBitLocker {
             $actualRecoveryType = $actualRecoveryObj.KeyProtectorType
             $actualRecoveryId = $actualRecoveryObj.KeyProtectorId
             $actualRecovery
-            
+
             Write-Host "Actual BitLocker key on $($computer):"
             Write-Host $actualBitlockerKeyId
 
@@ -97,7 +97,7 @@ function Compare-ADBitLockerToActualBitLocker {
                 Write-Host $actualBitlockerKeyId -BackgroundColor DarkGreen
                 $keysMatch = "Yes"
             } else {
-                $errorString = "The current BitLocker key on the device" + 
+                $errorString = "The current BitLocker key on the device" +
                 " does not match the latest key in Active Directory."
                 Write-Host $errorString -BackgroundColor Red
                 Write-Host $ADBitlockerKeyId -BackgroundColor Red

@@ -1,3 +1,8 @@
+<#
+.NOTES
+THIS IS BROKEN!
+#>
+function Get-BluebeamUsers {
 $bluebeamUsers = Get-ADGroupMember app_bluebeam_revu_usg |
 Get-ADUser -Properties givenName, surname, department, emailaddress
 
@@ -19,3 +24,4 @@ $sortedBluebeamUsers = $bluebeamBusinessUnits | Sort-Object department, surname
 
 $sortedBluebeamUsers | Export-Csv -Path 'C:\sources\csv\bluebeam-users-23052025.csv' -NoTypeInformation -Encoding 'utf8'
 $sortedBluebeamUsers | Export-Excel -Path 'C:\sources\csv\bluebeam-users-23052025.xlsx'
+}

@@ -6,9 +6,8 @@ function Get-TeamsVersion {
         [string]
         $ComputerName = $env:COMPUTERNAME
     )
-    $output = Invoke-Command -ComputerName $ComputerName -ScriptBlock {
-        $output = (Get-ChildItem "C:\Program Files\WindowsApps\MSTeams*").Name
-        $output
+
+    Invoke-Command -ComputerName $ComputerName -ScriptBlock {
+        (Get-ChildItem "C:\Program Files\WindowsApps\MSTeams*").Name
     }
-    $output
 }
