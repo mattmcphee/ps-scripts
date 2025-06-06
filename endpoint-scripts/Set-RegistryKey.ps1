@@ -57,5 +57,3 @@ function Set-RegistryKey {
         }
     }
 }
-
-Set-RegistryKey -Key 'HKLM:\Software\BMD' -Name 'testname' -Value 'testvalue'

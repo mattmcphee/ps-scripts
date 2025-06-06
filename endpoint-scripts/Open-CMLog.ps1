@@ -3,9 +3,19 @@ function Open-CMLog {
         # ComputerName
         [Parameter()]
         [string]
-        $ComputerName
+        $ComputerName,
+        # Path
+        [Parameter(Mandatory)]
+        [string]
+        $Path
     )
 
+    # edit string to use UNC
+    $Path.replace(":","$")
+
+    # process path
+    $process = "C:\Program Files\CMTrace\CMTrace.exe"
+
     # log file to open
-    & "C:\Program Files\CMTrace\CMTrace.exe" "\\$ComputerName\c$\Windows\Logs\Software\Uninstall-AdobeApps.log"
+    Start-Process -FilePath $process -ArgumentList "\\$ComputerName\$Path"
 }
