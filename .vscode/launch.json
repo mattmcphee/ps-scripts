@@ -11,6 +11,18 @@
             "script": "${file}",
             "args": [],
             "cwd": "${file}"
+        },
+        {
+            "name": "Launch script with args",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "C:/sources/repos/WDAC/Managed Installer/Set-ManagedInstallers.ps1",
+            "cwd": "${fileDirname}",
+            "args": [
+                "-ComputerName", "mmwin11-05",
+                "-XmlPolicy", "C:/wdac/BMD-WDAC-Applocker-Policy.xml",
+                "-OutputFolder", "C:/wdac"
+            ]
         }
     ]
 }

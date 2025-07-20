@@ -28,32 +28,54 @@ function Get-InstalledApps {
         $ApplicationName
     )
 
-    $apps = @()
+    $getAppsScriptBlock = {
+        $apps = @()
 
-    if (!$ComputerName) {
-        $apps += Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*"
-        $apps += Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*"
-    } else {
-        $apps = Invoke-Command -ComputerName $ComputerName -ScriptBlock {
-            $remoteApps = @()
-            $remoteApps += Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*"
-            $remoteApps += Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*"
-            return $remoteApps
+        $x64Apps = Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*" |
+            Select-Object *,@{ n="RegistryKey"; e={$_.PSPath.Substring(36)} }
+        $apps += $x64Apps
+
+        $x86Apps = Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" |
+            Select-Object *,@{ n="RegistryKey"; e={$_.PSPath.Substring(36)} }
+        $apps += $x86Apps
+
+        $officeRegistryKey = "SOFTWARE\Microsoft\Office\ClickToRun\Configuration"
+        $officeVersion = (Get-ItemProperty -Path "HKLM:\$officeRegistryKey" | Select-Object VersionToReport).VersionToReport.Substring(5)
+        $apps += [PSCustomObject]@{
+            "DisplayName" = "Microsoft Office 365 Apps for Enterprise"
+            "DisplayVersion" = $officeVersion
+            "RegistryKey" = "HKEY_LOCAL_MACHINE\$officeRegistryKey"
         }
+
+        $bginfoRegistryKey = "SOFTWARE\BMD\BGInfo"
+        $bginfoProps = Get-ItemProperty -Path "HKLM:\$bginfoRegistryKey"
+        $apps += [PSCustomObject]@{
+            "DisplayName" = $bginfoProps.PSChildName
+            "DisplayVersion" = $bginfoProps.Version
+            "RegistryKey" = "HKEY_LOCAL_MACHINE\$bginfoRegistryKey"
+        }
+
+        $selectProperties = @(
+            'DisplayName',
+            'DisplayVersion',
+            'InstallLocation',
+            'UninstallString',
+            'QuietUninstallString',
+            'RegistryKey'
+        )
+
+        return $apps | Select-Object $selectProperties
+    }
+
+    if ($ComputerName) {
+        $apps = Invoke-Command -ComputerName $ComputerName -ScriptBlock $getAppsScriptBlock
+    } else {
+        $apps = & $getAppsScriptBlock
     }
 
     if ($ApplicationName) {
-        $apps = $apps | Where-Object { $_.DisplayName -like "$ApplicationName" } |
-        Select-Object Displayname,DisplayVersion,InstallLocation,UninstallString,QuietUninstallString,@{
-            n='RegistryKey'
-            e={ $_.PsPath.substring(36) }
-        } | Sort-Object DisplayName
+        return $apps | Where-Object { $_.DisplayName -like $ApplicationName } | Sort-Object DisplayName
     } else {
-        $apps = $apps | Select-Object DisplayName,DisplayVersion,InstallLocation,UninstallString,QuietUninstallString,@{
-            n='RegistryKey'
-            e={ $_.PsPath.substring(36) }
-        } | Sort-Object DisplayName
+        return $apps | Sort-Object DisplayName
     }
-
-    $apps
 }
