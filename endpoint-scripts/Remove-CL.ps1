@@ -11,4 +11,3 @@ function Remove-CL {
         reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "__PSLockdownPolicy" /f
     }
 }
-

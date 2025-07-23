@@ -7,17 +7,12 @@ function Import-VMToSCCM {
         # MacAddress
         [Parameter(Mandatory)]
         [string]
-        $MacAddress,
-        # SMBiosGuid
-        [Parameter(Mandatory)]
-        [string]
-        $SMBiosGuid
+        $MacAddress
     )
 
     $OsdPromptCollectionId = "A000005E"
 
     Import-CMComputerInformation -ComputerName $ComputerName `
         -MacAddress $MacAddress `
-        -SMBiosGuid $SMBiosGuid `
         -CollectionId $OsdPromptCollectionId
 }

@@ -1,4 +1,4 @@
-﻿<# 
+<# 
 .SYNOPSIS 
     Overwriting or Merge with current Managed Installer (MI) AppLocker Rules
 .DESCRIPTION 
@@ -126,4 +126,3 @@ Remove-Item -Path C:\Windows\Temp\AppLockerMIPolicy.xml
 Start-Sleep 30
 Get-AppLockerPolicy -Effective -XML > C:\Windows\Temp\AppLockerAfterScript.xml
 Write-Host "Before and After Applocker xml can be found here C:\Windows\Temp\"
-

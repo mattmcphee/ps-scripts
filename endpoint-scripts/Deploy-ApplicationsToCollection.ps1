@@ -1,7 +1,7 @@
 function Deploy-ApplicationsToCollection {
     <#
     .SYNOPSIS
-        Deploys a list of applications to a collection. The application and the 
+        Deploys a list of applications to a collection. The application and the
         collection must already exist for this function to work.
     .NOTES
         Version:        1.0
@@ -30,7 +30,7 @@ function Deploy-ApplicationsToCollection {
         [string]
         $CollectionName
     )
-    
+
     Import-MEMModule A00
 
     $apps = Get-Content -Path $ApplicationListPath

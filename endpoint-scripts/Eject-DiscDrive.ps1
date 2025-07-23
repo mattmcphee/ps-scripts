@@ -25,4 +25,3 @@ function Eject-DiscDrive {
         }
     }
 }
-
