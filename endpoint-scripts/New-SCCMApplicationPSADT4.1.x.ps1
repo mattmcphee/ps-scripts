@@ -1,4 +1,4 @@
-function New-SCCMApplication4 {
+function New-SCCMApplicationPSADT4.1.x {
     param (
         # ApplicationName
         [Parameter(Mandatory=$true)]
@@ -111,58 +111,58 @@ function New-SCCMApplication4 {
         # file detection clause
         if ($Is64Bit) {
             $fileDetClause = New-CMDetectionClauseFile `
-            -FileName $InstalledFile `
-            -Path $InstallFolder `
-            -Existence `
-            -Is64Bit
+                -FileName $InstalledFile `
+                -Path $InstallFolder `
+                -Existence `
+                -Is64Bit
         } else {
             $fileDetClause = New-CMDetectionClauseFile `
-            -FileName $InstalledFile `
-            -Path $InstallFolder `
-            -Existence
+                -FileName $InstalledFile `
+                -Path $InstallFolder `
+                -Existence
         }
 
         # registry detection clause
         $regDetClause = New-CMDetectionClauseRegistryKeyValue `
-        -Hive 'LocalMachine' `
-        -KeyName $RegKeyPath `
-        -PropertyType 'String' `
-        -ValueName $RegKeyName `
-        -Value `
-        -ExpectedValue $RegKeyValue `
-        -ExpressionOperator 'IsEquals' `
-        -Is64Bit
+            -Hive 'LocalMachine' `
+            -KeyName $RegKeyPath `
+            -PropertyType 'String' `
+            -ValueName $RegKeyName `
+            -Value `
+            -ExpectedValue $RegKeyValue `
+            -ExpressionOperator 'IsEquals' `
+            -Is64Bit
 
         # if uninstall location has been provided then set the uninstall
         # if not then set same for install and uninstall
         if ($UninstallContentLocation) {
             Add-CMScriptDeploymentType `
-            -DeploymentTypeName $ApplicationName `
-            -ApplicationName $ApplicationName `
-            -InstallationBehaviorType 'InstallForSystem' `
-            -LogonRequirementType 'WhetherOrNotUserLoggedOn' `
-            -MaximumRuntimeMins $MaxRunTime `
-            -EstimatedRuntimeMins $EstimatedRunTime `
-            -AddRequirement @($freeSpaceRule,$x64Rule) `
-            -ContentLocation $ContentLocation `
-            -UninstallOption 'Different' `
-            -UninstallContentLocation $UninstallContentLocation `
-            -InstallCommand "Invoke-AppDeployToolkit.exe -AllowRebootPassThru -DeploymentType Install" `
-            -UninstallCommand "Invoke-AppDeployToolkit.exe -AllowRebootPassThru -DeploymentType Uninstall" `
-            -AddDetectionClause $fileDetClause,$regDetClause
+                -DeploymentTypeName $ApplicationName `
+                -ApplicationName $ApplicationName `
+                -InstallationBehaviorType 'InstallForSystem' `
+                -LogonRequirementType 'WhetherOrNotUserLoggedOn' `
+                -MaximumRuntimeMins $MaxRunTime `
+                -EstimatedRuntimeMins $EstimatedRunTime `
+                -AddRequirement @($freeSpaceRule,$x64Rule) `
+                -ContentLocation $ContentLocation `
+                -UninstallOption 'Different' `
+                -UninstallContentLocation $UninstallContentLocation `
+                -InstallCommand "Invoke-AppDeployToolkit.exe -DeploymentType Install" `
+                -UninstallCommand "Invoke-AppDeployToolkit.exe -DeploymentType Uninstall" `
+                -AddDetectionClause $fileDetClause,$regDetClause
         } else {
             Add-CMScriptDeploymentType `
-            -DeploymentTypeName $ApplicationName `
-            -ApplicationName $ApplicationName `
-            -InstallationBehaviorType 'InstallForSystem' `
-            -LogonRequirementType 'WhetherOrNotUserLoggedOn' `
-            -MaximumRuntimeMins $MaxRunTime `
-            -EstimatedRuntimeMins $EstimatedRunTime `
-            -AddRequirement @($freeSpaceRule,$x64Rule) `
-            -ContentLocation $ContentLocation `
-            -InstallCommand "Invoke-AppDeployToolkit.exe -AllowRebootPassThru -DeploymentType Install" `
-            -UninstallCommand "Invoke-AppDeployToolkit.exe -AllowRebootPassThru -DeploymentType Uninstall" `
-            -AddDetectionClause $fileDetClause,$regDetClause
+                -DeploymentTypeName $ApplicationName `
+                -ApplicationName $ApplicationName `
+                -InstallationBehaviorType 'InstallForSystem' `
+                -LogonRequirementType 'WhetherOrNotUserLoggedOn' `
+                -MaximumRuntimeMins $MaxRunTime `
+                -EstimatedRuntimeMins $EstimatedRunTime `
+                -AddRequirement @($freeSpaceRule,$x64Rule) `
+                -ContentLocation $ContentLocation `
+                -InstallCommand "Invoke-AppDeployToolkit.exe -DeploymentType Install" `
+                -UninstallCommand "Invoke-AppDeployToolkit.exe -DeploymentType Uninstall" `
+                -AddDetectionClause $fileDetClause,$regDetClause
         }
     } else {
         # app already has deployment types, let's exit

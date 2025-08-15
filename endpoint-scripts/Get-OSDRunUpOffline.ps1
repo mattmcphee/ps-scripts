@@ -13,8 +13,7 @@ function Get-OSDRunUpOffline {
         $results = @()
         try {
             Import-MEMModule -SiteCode "A00"
-        }
-        catch {
+        } catch {
             "Error: $_"
             exit
         }
@@ -40,8 +39,8 @@ function Get-OSDRunUpOffline {
             Get-WmiObject -ComputerName $sccmComputerName `
                 -Namespace $sccmWmiNamespace `
                 -Class $Class |
-            Where-Object { $_.ResourceID -eq $resId } |
-            Select-Object -First 1
+                Where-Object { $_.ResourceID -eq $resId } |
+                Select-Object -First 1
         }
 
         function Convert-WmiDateTime {
@@ -107,14 +106,14 @@ function Get-OSDRunUpOffline {
             switch ($wmiBitLocker.ProtectionStatus) {
                 0 { $blStatus = "Off" }
                 1 { $blStatus = "On" }
-                Default { $blStatus = "Unknown" }
+                default { $blStatus = "Unknown" }
             }
 
             # make secureboot status more descriptive
             switch ($wmiSecureBoot.IsEnabled_InitialValue) {
                 0 { $secureBootStatus = "Disabled" }
                 1 { $secureBootStatus = "Enabled" }
-                Default { $secureBootStatus = "Unknown" }
+                default { $secureBootStatus = "Unknown" }
             }
 
             # add all gathered info into a big ol' object ball
