@@ -45,13 +45,28 @@ function Write-Log {
         [Parameter(Mandatory = $false)]
         [string]
         $Context = "PowerShellScript",
-        # Quiet - suppresses output
+        # Quiet - suppresses output to the console
         [Parameter(Mandatory = $false)]
         [switch]
-        $Quiet = $false
+        $Quiet = $false,
+        # NoClobber
+        [Parameter(Mandatory = $false)]
+        [switch]
+        $NoClobber
     )
 
+    begin { 
+        # Set VerbosePreference to Continue so that verbose messages are displayed. 
+        $VerbosePreference = 'Continue' 
+    } 
+
     process {
+        # if the file already exists and NoClobber was specified, do not write to the log. 
+        if ((Test-Path $Path) -AND $NoClobber) { 
+            Write-Error "Log file $Path already exists, and you specified NoClobber. Either delete the file or specify a different name." 
+            return 
+        } 
+
         if (-not $Quiet) {
             # output the message
             Write-Host $Message
@@ -82,4 +97,6 @@ function Write-Log {
         # append line to log file
         $logLine | Out-File -FilePath $Path -Append -Encoding utf8
     }
+
+    end {}
 }
