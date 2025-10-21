@@ -13,7 +13,8 @@ function Get-OSDRunUpOffline {
         $results = @()
         try {
             Import-MEMModule -SiteCode "A00"
-        } catch {
+        }
+        catch {
             "Error: $_"
             exit
         }
@@ -39,8 +40,8 @@ function Get-OSDRunUpOffline {
             Get-WmiObject -ComputerName $sccmComputerName `
                 -Namespace $sccmWmiNamespace `
                 -Class $Class |
-                Where-Object { $_.ResourceID -eq $resId } |
-                Select-Object -First 1
+            Where-Object { $_.ResourceID -eq $resId } |
+            Select-Object -First 1
         }
 
         function Convert-WmiDateTime {

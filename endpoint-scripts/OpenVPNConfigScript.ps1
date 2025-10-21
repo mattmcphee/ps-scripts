@@ -100,7 +100,7 @@ block-outside-dns
         Remove-Item -Path "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\OpenVPN" -Recurse
         # Restart services
         Start-Sleep -Seconds 15
-        Restart-Service -Name OpenVPNService,OpenVPNServiceInteractive
+        Restart-Service -Name OpenVPNService, OpenVPNServiceInteractive
     }
 
     Uninstall {

@@ -11,11 +11,11 @@ function Open-CMLog {
     )
 
     # edit string to use UNC
-    $Path.replace(":","$")
+    $uncPath = $Path.replace(":", "$")
 
     # process path
     $process = "C:\Program Files\CMTrace\CMTrace.exe"
 
     # log file to open
-    Start-Process -FilePath $process -ArgumentList "\\$ComputerName\$Path"
+    Start-Process -FilePath $process -ArgumentList "\\$ComputerName\$uncPath"
 }

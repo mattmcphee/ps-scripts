@@ -1,4 +1,35 @@
-function test-writingerrortolog {
+function Wait-ProcessPolled {
+    [CmdletBinding()]
+    param (
+        # ProcessName - process to wait for
+        [Parameter(Mandatory)]
+        [string]
+        $ProcessName,
+        # MaxAttempts - number of times to poll the process
+        [Parameter(Mandatory)]
+        [ValidateRange("Positive")]
+        [int]
+        $MaxAttempts,
+        # WaitSeconds - seconds to wait between polling
+        [Parameter(Mandatory)]
+        [ValidateRange("Positive")]
+        [int]
+        $WaitSeconds,
+        # LogPath - path to write logs to. This is mandatory because this function is specifically to be used with no-touch scripts.
+        [Parameter(Mandatory)]
+        [ValidateNotNullOrEmpty()]
+        [ValidateScript({
+                $dir = Split-Path $_ -Parent
+                if (Test-Path $dir) {
+                    return $true
+                } else {
+                    throw "LogPath: The folder path '$dir' does not exist."
+                }
+            })]
+        [string]
+        $LogPath
+    )
+
     function Write-Log {
         <#
     .SYNOPSIS
@@ -76,16 +107,19 @@ function test-writingerrortolog {
         }
     }
 
-    $logPath = 'C:\sources\logs\errortest.log'
-
-    try {
-        Get-ItemPropertyValue -Path 'C:\paththatdoesntexist' -Name 'namethatdoesntexist' -ErrorAction Stop
-    } catch {
-        $coolError = $_
-        Write-Log $_ -Level Error -Path $logPath
-        Write-Log $_.ScriptStackTrace -Level Error -Path $logPath
-        Write-Log $PSScriptRoot -Level Warning -Path $logPath
+    $curAttempts = 0
+    while ($curAttempts -lt $MaxAttempts) {
+        $curAttempts++
+        try {
+            $proc = Get-Process -Name $ProcessName
+            if ($proc) {
+                $msg = "$ProcessName is still running. Waiting $waitSecs seconds. This is attempt $curAttempts out of $maxAttempts."
+                Write-Log -Message $msg -Level Info -Path $LogPath
+            }
+        } catch {
+            Write-Log "Process not found. Proceeding..." -Level Info -Path $LogPath
+            break
+        }
+        Start-Sleep -Seconds $waitSecs
     }
 }
-
-test-writingerrortolog
