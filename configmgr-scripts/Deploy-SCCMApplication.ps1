@@ -90,7 +90,7 @@ function Deploy-SCCMApplication {
     if ($SupersededApplicationName) {
         try {
             $dt = Get-CMDeploymentType -ApplicationName $app.LocalizedDisplayName
-            $supersededApp = Get-CMApplication -Name "$SupersededApplicationName" -Fast
+            $supersededApp = Get-CMApplication -Name $SupersededApplicationName -Fast
             if (-not $supersededApp) {
                 throw "Application '$SupersededApplicationName' not found."
             } elseif ($supersededApp.Count -gt 1) {
@@ -102,12 +102,14 @@ function Deploy-SCCMApplication {
                 throw "Superseded application '$SupersededApplicationName' has no deployment types."
             }
             $supersededAppDt = Get-CMDeploymentType -ApplicationName $supersededApp.LocalizedDisplayName
-            
+            Write-Host "Setting supersedence..."
             Set-CMApplicationSupersedence -InputObject $app `
                 -SupersededApplication $supersededApp `
                 -CurrentDeploymentType $dt `
                 -OldDeploymentType $supersededAppDt `
                 -IsUninstall $Uninstall
+            Write-Host "Supersedence set. Confirming..."
+            
         } catch {
             throw $_
         }

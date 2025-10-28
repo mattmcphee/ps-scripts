@@ -18,7 +18,7 @@ function New-AppScaffold {
 
     New-Item -Path "$Path\$ApplicationName" -Name "Install" -ItemType Directory
 
-    Copy-Item -Path "C:\sources\staging\PSAppDeployToolkit_v4.1.x\*" `
+    Copy-Item -Path "C:\sources\staging\psadt_v4.1.7\*" `
         -Destination "$Path\$ApplicationName\Install" `
         -Recurse `
         -Force
