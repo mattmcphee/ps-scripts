@@ -28,7 +28,7 @@ function Deploy-SCCMApplication {
         [string]$ApplicationName,
 
         [Parameter(Mandatory = $false)]
-        [string]$CollectionName,
+        [string[]]$CollectionName,
 
         [Parameter(Mandatory = $false)]
         [bool]$ApprovalRequired = $false,
@@ -73,19 +73,6 @@ function Deploy-SCCMApplication {
         throw "Application '$ApplicationName' has no deployment types."
     }
 
-    # find the target collection object
-    if ($CollectionName) {
-        Write-Verbose "Searching for collection: '$CollectionName'..."
-        try {
-            $coll = Get-CMCollection -Name $CollectionName
-            if (-not $coll) {
-                throw "Collection '$CollectionName' not found."
-            }
-        } catch {
-            throw $_
-        }
-    }
-
     # set supersedence if superseded application has been provided
     if ($SupersededApplicationName) {
         try {
@@ -119,21 +106,32 @@ function Deploy-SCCMApplication {
     $availableDateTime = $deadlineDateTime.AddDays(-1)
 
     Write-Verbose "Creating deployment(s) for '$ApplicationName'..."
-    if ($coll) {
-        try {
-            New-CMApplicationDeployment -InputObject $app `
-                -Collection $coll `
-                -DeployAction Install `
-                -DeployPurpose $DeployPurpose `
-                -TimeBaseOn LocalTime `
-                -ApprovalRequired $ApprovalRequired `
-                -AvailableDateTime $availableDateTime `
-                -DeadlineDateTime $deadlineDateTime `
-                -UpdateSupersedence $true
 
-            Write-Verbose "Successfully created deployment for application '$ApplicationName' to collection '$CollectionName'."
-        } catch {
-            throw $_
+    # find the target collection object
+    if ($CollectionName) {
+        foreach ($collectionItem in $CollectionName) {
+            Write-Verbose "Searching for collection: '$collectionItem'..."
+            try {
+                $coll = Get-CMCollection -Name $collectionItem
+                if (-not $coll) {
+                    Write-Host "Collection: '$collectionItem' not found. Skipping..." -ForegroundColor Red
+                    continue
+                }
+
+                New-CMApplicationDeployment -InputObject $app `
+                    -Collection $coll `
+                    -DeployAction Install `
+                    -DeployPurpose $DeployPurpose `
+                    -TimeBaseOn LocalTime `
+                    -ApprovalRequired $ApprovalRequired `
+                    -AvailableDateTime $availableDateTime `
+                    -DeadlineDateTime $deadlineDateTime `
+                    -UpdateSupersedence $true
+        
+                Write-Verbose "Successfully created deployment for application '$ApplicationName' to collection '$collectionItem'."
+            } catch {
+                throw $_
+            }
         }
     }
 
