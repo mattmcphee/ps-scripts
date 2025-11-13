@@ -25,7 +25,7 @@ function Write-Log {
         [string]
         $Level = "Info",
         # Path
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory = $false)]
         [ValidateNotNullOrEmpty()]
         [ValidateScript({
                 $dir = Split-Path $_ -Parent
@@ -36,7 +36,7 @@ function Write-Log {
                 }
             })]
         [string]
-        $Path,
+        $Path = "C:\Windows\Logs\Software\CHANGEME.log",
         # Component
         [Parameter(Mandatory = $false)]
         [string]
@@ -86,7 +86,7 @@ function Write-Log {
         $logLine = "<![LOG[$Message]LOG]!>" +
         "<" +
         "time=`"$(Get-Date -Format "HH:mm:ss.ffffff")`" " +
-        "date=`"$(Get-Date -Format "d-M-yyyy")`" " +
+        "date=`"$(Get-Date -Format "M-d-yyyy")`" " +
         "component=`"$Component`" " +
         "context=`"$Context`" " +
         "type=`"$type`" " +
