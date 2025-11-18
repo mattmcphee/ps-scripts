@@ -53,6 +53,10 @@ function Deploy-SCCMApplication {
         [switch]$ApplicationsForWorkstations
     )
 
+    $ogLoc = Get-Location
+
+    Set-Location 'A00:'
+
     # find the application object
     Write-Verbose "Searching for application: '$ApplicationName'..."
     try {
@@ -187,4 +191,6 @@ function Deploy-SCCMApplication {
 
         Write-Verbose "Successfully created deployment for application '$ApplicationName' to collection 'Applications for Workstations'."
     }
+
+    Set-Location $ogLoc
 }
