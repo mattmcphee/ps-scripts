@@ -102,8 +102,6 @@ function New-SCCMApplicationPSADT4.1.x {
             -PartitionOption 'System' `
             -RuleOperator 'GreaterThan' `
             -Value1 $SpaceRequired
-    $x64Rule = Get-CMGlobalCondition -Name "Supported Workstation OS x64" |
-        New-CMRequirementRuleBooleanValue -Value $true
 
     # check to see if application has deployment type
     # if app has no deployment types, create one
@@ -143,7 +141,7 @@ function New-SCCMApplicationPSADT4.1.x {
                 -LogonRequirementType 'WhetherOrNotUserLoggedOn' `
                 -MaximumRuntimeMins $MaxRunTime `
                 -EstimatedRuntimeMins $EstimatedRunTime `
-                -AddRequirement @($freeSpaceRule,$x64Rule) `
+                -AddRequirement $freeSpaceRule `
                 -ContentLocation $ContentLocation `
                 -UninstallOption 'Different' `
                 -UninstallContentLocation $UninstallContentLocation `
@@ -158,7 +156,7 @@ function New-SCCMApplicationPSADT4.1.x {
                 -LogonRequirementType 'WhetherOrNotUserLoggedOn' `
                 -MaximumRuntimeMins $MaxRunTime `
                 -EstimatedRuntimeMins $EstimatedRunTime `
-                -AddRequirement @($freeSpaceRule,$x64Rule) `
+                -AddRequirement $freeSpaceRule `
                 -ContentLocation $ContentLocation `
                 -InstallCommand "Invoke-AppDeployToolkit.exe -DeploymentType Install" `
                 -UninstallCommand "Invoke-AppDeployToolkit.exe -DeploymentType Uninstall" `
