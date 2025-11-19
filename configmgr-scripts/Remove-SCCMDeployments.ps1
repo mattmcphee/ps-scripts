@@ -6,6 +6,10 @@ function Remove-SCCMDeployments {
         [string]
         $ApplicationName
     )
+
+    $ogLoc = Get-Location
+
+    Set-Location 'A00:'
         
     try {
         $app = Get-CMApplication -Name "$ApplicationName" -Fast
@@ -20,4 +24,6 @@ function Remove-SCCMDeployments {
     } catch {
         throw $_
     }
+
+    Set-Location $ogLoc
 }
