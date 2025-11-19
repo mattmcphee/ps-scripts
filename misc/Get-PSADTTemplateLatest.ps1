@@ -8,9 +8,10 @@ function Get-PSADTTemplateLatest {
     )
     
     $repo = "PSAppDeployToolkit"
+    $githubUrl = "https://api.github.com/repos/$repo/$repo/releases/latest"
+    
     $fileName = "PSAppDeployToolkit_Template_v4.zip"
     $outFile = Split-Path -Path $DestinationFolder -Parent | Join-Path -ChildPath $fileName
-    $githubUrl = "https://api.github.com/repos/$repo/$repo/releases/latest"
 
 
     # if folder exists, rename it to timestamp
