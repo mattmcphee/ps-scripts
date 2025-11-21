@@ -70,6 +70,8 @@ function New-SCCMApplicationPSADT4.1.x {
         $UninstallContentLocation
     )
 
+    $ogLoc = Get-Location
+
     Set-Location -Path 'A00:\'
 
     # if app doesn't exist, create it
@@ -166,4 +168,6 @@ function New-SCCMApplicationPSADT4.1.x {
         # app already has deployment types, let's exit
         throw -Message "This app already has at least one deployment type. Exiting..."
     }
+
+    Set-Location $ogLoc
 }
