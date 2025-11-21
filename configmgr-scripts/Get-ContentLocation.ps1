@@ -22,7 +22,7 @@ function Get-ContentLocation {
         }
     }
 
-    Set-Location $env:WINDIR
+    Set-Location $env:PROGRAMFILES
 
     $nameAndFolder | Select-Object *, @{
         name = 'Size'
