@@ -19,6 +19,10 @@ function Copy-InvokeScript {
         $ComputerName
     )
 
+    $ogLoc = Get-Location
+
+    Set-Location "C:\"
+
     try {
         $localUninstallPath = $SourcePath.Replace("Install", "Uninstall")
         $shareInstallPath = "\\bmd\bmdapps\sccm_packages\software\$Publisher\$ApplicationName\Install\Invoke-AppDeployToolkit.ps1"
@@ -45,4 +49,6 @@ function Copy-InvokeScript {
     } catch {
         throw $_
     }
+
+    Set-Location $ogLoc
 }
