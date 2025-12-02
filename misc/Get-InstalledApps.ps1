@@ -18,133 +18,49 @@ Get-InstalledApps -ComputerName MMWIN11-05 -ApplicationName *note*
 #>
 function Get-InstalledApps {
     [CmdletBinding()]
-    #region Params
     param(
         # ComputerName
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory=$false)]
         [string]
         $ComputerName,
         # ApplicationName
-        [Parameter(Mandatory = $false)]
+        [Parameter(Mandatory=$false)]
         [string]
-        $ApplicationName,
-        # PathHeadings
-        [Parameter(Mandatory = $false)]
-        [switch]
-        $NoPathHeadings = $false
+        $ApplicationName
     )
 
-    #region Write-DashLine
-    function Write-DashLine {
-        param(
-            [string]$Text
-        )
-
-        $totalLength = 100
-        $dashCount = $totalLength - $Text.Length
-        $dashChar = "="
-        $boundChar = "|"
-        $boundStart = $boundChar + $dashChar * 3
-        $boundEnd = $dashChar * 3 + $boundChar
-
-        if ($dashCount -le 0) {
-            $line = "$boundStart $Text $boundEnd"
-        } else {
-            $boundEndDynamic = $dashChar * ($dashCount) + $boundEnd
-            $line = "$boundStart $Text $boundEndDynamic"
-        }
-
-        Write-Host $line -ForegroundColor Cyan
-    }
-
-    #region Variables
-    $ErrorActionPreference = 'Stop'
-
-    $regPaths = @(
-        "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall",
-        "SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall",
-        "SOFTWARE\Microsoft\Office\ClickToRun",
-        "SOFTWARE\BMD"
-    )
-
-    $propsToCapture = @(
-        'DisplayName',
-        'DisplayVersion',
-        'Version',
-        'InstallLocation',
-        'UninstallString',
-        'QuietUninstallString',
-        'InstallationPath',
-        'ProductReleaseIds',
-        'VersionToReport'
-    )
-
-    #region Main
-    try {
-        $baseKey = [Microsoft.Win32.RegistryKey]::OpenRemoteBaseKey(
-            'LocalMachine',
-            $ComputerName,
-            [Microsoft.Win32.RegistryView]::Registry64
-        )
-    } catch {
-        $baseKey.Close()
-        throw "Could not find $ComputerName on the network."
-    }
-
-    foreach ($regPath in $regPaths) {
-        $regKey = $baseKey.OpenSubKey($regPath)
-        if (-not $regKey) {
-            Write-Verbose "Could not find registry path: HKLM:\$regPath - skipping..."
-            continue
-        }
-
+    $getAppsScriptBlock = {
         $apps = @()
 
-        $regKeySubKeyNames = $regKey.GetSubKeyNames()
+        $x64Apps = Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*" |
+            Select-Object *,@{ n="RegistryKey"; e={$_.PSPath.Substring(36)} }
+        $apps += $x64Apps
 
-        foreach ($appKeyName in $regKeySubKeyNames) {
-            $appKey = $baseKey.OpenSubKey("$regPath\$appKeyName")
+        $x86Apps = Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" |
+            Select-Object *,@{ n="RegistryKey"; e={$_.PSPath.Substring(36)} }
+        $apps += $x86Apps
 
-            if ($appKey.ValueCount -gt 0) {
-                $displayName = $appKey.GetValue('DisplayName')
-                if (
-                    $ApplicationName -and `
-                        $appKeyName -notlike $ApplicationName -and `
-                        $displayName -notlike $ApplicationName -and `
-                        $appKey.Name -notlike $ApplicationName
-                ) {
-                    continue
-                }
+        $selectProperties = @(
+            'DisplayName',
+            'DisplayVersion',
+            'InstallLocation',
+            'UninstallString',
+            'QuietUninstallString',
+            'RegistryKey'
+        )
 
-                $appInfo = New-Object -TypeName PSCustomObject
-
-                $appInfo | Add-Member -MemberType NoteProperty -Name 'RegistryPath' -Value $appKey.Name
-                $appInfo | Add-Member -MemberType NoteProperty -Name 'KeyName' -Value $appKeyName
-                
-                $appKeyValueNames = $appKey.GetValueNames() | Sort-Object
-
-                foreach ($appKeyValueName in $appKeyValueNames) {
-                    if ($propsToCapture -contains $appKeyValueName) {
-                        $propValue = $appKey.GetValue($appKeyValueName)
-                        $appInfo | Add-Member -MemberType NoteProperty -Name $appKeyValueName -Value $propValue
-                    }
-                }
-
-                $apps += $appInfo
-            }
-
-            $appkey.Close()
-        }
-
-        $regKey.Close()
-
-        if ($apps.Count -gt 0) {
-            if (-not $NoPathHeadings) {
-                Write-DashLine -Text "HKLM:\$regPath"
-            }
-            $apps
-        }
+        return $apps | Select-Object $selectProperties
     }
 
-    $baseKey.Close()
+    if ($ComputerName) {
+        $apps = Invoke-Command -ComputerName $ComputerName -ScriptBlock $getAppsScriptBlock
+    } else {
+        $apps = & $getAppsScriptBlock
+    }
+
+    if ($ApplicationName) {
+        return $apps | Where-Object { $_.DisplayName -like $ApplicationName } | Sort-Object DisplayName
+    } else {
+        return $apps | Sort-Object DisplayName
+    }
 }

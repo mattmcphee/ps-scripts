@@ -42,7 +42,7 @@ function Get-AppLockerGPOPolicy {
         # create XmlWriterSettings object to format xml
         $xmlWriterSettings = New-Object System.Xml.XmlWriterSettings
         $xmlWriterSettings.Indent = $true
-        $xmlWriterSettings.IndentChars = "  "
+        $xmlWriterSettings.IndentChars = "    "
         $xmlWriterSettings.NewLineHandling = [System.Xml.NewLineHandling]::Replace
         $xmlWriterSettings.OmitXmlDeclaration = $true
 
