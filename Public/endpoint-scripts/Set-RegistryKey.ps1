@@ -1,20 +1,20 @@
+<#
+.SYNOPSIS
+Creates a registry key or updates it with new data if it already exists.
+.DESCRIPTION
+Creates a registry key or updates it with new data if it already exists.
+.NOTES
+This was taken from Powershell App Deployment Toolkit and modified to be a standalone function.
+.PARAMETER Key
+The path to the location containing the registry item
+.PARAMETER Name
+The name of the registry item
+.PARAMETER Value
+The value to set the registry item to
+.PARAMETER Type
+The type of the registry item - must be one of a number of types
+#>
 function Set-RegistryKey {
-    <#
-    .SYNOPSIS
-    Creates a registry key or updates it with new data if it already exists.
-    .DESCRIPTION
-    Creates a registry key or updates it with new data if it already exists.
-    .NOTES
-    This was taken from Powershell App Deployment Toolkit and modified to be a standalone function.
-    .PARAMETER Key
-    The path to the location containing the registry item
-    .PARAMETER Name
-    The name of the registry item
-    .PARAMETER Value
-    The value to set the registry item to
-    .PARAMETER Type
-    The type of the registry item - must be one of a number of types
-    #>
     param (
         # the path to the registry key containing registry items
         [Parameter(Mandatory)]
