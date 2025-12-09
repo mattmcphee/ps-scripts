@@ -13,7 +13,6 @@ function New-RemediationScript {
     $Publisher = "Matt McPhee"
     $RunAs = 'SYSTEM'
     $RunAs32 = $false
-    $ScheduleType = "Daily"
     $ScheduleFrequency = "1"
     $StartTime = "01:00"
     $DetectionScriptPath = "C:\sources\repos\ps-scripts\intune-scripts\Update-AdobeAppsDetection.ps1"
@@ -71,7 +70,7 @@ function New-RemediationScript {
     $uri = "https://graph.microsoft.com/$graphApiVersion/$resource/$scriptId/assign"
 
     try {
-        $scriptAssignmentResponse = Invoke-MGGraphRequest -Uri $uri `
+        Invoke-MGGraphRequest -Uri $uri `
             -Method POST -Body $assignmentParams -ContentType 'application/json' `
             -ErrorAction Stop
     } catch {

@@ -39,15 +39,8 @@ function New-IntuneAppControlPolicy {
         $uri = "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('$policyTemplateId')?`$expand=settings"
 
         # fetch the policy details with expanded settings
-        $template = Invoke-MgGraphRequest -Method GET -Uri $uri |
+        Invoke-MgGraphRequest -Method GET -Uri $uri |
         Select-Object -Property name, description, settings, platforms, technologies, templateReference
-        $templateJson = $template | ConvertTo-Json -Depth 100
-        $RAWJson = $templateJson
-
-        # get all configuration policies
-        $intunePolicies = Get-MgBetaDeviceManagementConfigurationPolicy -All
-
-        # find policy with name
 
         # Create hashtable for policy parameters
         $params = @{
