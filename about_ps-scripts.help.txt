@@ -1,0 +1,15 @@
+<#
+.SYNOPSIS
+    A collection of helper functions.
+
+.DESCRIPTION
+    A collection of functions for app packaging, SCCM, AppLocker, WDAC, Active Directory, Intune and Group Policy.
+
+.NOTES
+    Developed by Matt McPhee for internal use.
+    Requires PowerShell 5.1 or newer.
+    Ensure you are running the latest version from the GitHub repository.
+
+.LINK
+    https://github.com/mattmcphee/ps-scripts
+#>
