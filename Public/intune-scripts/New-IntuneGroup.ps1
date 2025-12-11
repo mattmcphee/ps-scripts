@@ -41,10 +41,5 @@ function New-IntuneGroup {
         visibility = $Visibility
     }
 
-    # ternary operators to check if switch is on
-    $groupParams.mailEnabled = $MailEnabled ? $true : $false
-    $groupParams.securityEnabled = $SecurityEnabled ? $true : $false
-    $groupParams.description = $Description ? $Description : ""
-
     New-MgGroup -BodyParameter $groupParams
 }

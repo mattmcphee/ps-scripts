@@ -1,4 +1,4 @@
-function Generate-ScriptFiles {
+function New-ScriptFiles {
     param (
         # Path
         [Parameter(Mandatory)]
