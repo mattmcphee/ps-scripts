@@ -1,7 +1,7 @@
 function Format-Xml {
     param (
         # XmlString
-        [Parameter(Mandatory)]
+        [Parameter(Mandatory,ValueFromPipeline)]
         [string]
         $XmlString
     )

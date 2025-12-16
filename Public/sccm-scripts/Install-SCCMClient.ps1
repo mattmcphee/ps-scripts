@@ -1,4 +1,4 @@
-function Reinstall-SCCMClient {
+function Install-SCCMClient {
     [CmdletBinding()]
     param (
         # ComputerName

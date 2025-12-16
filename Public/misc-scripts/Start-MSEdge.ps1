@@ -1,5 +1,6 @@
 function Start-MSEdge {
     [CmdletBinding()]
+    [Alias('edge')]
     param (
         # FilePath
         [Parameter(Mandatory=$false,ValueFromPipeline)]

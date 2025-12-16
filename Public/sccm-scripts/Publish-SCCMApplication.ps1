@@ -19,9 +19,9 @@
     - Ensure you are connected to the CM site by running Import-MEMModule
 
 .EXAMPLE
-    Deploy-SCCMApplication -ApplicationName "7-Zip 23.01 (x64)" -DeploymentTypeName "7-Zip 23.01 (x64) - Install" -CollectionName "AaronLocker Testing"
+    Publish-SCCMApplication -ApplicationName "7-Zip 23.01 (x64)" -DeploymentTypeName "7-Zip 23.01 (x64) - Install" -CollectionName "AaronLocker Testing"
 #>
-function Deploy-SCCMApplication {
+function Publish-SCCMApplication {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true)]

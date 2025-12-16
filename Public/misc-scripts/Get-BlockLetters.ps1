@@ -1,5 +1,6 @@
 function Get-BlockLetters {
     [CmdletBinding()]
+    [Alias('gbl')]
     param (
         # Text
         [Parameter(Mandatory, ValueFromPipeline)]
@@ -202,36 +203,110 @@ function Get-BlockLetters {
                 '   ',
                 '   '
             )
+            '-' = @(
+                '      ',
+                ' ____ ',
+                '/\___\',
+                '\/___/',
+                '      '
+            )
+            '1' = @(
+                ' __   ',
+                '/\ \  ',
+                '\ \ \ ',
+                ' \ \_\',
+                '  \/_/'
+            )
+            '2' = @(
+                ' _____   ',
+                '/\__  \  ',
+                '\/_-" /_ ',
+                ' /\_____\',
+                ' \/_____/'
+            )
+            '3' = @(
+                ' ______   ',
+                '/\___  \  ',
+                '\//\__  \ ',
+                ' \/\_____\',
+                '  \/_____/'
+            )
+            '4' = @(
+                ' __  __   ',
+                '/\ \_\ \  ',
+                '\ \____ \ ',
+                ' \/___/\ \',
+                '      \/_/'
+            )
+            '5' = @(
+                ' ______   ',
+                '/\  ___\  ',
+                '\ \___  \ ',
+                ' \/\_____\',
+                '  \/_____/'
+            )
+            '6' = @(
+                ' __       ',
+                '/\ \____  ',
+                '\ \  __ \ ',
+                ' \ \_____\',
+                '  \/_____/'
+            )
+            '7' = @(
+                ' ______   ',
+                '/\___  \  ',
+                '\/___\  \ ',
+                '    \ \__\',
+                '     \/__/'
+            )
+            '8' = @(
+                ' ______   ',
+                '/\  __ \  ',
+                '\ \  __ \ ',
+                ' \ \_____\',
+                '  \/_____/'
+            )
+            '9' = @(
+                ' ______   ',
+                '/\  __ \  ',
+                '\ \____ \ ',
+                ' \/___/\ \',
+                '      \/_/'
+            )
+            '0' = @(
+                ' ______   ',
+                '/\  __ \  ',
+                '\ \ \_\ \ ',
+                ' \ \_____\',
+                '  \/_____/'
+            )
         }
     }
     
     process {
-        $outputLines = New-Object 'string[]' 5
         $text = $Text.ToUpper()
 
-        for ($i = 0; $i -lt $text.Length; $i++) {
-            $char = $text[$i].ToString()
-            if ($asciiTable.ContainsKey($char)) {
-                $charArt = $asciiTable[$char]
-            } else {
-                throw "Only letters of the alphabet are allowed! Haven't done numbers/symbols yet, sheesh!"
-            }
+        $lines = @('#', '#', '#', '#', '#')
 
-            for ($j = 0; $j -lt 5; $j++) {
-                $outputLines[$j] += $charArt[$j]
+        foreach ($char in $text.ToCharArray()) {
+            if ($asciiTable.ContainsKey([string]$char)) {
+                $charLines = $asciiTable[[string]$char]
+                for ($i = 0; $i -lt 5; $i++) {
+                    $lines[$i] += $charLines[$i]
+                }
             }
         }
 
         if ($Colour) {
             try {
-                foreach ($line in $outputLines) {
+                foreach ($line in $lines) {
                     Write-Host $line -ForegroundColor $Colour
                 }
             } catch {
                 throw "Colour: '$Colour' is not a valid colour."
             }
         } else {
-            $outputLines | Out-Host
+            $lines
         }
     }
     

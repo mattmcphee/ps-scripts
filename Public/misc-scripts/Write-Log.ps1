@@ -11,48 +11,40 @@
     Appends a line to a log file.
 #>
 function Write-Log {
-        [CmdletBinding()]
-        param(
-            # Message
-            [Parameter(Mandatory = $true, ValueFromPipeline)]
-            [AllowEmptyString()]
-            [AllowNull()]
-            [string[]]
-            $Message,
-            # Level
-            [Parameter(Mandatory = $false)]
-            [ValidateSet("Error", "Warning", "Info")]
-            [string]
-            $Level = "Info",
-            # Path
-            [Parameter(Mandatory = $true)]
-            [ValidateNotNullOrEmpty()]
-            [ValidateScript({
-                if (-not (Test-Path $_)) {
-                    throw "Path: '$_' not found."
-                }
-                if (-not (Test-Path $_ -PathType 'Directory')) {
-                    throw "Path: '$_' is not a directory."
-                }
-                $true
-            })]
-            [string]
-            $Path,
-            # Component
-            [Parameter(Mandatory = $false)]
-            [string]
-            $Component = "PowerShellScript",
-            # Context
-            [Parameter(Mandatory = $false)]
-            [string]
-            $Context = "PowerShellScript",
-            # Quiet - suppresses output
-            [Parameter(Mandatory = $false)]
-            [switch]
-            $Quiet = $false
-        )
+    [CmdletBinding()]
+    param(
+        # Message
+        [Parameter(Mandatory = $true, ValueFromPipeline)]
+        [AllowEmptyString()]
+        [AllowNull()]
+        [string[]]
+        $Message,
+        # Path
+        [Parameter(Mandatory = $true)]
+        [ValidateNotNullOrEmpty()]
+        [string]
+        $Path,
+        # Level
+        [Parameter(Mandatory = $false)]
+        [ValidateSet("Error", "Warning", "Info")]
+        [string]
+        $Level = "Info",
+        # Component
+        [Parameter(Mandatory = $false)]
+        [string]
+        $Component = "PowerShellScript",
+        # Context
+        [Parameter(Mandatory = $false)]
+        [string]
+        $Context = "PowerShellScript",
+        # Quiet - suppresses output
+        [Parameter(Mandatory = $false)]
+        [switch]
+        $Quiet = $false
+    )
 
-        process {
+    process {
+        foreach ($line in $Message) {
             if (-not $Quiet) {
                 # output the message
                 Write-Host $Message
@@ -84,3 +76,4 @@ function Write-Log {
             $logLine | Out-File -FilePath $Path -Append -Encoding utf8
         }
     }
+}
