@@ -14,7 +14,7 @@ function New-Day {
     $dateYear = $dateArr[0]
     # $dateMonth = $dateArr[1]
     # $dateDay = $dateArr[2]
-    $notePath = "$env:windir\sources\repos\weekly-notepad\weeklynotepad$dateYear\$date.txt"
+    $notePath = "$env:systemdrive\sources\repos\weekly-notepad\weeklynotepad$dateYear\$date.txt"
 
     if (-not ($notePath)) {
         New-Item -Path $notePath -Force
