@@ -5,14 +5,6 @@ function Copy-InvokeScript {
         [Parameter(Mandatory)]
         [string]
         $SourcePath,
-        # ApplicationName
-        [Parameter(Mandatory)]
-        [string]
-        $ApplicationName,
-        # Publisher
-        [Parameter(Mandatory)]
-        [string]
-        $Publisher,
         # ComputerName
         [Parameter(Mandatory)]
         [string]
@@ -24,18 +16,10 @@ function Copy-InvokeScript {
     Set-Location "C:\"
 
     try {
-        $localUninstallPath = $SourcePath.Replace("Install", "Uninstall")
-        $shareInstallPath = "\\bmd\bmdapps\sccm_packages\software\$Publisher\$ApplicationName\Install\Invoke-AppDeployToolkit.ps1"
-        $shareUninstallPath = $shareInstallPath.Replace("Install", "Uninstall")
-        $remoteInstallPath = $SourcePath.Replace("C:\", "\\$ComputerName\c`$\")
-        $remoteUninstallPath = $remoteInstallPath.Replace("Install", "Uninstall")
+        $remotePath = $SourcePath.Replace("C:\", "\\$ComputerName\c`$\")
         
         $destinationPaths = @(
-            $localUninstallPath,
-            $shareInstallPath,
-            $shareUninstallPath,
-            $remoteInstallPath,
-            $remoteUninstallPath
+            $remotePath
         )
 
         foreach ($destinationPath in $destinationPaths) {

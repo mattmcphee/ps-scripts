@@ -65,10 +65,10 @@ function Remove-SCCMSupersedence {
                 -CurrentDeploymentType $dt `
                 -OldDeploymentType $supersededDt `
                 -RemoveSupersedence `
-                -Force
+                -Force `
+                -ErrorAction "Stop"
         } catch {
-            Write-Host "Could not remove supersedence for $($app.LocalizedDisplayName)"
-            Write-Output $_
+            throw "Could not remove supersedence for $($app.LocalizedDisplayName). Error: $_"
         }
         Write-Host "Removed supersedence for $($app.LocalizedDisplayName)"
     }
