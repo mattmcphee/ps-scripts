@@ -66,7 +66,19 @@
 
         # UninstallCommandLine - uninstall command line (optional)
         [Parameter(Mandatory = $false)]
-        [string]$UninstallCommandLine
+        [string]$UninstallCommandLine,
+
+        # ApplicationExePath - path to main exe on the client machine (will be used for detection if provided)
+        [Parameter(Mandatory = $false)]
+        [string]$ApplicationExePath,
+
+        # RegKeyPath - registry path that holds displayversion value name on the client machine (will be used for detection if provided)
+        [Parameter(Mandatory = $false)]
+        [string]$RegKeyPath,
+
+        # DisplayVersion - the version value that appears in the registry on the client machine (will be used for detection if provided)
+        [Parameter(Mandatory = $false)]
+        [string]$DisplayVersion
     )
 
     # get app
@@ -97,21 +109,34 @@
         Select-Object -ExpandProperty Location
     $sourcePath = $sourcePathBase + $installerFile
 
-    # app installation folder and app exe are two separate elements
-    $appPathBase = $appXmlCustomData.EnhancedDetectionMethod.Settings.File.Path
-    $appPathExe = $appXmlCustomData.EnhancedDetectionMethod.Settings.File.Filter
-    if ([string]::IsNullOrEmpty($appPathBase) -or [string]::IsNullOrEmpty($appPathExe)) {
-        throw "Unable to find file existence detection method for: $($app.LocalizedDisplayName)"
+    # use exe path if provided or try to pull it out from sccm
+    if ($PSBoundParameters["ApplicationExePath"]) {
+        $applicationExePath = $ApplicationExePath
+    } else {
+        $appPathBase = $appXmlCustomData.EnhancedDetectionMethod.Settings.File.Path
+        $appPathExe = $appXmlCustomData.EnhancedDetectionMethod.Settings.File.Filter
+
+        if ([string]::IsNullOrEmpty($appPathBase) -or [string]::IsNullOrEmpty($appPathExe)) {
+            $msg = "Unable to find file existence detection method for: $($app.LocalizedDisplayName)`n" +
+            "Provide a path to the installed application's executable."
+            throw $msg
+        }
+
+        $applicationExePath = "$appPathBase\$appPathExe"
     }
-    $applicationExePath = "$appPathBase\$appPathExe"
 
     # reg key path and reg key value are two separate elements
-    $regKeyPath = "HKEY_LOCAL_MACHINE\" + $appXmlCustomData.EnhancedDetectionMethod.Settings.SimpleSetting.RegistryDiscoverySource.Key
-    $displayVersion = $appXmlCustomData.EnhancedDetectionMethod.Rule.Expression.Operands.Expression.Operands.ConstantValue |
-        Where-Object { $_.DataType -like "String" } |
-        Select-Object -ExpandProperty Value
-    if ([string]::IsNullOrEmpty($regKeyPath) -or [string]::IsNullOrEmpty($displayVersion)) {
-        throw "Unable to find registry key detection method for: $($app.LocalizedDisplayName)"
+    if ($PSBoundParameters["RegKeyPath"] -and $PSBoundParameters["DisplayVersion"]) {
+        $regKeyPath = $RegKeyPath
+        $displayVersion = $DisplayVersion
+    } else {
+        $regKeyPath = "HKEY_LOCAL_MACHINE\" + $appXmlCustomData.EnhancedDetectionMethod.Settings.SimpleSetting.RegistryDiscoverySource.Key
+        $displayVersion = $appXmlCustomData.EnhancedDetectionMethod.Rule.Expression.Operands.Expression.Operands.ConstantValue |
+            Where-Object { $_.DataType -like "String" } |
+            Select-Object -ExpandProperty Value
+        if ([string]::IsNullOrEmpty($regKeyPath) -or [string]::IsNullOrEmpty($displayVersion)) {
+            throw "Unable to find registry key detection method for: $($app.LocalizedDisplayName)"
+        }
     }
 
     if ($PSBoundParameters["InstallCommandLine"]) {
@@ -197,7 +222,6 @@
             -Intent "available" `
             -Notification "showAll" `
             -DeliveryOptimizationPriority "foreground"
-
     } catch {
         throw "Error encountered when deploying app: $_"
     }
