@@ -111,7 +111,7 @@
     https://github.com/MSEndpointMgr/IntuneWin32App
 #>
 function New-IntuneApp {
-    [CmdletBinding()]
+    [CmdletBinding(SupportsShouldProcess)]
     param (
         # SourcePath - path to the main installer exe
         [Parameter(Mandatory)]
@@ -198,7 +198,7 @@ function New-IntuneApp {
         # CategoryName - specify a single or multiple categories categorize the app (optional)
         [Parameter(Mandatory = $false)]
         [string[]]$CategoryName,
-        
+
         # RestartBehavior - restart behavior if app requires restart (optional, defaults to basedOnReturnCode)
         [Parameter(Mandatory = $false)]
         [ValidateSet("allow", "basedOnReturnCode", "suppress", "force")]
@@ -220,9 +220,9 @@ function New-IntuneApp {
 
     # Check for module
     $minVersion = [version]"1.5.0"
-    $module = Get-Module -Name "IntuneWin32App" | 
-            Where-Object { $_.Version -ge $minVersion } | 
-            Sort-Object Version -Descending | 
+    $module = Get-Module -Name "IntuneWin32App" |
+            Where-Object { $_.Version -ge $minVersion } |
+            Sort-Object Version -Descending |
             Select-Object -First 1
 
     if (-not $module) {
@@ -241,7 +241,7 @@ function New-IntuneApp {
     if (Test-Path $intunewinPath) {
         $win32AppPackage = @{
             Path = $intunewinPath
-        } 
+        }
     } else {
         try {
             $win32AppPackage = New-IntuneWin32AppPackage -SourceFolder $sourceFolder -SetupFile $setupFile -OutputFolder $outputFolder -Force -ErrorAction "Stop"
@@ -253,10 +253,16 @@ function New-IntuneApp {
     # calculate how much disk space is required
     # add 1.5x the installed app size as overhead
     # add 100MB on top just in case
-    $sourceFolderSizeMB = [int]((Get-ChildItem -Path $sourceFolder -Recurse -Force | Measure-Object -Property Length -Sum).Sum / 1MB)
-    $intunewinSizeMB = [int]((Get-ChildItem -Path $intunewinPath -Force | Measure-Object -Property Length -Sum).Sum / 1MB)
-    $installedAppSizeWithOverhead = [int]($InstalledApplicationSizeMB * 1.5)
-    $minFreeDiskSpaceMB = $sourceFolderSizeMB + $intunewinSizeMB + $installedAppSizeWithOverhead + 100
+    try {
+        $sourceFolderSizeMB = [int]((Get-ChildItem -Path $sourceFolder -Recurse -Force | Measure-Object -Property Length -Sum).Sum / 1MB)
+        $intunewinSizeMB = [int]((Get-ChildItem -Path $intunewinPath -Force | Measure-Object -Property Length -Sum).Sum / 1MB)
+        $installedAppSizeWithOverhead = [int]($InstalledApplicationSizeMB * 1.5)
+        $minFreeDiskSpaceMB = $sourceFolderSizeMB + $intunewinSizeMB + $installedAppSizeWithOverhead + 100
+        # round up to the nearest 100MB just in case in case
+        $minFreeDiskSpaceMB = $minFreeDiskSpaceMB + (100 - ($minFreeDiskSpaceMB % 100))
+    } catch {
+        throw "Error encountered when calculating minimum free disk space."
+    }
 
     # Create requirement rule for Intel/AMD platforms and Windows 10 20H2
     try {
@@ -275,22 +281,34 @@ function New-IntuneApp {
 
     try {
         $detRuleExe = New-IntuneWin32AppDetectionRuleFile `
-        -Existence `
-        -Path $appExeFolder `
-        -FileOrFolder $appExe `
-        -DetectionType "exists" `
-        -ErrorAction "Stop"
-    
-        # Create registry version detection rule
-        $detRuleReg = New-IntuneWin32AppDetectionRuleRegistry `
-        -VersionComparison `
-        -KeyPath $RegKeyPath `
-        -ValueName "DisplayVersion" `
-        -VersionComparisonOperator "greaterThanOrEqual" `
-        -VersionComparisonValue $DisplayVersion `
-        -ErrorAction "Stop"
+            -Existence `
+            -Path $appExeFolder `
+            -FileOrFolder $appExe `
+            -DetectionType "exists" `
+            -ErrorAction "Stop"
     } catch {
-        throw "Error occurred when creating detection rules: $_"
+        throw "Error occurred when creating file existence detection rule: $_"
+    }
+
+    # Create registry version detection rule
+    # if version has only numbers and periods then use greater than or equal
+    # else use string comparison equal
+    if ($DisplayVersion -match "^(\d+(\.\d+){0,3})$") {
+        $detRuleReg = New-IntuneWin32AppDetectionRuleRegistry `
+            -VersionComparison `
+            -KeyPath $RegKeyPath `
+            -ValueName "DisplayVersion" `
+            -VersionComparisonOperator "greaterThanOrEqual" `
+            -VersionComparisonValue $DisplayVersion `
+            -ErrorAction "Stop"
+    } else {
+        $detRuleReg = New-IntuneWin32AppDetectionRuleRegistry `
+            -StringComparison `
+            -KeyPath $RegKeyPath `
+            -ValueName "DisplayVersion" `
+            -StringComparisonOperator "equal" `
+            -StringComparisonValue $DisplayVersion `
+            -ErrorAction "Stop"
     }
 
     # Convert image file to icon
@@ -323,7 +341,6 @@ function New-IntuneApp {
             Icon                        = $icon
             UseAzCopy                   = $true
             AzCopyWindowStyle           = "Hidden"
-            ErrorAction                 = "Stop"
         }
 
         if ($PSBoundParameters["CategoryName"]) {
@@ -338,7 +355,9 @@ function New-IntuneApp {
             $addIntuneWin32AppArgs.Add("InformationURL", $InformationURL)
         }
 
-        Add-IntuneWin32App @addIntuneWin32AppArgs
+        if ($PSCmdlet.ShouldProcess($addIntuneWin32AppArgs, "Adding app to Intune using this information.")) {
+            Add-IntuneWin32App @addIntuneWin32AppArgs
+        }
     } catch {
         throw "Error occurred when adding app to intune: $_"
     }

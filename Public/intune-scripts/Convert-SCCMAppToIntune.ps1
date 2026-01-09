@@ -4,7 +4,7 @@
         # ApplicationName - exact name as it appears in SCCM
         [Parameter(Mandatory)]
         [string]$ApplicationName,
-        
+
         # IconPath - path to image icon
         [Parameter(Mandatory)]
         [ValidateScript({
@@ -49,7 +49,7 @@
         # CategoryName - specify a single or multiple categories to categorize the app (optional)
         [Parameter(Mandatory = $false)]
         [string[]]$CategoryName,
-        
+
         # RestartBehavior - restart behavior if app requires restart (optional, defaults to basedOnReturnCode)
         [Parameter(Mandatory = $false)]
         [ValidateSet("allow", "basedOnReturnCode", "suppress", "force")]
@@ -68,7 +68,7 @@
         [Parameter(Mandatory = $false)]
         [string]$UninstallCommandLine
     )
-    
+
     # get app
     try {
         $ogLoc = Get-Location
@@ -108,7 +108,7 @@
     # reg key path and reg key value are two separate elements
     $regKeyPath = "HKEY_LOCAL_MACHINE\" + $appXmlCustomData.EnhancedDetectionMethod.Settings.SimpleSetting.RegistryDiscoverySource.Key
     $displayVersion = $appXmlCustomData.EnhancedDetectionMethod.Rule.Expression.Operands.Expression.Operands.ConstantValue |
-        Where-Object { $_.DataType -like "String" } | 
+        Where-Object { $_.DataType -like "String" } |
         Select-Object -ExpandProperty Value
     if ([string]::IsNullOrEmpty($regKeyPath) -or [string]::IsNullOrEmpty($displayVersion)) {
         throw "Unable to find registry key detection method for: $($app.LocalizedDisplayName)"
@@ -187,5 +187,18 @@
         New-IntuneApp @newIntuneAppArgs
     } catch {
         throw "Error encountered when creating app in Intune: $_"
+    }
+
+    # deploy app to all devices
+    try {
+        $appID = Get-IntuneWin32App | Where-Object { $_.displayName -like $displayName } | Select-Object -ExpandProperty "ID"
+        Add-IntuneWin32AppAssignmentAllDevices `
+            -ID $appID `
+            -Intent "available" `
+            -Notification "showAll" `
+            -DeliveryOptimizationPriority "foreground"
+
+    } catch {
+        throw "Error encountered when deploying app: $_"
     }
 }
