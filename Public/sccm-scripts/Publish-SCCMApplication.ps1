@@ -38,19 +38,25 @@ function Publish-SCCMApplication {
         [string]$DeployPurpose = 'Available',
 
         [Parameter(Mandatory = $false)]
-        [string]$SupersededApplicationName, 
+        [string]$SupersededApplicationName,
 
         [Parameter(Mandatory = $false)]
         [bool]$Uninstall = $false,
 
         [Parameter(Mandatory = $false)]
         [switch]$AaronLockerTesting,
-        
+
         [Parameter(Mandatory = $false)]
         [switch]$HasMail,
 
         [Parameter(Mandatory = $false)]
-        [switch]$ApplicationsForWorkstations
+        [switch]$ApplicationsForWorkstations,
+
+        [Parameter(Mandatory = $false)]
+        [string]$RemoveDeployments,
+
+        [Parameter(Mandatory = $false)]
+        [string]$RemoveOldVersions
     )
 
     $ogLoc = Get-Location
@@ -60,7 +66,7 @@ function Publish-SCCMApplication {
     # find the application object
     Write-Verbose "Searching for application: '$ApplicationName'..."
     try {
-        $app = Get-CMApplication -Name "$ApplicationName" -Fast
+        $app = Get-CMApplication -Name $ApplicationName -Fast
         if (-not $app) {
             throw "Application '$ApplicationName' not found."
         } elseif ($app.Count -gt 1) {
@@ -93,14 +99,14 @@ function Publish-SCCMApplication {
                 throw "Superseded application '$SupersededApplicationName' has no deployment types."
             }
             $supersededAppDt = Get-CMDeploymentType -ApplicationName $supersededApp.LocalizedDisplayName
-            Write-Host "Setting supersedence..."
+            Write-Verbose "Setting supersedence..."
             Set-CMApplicationSupersedence -InputObject $app `
                 -SupersededApplication $supersededApp `
                 -CurrentDeploymentType $dt `
                 -OldDeploymentType $supersededAppDt `
                 -IsUninstall $Uninstall
-            Write-Host "Supersedence set. Confirming..."
-            
+            Write-Verbose "Supersedence set. Confirming..."
+
         } catch {
             throw $_
         }
@@ -118,7 +124,7 @@ function Publish-SCCMApplication {
             try {
                 $coll = Get-CMCollection -Name $collectionItem
                 if (-not $coll) {
-                    Write-Host "Collection: '$collectionItem' not found. Skipping..." -ForegroundColor Red
+                    Write-Verbose "Collection: '$collectionItem' not found. Skipping..." -ForegroundColor Red
                     continue
                 }
 
@@ -131,7 +137,7 @@ function Publish-SCCMApplication {
                     -AvailableDateTime $availableDateTime `
                     -DeadlineDateTime $deadlineDateTime `
                     -UpdateSupersedence $true
-        
+
                 Write-Verbose "Successfully created deployment for application '$ApplicationName' to collection '$collectionItem'."
             } catch {
                 throw $_
@@ -190,6 +196,24 @@ function Publish-SCCMApplication {
         }
 
         Write-Verbose "Successfully created deployment for application '$ApplicationName' to collection 'Applications for Workstations'."
+    }
+
+    if ($PSBoundParameters["RemoveDeployments"]) {
+        foreach ($appName in $RemoveDeployments) {
+            try {
+                Remove-SCCMDeployments -ApplicationName $appName
+            } catch {
+                throw "Error encountered when removing deployments for: $RemoveDeployments Error: $_"
+            }
+        }
+    }
+
+    if ($PSBoundParameters["RemoveOldVersions"]) {
+        try {
+            Remove-SCCMApplicationOldVersions -ApplicationName $RemoveOldVersions
+        } catch {
+            throw "Error encountered when removing old versions for: $RemoveOldVersions"
+        }
     }
 
     Set-Location $ogLoc
