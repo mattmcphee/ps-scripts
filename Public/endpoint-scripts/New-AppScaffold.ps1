@@ -1,4 +1,5 @@
 function New-AppScaffold {
+    [CmdletBinding(SupportsShouldProcess)]
     param(
         # ApplicationName
         [Parameter(Mandatory)]
@@ -16,7 +17,7 @@ function New-AppScaffold {
         New-Item -Path "$Path\$ApplicationName" -ItemType Directory
     }
 
-    Copy-Item -Path "C:\sources\staging\psadt_v4.1.7\*" `
+    Copy-Item -Path "C:\sources\staging\psadt_4.1.8\*" `
         -Destination "$Path\$ApplicationName" `
         -Recurse `
         -Force

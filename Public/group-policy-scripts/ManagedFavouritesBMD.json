@@ -1,0 +1,119 @@
+﻿[
+    {
+        "toplevel_name": "BMD Managed Favourites"
+    },
+    {
+        "name": "BMD - Admin",
+        "children": [
+            {
+                "name": "Thomson Reuters - Onesource",
+                "url": "https://myapps.microsoft.com/signin/apac1onesourcetaxcom/2733b35b-9e7c-467a-8942-96ada1e394da?tenantId=9a2a4ae5-8ac1-460b-90f0-bb3c8516df35"
+            }
+        ]
+    },
+    {
+        "name": "Complete Business Travel",
+        "children": [
+            {
+                "name": "CBT - TOPdesk Operator",
+                "url": "https://topdesk.cbtravel.com.au/tas/secure"
+            }
+        ]
+    },
+    {
+        "name": "Azure Multi Factor Auth Setup",
+        "url": "https://aka.ms/mfasetup"
+    },
+    {
+        "name": "Azure Self-Service Reset Portal",
+        "url": "https://aka.ms/sspr"
+    },
+    {
+        "name": "Azure Self-Service Reset Setup",
+        "url": "https://aka.ms/ssprsetup"
+    },
+    {
+        "name": "Beakon - Production",
+        "url": "https://myapps.microsoft.com/signin/cf9d936e-1769-4450-94bf-8f752cf3f296?tenantId=9a2a4ae5-8ac1-460b-90f0-bb3c8516df35"
+    },
+    {
+        "name": "BMD - Apps",
+        "url": "https://www.office.com/apps?auth=2"
+    },
+    {
+        "name": "BMD - CRM Production",
+        "url": "https://bmdcrmprod.crm6.dynamics.com"
+    },
+    {
+        "name": "BMD - Digital Asset Library",
+        "url": "https://myapps.microsoft.com/signin/091e548b-0194-4384-9d81-94092418936a?tenantId=9a2a4ae5-8ac1-460b-90f0-bb3c8516df35"
+    },
+    {
+        "name": "BMD - Finance and Operations",
+        "url": "https://bmdaxprod.operations.dynamics.com/?cmp=BMD&mi=DefaultDashboard"
+    },
+    {
+        "name": "BMD - Helpdesk - TopDesk Self Service",
+        "url": "https://topdesk.bmd.com.au/tas/public/ssp/"
+    },
+    {
+        "name": "BMD - Online Search",
+        "url": "https://www.bing.com/business?form=BFBSPR"
+    },
+    {
+        "name": "Copilot",
+        "url": "https://copilot.microsoft.com/"
+    },
+    {
+        "name": "Felix - SSO",
+        "url": "https://launcher.myapps.microsoft.com/api/signin/48578dab-2810-4fa6-9778-6422e539416d?tenantId=9a2a4ae5-8ac1-460b-90f0-bb3c8516df35"
+    },
+    {
+        "name": "FleetSU",
+        "url": "https://myapps.microsoft.com/signin/7ded34d3-d4fc-4281-9629-b367997352e3?tenantId=9a2a4ae5-8ac1-460b-90f0-bb3c8516df35"
+    },
+    {
+        "name": "Join Docketbook - BMD Landing Page",
+        "url": "https://join.docketbook.com.au/bmd"
+    },
+    {
+        "name": "Nearmap Login",
+        "url": "https://admin.nearmap.com/welcome/"
+    },
+    {
+        "name": "PageUp - Hiring Manager",
+        "url": "https://myapps.microsoft.com/signin/f892de86-a51b-4982-bc9a-8ba52eee7cb5?tenantId=9a2a4ae5-8ac1-460b-90f0-bb3c8516df35"
+    },
+    {
+        "name": "PageUp - Perform at BMD",
+        "url": "https://bmdgroup.pageuppeople.com/"
+    },
+    {
+        "name": "propelleraero.com",
+        "url": "https://bmd.prpellr.com/login"
+    },
+    {
+        "name": "Reali - SSO",
+        "url": "https://bmd.reali.au/"
+    },
+    {
+        "name": "SAI Global",
+        "url": "https://myapps.microsoft.com/signin/1515fd91-fc0e-4278-9046-dc066bad6424?tenantId=9a2a4ae5-8ac1-460b-90f0-bb3c8516df35"
+    },
+    {
+        "name": "Serko Travel Portal - SSO",
+        "url": "https://completebusinesstravel.serko.travel/sso/saml/authrequest/CBTBMD"
+    },
+    {
+        "name": "Verkada Command",
+        "url": "https://launcher.myapps.microsoft.com/api/signin/161f907a-a169-4eb9-b480-9c252a3c7ceb?tenantId=9a2a4ae5-8ac1-460b-90f0-bb3c8516df35"
+    },
+    {
+        "name": "Whispir",
+        "url": "https://myapps.microsoft.com/signin/6b99a889-a8be-44e0-8716-1216e5bc7fce?tenantId=9a2a4ae5-8ac1-460b-90f0-bb3c8516df35"
+    },
+    {
+        "name": "Who's On Location - SSO",
+        "url": "https://login.whosonlocation.com/saml/login/309085"
+    }
+]
