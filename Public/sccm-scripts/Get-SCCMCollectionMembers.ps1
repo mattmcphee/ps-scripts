@@ -12,7 +12,12 @@ function Get-SCCMCollectionMembers {
     Set-Location 'A00:'
 
     try {
-        (Get-CMCollectionMember -CollectionName $CollectionName | Select-Object Name,CurrentLogonUser)
+        $collName = (Get-CMCollection -Name $CollectionName).Name
+        if ($collectionName.Count -gt 1) {
+            Set-Location $ogLoc
+            throw "Found these collections when searching for '$CollectionName': $collName`n`n"
+        }
+        Get-CMCollectionMember -CollectionName $CollectionName | Select-Object Name,CurrentLogonUser
     } catch {
         throw $_
     }
