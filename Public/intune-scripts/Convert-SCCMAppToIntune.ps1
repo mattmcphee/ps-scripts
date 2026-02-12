@@ -72,7 +72,9 @@
         [Parameter(Mandatory = $false)]
         [string]$ApplicationExePath,
 
-        # RegKeyPath - registry path that holds displayversion value name on the client machine (will be used for detection if provided)
+        # RegKeyPath - registry path that holds displayversion value name on the client machine
+        # (will be used for detection if provided)
+        # Must include HKLM\ or HKEY_LOCAL_MACHINE\ at the start (or whatever registry hive)
         [Parameter(Mandatory = $false)]
         [string]$RegKeyPath,
 
@@ -214,15 +216,14 @@
         throw "Error encountered when creating app in Intune: $_"
     }
 
-    # deploy app to all devices
-    try {
-        $appID = Get-IntuneWin32App | Where-Object { $_.displayName -like $displayName } | Select-Object -ExpandProperty "ID"
-        Add-IntuneWin32AppAssignmentAllDevices `
-            -ID $appID `
-            -Intent "available" `
-            -Notification "showAll" `
-            -DeliveryOptimizationPriority "foreground"
-    } catch {
-        throw "Error encountered when deploying app: $_"
+    # assign to mem-device-app-testing_gs
+    Deploy-IntuneAppToTesting -DisplayName $displayName
+
+    # output the parameter splat to the console
+    Write-Output "`$convertSCCMAppArgs = @{"
+    $PSBoundParameters.GetEnumerator() | ForEach-Object {
+        Write-Output "$($_.Key) = `"$($_.Value)`""
     }
+    Write-Output "}"
+    Write-Output "Convert-SCCMAppToIntune @convertSCCMAppArgs"
 }
