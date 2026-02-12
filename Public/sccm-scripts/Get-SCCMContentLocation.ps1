@@ -18,6 +18,7 @@ function Get-SCCMContentLocation {
             throw "Found more than one application when searching for '$ApplicationName'. Be more specific."
         }
     } catch {
+        Set-Location $ogLoc
         throw $_
     }
 
