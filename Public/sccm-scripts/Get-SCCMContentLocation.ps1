@@ -1,4 +1,4 @@
-function Get-ContentLocation {
+function Get-SCCMContentLocation {
     [CmdletBinding()]
     param (
         # ApplicationName
@@ -9,8 +9,19 @@ function Get-ContentLocation {
 
     $ogLoc = Get-Location
     Set-Location 'A00:'
-    
-    $appDts = Get-CMDeploymentType -ApplicationName $ApplicationName
+
+    try {
+        $app = Get-CMApplication -Name "$ApplicationName" -Fast
+        if ($app.Count -lt 1) {
+            throw "Application '$ApplicationName' not found."
+        } elseif ($app.Count -gt 1) {
+            throw "Found more than one application when searching for '$ApplicationName'. Be more specific."
+        }
+    } catch {
+        throw $_
+    }
+
+    $appDts = $app | Get-CMDeploymentType
 
     $nameAndFolder = $appDts |
     Select-Object LocalizedDisplayName, @{
