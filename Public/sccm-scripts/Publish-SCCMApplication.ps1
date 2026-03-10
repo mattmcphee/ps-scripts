@@ -106,7 +106,6 @@ function Publish-SCCMApplication {
                 -OldDeploymentType $supersededAppDt `
                 -IsUninstall $Uninstall
             Write-Verbose "Supersedence set. Confirming..."
-
         } catch {
             throw $_
         }

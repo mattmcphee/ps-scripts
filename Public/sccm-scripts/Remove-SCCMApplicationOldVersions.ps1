@@ -54,7 +54,7 @@ function Remove-SCCMApplicationOldVersions {
             [string]
             $ApplicationName
         )
-        
+
         # find the application object
         Write-Verbose "Searching for application: '$ApplicationName'..."
         $app = Get-CMApplication -Name "$ApplicationName" -Fast
