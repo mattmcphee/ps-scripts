@@ -10,7 +10,7 @@
 .OUTPUTS
     Appends a line to a log file.
 #>
-function Write-Log {
+function Write-CMLog {
     [CmdletBinding()]
     param(
         # Message

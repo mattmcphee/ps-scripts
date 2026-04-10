@@ -10,7 +10,7 @@ function Remove-SCCMDeployments {
     $ogLoc = Get-Location
 
     Set-Location 'A00:'
-        
+
     try {
         $app = Get-CMApplication -Name "$ApplicationName" -Fast
         if ($app.Count -lt 1) {

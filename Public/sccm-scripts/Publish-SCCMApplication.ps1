@@ -53,7 +53,7 @@ function Publish-SCCMApplication {
         [switch]$ApplicationsForWorkstations,
 
         [Parameter(Mandatory = $false)]
-        [string]$RemoveDeployments,
+        [string]$RemoveDeployments = $SupersededApplicationName,
 
         [Parameter(Mandatory = $false)]
         [string]$RemoveOldVersions
