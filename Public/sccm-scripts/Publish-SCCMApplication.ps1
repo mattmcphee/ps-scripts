@@ -53,7 +53,7 @@ function Publish-SCCMApplication {
         [switch]$ApplicationsForWorkstations,
 
         [Parameter(Mandatory = $false)]
-        [string]$RemoveDeployments = $SupersededApplicationName,
+        [string[]]$RemoveDeployments,
 
         [Parameter(Mandatory = $false)]
         [string]$RemoveOldVersions
@@ -197,7 +197,12 @@ function Publish-SCCMApplication {
         Write-Verbose "Successfully created deployment for application '$ApplicationName' to collection 'Applications for Workstations'."
     }
 
-    if ($PSBoundParameters["RemoveDeployments"]) {
+    # remove deployments of superseded application + any others specified in the removedeployments param
+    if ($SupersededApplicationName) {
+        $RemoveDeployments += $SupersededApplicationName
+    }
+
+    if ($RemoveDeployments) {
         foreach ($appName in $RemoveDeployments) {
             try {
                 Remove-SCCMDeployments -ApplicationName $appName
