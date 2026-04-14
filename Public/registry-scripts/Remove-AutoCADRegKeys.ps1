@@ -1,14 +1,14 @@
 ﻿function Remove-AutoCADRegKeys {
-    [CmdletBinding()]
+    [CmdletBinding(SupportsShouldProcess)]
     param (
         # ComputerName
         [Parameter(Mandatory)]
         [string]
         $ComputerName,
-        # User
+        # UserUPN
         [Parameter(Mandatory)]
         [string]
-        $User,
+        $UserUPN,
         # ApplicationName
         [Parameter(Mandatory)]
         [ValidateSet("AutoCAD 2024", "AutoCAD Civil 3D 2025")]
@@ -84,10 +84,27 @@
         }
     }
 
+    # confirm user is logged in
+    try {
+        $explorerProcesses = Get-CimInstance -ClassName Win32_Process -ComputerName $ComputerName -Filter "Name = 'explorer.exe'"
+
+        $loggedOnUsers = foreach ($proc in $explorerProcesses) {
+            (Invoke-CimMethod -InputObject $proc -MethodName GetOwner).User
+        }
+
+        if ($loggedOnUsers -contains $UserUPN) {
+            Write-CMLog "$UserUPN is currently logged into $ComputerName"
+        } else {
+            throw "ERROR: $UserUPN is not currently logged into $ComputerName. $UserUPN must be logged in. $_"
+        }
+    } catch {
+        throw "ERROR: $_"
+    }
+
     try {
         Write-CMLog -Message "Attempting to remove reg keys for '$ApplicationName'"
-        $sid = (Get-ADUser -Identity $User).SID
-        Write-CMLog -Message "$User SID is '$sid'"
+        $sid = (Get-ADUser -Identity $UserUPN).SID
+        Write-CMLog -Message "$UserUPN SID is '$sid'"
 
         if ($ApplicationName -eq "AutoCAD 2024") {
             $appRegPath = "R24.3\ACAD-7101:409"
@@ -95,10 +112,23 @@
             $appRegPath = "R25.0\ACAD-8100:409"
         }
 
-        Write-CMLog -Message "Registry path to recursively delete will be: 'HKEY_USERS\$sid\Software\Autodesk\AutoCAD\$appRegPath'"
+        $keyPath = "$sid\Software\Autodesk\AutoCAD\$appRegPath"
+        Write-CMLog -Message "Registry path to recursively delete will be: 'HKEY_USERS\$keyPath'"
 
+        try {
+            Invoke-Command -ComputerName $ComputerName -ScriptBlock {
+                try {
+                    [Microsoft.Win32.Registry]::Users.DeleteSubKeyTree($using:keyPath, $false)
+                } catch {
+                    throw "ERROR: $_"
+                }
+            }
+        } catch {
+            throw "ERROR: $_"
+        }
 
+        Write-CMLog -Message "Successfully deleted 'HKEY_USERS\$keyPath' (or it did not exist)."
     } catch {
-        throw $_
+        throw "ERROR: $_"
     }
 }
