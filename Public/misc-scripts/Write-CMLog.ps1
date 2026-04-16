@@ -44,6 +44,16 @@ function Write-CMLog {
     )
 
     process {
+        $logDir = Split-Path $Path -Parent
+
+        if (-not (Test-Path -Path $logDir -PathType Container)) {
+            try {
+                New-Item -ItemType Directory -Path $logDir -ErrorAction Stop -Force
+            } catch {
+                throw "Could not create log directory: $logDir $_"
+            }
+        }
+
         $now = Get-Date
         $tzOffset = [TimeZoneInfo]::Local.GetUtcOffset($now).TotalMinutes
         $timeStr = $now.ToString("HH:mm:ss.fff") + ("{0:+000;-000;+000}" -f $tzOffset)
