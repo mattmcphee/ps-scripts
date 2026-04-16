@@ -44,10 +44,15 @@ function Write-CMLog {
     )
 
     process {
+        $now = Get-Date
+        $tzOffset = [TimeZoneInfo]::Local.GetUtcOffset($now).TotalMinutes
+        $timeStr = $now.ToString("HH:mm:ss.fff") + ("{0:+000;-000;+000}" -f $tzOffset)
+        $dateStr = $now.ToString("MM-dd-yyyy")
+
         foreach ($line in $Message) {
             if (-not $Quiet) {
                 # output the message
-                Write-Output $Message
+                Write-Output $line
             }
 
             # convert level to type codes so cmtrace can read it
@@ -61,10 +66,10 @@ function Write-CMLog {
             $scriptName = $MyInvocation.MyCommand.Name
 
             # create log entry
-            $logLine = "<![LOG[$Message]LOG]!>" +
+            $logLine = "<![LOG[$line]LOG]!>" +
             "<" +
-            "time=`"$(Get-Date -Format "HH:mm:ss.ffffff")`" " +
-            "date=`"$(Get-Date -Format "d-M-yyyy")`" " +
+            "time=`"$timeStr`" " +
+            "date=`"$dateStr`" " +
             "component=`"$Component`" " +
             "context=`"$Context`" " +
             "type=`"$type`" " +
