@@ -47,7 +47,7 @@ function Write-CMLog {
         foreach ($line in $Message) {
             if (-not $Quiet) {
                 # output the message
-                Write-Host $Message
+                Write-Output $Message
             }
 
             # convert level to type codes so cmtrace can read it
