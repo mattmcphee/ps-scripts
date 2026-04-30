@@ -11,14 +11,22 @@ function New-AppScaffold {
         $Path
     )
 
-    if (Test-Path -Path "$Path\$ApplicationName") {
+    $psadtSourcePath = "C:\sources\staging\psadt_4.1.8\*"
+    $stagingDestinationPath = "$Path\$ApplicationName"
+    $appScriptPath = "$stagingDestinationPath\Invoke-AppDeployToolkit.ps1"
+    $appScriptDestinationPath = "C:\sources\repos\matmcp1-psadt-app-scripts\$ApplicationName\Invoke-AppDeployToolkit.ps1"
+
+    if (Test-Path -Path $stagingDestinationPath) {
         throw "Folder already exists. Exiting..."
     } else {
-        New-Item -Path "$Path\$ApplicationName" -ItemType Directory
+        New-Item -Path $stagingDestinationPath -ItemType Directory -Force
     }
 
-    Copy-Item -Path "C:\sources\staging\psadt_4.1.8\*" `
-        -Destination "$Path\$ApplicationName" `
+    Copy-Item -Path $psadtSourcePath `
+        -Destination $stagingDestinationPath `
         -Recurse `
         -Force
+
+    # copy invoke-appdeploytoolkit.ps1 to matmcp1-app-scripts
+    Copy-Item -Path $appScriptPath -Destination $appScriptDestinationPath -Force
 }
