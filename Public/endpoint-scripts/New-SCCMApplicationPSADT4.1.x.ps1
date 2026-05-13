@@ -166,7 +166,7 @@ function New-SCCMApplicationPSADT4.1.x {
         }
     } else {
         # app already has deployment types, let's exit
-        throw -Message "This app already has at least one deployment type. Exiting..."
+        throw "This app already has at least one deployment type. Exiting..."
     }
 
     Set-Location $ogLoc

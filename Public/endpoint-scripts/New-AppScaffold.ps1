@@ -28,5 +28,9 @@ function New-AppScaffold {
         -Force
 
     # copy invoke-appdeploytoolkit.ps1 to matmcp1-app-scripts
+    $appScriptFolderPath = "C:\sources\repos\matmcp1-psadt-app-scripts\$ApplicationName"
+    if (-not (Test-Path -Path $appScriptFolderPath)) {
+        New-Item -Path $appScriptFolderPath -ItemType Directory -Force
+    }
     Copy-Item -Path $appScriptPath -Destination $appScriptDestinationPath -Force
 }
