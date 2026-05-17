@@ -56,7 +56,10 @@ function Publish-SCCMApplication {
         [string[]]$RemoveDeployments,
 
         [Parameter(Mandatory = $false)]
-        [string]$RemoveOldVersions
+        [string]$RemoveOldVersions,
+
+        [Parameter(Mandatory = $false)]
+        [switch]$KeepSupersededDeployments
     )
 
     $ogLoc = Get-Location
@@ -198,7 +201,7 @@ function Publish-SCCMApplication {
     }
 
     # remove deployments of superseded application + any others specified in the removedeployments param
-    if ($SupersededApplicationName) {
+    if ( $SupersededApplicationName -and (-not $KeepSupersededDeployments) ) {
         $RemoveDeployments += $SupersededApplicationName
     }
 
