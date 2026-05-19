@@ -59,11 +59,13 @@ function Publish-SCCMApplication {
         [string]$RemoveOldVersions,
 
         [Parameter(Mandatory = $false)]
-        [switch]$KeepSupersededDeployments
+        [switch]$KeepSupersededDeployments,
+
+        [Parameter(Mandatory = $false)]
+        [string]$RemoveAppContent
     )
 
     $ogLoc = Get-Location
-
     Set-Location 'A00:'
 
     # find the application object
@@ -207,20 +209,16 @@ function Publish-SCCMApplication {
 
     if ($RemoveDeployments) {
         foreach ($appName in $RemoveDeployments) {
-            try {
-                Remove-SCCMDeployments -ApplicationName $appName
-            } catch {
-                throw "Error encountered when removing deployments for: $RemoveDeployments Error: $_"
-            }
+            Remove-SCCMDeployments -ApplicationName $appName
         }
     }
 
     if ($PSBoundParameters["RemoveOldVersions"]) {
-        try {
-            Remove-SCCMApplicationOldVersions -ApplicationName $RemoveOldVersions
-        } catch {
-            throw "Error encountered when removing old versions for: $RemoveOldVersions"
-        }
+        Remove-SCCMApplicationOldVersions -ApplicationName $RemoveOldVersions
+    }
+
+    if ($PSBoundParameters["RemoveAppContent"]) {
+        Remove-SCCMAppContentExceptSelected -ApplicationName $RemoveAppContent
     }
 
     Set-Location $ogLoc
