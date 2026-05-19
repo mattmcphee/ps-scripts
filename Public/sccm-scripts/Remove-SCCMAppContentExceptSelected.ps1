@@ -9,7 +9,7 @@ For any matching applications you do NOT select, it will purge their content fro
 Distribution Points and Distribution Point Groups
 
 .EXAMPLE
-Remove-CMAppContentExceptSelected -AppNameWildcard "*Google Chrome*"
+Remove-SCCMAppContentExceptSelected -ApplicationName "*Google Chrome*"
 
 .NOTES
 Author: Matt McPhee
@@ -20,18 +20,26 @@ Changelog:
 function Remove-SCCMAppContentExceptSelected {
     [CmdletBinding(SupportsShouldProcess=$true)]
     param (
-        [Parameter(Mandatory=$true, HelpMessage="Enter the app name with wildcards, e.g. *Adobe*")]
-        [string]$AppNameWildcard
+        [Parameter(Mandatory=$true, HelpMessage="Enter the app name (supports wildcards), e.g. *Adobe*")]
+        [string]$ApplicationName
     )
 
     $ogLoc = Get-Location
+    Set-Location "A00:"
 
     # fetch matching applications
-    Write-Verbose "Querying SCCM for applications matching '$AppNameWildcard'..."
-    $allApps = Get-CMApplication -Name $AppNameWildcard
+    Write-Verbose "Querying SCCM for applications matching '$ApplicationName'..."
+
+    try {
+        $allApps = Get-CMApplication -Name $ApplicationName -ErrorAction Stop
+    } catch {
+        Set-Location $ogLoc
+        throw "Error fetching applications: $_"
+    }
+
     if (-not $allApps) {
         Set-Location $ogLoc
-        throw "No applications found matching '$AppNameWildcard'."
+        throw "No applications found matching '$ApplicationName'."
     }
 
     # get selections from gridview
