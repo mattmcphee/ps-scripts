@@ -46,7 +46,8 @@ function Remove-SCCMAppContentExceptSelected {
     Write-Verbose "Found $($allApps.Count) application(s). Opening GridView for selection..."
 
     $appsToKeep = $allApps | 
-        Select-Object LocalizedDisplayName, SoftwareVersion, Manufacturer, DateCreated, CreatedBy, DateLastModified, LastModifiedBy | 
+        Select-Object LocalizedDisplayName, SoftwareVersion, Manufacturer, DateCreated, CreatedBy, DateLastModified, LastModifiedBy |
+        Sort-Object LocalizedDisplayName |
         Out-GridView -Title "Select app content to KEEP (Unselected apps will have content DELETED from ALL DPs!)" -PassThru
 
     # handle no selection
@@ -95,16 +96,23 @@ function Remove-SCCMAppContentExceptSelected {
         throw "No Distribution Point Groups found in SCCM."
     }
 
-    # remove content
+    # remove content if distributed
     foreach ($app in $appsToRemove) {
+        $distStatus = Get-CMDistributionStatus -InputObject $app
+
+        if ($distStatus.Targeted -eq 0) {
+            Write-Verbose "Skipping '$($app.LocalizedDisplayName)' as it has no content distributed to any DPs."
+            continue
+        }
+
         $target = "Application: $($app.LocalizedDisplayName)"
         $action = "Remove content from all Distribution Points and DP Groups"
 
         if ($PSCmdlet.ShouldProcess($target, $action)) {
             Write-Verbose "Removing content from all DPs for: $($app.LocalizedDisplayName)"
             try {
-                Remove-CMContentDistribution -ApplicationName $app.LocalizedDisplayName -DistributionPointName $allDps -Force -ErrorAction Stop
-                Remove-CMContentDistribution -ApplicationName $app.LocalizedDisplayName -DistributionPointGroupName $allDpGroups -Force -ErrorAction Stop
+                Remove-CMContentDistribution -ApplicationName $app.LocalizedDisplayName -DistributionPointName $allDps -Force -ErrorAction SilentlyContinue
+                Remove-CMContentDistribution -ApplicationName $app.LocalizedDisplayName -DistributionPointGroupName $allDpGroups -Force -ErrorAction SilentlyContinue
             } catch {
                 Set-Location $ogLoc
                 throw "Failed to remove content for '$($app.LocalizedDisplayName)'. Error: $_"
