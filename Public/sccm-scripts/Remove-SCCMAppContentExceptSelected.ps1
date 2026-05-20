@@ -45,8 +45,8 @@ function Remove-SCCMAppContentExceptSelected {
     # get selections from gridview
     Write-Verbose "Found $($allApps.Count) application(s). Opening GridView for selection..."
 
-    $appsToKeep = $allApps | 
-        Select-Object LocalizedDisplayName, SoftwareVersion, Manufacturer, DateCreated, CreatedBy, DateLastModified, LastModifiedBy |
+    $appsToKeep = $allApps |
+        Select-Object LocalizedDisplayName, SoftwareVersion, Manufacturer, DateCreated, CreatedBy, DateLastModified, LastModifiedBy, CI_ID |
         Sort-Object LocalizedDisplayName |
         Out-GridView -Title "Select app content to KEEP (Unselected apps will have content DELETED from ALL DPs!)" -PassThru
 
@@ -84,7 +84,7 @@ function Remove-SCCMAppContentExceptSelected {
 
     # fetch all DPs and DP Groups
     Write-Verbose "Fetching all Distribution Points and Distribution Point Groups..."
-    $allDps = (Get-CMDistributionPoint).Name
+    $allDps = (Get-CMDistributionPoint).NetworkOSPath.Replace('\\', '')
     if (-not $allDps) {
         Set-Location $ogLoc
         throw "No Distribution Points found in SCCM."
