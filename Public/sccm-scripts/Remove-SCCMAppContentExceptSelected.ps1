@@ -46,7 +46,7 @@ function Remove-SCCMAppContentExceptSelected {
     Write-Verbose "Found $($allApps.Count) application(s). Opening GridView for selection..."
 
     $appsToKeep = $allApps |
-        Select-Object LocalizedDisplayName, SoftwareVersion, Manufacturer, DateCreated, CreatedBy, DateLastModified, LastModifiedBy, CI_ID |
+        Select-Object LocalizedDisplayName, SoftwareVersion, Manufacturer, DateCreated, CreatedBy, DateLastModified, LastModifiedBy, NumberOfDeployments, CI_ID |
         Sort-Object LocalizedDisplayName |
         Out-GridView -Title "Select app content to KEEP (Unselected apps will have content DELETED from ALL DPs!)" -PassThru
 
