@@ -3,7 +3,7 @@ function Remove-SCCMDeployments {
     param (
         # ApplicationName
         [Parameter(Mandatory = $true)]
-        [string]
+        [string[]]
         $ApplicationName
     )
 
@@ -12,15 +12,17 @@ function Remove-SCCMDeployments {
     Set-Location 'A00:'
 
     try {
-        $app = Get-CMApplication -Name "$ApplicationName" -Fast
-        if ($app.Count -lt 1) {
-            throw "Application '$ApplicationName' not found."
-        } elseif ($app.Count -gt 1) {
-            throw "Found more than one application when searching for '$ApplicationName'. Be more specific."
-        }
+        foreach ($name in $ApplicationName) {
+            $app = Get-CMApplication -Name "$name" -Fast
+            if ($app.Count -lt 1) {
+                throw "Application '$name' not found."
+            } elseif ($app.Count -gt 1) {
+                throw "Found more than one application when searching for '$name'. Be more specific."
+            }
 
-        $app | Remove-CMApplicationDeployment -Force
-        Write-Verbose "Successfully removed all deployments for application '$ApplicationName'."
+            $app | Remove-CMApplicationDeployment -Force
+            Write-Verbose "Successfully removed all deployments for application '$name'."
+        }
     } catch {
         throw $_
     }
