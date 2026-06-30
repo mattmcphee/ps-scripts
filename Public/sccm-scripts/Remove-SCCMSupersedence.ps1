@@ -73,6 +73,9 @@ function Remove-SCCMSupersedence {
         Write-Host "Removed supersedence for $($app.LocalizedDisplayName)"
     }
 
+    $ogLoc = Get-Location
+    Set-Location 'A00:\'
+
     switch ($PSCmdlet.ParameterSetName) {
         'ByApplicationName' {
             try {
@@ -110,4 +113,6 @@ function Remove-SCCMSupersedence {
             }
         }
     }
+
+    Set-Location $ogLoc
 }
