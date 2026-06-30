@@ -8,12 +8,41 @@
     $ogLoc = Get-Location
     Set-Location 'A00:\'
 
-    $app = Get-CMApplication -Name $Name -Fast
-    $allDps = (Get-CMDistributionPoint).NetworkOSPath.Replace('\\', '')
-    $allDpGroups = (Get-CMDistributionPointGroup).Name
+    try {
+        $app = Get-CMApplication -Name $Name -Fast
+        if (-not $app) {
+            Write-Warning "Application '$Name' was not found."
+            return
+        }
 
-    Remove-CMContentDistribution -ApplicationName $app.LocalizedDisplayName -DistributionPointGroupName $allDpGroups -Force -ErrorAction SilentlyContinue
-    Remove-CMContentDistribution -ApplicationName $app.LocalizedDisplayName -DistributionPointName $allDps -Force -ErrorAction SilentlyContinue
+        $appName = $app.LocalizedDisplayName
+        $allDps = (Get-CMDistributionPoint).NetworkOSPath.Replace('\\', '')
+        $allDpGroups = (Get-CMDistributionPointGroup).Name
 
-    Set-Location $ogLoc
+        # Remove content from each distribution point group individually so that a
+        # destination without the content does not abort removal from the others.
+        foreach ($dpGroup in $allDpGroups) {
+            try {
+                Remove-CMContentDistribution -ApplicationName $appName -DistributionPointGroupName $dpGroup -Force -ErrorAction Stop
+                Write-Verbose "Removed content for '$appName' from distribution point group '$dpGroup'."
+            }
+            catch {
+                Write-Verbose "Skipping distribution point group '$dpGroup': $($_.Exception.Message)"
+            }
+        }
+
+        # Remove content from each distribution point individually for the same reason.
+        foreach ($dp in $allDps) {
+            try {
+                Remove-CMContentDistribution -ApplicationName $appName -DistributionPointName $dp -Force -ErrorAction Stop
+                Write-Verbose "Removed content for '$appName' from distribution point '$dp'."
+            }
+            catch {
+                Write-Verbose "Skipping distribution point '$dp': $($_.Exception.Message)"
+            }
+        }
+    }
+    finally {
+        Set-Location $ogLoc
+    }
 }
