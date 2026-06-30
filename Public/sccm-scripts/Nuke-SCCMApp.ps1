@@ -6,6 +6,9 @@
         $Name
     )
 
+    $ogLoc = Get-Location
+    Set-Location 'A00:\'
+
     $apps = Get-CMApplication -Name $Name -Fast
 
     if (-not $apps) {
@@ -34,4 +37,6 @@
         Remove-SCCMAppContent -Name $app.LocalizedDisplayName
         Move-SCCMAppToBin -Name $app.localizedDisplayName
     }
+
+    Set-Location $ogLoc
 }
