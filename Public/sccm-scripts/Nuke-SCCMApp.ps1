@@ -35,6 +35,7 @@
     foreach ($app in $apps) {
         Remove-SCCMDeployments -ApplicationName $app.LocalizedDisplayName
         Remove-SCCMAppContent -Name $app.LocalizedDisplayName
+        Remove-SCCMSupersedence -ApplicationName $app.LocalizedDisplayName
         Move-SCCMAppToBin -Name $app.localizedDisplayName
     }
 

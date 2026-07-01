@@ -68,7 +68,7 @@ function Remove-SCCMSupersedence {
                 -Force `
                 -ErrorAction "Stop"
         } catch {
-            throw "Could not remove supersedence for $($app.LocalizedDisplayName). Error: $_"
+            Write-Warning "Could not remove supersedence for $($app.LocalizedDisplayName). Error: $_"
         }
         Write-Host "Removed supersedence for $($app.LocalizedDisplayName)"
     }
