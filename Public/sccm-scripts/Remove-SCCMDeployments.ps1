@@ -24,7 +24,8 @@ function Remove-SCCMDeployments {
             Write-Verbose "Successfully removed all deployments for application '$name'."
         }
     } catch {
-        Write-Warning "Could not remove deployments for application '$name'. Error: $_"
+        Write-Warning "Could not remove deployments for application '$name' - no deployments found."
+        Set-Location $ogLoc
     }
 
     Set-Location $ogLoc
