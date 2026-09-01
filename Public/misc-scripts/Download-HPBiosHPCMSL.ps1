@@ -20,11 +20,16 @@
         Write-Host "Found $($device.Name) (Platform ID: $($device.SystemID))" -ForegroundColor Cyan
         Write-Host "Downloading latest BIOS..." -ForegroundColor Yellow
 
+        # get bin filename
+        $filename = (Get-HPBIOSUpdates -Platform $device.SystemID -Latest).bin
+
+        $biosFilePath = "$Path\$filename"
+
         # Downloads the latest .bin firmware payload directly into the folder
-        Get-HPBIOSUpdates -Platform $device.SystemID -Download -SaveAs $Path -Latest -Quiet
+        Get-HPBIOSUpdates -Platform $device.SystemID -Download -SaveAs $biosFilePath
     } else {
         Write-Warning "Could not find a platform matching: $Model"
     }
 
-    Write-Host "`nAll BIOS downloads complete! Files saved to $Path" -ForegroundColor Green
+    Write-Host "`nAll BIOS downloads complete! Files saved to $biosFilePath" -ForegroundColor Green
 }
