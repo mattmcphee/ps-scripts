@@ -1,7 +1,7 @@
 ﻿function Get-IntuneGroupMembers {
     param (
         # Name - name of the group to retrieve members of
-        [Parameter(Mandatory=$false)]
+        [Parameter(Mandatory=$true)]
         [string]$GroupID,
 
         # AllProperties - will return all properties on the object
@@ -22,13 +22,16 @@
         $response = Invoke-MgGraphRequest -Method GET -Uri $uri
 
         foreach ($member in $response.value) {
+            if ($DisplayName -and $group.displayName -notlike $DisplayName) {
+                continue
+            }
+
             if ($AllProperties) {
-                $results.Add([PSCustomObject]$member)
+                $results.Add([PSCustomObject]$group)
             } else {
                 $results.Add([PSCustomObject]@{
-                    ID                = $member.id
-                    DisplayName       = $member.displayName
-                    UserPrincipalName = $member.userPrincipalName
+                    ID              = $group.id
+                    DisplayName     = $group.displayName
                 })
             }
         }
