@@ -136,5 +136,3 @@ function Hide-IntelExtensibleFrameworkUpdateRemediation {
     Write-Output "Hid $($matched.Count) update(s) matching Intel Extensible Framework 2.1.10103.24"
     exit 0
 }
-
-Hide-IntelExtensibleFrameworkUpdateRemediation

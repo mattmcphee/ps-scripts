@@ -122,5 +122,3 @@ function Hide-IntelExtensibleFrameworkUpdateDetection {
         exit 0
     }
 }
-
-Hide-IntelExtensibleFrameworkUpdateDetection
