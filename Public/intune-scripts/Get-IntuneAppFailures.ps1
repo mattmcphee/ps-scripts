@@ -28,34 +28,36 @@
             [CultureInfo]::InvariantCulture
         )
 
-        $appId                          = $appRegItem.PSChildName
-        $reportingState                 = $appRegItem.ReportingState | ConvertFrom-Json
+        $result = [ordered]@{}
 
-        $enforcementErrorCode           = $reportingState.EnforcementErrorCode
-        $hasEnforcementError            = (-not [string]::IsNullOrWhiteSpace($enforcementErrorCode)) -and ($enforcementErrorCode -ne 0)
+        $appId                                  = $appRegItem.PSChildName
+        $reportingState                         = $appRegItem.ReportingState | ConvertFrom-Json
+        $enforcementErrorCode                   = $reportingState.EnforcementErrorCode
+        $hasEnforcementError                    = (-not [string]::IsNullOrWhiteSpace($enforcementErrorCode)) -and ($enforcementErrorCode -ne 0)
+        $detectionErrorOccurred                 = $reportingState.DetectionErrorOccurred
+        $hasDetectionError                      = $detectionErrorOccurred -eq 'True'
+        $applicabilityErrorOccurred             = $reportingState.ApplicabilityErrorOccurred
+        $hasApplicabilityError                  = $applicabilityErrorOccurred -eq 'True'
+        $noErrors                               = (-not $hasEnforcementError) -and (-not $hasDetectionError) -and (-not $hasApplicabilityError)
 
-        $detectionErrorOccurred         = $reportingState.DetectionErrorOccurred
-        $hasDetectionError              = $detectionErrorOccurred -eq 'True'
+        if ($noErrors) { continue }
 
-        $applicabilityErrorOccurred     = $reportingState.ApplicabilityErrorOccurred
-        $hasApplicabilityError          = $applicabilityErrorOccurred -eq 'True'
+        # getting the displayname from the id is an expensive operation
+        # so we do it only when there's a confirmed error
+        $displayName = (Get-IntuneApp -ID $appId).DisplayName
 
-        if ( (-not $hasEnforcementError) -and (-not $hasDetectionError) -and (-not $hasApplicabilityError) ) {
-            continue
-        }
+        $result['AppId']                        = $appId
+        $result['DisplayName']                  = $displayName
+        $result['StatusServiceReportTime']      = $statusServiceReportTime
+        $result['AppStatusLastChanged']         = $lastUpdatedTime
+        $result['HasEnforcementError']          = $hasEnforcementError
+        $result['EnforcementErrorCode']         = '0x{0:X8}' -f ($enforcementErrorCode -band 0x00000000FFFFFFFF)
+        $result['HasDetectionError']            = $hasDetectionError
+        $result['DetectionErrorCode']           = $reportingState.DetectionErrorCode
+        $result['HasApplicabilityError']        = $hasApplicabilityError
+        $result['ApplicabilityErrorCode']       = $reportingState.ApplicabilityErrorCode
 
-        $props = [ordered]@{
-            AppId                       = $appId
-            StatusServiceReportTime     = $statusServiceReportTime
-            LastUpdatedTime             = $lastUpdatedTime
-            ParsedEnforcementErrorCode  = '0x{0:X8}' -f ($enforcementErrorCode -band 0x00000000FFFFFFFF)
-        }
-
-        foreach ($p in $reportingState.PSObject.Properties) {
-            $props[$p.Name] = $p.Value
-        }
-
-        $results.Add([PSCustomObject]$props)
+        $results.Add($result)
     }
 
     $results

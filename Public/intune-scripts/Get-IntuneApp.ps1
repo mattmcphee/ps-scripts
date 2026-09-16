@@ -6,6 +6,7 @@
 
         # ID - one or more app guid's to lookup
         [Parameter(Mandatory=$false, ValueFromPipeline=$true, ValueFromPipelineByPropertyName=$true)]
+        [Alias('AppId')]
         [string[]]$ID,
 
         # AllProperties - will add every app property to the returned objects
@@ -36,13 +37,21 @@
         if ($ID) {
             foreach ($appId in $ID) {
                 $uri = "$baseUri/$appId$select"
-                $app = Invoke-MgGraphRequest -Method GET -Uri $uri -ErrorAction Stop
+                try {
+                    $app = Invoke-MgGraphRequest -Method GET -Uri $uri -ErrorAction Stop
+                } catch {
+                    Write-Warning "Couldn't get DisplayName for $appId. $_"
+                }
                 Add-AppObjectToList -App $app
             }
         } else {
             $uri = "$baseUri$select"
             while ($uri) {
-                $response = Invoke-MgGraphRequest -Method GET -Uri $uri -ErrorAction Stop
+                try {
+                    $response = Invoke-MgGraphRequest -Method GET -Uri $uri -ErrorAction Stop
+                } catch {
+                    Write-Warning "Couldn't get DisplayName for $appId. $_"
+                }
                 foreach ($app in $response.value) {
                     if ($DisplayName -and $app.displayName -notlike $DisplayName) {
                         continue
