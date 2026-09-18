@@ -1,4 +1,4 @@
-﻿function Nuke-SCCMApp {
+﻿function Unpublish-SCCMApp {
     param (
         # Name - name of app to search for
         [Parameter(Mandatory)]

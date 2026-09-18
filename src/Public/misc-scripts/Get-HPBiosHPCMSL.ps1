@@ -1,4 +1,4 @@
-﻿function Download-HPBiosHPCMSL {
+﻿function Get-HPBiosHPCMSL {
     [CmdletBinding()]
     param (
         # Path - path to save .bin bios files to

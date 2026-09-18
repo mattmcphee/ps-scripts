@@ -1,4 +1,4 @@
-﻿function Round-Nearest100 {
+﻿function Get-Nearest100 {
     param (
         # number
         [Parameter(Mandatory)]
