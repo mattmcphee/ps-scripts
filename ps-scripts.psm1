@@ -1,7 +1,7 @@
 # ============================================================================
 # GENERATED FILE - DO NOT EDIT
 # Run .\build.ps1 to regenerate this file from .\src
-# This file was built on 18-Sept-2026 13:02:53
+# This file was built on 18-Sept-2026 13:22:56
 # ============================================================================
 
 #region Add-CompToADGroup.ps1
@@ -3281,116 +3281,6 @@ function Add-RemediationScriptAssignment {
 
 #endregion
 
-#region Check-IntuneAppState.ps1
-function Check-IntuneAppState {
-    [CmdletBinding()]
-    param (
-        [Parameter(Mandatory = $true)]
-        [string]$LogicAppUrl,
-        [Parameter(Mandatory=$false)]
-        [string]$StateFilePath = "C:\ProgramData\IntuneMonitor\app_state.csv"
-    )
-
-    # Ensure data directory exists
-    $directory = Split-Path -Path $StateFilePath -Parent
-    if (-not (Test-Path $directory)) {
-        $null = New-Item -Path $directory -ItemType Directory -Force
-    }
-
-    # 1. Collect current Win32 app registry state
-    $regBasePath = "HKLM:\SOFTWARE\Microsoft\IntuneManagementExtension\Win32Apps"
-    $currentApps = @()
-
-    if (Test-Path $regBasePath) {
-        # Scan subkeys 2 levels deep: Win32Apps\<ContextGUID>\<AppGUID>
-        $contextKeys = Get-ChildItem -Path $regBasePath -ErrorAction SilentlyContinue
-
-        foreach ($context in $contextKeys) {
-            $appKeys = Get-ChildItem -Path $context.PSPath -ErrorAction SilentlyContinue
-
-            foreach ($app in $appKeys) {
-                # Exclude special IME utility subkeys like GRS or Reporting
-                if ($app.PSChildName -match '^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$') {
-                    $installExCode = $app.GetValue("InstallExCode", $null)
-                    $exitCode      = $app.GetValue("ExitCode", $null)
-
-                    if ($null -ne $installExCode) {
-                        $currentApps += [PSCustomObject]@{
-                            AppId         = $app.PSChildName
-                            ContextId     = $context.PSChildName
-                            ExitCode      = [string]$exitCode
-                            InstallExCode = [string]$installExCode
-                            Status        = if ($installExCode -eq 0) { "Success" } else { "Failed" }
-                            LastEvaluated = (Get-Date).ToString("yyyy-MM-dd HH:mm:ss")
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    # 2. Check if a baseline snapshot exists
-    if (-not (Test-Path $StateFilePath)) {
-        # First run: Save baseline without firing historical alerts
-        $currentApps | Export-Csv -Path $StateFilePath -NoTypeInformation
-        Write-Host "Baseline state snapshot created with $($currentApps.Count) app entries." -ForegroundColor Cyan
-        exit 0
-    }
-
-    # 3. Load previous state and detect new or changed failures
-    $previousApps = Import-Csv -Path $StateFilePath
-    $previousLookup = @{}
-    foreach ($item in $previousApps) {
-        $previousLookup[$item.AppId] = $item
-    }
-
-    foreach ($app in $currentApps) {
-        if ($app.Status -eq "Failed") {
-            $isNewFailure = $false
-
-            if (-not $previousLookup.ContainsKey($app.AppId)) {
-                # Brand new app targeted that failed on first attempt
-                $isNewFailure = $true
-            }
-            elseif ($previousLookup[$app.AppId].Status -ne "Failed" -or 
-                    $previousLookup[$app.AppId].InstallExCode -ne $app.InstallExCode) {
-                # App previously succeeded or had a different error code
-                $isNewFailure = $true
-            }
-
-            if ($isNewFailure) {
-                Write-Host "New failure detected for App ID: $($app.AppId)" -ForegroundColor Red
-
-                # Format Intune error code to Hex representation if negative
-                $hexError = if ([int64]$app.InstallExCode -lt 0) {
-                    "0x{0:X8}" -f ([int64]$app.InstallExCode -band 0xFFFFFFFF)
-                } else {
-                    $app.InstallExCode
-                }
-
-                $payload = @{
-                    deviceName = $env:COMPUTERNAME
-                    appName    = "Win32 App (ID: $($app.AppId))"
-                    errorCode  = "Installer Exit: $($app.ExitCode) | Intune HRESULT: $hexError"
-                    timestamp  = $app.LastEvaluated
-                } | ConvertTo-Json
-
-                try {
-                    Invoke-RestMethod -Uri $LogicAppUrl -Method Post -ContentType "application/json" -Body $payload
-                    Write-Host "Alert dispatched to Logic App." -ForegroundColor Green
-                }
-                catch {
-                    Write-Error "Failed to send alert: $_"
-                }
-            }
-        }
-    }
-
-    # 4. Update the CSV snapshot to the current state
-    $currentApps | Export-Csv -Path $StateFilePath -NoTypeInformation
-}
-#endregion
-
 #region Connect-Tenant.ps1
 function Connect-Tenant {
     [CmdletBinding()]
@@ -5411,64 +5301,6 @@ function Remove-RemediationScriptAssignment {
 
 #endregion
 
-#region Scrape-Logs.ps1
-function Scrape-Logs {
-    # Paths
-    $logDir   = "$env:ProgramData\Microsoft\IntuneManagementExtension\Logs"
-    $regBase  = "HKLM:\SOFTWARE\Microsoft\IntuneManagementExtension\Win32Apps"
-
-    $appMap = @{}
-
-    # Search newest logs first (AppWorkload logs hold Win32 app telemetry in modern IME builds)
-    $logFiles = Get-ChildItem -Path $logDir -Filter "*.log" -ErrorAction SilentlyContinue |
-    Where-Object { $_.Name -match "AppWorkload|IntuneManagementExtension" } |
-    Sort-Object LastWriteTime -Descending
-
-    foreach ($file in $logFiles) {
-        # Scan for the policy sync line
-        Get-Content -Path $file.FullName -ErrorAction SilentlyContinue |
-        Where-Object { $_ -match 'Get policies = (\[.+?\])' } |
-        ForEach-Object {
-            try {
-                $policies = $matches[1] | ConvertFrom-Json
-                foreach ($app in $policies) {
-                    if ($app.Id -and $app.Name -and -not $appMap.ContainsKey($app.Id)) {
-                        $appMap[$app.Id] = $app.Name
-                    }
-                }
-            } catch {
-                # Skip partial/corrupted log entries
-            }
-        }
-    }
-
-    # Enumerate the registry and resolve names
-    $appInventory = [System.Collections.Generic.List[PSCustomObject]]::new()
-
-    Get-ChildItem -Path $regBase -ErrorAction SilentlyContinue | ForEach-Object {
-        $context = $_.PSChildName
-        Get-ChildItem -Path $_.PSPath -ErrorAction SilentlyContinue | ForEach-Object {
-            $rawGuid   = $_.PSChildName
-            $cleanGuid = ($rawGuid -split '_')[0] # Strips revision suffixes like _1
-            $props     = Get-ItemProperty -Path $_.PSPath
-
-            $appInventory.Add([PSCustomObject]@{
-                AppGuid         = $cleanGuid
-                DisplayName     = if ($appMap.ContainsKey($cleanGuid)) { $appMap[$cleanGuid] } else { "Unknown / Log Expired" }
-                Scope           = if ($context -eq "00000000-0000-0000-0000-000000000000") { "Device" } else { "User" }
-                ComplianceState = $props.ComplianceState
-                EnforcementState= $props.EnforcementState
-                InstallExCode   = $props.InstallExCode
-            })
-        }
-    }
-
-    # Example: Output to CSV for telemetry/monitoring
-    $appInventory | Export-Csv -Path "$env:ProgramData\Win32AppInventory.csv" -NoTypeInformation
-}
-
-#endregion
-
 #region Send-GraphEmail.ps1
 function Send-GraphEmail {
     [CmdletBinding()]
@@ -5558,6 +5390,7 @@ function Update-AdobeAppsDetection {
         exit 0
     }
 }
+
 #endregion
 
 #region Update-AdobeAppsRemediation.ps1
@@ -5649,45 +5482,6 @@ function Add-RemoteLocalGroupMember {
             $_
         }
     }
-}
-
-#endregion
-
-#region Download-HPBiosHPCMSL.ps1
-function Download-HPBiosHPCMSL {
-    [CmdletBinding()]
-    param (
-        # Path - path to save .bin bios files to
-        [Parameter(Mandatory)]
-        [string]$Path,
-        # Model - all or part of the laptop model name to search bios for using HPCMSL
-        [Parameter(Mandatory)]
-        [string]$Model
-    )
-
-    if (!(Test-Path $Path -PathType Container)) {
-        $null = New-Item -ItemType Directory -Path $Path -Force
-    }
-
-    # Resolve the Platform/System Board ID for the Model
-    $device = Get-HPDeviceDetails -Name "*$Model*" | Select-Object -First 1
-
-    if ($device) {
-        Write-Host "Found $($device.Name) (Platform ID: $($device.SystemID))" -ForegroundColor Cyan
-        Write-Host "Downloading latest BIOS..." -ForegroundColor Yellow
-
-        # get bin filename
-        $filename = (Get-HPBIOSUpdates -Platform $device.SystemID -Latest).bin
-
-        $biosFilePath = "$Path\$filename"
-
-        # Downloads the latest .bin firmware payload directly into the folder
-        Get-HPBIOSUpdates -Platform $device.SystemID -Download -SaveAs $biosFilePath
-    } else {
-        Write-Warning "Could not find a platform matching: $Model"
-    }
-
-    Write-Host "`nAll BIOS downloads complete! Files saved to $biosFilePath" -ForegroundColor Green
 }
 
 #endregion
@@ -6140,6 +5934,45 @@ function Get-FolderSizesRecurse {
 
 #endregion
 
+#region Get-HPBiosHPCMSL.ps1
+function Get-HPBiosHPCMSL {
+    [CmdletBinding()]
+    param (
+        # Path - path to save .bin bios files to
+        [Parameter(Mandatory)]
+        [string]$Path,
+        # Model - all or part of the laptop model name to search bios for using HPCMSL
+        [Parameter(Mandatory)]
+        [string]$Model
+    )
+
+    if (!(Test-Path $Path -PathType Container)) {
+        $null = New-Item -ItemType Directory -Path $Path -Force
+    }
+
+    # Resolve the Platform/System Board ID for the Model
+    $device = Get-HPDeviceDetails -Name "*$Model*" | Select-Object -First 1
+
+    if ($device) {
+        Write-Host "Found $($device.Name) (Platform ID: $($device.SystemID))" -ForegroundColor Cyan
+        Write-Host "Downloading latest BIOS..." -ForegroundColor Yellow
+
+        # get bin filename
+        $filename = (Get-HPBIOSUpdates -Platform $device.SystemID -Latest).bin
+
+        $biosFilePath = "$Path\$filename"
+
+        # Downloads the latest .bin firmware payload directly into the folder
+        Get-HPBIOSUpdates -Platform $device.SystemID -Download -SaveAs $biosFilePath
+    } else {
+        Write-Warning "Could not find a platform matching: $Model"
+    }
+
+    Write-Host "`nAll BIOS downloads complete! Files saved to $biosFilePath" -ForegroundColor Green
+}
+
+#endregion
+
 #region Get-InstalledApps.ps1
 #region Comments
 <#
@@ -6206,6 +6039,21 @@ function Get-InstalledApps {
     } else {
         return $apps | Sort-Object DisplayName
     }
+}
+
+#endregion
+
+#region Get-Nearest100.ps1
+function Get-Nearest100 {
+    param (
+        # number
+        [Parameter(Mandatory)]
+        [ValidateRange(1, [int]::MaxValue)]
+        [int]
+        $Number
+    )
+
+    return ($Number + (100 - ($Number % 100)))
 }
 
 #endregion
@@ -6571,21 +6419,6 @@ function New-ScriptFiles {
 
         Set-Content -Path $filePath -Value $filePath
     }
-}
-
-#endregion
-
-#region Round-Nearest100.ps1
-function Round-Nearest100 {
-    param (
-        # number
-        [Parameter(Mandatory)]
-        [ValidateRange(1, [int]::MaxValue)]
-        [int]
-        $Number
-    )
-
-    return ($Number + (100 - ($Number % 100)))
 }
 
 #endregion
@@ -7736,53 +7569,6 @@ function New-SCCMAppInstalledCollection {
 
 #endregion
 
-#region Nuke-SCCMApp.ps1
-function Nuke-SCCMApp {
-    param (
-        # Name - name of app to search for
-        [Parameter(Mandatory)]
-        [string]
-        $Name
-    )
-
-    $ogLoc = Get-Location
-    Set-Location 'A00:\'
-
-    $apps = Get-CMApplication -Name $Name -Fast
-
-    if (-not $apps) {
-        Write-Warning "Application '$Name' was not found."
-        return
-    }
-
-    # warning message
-    $title    = "Warning!"
-    $message  = "You are about to NUKE the following applications: " + 
-        "`n`n$($apps.LocalizedDisplayName -join "`n")`n`nAre you sure you wish to continue?"
-    $options  = "&Yes", "&No" # The ampersand defines the hotkey (Y and N)
-    $default  = 1 # Sets 'No' as the default index
-
-    $selection = $host.ui.PromptForChoice($title, $message, $options, $default)
-
-    if ($selection -eq 0) {
-        Write-Host "You chose Yes. Starting process..."
-    } else {
-        Write-Host "Operation aborted by user."
-        return
-    }
-
-    foreach ($app in $apps) {
-        Remove-SCCMDeployments -ApplicationName $app.LocalizedDisplayName
-        Remove-SCCMAppContent -Name $app.LocalizedDisplayName
-        Remove-SCCMSupersedence -ApplicationName $app.LocalizedDisplayName
-        Move-SCCMAppToBin -Name $app.localizedDisplayName
-    }
-
-    Set-Location $ogLoc
-}
-
-#endregion
-
 #region Open-CMLog.ps1
 function Open-CMLog {
     param (
@@ -8688,6 +8474,53 @@ function Reset-CCMSQLCELog {
         -Name TriggerSchedule "{00000000-0000-0000-0000-000000000114}" `
         -ErrorAction SilentlyContinue
     Start-Sleep -Seconds $sleepTime
+}
+
+#endregion
+
+#region Unpublish-SCCMApp.ps1
+function Unpublish-SCCMApp {
+    param (
+        # Name - name of app to search for
+        [Parameter(Mandatory)]
+        [string]
+        $Name
+    )
+
+    $ogLoc = Get-Location
+    Set-Location 'A00:\'
+
+    $apps = Get-CMApplication -Name $Name -Fast
+
+    if (-not $apps) {
+        Write-Warning "Application '$Name' was not found."
+        return
+    }
+
+    # warning message
+    $title    = "Warning!"
+    $message  = "You are about to NUKE the following applications: " + 
+        "`n`n$($apps.LocalizedDisplayName -join "`n")`n`nAre you sure you wish to continue?"
+    $options  = "&Yes", "&No" # The ampersand defines the hotkey (Y and N)
+    $default  = 1 # Sets 'No' as the default index
+
+    $selection = $host.ui.PromptForChoice($title, $message, $options, $default)
+
+    if ($selection -eq 0) {
+        Write-Host "You chose Yes. Starting process..."
+    } else {
+        Write-Host "Operation aborted by user."
+        return
+    }
+
+    foreach ($app in $apps) {
+        Remove-SCCMDeployments -ApplicationName $app.LocalizedDisplayName
+        Remove-SCCMAppContent -Name $app.LocalizedDisplayName
+        Remove-SCCMSupersedence -ApplicationName $app.LocalizedDisplayName
+        Move-SCCMAppToBin -Name $app.localizedDisplayName
+    }
+
+    Set-Location $ogLoc
 }
 
 #endregion
