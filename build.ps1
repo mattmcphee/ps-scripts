@@ -1,7 +1,11 @@
-﻿$source = Join-Path $PSScriptRoot 'src'
-$output = Join-Path $PSScriptRoot 'ps-scripts.psm1'
+﻿$moduleName = 'ps-scripts'
+$source = Join-Path $PSScriptRoot 'src'
+$moduleFile = Join-Path $PSScriptRoot "$moduleName.psm1"
+$manifestFile = Join-Path $PSScriptRoot "$moduleName.psd1"
+$privateFilter = "$source\Private\*.ps1"
+$publicFilter = "$source\Public\*.ps1"
 
-$content = @(
+$psm1Content = @(
     '# ============================================================================'
     '# GENERATED FILE - DO NOT EDIT'
     '# Run .\build.ps1 to regenerate this file from .\src'
@@ -11,15 +15,23 @@ $content = @(
 )
 
 $files = @(
-    Get-ChildItem "$source\Private\*.ps1" -Recurse
-    Get-ChildItem "$source\Public\*.ps1" -Recurse
+    Get-ChildItem $privateFilter -Recurse
+    Get-ChildItem $publicFilter -Recurse
 )
 
 foreach ($file in $files) {
-    $content += "#region $($file.Name)"
-    $content += Get-Content $file.FullName -Raw
-    $content += "#endregion"
-    $content += ''
+    $psm1Content += "#region $($file.Name)"
+    $psm1Content += Get-Content $file.FullName -Raw
+    $psm1Content += "#endregion"
+    $psm1Content += ''
 }
 
-$content -join "`r`n" | Set-Content $output -Encoding UTF8
+# specifically export only public functions via export-modulemember
+$public = (Get-ChildItem $publicFilter -Recurse).BaseName
+$psm1Content += "#region Export Functions"
+$psm1Content += "Export-ModuleMember -Function @(`r`n    '$($public -join "'`r`n    '")'`r`n)"
+$psm1Content += "#endregion"
+$psm1Content -join "`r`n" | Set-Content $moduleFile -Encoding UTF8
+
+# target the FunctionsToExport line and add public functions to it
+Update-ModuleManifest -Path $manifestFile -FunctionsToExport $public

@@ -1,7 +1,7 @@
 # ============================================================================
 # GENERATED FILE - DO NOT EDIT
 # Run .\build.ps1 to regenerate this file from .\src
-# This file was built on 18-Sept-2026 13:22:56
+# This file was built on 21-Sept-2026 14:46:31
 # ============================================================================
 
 #region Add-CompToADGroup.ps1
@@ -3604,116 +3604,6 @@ function Copy-InstallScripts {
         } catch {
             throw $_
         }
-    }
-}
-
-#endregion
-
-#region Deploy-IntuneAppAllDevices.ps1
-function Deploy-IntuneAppAllDevices {
-    [CmdletBinding()]
-    param (
-        # DisplayName
-        [Parameter(Mandatory)]
-        [string]$DisplayName
-    )
-
-    # deploy app to all devices
-    try {
-        $appID = Get-IntuneWin32App | Where-Object { $_.displayName -like $DisplayName } | Select-Object -ExpandProperty "ID"
-
-        if ($appID.Count -lt 1) {
-            throw "Found no applications with DisplayName: $DisplayName"
-        } elseif ($appID.Count -gt 1) {
-            throw "Found more than one application when searching using display name: $DisplayName. Be more specific."
-        }
-
-        Add-IntuneWin32AppAssignmentAllDevices `
-            -ID $appID `
-            -Intent "available" `
-            -Notification "showAll" `
-            -DeliveryOptimizationPriority "foreground"
-
-    } catch {
-        throw "Error encountered when deploying app: $_"
-    }
-}
-
-#endregion
-
-#region Deploy-IntuneAppToGroup.ps1
-function Deploy-IntuneAppToGroup {
-    [CmdletBinding()]
-    param (
-        # DisplayName - displayname of app in intune
-        [Parameter(Mandatory=$true)]
-        [string]$DisplayName,
-
-        # GroupID - id of group in entra
-        [Parameter(Mandatory=$true)]
-        [string]$GroupID
-    )
-
-    try {
-        $win32App = Get-IntuneWin32App | Where-Object { $_.DisplayName -like $DisplayName }
-    } catch {
-        throw "Encountered error when retrieving app from intune with displayname: '$DisplayName'"
-    }
-
-    if ($null -eq $win32App) {
-        throw "Could not find app with DisplayName: '$DisplayName'"
-    } elseif ($win32App.Count -gt 1) {
-        throw "Found more than 1 app with DisplayName: '$DisplayName'. Be more specific."
-    }
-
-    try {
-        $intuneWin32AppAssignmentArgs = @{
-            Include         = $true
-            ID              = $win32App.id
-            GroupID         = $groupID
-            Intent          = "available"
-            Notification    = "showAll"
-        }
-        Add-IntuneWin32AppAssignmentGroup @intuneWin32AppAssignmentArgs
-    } catch {
-        throw "Encountered error when assigning '$DisplayName' to GroupID '$GroupID'"
-    }
-}
-
-#endregion
-
-#region Deploy-IntuneAppToTesting.ps1
-function Deploy-IntuneAppToTesting {
-    [CmdletBinding()]
-    param (
-        # DisplayName - displayname of app in intune
-        [Parameter(Mandatory=$true)]
-        [string]$DisplayName
-    )
-
-    try {
-        $win32App = Get-IntuneWin32App | Where-Object DisplayName -like $DisplayName
-    } catch {
-        throw "Encountered error when retrieving app from intune with displayname: '$DisplayName'"
-    }
-
-    if ($null -eq $win32App) {
-        throw "Could not find app with DisplayName: '$DisplayName'"
-    } elseif ($win32App.Count -gt 1) {
-        throw "Found more than 1 app with DisplayName: '$DisplayName'. Be more specific."
-    }
-
-    try {
-        $intuneWin32AppAssignmentArgs = @{
-            Include         = $true
-            ID              = $win32App.id
-            GroupID         = "9deb0e98-7051-4279-9e7a-31ec1daae2b9"
-            Intent          = "available"
-            Notification    = "showAll"
-        }
-        Add-IntuneWin32AppAssignmentGroup @intuneWin32AppAssignmentArgs
-    } catch {
-        throw "Encountered error when assigning '$DisplayName' to mem-device-app-testing_gs with ID '9deb0e98-7051-4279-9e7a-31ec1daae2b9'"
     }
 }
 
@@ -8674,3 +8564,149 @@ function Set-BasePolicyID {
 
 #endregion
 
+#region Export Functions
+Export-ModuleMember -Function @(
+    'Add-CompToADGroup'
+    'Add-UsersToADGroup'
+    'Compare-ComputersADGroups'
+    'Compare-UsersADGroups'
+    'Get-ADComputerMembership'
+    'Get-ADGroupMemberInfo'
+    'Get-ADUserMembership'
+    'Add-CodeSignature'
+    'Backup-ADBitlocker'
+    'Clear-SoftwareDistributionFolder'
+    'Compare-ADBitLockerToActualBitLocker'
+    'Confirm-BuggedSupersedence'
+    'Confirm-CCMSQLIssue'
+    'Convert-WmiDateTime'
+    'Copy-BypassAppsToSource'
+    'Copy-Dlls'
+    'Export-IconFromExe'
+    'Find-HostName'
+    'Format-AaronLockerHashRule'
+    'Get-AppRequirements'
+    'Get-AppsWithMoreThanOneDependency'
+    'Get-AppsWithMultipleDTs'
+    'Get-CCMCacheSize'
+    'Get-CMComputerInfo'
+    'Get-ComputerUptime'
+    'Get-ConnectedDocks'
+    'Get-DriverList'
+    'Get-FolderSizes'
+    'Get-InstallCommands'
+    'Get-InstalledKB'
+    'Get-LastLogonUser'
+    'Get-MachinesOfflineOverXDays'
+    'Get-SCCMDeviceQueries'
+    'Get-SCCMDeviceQueriesContainingOldGroups'
+    'Get-SCCMUserQueries'
+    'Get-SCCMUserQueriesContainingOldGroups'
+    'Get-SCCMWmiQueryResult'
+    'Get-SystemEnvironmentVariable'
+    'Get-SystemEnvironmentVariables'
+    'Get-TeamsVersion'
+    'Get-UserDeptAndJobTitle'
+    'Get-WDACEventLogs'
+    'Import-VMToSCCM'
+    'Install-HP7740Driver'
+    'New-AppScaffold'
+    'New-SCCMApplication'
+    'New-SCCMApplicationPSADT4.1.x'
+    'Remove-CodeSignature'
+    'Remove-RegistryKey'
+    'Repair-ConfigMGRClient'
+    'Reset-WMI'
+    'Reset-WMINoUninstall'
+    'Resize-Image'
+    'Set-NewWinServer'
+    'Set-RegistryKey'
+    'Uninstall-AdobeApps'
+    'Uninstall-HP7740Driver'
+    'Update-AdobeApps'
+    'Get-MailboxSizes'
+    'Set-ArchiveAfter180'
+    'Convert-EdgeFavourites'
+    'Get-AppLockerGPOPolicy'
+    'Get-GPOFromADGroupName'
+    'Get-GPOFromXmlString'
+    'Add-RemediationScriptAssignment'
+    'Connect-Tenant'
+    'Convert-Base64'
+    'Convert-SCCMAppToIntune'
+    'Copy-InstallScripts'
+    'Get-DeviceEntraGroups'
+    'Get-EntraGroups'
+    'Get-IntuneApp'
+    'Get-IntuneAppFailures'
+    'Get-IntuneAppFailuresPostToURL'
+    'Get-IntuneDevice'
+    'Get-IntuneGroup'
+    'Get-IntuneGroupMembers'
+    'Get-IntuneUser'
+    'Get-RemediationScript'
+    'Get-RemediationScriptAssignment'
+    'Get-RequiredAssignmentsForGroup'
+    'Get-VulnerabilitiesBySoftwareName'
+    'Hide-IntelExtensibleFrameworkUpdate'
+    'Hide-IntelExtensibleFrameworkUpdateDetection'
+    'Hide-IntelExtensibleFrameworkUpdateRemediation'
+    'New-IntuneAppControlPolicy'
+    'New-IntuneGroup'
+    'New-IntuneWinPackage'
+    'New-RemediationScript'
+    'Remove-RemediationScriptAssignment'
+    'Send-GraphEmail'
+    'Update-AdobeAppsDetection'
+    'Update-AdobeAppsRemediation'
+    'Add-MITLicence'
+    'Add-RemoteLocalGroupMember'
+    'Format-Xml'
+    'Get-BlockLetters'
+    'Get-Departments'
+    'Get-FolderSizeBytes'
+    'Get-FolderSizesGroupObject'
+    'Get-FolderSizesRecurse'
+    'Get-HPBiosHPCMSL'
+    'Get-InstalledApps'
+    'Get-Nearest100'
+    'Get-PSADTTemplateLatest'
+    'Get-RemoteLocalGroupMember'
+    'Install-LatestVSTOR2010'
+    'Invoke-PsExecScript'
+    'New-Day'
+    'New-ScriptFiles'
+    'Start-MSEdge'
+    'Test-FolderWriteSpeed'
+    'Test-UdpConnection'
+    'Unprotect-ExcelWorkbook'
+    'Wait-ProcessPolled'
+    'Write-CMLog'
+    'Write-DashLine'
+    'Remove-AutoCADRegKeys'
+    'Set-BestAppearanceWin11'
+    'Add-DeviceToCollection'
+    'Add-SCCMDeviceToCollection'
+    'Copy-InvokeScript'
+    'Get-SCCMAppInfo'
+    'Get-SCCMCollectionMembers'
+    'Get-SCCMContentLocation'
+    'Get-SCCMDeploymentCollections'
+    'Install-SCCMClient'
+    'Move-SCCMAppToBin'
+    'New-SCCMAppInstalledCollection'
+    'Open-CMLog'
+    'Publish-SCCMApplication'
+    'Remove-SCCMAppContent'
+    'Remove-SCCMAppContentExceptSelected'
+    'Remove-SCCMApplicationOldVersions'
+    'Remove-SCCMDeployments'
+    'Remove-SCCMSupersedence'
+    'Reset-CCMSQLCELog'
+    'Unpublish-SCCMApp'
+    'Convert-WDACXML'
+    'Get-ActiveCIPolicies'
+    'New-SupplementalAppControlPolicy'
+    'Set-BasePolicyID'
+)
+#endregion
