@@ -114,8 +114,7 @@ function Remove-SCCMAppContentExceptSelected {
                 Remove-CMContentDistribution -ApplicationName $app.LocalizedDisplayName -DistributionPointName $allDps -Force -ErrorAction SilentlyContinue
                 Remove-CMContentDistribution -ApplicationName $app.LocalizedDisplayName -DistributionPointGroupName $allDpGroups -Force -ErrorAction SilentlyContinue
             } catch {
-                Set-Location $ogLoc
-                throw "Failed to remove content for '$($app.LocalizedDisplayName)'. Error: $_"
+                continue
             }
         }
     }
