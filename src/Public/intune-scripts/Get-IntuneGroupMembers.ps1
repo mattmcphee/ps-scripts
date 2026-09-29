@@ -13,7 +13,7 @@
 
     # only get the basic fields
     if (-not $AllProperties) {
-        $uri += '?$select=id,displayName,userPrincipalName'
+        $uri += '?$select=id,displayName'
     }
 
     $results = [System.Collections.Generic.List[PSCustomObject]]::new()
@@ -22,16 +22,12 @@
         $response = Invoke-MgGraphRequest -Method GET -Uri $uri
 
         foreach ($member in $response.value) {
-            if ($DisplayName -and $group.displayName -notlike $DisplayName) {
-                continue
-            }
-
             if ($AllProperties) {
-                $results.Add([PSCustomObject]$group)
+                $results.Add([PSCustomObject]$member)
             } else {
                 $results.Add([PSCustomObject]@{
-                    ID              = $group.id
-                    DisplayName     = $group.displayName
+                    ID              = $member.id
+                    DisplayName     = $member.displayName
                 })
             }
         }
