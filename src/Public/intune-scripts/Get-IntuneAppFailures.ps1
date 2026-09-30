@@ -31,13 +31,13 @@
                 [System.Globalization.DateTimeStyles]::AdjustToUniversal
             )
 
-            $lastUpdatedTimeIsStale = $lastUpdatedTime -lt (Get-Date).ToUniversalTime().AddDays(-[Math]::Abs($using:LastXDays))
-            if ($lastUpdatedTimeIsStale) { continue }
+            $statusServiceReportTimeIsStale = $statusServiceReportTime -lt (Get-Date).ToUniversalTime().AddDays(-[Math]::Abs($using:LastXDays))
+            if ($statusServiceReportTimeIsStale) { continue }
 
             $appId                                  = $appRegItem.PSChildName
             $reportingState                         = $appRegItem.ReportingState | ConvertFrom-Json
             $enforcementErrorCode                   = $reportingState.EnforcementErrorCode
-            $hasEnforcementError                    = (-not [string]::IsNullOrWhiteSpace($enforcementErrorCode)) -and ($enforcementErrorCode -ne 0) -and ($enforcementErrorCode -ne "0x80070642")
+            $hasEnforcementError                    = (-not [string]::IsNullOrWhiteSpace($enforcementErrorCode)) -and ($enforcementErrorCode -ne 0)
             $detectionErrorOccurred                 = $reportingState.DetectionErrorOccurred
             $hasDetectionError                      = $detectionErrorOccurred -eq 'True'
             $applicabilityErrorOccurred             = $reportingState.ApplicabilityErrorOccurred
