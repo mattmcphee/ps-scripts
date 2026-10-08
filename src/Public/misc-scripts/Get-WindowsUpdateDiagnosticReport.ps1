@@ -116,10 +116,8 @@
     $PendingFileRename = $false
 
     try {
-        $RenameValue = Get-RegistrySnapshot `
-            'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager' `
-            -Name PendingFileRenameOperations `
-            -ErrorAction SilentlyContinue
+        $RenameValue = Get-RegistrySnapshot 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager' |
+            Get-RegistrySnapshotValue -Name PendingFileRenameOperations
 
         if ($null -ne $RenameValue.PendingFileRenameOperations) {
             $PendingFileRename = $true
@@ -607,4 +605,4 @@
     return $Report
 }
 
-Get-WindowsUpdateDiagnosticReport -OutputPath 'C:\sources\wudiag.json'
+Get-WindowsUpdateDiagnosticReport -OutputPath 'C:\sources\wu-report.json'

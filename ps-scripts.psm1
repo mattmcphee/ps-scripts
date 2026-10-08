@@ -1,7 +1,7 @@
 # ============================================================================
 # GENERATED FILE - DO NOT EDIT
 # Run .\build.ps1 to regenerate this file from .\src
-# This file was built on 22-Sept-2026 15:48:09
+# This file was built on 06-Oct-2026 08:31:01
 # ============================================================================
 
 #region Add-CompToADGroup.ps1
@@ -3852,13 +3852,13 @@ function Get-IntuneAppFailures {
                 [System.Globalization.DateTimeStyles]::AdjustToUniversal
             )
 
-            $lastUpdatedTimeIsStale = $lastUpdatedTime -lt (Get-Date).ToUniversalTime().AddDays(-[Math]::Abs($using:LastXDays))
-            if ($lastUpdatedTimeIsStale) { continue }
+            $statusServiceReportTimeIsStale = $statusServiceReportTime -lt (Get-Date).ToUniversalTime().AddDays(-[Math]::Abs($using:LastXDays))
+            if ($statusServiceReportTimeIsStale) { continue }
 
             $appId                                  = $appRegItem.PSChildName
             $reportingState                         = $appRegItem.ReportingState | ConvertFrom-Json
             $enforcementErrorCode                   = $reportingState.EnforcementErrorCode
-            $hasEnforcementError                    = (-not [string]::IsNullOrWhiteSpace($enforcementErrorCode)) -and ($enforcementErrorCode -ne 0) -and ($enforcementErrorCode -ne "0x80070642")
+            $hasEnforcementError                    = (-not [string]::IsNullOrWhiteSpace($enforcementErrorCode)) -and ($enforcementErrorCode -ne 0)
             $detectionErrorOccurred                 = $reportingState.DetectionErrorOccurred
             $hasDetectionError                      = $detectionErrorOccurred -eq 'True'
             $applicabilityErrorOccurred             = $reportingState.ApplicabilityErrorOccurred
@@ -4234,7 +4234,7 @@ function Get-IntuneGroupMembers {
 
     # only get the basic fields
     if (-not $AllProperties) {
-        $uri += '?$select=id,displayName,userPrincipalName'
+        $uri += '?$select=id,displayName'
     }
 
     $results = [System.Collections.Generic.List[PSCustomObject]]::new()
@@ -4243,16 +4243,12 @@ function Get-IntuneGroupMembers {
         $response = Invoke-MgGraphRequest -Method GET -Uri $uri
 
         foreach ($member in $response.value) {
-            if ($DisplayName -and $group.displayName -notlike $DisplayName) {
-                continue
-            }
-
             if ($AllProperties) {
-                $results.Add([PSCustomObject]$group)
+                $results.Add([PSCustomObject]$member)
             } else {
                 $results.Add([PSCustomObject]@{
-                    ID              = $group.id
-                    DisplayName     = $group.displayName
+                    ID              = $member.id
+                    DisplayName     = $member.displayName
                 })
             }
         }
@@ -5254,6 +5250,135 @@ function Send-GraphEmail {
     } catch {
         throw "Error: $($_.Exception.Message)"
     }
+}
+
+#endregion
+
+#region Unhide-IntelExtensibleFrameworkUpdate.ps1
+function Unhide-IntelExtensibleFrameworkUpdate {
+    $titlePattern = "*Intel*Extension*2.1.10103.24*"
+    $logPath = "C:\Windows\Logs\Unhide-IntelExtensibleFrameworkUpdate.log"
+
+    function Write-CMLog {
+        [CmdletBinding()]
+        param(
+            # Message
+            [Parameter(Mandatory = $true, ValueFromPipeline)]
+            [AllowEmptyString()]
+            [AllowNull()]
+            [string[]]$Message,
+            # Path
+            [Parameter(Mandatory = $true)]
+            [ValidateNotNullOrEmpty()]
+            [string]$Path,
+            # Level
+            [Parameter(Mandatory = $false)]
+            [ValidateSet("Error", "Warning", "Info")]
+            [string]$Level = "Info",
+            # Component
+            [Parameter(Mandatory = $false)]
+            [string]$Component = "PowerShellScript",
+            # Context
+            [Parameter(Mandatory = $false)]
+            [string]$Context = "PowerShellScript",
+            # Quiet - suppresses output
+            [Parameter(Mandatory = $false)]
+            [switch]$Quiet = $false
+        )
+
+        process {
+            $logDir = Split-Path $Path -Parent
+
+            if (-not (Test-Path -Path $logDir -PathType Container)) {
+                try {
+                    New-Item -ItemType Directory -Path $logDir -ErrorAction Stop -Force | Out-Null
+                } catch {
+                    throw "Could not create log directory: $logDir $_"
+                }
+            }
+
+            $now = Get-Date
+            $tzOffset = [TimeZoneInfo]::Local.GetUtcOffset($now).TotalMinutes
+            $timeStr = $now.ToString("HH:mm:ss.fff") + ("{0:+000;-000;+000}" -f $tzOffset)
+            $dateStr = $now.ToString("MM-dd-yyyy")
+
+            foreach ($line in $Message) {
+                if (-not $Quiet) {
+                    # output the message
+                    Write-Output $line
+                }
+
+                # convert level to type codes so cmtrace can read it
+                switch ($Level) {
+                    "Info" { [int]$type = 1 }
+                    "Warning" { [int]$type = 2 }
+                    "Error" { [int]$type = 3 }
+                }
+
+                $threadId = [System.Threading.Thread]::CurrentThread.ManagedThreadId
+
+                # create log entry
+                $logLine = "<![LOG[$line]LOG]!>" +
+                "<" +
+                "time=`"$timeStr`" " +
+                "date=`"$dateStr`" " +
+                "component=`"$Component`" " +
+                "context=`"$Context`" " +
+                "type=`"$type`" " +
+                "thread=`"$threadId`" " +
+                "file=`"Hide-IntelExtensibleFrameworkUpdateRemediation.ps1`"" +
+                ">"
+
+                # append line to log file
+                $logLine | Out-File -FilePath $Path -Append -Encoding utf8
+            }
+        }
+    }
+
+    try {
+        $updateSession = New-Object -ComObject Microsoft.Update.Session
+        $updateSearcher = $updateSession.CreateUpdateSearcher()
+        $updates = @($updateSearcher.Search("IsHidden=1").Updates)
+    } catch {
+        Write-CMLog -Message "Failed to query the Windows Update Agent: $($_.Exception.Message)" -Level 'Error' -Path $logPath -Quiet
+        exit 1
+    }
+
+    $matched = @($updates | Where-Object { $_.Title -like $titlePattern })
+
+    if ($matched.Count -eq 0) {
+        Write-CMLog -Message "No hidden update matching '$titlePattern'. Nothing to remediate." -Level 'Info' -Path $logPath -Quiet
+        exit 0
+    }
+
+    $failures = [System.Collections.Generic.List[string]]::new()
+
+    foreach ($update in $matched) {
+        try {
+            $update.IsHidden = $false
+        } catch {
+            Write-CMLog -Message "Failed to unhide $($update.Title): $($_.Exception.Message)" -Level 'Error' -Path $logPath -Quiet
+            $failures.Add($update.Title)
+            continue
+        }
+
+        Start-Sleep -Seconds 60
+
+        # re-read the property to confirm the change persisted to the WU datastore
+        if (-not ($update.IsHidden)) {
+            Write-CMLog -Message "Successfully unhideded $($update.Title)" -Level 'Info' -Path $logPath -Quiet
+        } else {
+            Write-CMLog -Message "Unhide operation reported no error but $($update.Title) is still hidden" -Level 'Error' -Path $logPath -Quiet
+            $failures.Add($update.Title)
+        }
+    }
+
+    if ($failures.Count -gt 0) {
+        Write-CMLog "Failed to unhide $($failures.Count) update(s): $($failures -join ', ')" -Level 'Error' -Path $logPath -Quiet
+        exit 1
+    }
+
+    exit 0
 }
 
 #endregion
@@ -6884,6 +7009,206 @@ function Invoke-PsExecScript {
                     -Force `
                     -ErrorAction SilentlyContinue
             }
+        }
+    }
+}
+
+#endregion
+
+#region Invoke-Robocopy.ps1
+function Invoke-Robocopy {
+    [CmdletBinding(SupportsShouldProcess)]
+    param (
+        [Parameter(Mandatory, Position = 0, ValueFromPipeline)]
+        [Alias('Source', 'FullName')]
+        [string[]]$Path,
+
+        [Parameter(Mandatory, Position = 1)]
+        [string]$Destination,
+
+        [ValidateRange(0, 100)]
+        [int]$RetryCount = 2,
+
+        [ValidateRange(0, 3600)]
+        [int]$WaitSeconds = 2,
+
+        [Parameter(Mandatory = $false)]
+        [string[]]$RobocopyArgument
+    )
+
+    begin {
+        $robocopy = Get-Command 'robocopy.exe' -ErrorAction Stop
+
+        # destination doesn't have to exist yet.
+        $destination = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(
+            $Destination
+        )
+
+        function Invoke-RobocopyCopy {
+            param (
+                [string]$SourceDirectory,
+                [string]$DestinationDirectory,
+                [string]$FileMask = '*'
+            )
+
+            $arguments = @(
+                $SourceDirectory
+                $DestinationDirectory
+                $FileMask
+                "/R:$RetryCount"
+                "/W:$WaitSeconds"
+                '/COPY:DAT'
+                '/DCOPY:DAT'
+                '/XJ'
+                '/NP'
+                '/E'
+                '/S'
+            )
+
+            if ($RobocopyArgument) { $arguments += $RobocopyArgument }
+
+            if ($PSCmdlet.ShouldProcess($DestinationDirectory, "robocopy '$SourceDirectory\$FileMask'")) {
+                Write-Verbose ('robocopy.exe ' + ($arguments | ForEach-Object { '"{0}"' -f $_ }) -join ' ')
+
+                $output = & $robocopy.Source @arguments 2>&1
+                $exitCode = $LASTEXITCODE
+
+                # robocopy exit codes 0-7 are considered successful.
+                if ($exitCode -ge 8) {
+                    $msg = $output -join [Environment]::NewLine
+
+                    throw @"
+robocopy failed with exit code $exitCode.
+
+Source:      $SourceDirectory
+Destination: $DestinationDirectory
+File mask:   $FileMask
+
+$msg
+"@
+                }
+
+                [PSCustomObject]@{
+                    Source      = $SourceDirectory
+                    Destination = $DestinationDirectory
+                    FileMask    = $FileMask
+                    ExitCode    = $exitCode
+                    Success     = $true
+                }
+            }
+        }
+
+        function Invoke-RobocopyLiteralItemCopy {
+            param (
+                [System.IO.FileSystemInfo]$item
+            )
+
+            if ($item.PSIsContainer) {
+                # A literal directory includes the directory itself.
+                #
+                # C:\Data\Photos -> D:\Backup\Photos
+                $targetDir = Join-Path $destination $item.Name
+
+                Invoke-RobocopyCopy `
+                    -SourceDirectory $item.FullName `
+                    -DestinationDirectory $targetDir
+            } else {
+                # A literal file is copied into destination.
+                #
+                # C:\Data\File.txt -> D:\Backup\File.txt
+                Invoke-RobocopyCopy `
+                    -SourceDirectory $item.DirectoryName `
+                    -DestinationDirectory $destination `
+                    -FileMask $item.Name
+            }
+        }
+    }
+
+    process {
+        foreach ($srcPath in $Path) {
+            # Handle ** specially.
+            # Supported:
+            #   C:\Data\**
+            #   C:\Data\**\*.txt
+            $globStar = [regex]::Match(
+                $srcPath,
+                '^(?<Root>.*[\\/])\*\*(?:[\\/](?<Mask>[^\\/]+))?$'
+            )
+
+            if ($globStar.Success) {
+                $root = $globStar.Groups['Root'].Value
+                $mask = $globStar.Groups['Mask'].Value
+
+                if ([string]::IsNullOrWhiteSpace($mask)) { $mask = '*' }
+
+                if ([System.Management.Automation.WildcardPattern]::ContainsWildcardCharacters(
+                        $root.TrimEnd('\', '/')
+                    )
+                ) { throw "Wildcards before '**' are not supported: $srcPath" }
+
+                $rootItem = Get-Item -LiteralPath $root -Force -ErrorAction Stop
+
+                if (-not $rootItem.PSIsContainer) {
+                    throw "The path before '**' must be a directory: $root"
+                }
+
+                if ($mask -eq '*') {
+                    # C:\Data\**
+                    # Copy absolutely everything beneath C:\Data,
+                    # including empty directories.
+                    Invoke-RobocopyCopy `
+                        -SourceDirectory $rootItem.FullName `
+                        -DestinationDirectory $destination
+                } else {
+                    # C:\Data\**\*.txt
+                    # Recursively copy matching files while preserving
+                    # their relative directory structure.
+                    Invoke-RobocopyCopy `
+                        -SourceDirectory $rootItem.FullName `
+                        -DestinationDirectory $destination `
+                        -FileMask $mask
+                }
+
+                continue
+            }
+
+            # Normal PowerShell wildcard.
+            # Example:
+            #   C:\Data\*.txt
+            #   C:\Data\Test*
+            if ([System.Management.Automation.WildcardPattern]::ContainsWildcardCharacters($srcPath)) {
+                $parent = Split-Path -Path $srcPath -Parent
+
+                if ([System.Management.Automation.WildcardPattern]::ContainsWildcardCharacters($parent)) {
+                    throw @"
+Wildcards are only supported in the final part of the path.
+
+Supported examples:
+    C:\Data\*.txt
+    C:\Data\Test*
+    C:\Data\**
+    C:\Data\**\*.txt
+"@
+                }
+
+                $items = @(
+                    Get-ChildItem -Path $srcPath -Force -ErrorAction Stop
+                )
+
+                if ($items.Count -eq 0) {
+                    throw "No files or directories matched '$srcPath'."
+                }
+
+                foreach ($item in $items) {
+                    Invoke-RobocopyLiteralItemCopy -Item $item
+                }
+
+                continue
+            }
+
+            # Normal literal file/directory.
+            $item = Get-Item -LiteralPath $srcPath -Force -ErrorAction Stop
+            Invoke-RobocopyLiteralItemCopy -Item $item
         }
     }
 }
@@ -8626,8 +8951,7 @@ function Remove-SCCMAppContentExceptSelected {
                 Remove-CMContentDistribution -ApplicationName $app.LocalizedDisplayName -DistributionPointName $allDps -Force -ErrorAction SilentlyContinue
                 Remove-CMContentDistribution -ApplicationName $app.LocalizedDisplayName -DistributionPointGroupName $allDpGroups -Force -ErrorAction SilentlyContinue
             } catch {
-                Set-Location $ogLoc
-                throw "Failed to remove content for '$($app.LocalizedDisplayName)'. Error: $_"
+                continue
             }
         }
     }
@@ -9401,6 +9725,7 @@ Export-ModuleMember -Function @(
     'New-RemediationScript'
     'Remove-RemediationScriptAssignment'
     'Send-GraphEmail'
+    'Unhide-IntelExtensibleFrameworkUpdate'
     'Update-AdobeAppsDetection'
     'Update-AdobeAppsRemediation'
     'Add-MITLicence'
@@ -9420,6 +9745,7 @@ Export-ModuleMember -Function @(
     'Get-WindowsUpdateDiagnosticReport'
     'Install-LatestVSTOR2010'
     'Invoke-PsExecScript'
+    'Invoke-Robocopy'
     'New-Day'
     'New-ScriptFiles'
     'Start-MSEdge'

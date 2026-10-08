@@ -10,6 +10,8 @@
     )
 
     $errors = Invoke-Command -ComputerName $ComputerName -ArgumentList $LastXDays -ScriptBlock {
+        
+
         $regPath = "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\IntuneManagementExtension\Win32Apps\Reporting\00000000-0000-0000-0000-000000000000"
 
         $appRegItems = Get-ChildItem $regPath | Get-ItemProperty
