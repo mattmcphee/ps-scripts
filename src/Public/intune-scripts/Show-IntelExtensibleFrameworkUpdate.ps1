@@ -1,4 +1,4 @@
-﻿function Unhide-IntelExtensibleFrameworkUpdate {
+﻿function Show-IntelExtensibleFrameworkUpdate {
     $titlePattern = "*Intel*Extension*2.1.10103.24*"
     $logPath = "C:\Windows\Logs\Unhide-IntelExtensibleFrameworkUpdate.log"
 
