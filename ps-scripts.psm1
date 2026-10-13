@@ -1,7 +1,7 @@
 # ============================================================================
 # GENERATED FILE - DO NOT EDIT
 # Run .\build.ps1 to regenerate this file from .\src
-# This file was built on 13-Oct-2026 11:58:45
+# This file was built on 13-Oct-2026 12:00:30
 # ============================================================================
 
 #region Add-CompToADGroup.ps1
@@ -7012,8 +7012,6 @@ function Get-WindowsUpdateDiagnosticReport {
 
     return $Report
 }
-
-Get-WindowsUpdateDiagnosticReport -OutputPath 'C:\sources\wu-report.json'
 
 #endregion
 
