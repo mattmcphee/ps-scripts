@@ -1,7 +1,7 @@
 # ============================================================================
 # GENERATED FILE - DO NOT EDIT
 # Run .\build.ps1 to regenerate this file from .\src
-# This file was built on 06-Oct-2026 08:31:01
+# This file was built on 13-Oct-2026 11:58:45
 # ============================================================================
 
 #region Add-CompToADGroup.ps1
@@ -3609,6 +3609,135 @@ function Copy-InstallScripts {
 
 #endregion
 
+#region Get-CompanyPortalStatus.ps1
+function Get-CompanyPortalStatus {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory)]
+        [string[]]$ComputerName,
+
+        [Parameter(Mandatory)]
+        [string]$CsvPath,
+
+        [Parameter(Mandatory=$false)]
+        [ValidateRange(1, 256)]
+        [int]$ThrottleLimit = 8,
+
+        [Parameter(Mandatory=$false)]
+        [ValidateRange(1000, 60000)]
+        [int]$Timeout = 5000
+    )
+
+    $computers = @(
+        $ComputerName |
+            Where-Object { -not [string]::IsNullOrWhiteSpace($_) } |
+            ForEach-Object { $_.Trim() } |
+            Select-Object -Unique
+    )
+
+    if ($computers.Count -eq 0) {
+        throw 'No computer names supplied.'
+    }
+
+    $sessionOption = New-PSSessionOption -OpenTimeout $Timeout
+
+    $results = @(
+        Invoke-Command `
+        -ComputerName $computers `
+        -ThrottleLimit $ThrottleLimit `
+        -SessionOption $sessionOption `
+        -ErrorAction SilentlyContinue `
+        -ScriptBlock {
+            $packageName = 'Microsoft.CompanyPortal'
+            $systemInstalled = $null
+            $userInstalled = $null
+
+            # Check device-level provisioning
+            try {
+                $systemInstalled = @(
+                    Get-AppxProvisionedPackage -Online -ErrorAction Stop |
+                        Where-Object DisplayName -eq $packageName
+                ).Count -gt 0
+            } catch {
+                $systemInstalled = $null
+            }
+
+            # Get last logged-on user's SID
+            try {
+                $logonInfo = Get-ItemProperty `
+                    -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI' `
+                    -ErrorAction Stop
+
+                $user = $logonInfo.LastLoggedOnUserSID
+
+                if (-not $user) {
+                    $user = $logonInfo.LastLoggedOnSAMUser
+                }
+
+                if (-not $user) {
+                    $user = $logonInfo.LastLoggedOnUser
+                }
+
+                if ($user) {
+                    $userInstalled = @(
+                        Get-AppxPackage `
+                            -Name $packageName `
+                            -User $user `
+                            -ErrorAction Stop
+                    ).Count -gt 0
+                }
+            } catch {
+                $userInstalled = $null
+            }
+
+            [PSCustomObject]@{
+                SystemInstalled = $systemInstalled
+                UserInstalled   = $userInstalled
+            }
+        }
+    )
+
+    # Index results for efficient lookup
+    $lookup = @{}
+
+    foreach ($result in $results) {
+        $name = [string]$result.PSComputerName
+
+        if ($name) {
+            $lookup[$name] = $result
+
+            $shortName = $name.Split('.')[0]
+
+            if (-not $lookup.ContainsKey($shortName)) {
+                $lookup[$shortName] = $result
+            }
+        }
+    }
+
+    # Include every requested computer, even unreachable ones
+    $report = foreach ($computer in $computers) {
+        $result = $lookup[$computer]
+
+        if (-not $result) {
+            $result = $lookup[$computer.Split('.')[0]]
+        }
+
+        [PSCustomObject]@{
+            ComputerName    = $computer
+            SystemInstalled = if ($result) { $result.SystemInstalled } else { $null }
+            UserInstalled   = if ($result) { $result.UserInstalled } else { $null }
+        }
+    }
+
+    $report | Export-Csv -Path $CsvPath -NoTypeInformation -Encoding UTF8
+
+    Write-Verbose "Exported $($report.Count) records to $CsvPath"
+
+    return $report
+}
+
+#endregion
+
 #region Get-DeviceEntraGroups.ps1
 function Get-DeviceEntraGroups {
     [CmdletBinding()]
@@ -3831,6 +3960,8 @@ function Get-IntuneAppFailures {
     )
 
     $errors = Invoke-Command -ComputerName $ComputerName -ArgumentList $LastXDays -ScriptBlock {
+        
+
         $regPath = "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\IntuneManagementExtension\Win32Apps\Reporting\00000000-0000-0000-0000-000000000000"
 
         $appRegItems = Get-ChildItem $regPath | Get-ItemProperty
@@ -5009,6 +5140,56 @@ function New-IntuneWinPackage {
 
 #endregion
 
+#region New-PimRequest.ps1
+function New-PimRequest {
+    [CmdletBinding()]
+    param (
+        [Parameter(Mandatory)]
+        [string]$TicketNumber,
+
+        [Parameter(Mandatory)]
+        [string]$Description
+    )
+
+    $tenantId     = '9a2a4ae5-8ac1-460b-90f0-bb3c8516df35'
+    $groupId      = 'c385f88e-372b-4a3a-98d4-0d98cabb0916'
+    $ticketSystem = 'TopDesk'
+    $duration     = 'PT8H'
+    $scopes       = 'Group.Read.All'
+
+    $ctx = Get-MgContext
+    if (-not $ctx -or $ctx.TenantId -ne $tenantId -or ($scopes | Where-Object { $_ -notin $ctx.Scopes })) {
+        Connect-MgGraph -TenantId $tenantId -Scopes $scopes -ContextScope Process -NoWelcome -ErrorAction Stop
+    }
+
+    $user = Invoke-MgGraphRequest -Method GET -Uri 'v1.0/me?$select=id' -ErrorAction Stop
+
+    $body = @{
+        action        = 'selfActivate'
+        accessId      = 'member'
+        principalId   = $user.id
+        groupId       = $groupId
+        justification = $Description
+        ticketInfo    = @{
+            ticketNumber = $TicketNumber
+            ticketSystem = $ticketSystem
+        }
+        scheduleInfo  = @{
+            startDateTime = [datetime]::UtcNow.ToString('o')
+            expiration    = @{ 
+                type = 'afterDuration'
+                duration = $duration
+            }
+        }
+    }
+
+    Invoke-MgGraphRequest -Method POST `
+        -Uri 'v1.0/identityGovernance/privilegedAccess/group/assignmentScheduleRequests' `
+        -Body $body -ErrorAction Stop
+}
+
+#endregion
+
 #region New-RemediationScript.ps1
 function New-RemediationScript {
     [CmdletBinding()]
@@ -5187,6 +5368,31 @@ function Remove-RemediationScriptAssignment {
 
 #endregion
 
+#region Restart-IntuneService.ps1
+function Restart-IntuneService {
+    [CmdletBinding()]
+    param (
+        # ComputerName
+        [Parameter(Mandatory=$false,ValueFromPipeline)]
+        [string[]]$ComputerName = $env:COMPUTERNAME
+    )
+
+    begin {
+        $scriptBlock = {
+            Get-Service -Name "IntuneManagementExtension" | Restart-Service -Force
+        }
+    }
+
+    process {
+        foreach ($computer in $computerName) {
+            Invoke-Command -ComputerName $computer -ScriptBlock $scriptBlock
+            Write-Host "Restarted IntuneManagementExtension service on $computer."
+        }
+    }
+}
+
+#endregion
+
 #region Send-GraphEmail.ps1
 function Send-GraphEmail {
     [CmdletBinding()]
@@ -5254,8 +5460,8 @@ function Send-GraphEmail {
 
 #endregion
 
-#region Unhide-IntelExtensibleFrameworkUpdate.ps1
-function Unhide-IntelExtensibleFrameworkUpdate {
+#region Show-IntelExtensibleFrameworkUpdate.ps1
+function Show-IntelExtensibleFrameworkUpdate {
     $titlePattern = "*Intel*Extension*2.1.10103.24*"
     $logPath = "C:\Windows\Logs\Unhide-IntelExtensibleFrameworkUpdate.log"
 
@@ -6318,10 +6524,8 @@ function Get-WindowsUpdateDiagnosticReport {
     $PendingFileRename = $false
 
     try {
-        $RenameValue = Get-RegistrySnapshot `
-            'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager' `
-            -Name PendingFileRenameOperations `
-            -ErrorAction SilentlyContinue
+        $RenameValue = Get-RegistrySnapshot 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager' |
+            Get-RegistrySnapshotValue -Name PendingFileRenameOperations
 
         if ($null -ne $RenameValue.PendingFileRenameOperations) {
             $PendingFileRename = $true
@@ -6808,6 +7012,8 @@ function Get-WindowsUpdateDiagnosticReport {
 
     return $Report
 }
+
+Get-WindowsUpdateDiagnosticReport -OutputPath 'C:\sources\wu-report.json'
 
 #endregion
 
@@ -9703,6 +9909,7 @@ Export-ModuleMember -Function @(
     'Convert-Base64'
     'Convert-SCCMAppToIntune'
     'Copy-InstallScripts'
+    'Get-CompanyPortalStatus'
     'Get-DeviceEntraGroups'
     'Get-EntraGroups'
     'Get-IntuneApp'
@@ -9722,10 +9929,12 @@ Export-ModuleMember -Function @(
     'New-IntuneAppControlPolicy'
     'New-IntuneGroup'
     'New-IntuneWinPackage'
+    'New-PimRequest'
     'New-RemediationScript'
     'Remove-RemediationScriptAssignment'
+    'Restart-IntuneService'
     'Send-GraphEmail'
-    'Unhide-IntelExtensibleFrameworkUpdate'
+    'Show-IntelExtensibleFrameworkUpdate'
     'Update-AdobeAppsDetection'
     'Update-AdobeAppsRemediation'
     'Add-MITLicence'
