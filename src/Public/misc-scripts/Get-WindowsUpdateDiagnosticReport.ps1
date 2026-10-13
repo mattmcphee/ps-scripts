@@ -604,5 +604,3 @@
 
     return $Report
 }
-
-Get-WindowsUpdateDiagnosticReport -OutputPath 'C:\sources\wu-report.json'
