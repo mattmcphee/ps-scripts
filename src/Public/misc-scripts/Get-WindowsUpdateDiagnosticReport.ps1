@@ -123,7 +123,7 @@
             $PendingFileRename = $true
         }
     } catch {
-        throw $_
+        Write-Verbose "Unable to read PendingFileRenameOperations: $($_.Exception.Message)"
     }
 
     $ConfigMgrRebootPending = $null
@@ -137,7 +137,8 @@
 
         $ConfigMgrRebootPending = $CCMReboot.RebootPending
     } catch {
-        throw $_
+        # Expected on machines without the ConfigMgr client
+        Write-Verbose "ConfigMgr reboot state unavailable: $($_.Exception.Message)"
     }
 
     $PendingReboot = [PSCustomObject]@{
@@ -164,12 +165,10 @@
     try {
         $Session = New-Object -ComObject Microsoft.Update.Session
         $Searcher = $Session.CreateUpdateSearcher()
-
         $HistoryCount = $Searcher.GetTotalHistoryCount()
 
         if ($HistoryCount -gt 0) {
             $QueryCount = [Math]::Min($HistoryCount, 300)
-
             $RawHistory = $Searcher.QueryHistory(0, $QueryCount)
 
             $ResultCodes = @{
@@ -189,7 +188,6 @@
 
             $UpdateHistory = @(
                 foreach ($Entry in $RawHistory) {
-
                     if ($Entry.Date -lt $since) {
                         continue
                     }
@@ -207,7 +205,7 @@
             )
         }
     } catch {
-        throw $_
+        $UpdateHistoryError = $_.Exception.Message
     }
 
     # -------------------------------------------------------------------------
@@ -233,9 +231,7 @@
 
             $PendingUpdates = @(
                 for ($i = 0; $i -lt $SearchResult.Updates.Count; $i++) {
-
                     $Update = $SearchResult.Updates.Item($i)
-
                     $Categories = @()
 
                     for (
@@ -243,9 +239,7 @@
                         $CategoryIndex -lt $Update.Categories.Count;
                         $CategoryIndex++
                     ) {
-                        $Categories += $Update.Categories.Item(
-                            $CategoryIndex
-                        ).Name
+                        $Categories += $Update.Categories.Item($CategoryIndex).Name
                     }
 
                     $KBs = @()
@@ -265,7 +259,7 @@
                 }
             )
         } catch {
-            throw $_
+            $UpdateSearchError = $_.Exception.Message
         }
     }
 
@@ -283,18 +277,20 @@
                 StartTime = $since
                 Level     = 2, 3
             } -ErrorAction Stop |
-                Select-Object -First $EventCount |
-                ForEach-Object {
-                    [PSCustomObject]@{
-                        TimeCreated = $_.TimeCreated
-                        EventID     = $_.Id
-                        Level       = $_.LevelDisplayName
-                        Message     = $_.Message
-                    }
+            Select-Object -First $EventCount |
+            ForEach-Object {
+                [PSCustomObject]@{
+                    TimeCreated = $_.TimeCreated
+                    EventID     = $_.Id
+                    Level       = $_.LevelDisplayName
+                    Message     = $_.Message
                 }
+            }
         )
     } catch {
-        throw $_
+        if ($_.FullyQualifiedErrorId -notlike 'NoMatchingEventsFound*') {
+            $WindowsUpdateEventError = $_.Exception.Message
+        }
     }
 
     # -------------------------------------------------------------------------
@@ -314,35 +310,7 @@
                 InstalledOn
         )
     } catch {
-        throw $_
-    }
-
-    # -------------------------------------------------------------------------
-    # ConfigMgr
-    # -------------------------------------------------------------------------
-
-    $CCMExec = Get-Service CcmExec -ErrorAction SilentlyContinue
-
-    $CCMLogRoot = Join-Path $env:windir 'CCM\Logs'
-
-    $ConfigMgr = [PSCustomObject]@{
-        ClientInstalled = [bool]$CCMExec
-        ClientState     = if ($CCMExec) { $CCMExec.Status } else { $null }
-
-        WUAHandlerErrors = @(
-            Get-ConfigMgrLogErrors `
-                (Join-Path $CCMLogRoot 'WUAHandler.log')
-        )
-
-        UpdatesDeploymentErrors = @(
-            Get-ConfigMgrLogErrors `
-                (Join-Path $CCMLogRoot 'UpdatesDeployment.log')
-        )
-
-        UpdatesHandlerErrors = @(
-            Get-ConfigMgrLogErrors `
-                (Join-Path $CCMLogRoot 'UpdatesHandler.log')
-        )
+        Write-Warning "Unable to query installed hotfixes: $($_.Exception.Message)"
     }
 
     # -------------------------------------------------------------------------
@@ -361,9 +329,9 @@
                 -TaskPath '\Microsoft\Windows\WindowsUpdate\' `
                 -ErrorAction SilentlyContinue
         ) |
-            Select-Object TaskName, TaskPath, State
+        Select-Object TaskName, TaskPath, State
     } catch {
-        throw $_
+        Write-Warning "Unable to query update scheduled tasks: $($_.Exception.Message)"
     }
 
     # -------------------------------------------------------------------------
@@ -376,7 +344,7 @@
                 Out-String
         ).Trim()
     } catch {
-        throw $_
+        $WinHTTPProxy = "Unable to query WinHTTP proxy: $($_.Exception.Message)"
     }
 
     try {
@@ -385,7 +353,7 @@
                 Out-String
         ).Trim()
     } catch {
-        throw $_
+        $TimeStatus = "Unable to query time service: $($_.Exception.Message)"
     }
 
     # -------------------------------------------------------------------------
@@ -415,35 +383,23 @@
         $LikelyIssues += 'The machine has a pending reboot.'
     }
 
-
     # Windows Update disabled
-    $NoAutoUpdate = Get-SnapshotValue `
-        $AUConfiguredPolicy `
-        'NoAutoUpdate'
+    $NoAutoUpdate = Get-RegistrySnapshotValue -Snapshot $AUConfiguredPolicy -Name 'NoAutoUpdate'
 
     if ($NoAutoUpdate -eq 1) {
         $LikelyIssues += 'NoAutoUpdate policy is enabled.'
     }
 
-
     # Windows Update UI/access disabled
-    $DisableWUAccess = Get-SnapshotValue `
-        $WUConfiguredPolicy `
-        'DisableWindowsUpdateAccess'
+    $DisableWUAccess = Get-RegistrySnapshotValue -Snapshot $WUConfiguredPolicy -Name 'DisableWindowsUpdateAccess'
 
     if ($DisableWUAccess -eq 1) {
         $LikelyIssues += 'DisableWindowsUpdateAccess policy is enabled.'
     }
 
-
     # Quality update pause
-    $PausedQualityStatus = Get-SnapshotValue `
-        $UpdatePolicyStatus `
-        'PausedQualityStatus'
-
-    $ConfiguredQualityPause = Get-SnapshotValue `
-        $WUConfiguredPolicy `
-        'PauseQualityUpdates'
+    $PausedQualityStatus = Get-RegistrySnapshotValue -Snapshot $UpdatePolicyStatus -Name 'PausedQualityStatus'
+    $ConfiguredQualityPause = Get-RegistrySnapshotValue -Snapshot $WUConfiguredPolicy -Name 'PauseQualityUpdates'
 
     if (
         ($PausedQualityStatus -eq 1) -or
@@ -452,53 +408,41 @@
         $LikelyIssues += 'Quality updates appear to be paused.'
     }
 
-
     # Quality update deferral
-    $QualityDeferral = Get-SnapshotValue `
-        $WUConfiguredPolicy `
-        'DeferQualityUpdatesPeriodInDays'
-
+    $QualityDeferral = Get-RegistrySnapshotValue -Snapshot $WUConfiguredPolicy -Name 'DeferQualityUpdatesPeriodInDays'
+    if (-not($QualityDeferral -is [int])) { $QualityDeferral = 0 }
     if ($QualityDeferral -gt 0) {
         $LikelyIssues += "Quality updates are configured to be deferred by $QualityDeferral day(s)."
     }
 
-
     # WSUS / SUP configuration
-    $UseWUServer = Get-SnapshotValue `
-        $AUConfiguredPolicy `
-        'UseWUServer'
-
-    $WUServer = Get-SnapshotValue `
-        $WUConfiguredPolicy `
-        'WUServer'
+    $UseWUServer = Get-RegistrySnapshotValue -Snapshot $AUConfiguredPolicy -Name 'UseWUServer'
+    $WUServer = Get-RegistrySnapshotValue -Snapshot $WUConfiguredPolicy -Name 'WUServer'
 
     if (($UseWUServer -eq 1) -and (-not $WUServer)) {
         $LikelyIssues += 'UseWUServer is enabled but no WUServer value was found.'
     }
-
 
     # WUA search failure
     if ($UpdateSearchError) {
         $LikelyIssues += "Windows Update Agent search failed: $UpdateSearchError"
     }
 
-
     # Recent update installation failures
     $RecentFailures = @(
         $UpdateHistory |
-            Where-Object {
-                $_.Result -in @(
-                    'Failed',
-                    'Aborted',
-                    'SucceededWithErrors'
-                )
-            }
+        Where-Object {
+            $_.Result -in @(
+                'Failed',
+                'Aborted',
+                'SucceededWithErrors'
+            )
+        }
     )
 
     if ($RecentFailures.Count -gt 0) {
         $LikelyIssues += "$($RecentFailures.Count) unsuccessful or partially successful Windows Update history entries were found in the last $Days days."
     }
-
 
     # No recent successful installs
     $LatestSuccessfulUpdate = $UpdateHistory |
@@ -516,15 +460,6 @@
     # Event log problems
     if ($WindowsUpdateEvents.Count -gt 0) {
         $LikelyIssues += "$($WindowsUpdateEvents.Count) Windows Update warning/error event(s) were found in the last $Days days."
-    }
-
-    # ConfigMgr errors
-    if (
-        $ConfigMgr.WUAHandlerErrors.Count -gt 0 -or
-        $ConfigMgr.UpdatesDeploymentErrors.Count -gt 0 -or
-        $ConfigMgr.UpdatesHandlerErrors.Count -gt 0
-    ) {
-        $LikelyIssues += 'ConfigMgr software update logs contain recent error/failure entries.'
     }
 
     # -------------------------------------------------------------------------
@@ -548,35 +483,22 @@
         }
 
         LikelyIssues              = $LikelyIssues
-
         Computer                  = $BasicInfo
-
-        services                  = $services
-
+        Services                  = $services
         PendingReboot             = $PendingReboot
-
         Policies                  = $Policies
-
         PendingUpdates            = $PendingUpdates
         UpdateSearchError         = $UpdateSearchError
-
         UpdateHistory             = $UpdateHistory
         UpdateHistoryError        = $UpdateHistoryError
-
         WindowsUpdateEvents       = $WindowsUpdateEvents
         WindowsUpdateEventError   = $WindowsUpdateEventError
-
         RecentHotFixes            = $RecentHotFixes
-
         ConfigMgr                 = $ConfigMgr
-
         UpdateScheduledTasks      = $UpdateScheduledTasks
-
         WinHTTPProxy              = $WinHTTPProxy
-
         TimeService               = $TimeStatus
     }
-
 
     # -------------------------------------------------------------------------
     # Optional JSON export

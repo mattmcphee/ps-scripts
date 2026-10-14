@@ -1,16 +1,15 @@
-function Copy-Dlls {
+function Copy-DymoDlls {
     [CmdletBinding()]
     param (
         # DestinationFolder
         [Parameter(Mandatory)]
-        [string]
-        $DestinationFolder,
+        [string]$DestinationFolder,
+
         # RemoteMachineFolder
         [Parameter(Mandatory)]
-        [string]
-        $RemoteMachineDllUncFolder
+        [string]$RemoteMachineDllUncFolder
     )
-    
+
     if (-not (Test-Path -Path $DestinationFolder -PathType Container)) {
         New-Item -Path $DestinationFolder -ItemType Directory -Force
     }
