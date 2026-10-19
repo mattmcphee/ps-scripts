@@ -12,7 +12,7 @@
 
     # only get the basic fields
     if (-not $AllProperties) {
-        $uri += '?$select=id,deviceName,model'
+        $uri += '?$select=id,deviceName,model,userPrincipalName,userDisplayName'
     }
 
     $results = [System.Collections.Generic.List[PSCustomObject]]::new()
@@ -29,9 +29,11 @@
                 $results.Add([PSCustomObject]$device)
             } else {
                 $results.Add([PSCustomObject]@{
-                    ID              = $device.id
-                    DeviceName      = $device.deviceName
-                    Model           = $device.model
+                    ID                  = $device.id
+                    DeviceName          = $device.deviceName
+                    Model               = $device.model
+                    UserPrincipalName   = $device.userPrincipalName
+                    UserDisplayName     = $device.userDisplayName
                 })
             }
         }

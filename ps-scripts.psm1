@@ -1,7 +1,7 @@
 # ============================================================================
 # GENERATED FILE - DO NOT EDIT
 # Run .\build.ps1 to regenerate this file from .\src
-# This file was built on 13-Oct-2026 12:00:30
+# This file was built on 19-Oct-2026 08:41:15
 # ============================================================================
 
 #region Add-CompToADGroup.ps1
@@ -857,20 +857,19 @@ function Copy-BypassAppsToSource {
 
 #endregion
 
-#region Copy-Dlls.ps1
-function Copy-Dlls {
+#region Copy-DymoDlls.ps1
+function Copy-DymoDlls {
     [CmdletBinding()]
     param (
         # DestinationFolder
         [Parameter(Mandatory)]
-        [string]
-        $DestinationFolder,
+        [string]$DestinationFolder,
+
         # RemoteMachineFolder
         [Parameter(Mandatory)]
-        [string]
-        $RemoteMachineDllUncFolder
+        [string]$RemoteMachineDllUncFolder
     )
-    
+
     if (-not (Test-Path -Path $DestinationFolder -PathType Container)) {
         New-Item -Path $DestinationFolder -ItemType Directory -Force
     }
@@ -3609,6 +3608,38 @@ function Copy-InstallScripts {
 
 #endregion
 
+#region Get-CompanyPortalAppStatus.ps1
+function Get-CompanyPortalAppStatus {
+    [CmdletBinding()]
+    param (
+        # ComputerName
+        [Parameter(Mandatory=$false)]
+        [string]$ComputerName = $env:COMPUTERNAME,
+
+        # AppId
+        [Parameter(Mandatory)]
+        [string]$AppId
+    )
+
+    $results = Invoke-Command -ComputerName $ComputerName -ArgumentList $AppId,$ComputerName -ScriptBlock {
+        $appId = $using:AppId
+        $computerName = $using:ComputerName
+        $regPath = "HKLM:\SOFTWARE\Microsoft\IntuneManagementExtension\Win32Apps\Reporting\00000000-0000-0000-0000-000000000000"
+
+        $reportingState = Get-ChildItem $regPath | Where-Object PSChildName -eq $appId
+
+        if ($null -eq $reportingState) {
+            throw "Could not find any status for app with ID '$appId' on computer '$computerName'"
+        }
+
+        $reportingState | Get-ItemProperty | Select-Object -ExpandProperty ReportingState | ConvertFrom-Json
+    }
+
+    $results
+}
+
+#endregion
+
 #region Get-CompanyPortalStatus.ps1
 function Get-CompanyPortalStatus {
     [CmdletBinding()]
@@ -4249,6 +4280,62 @@ $appIdsString
             Write-CMLog "Failed to send payload to endpoint: $($_.Exception.Message)"
         }
     }
+}
+
+#endregion
+
+#region Get-IntuneAppInstallations.ps1
+function Get-IntuneAppInstallations {
+    param(
+        # DisplayName
+        [Parameter(Mandatory=$false)]
+        [string]$DisplayName,
+
+        # MinVersion
+        [Parameter(Mandatory=$false)]
+        [version]$MinVersion,
+
+        # MaxVersion
+        [Parameter(Mandatory=$false)]
+        [version]$MaxVersion,
+
+        # DbPath
+        [Parameter(Mandatory=$false)]
+        [string]$DbPath = "C:\sources\sqlite\IntuneAppInstalledInventory.db"
+    )
+
+    Import-Module PSSQLITE
+
+    $query = @(
+        'SELECT ApplicationName, ApplicationPublisher, ApplicationVersion, DeviceName, EmailAddress'
+        'FROM installations'
+    )
+
+    $sqlParams = @{}
+
+    if ($DisplayName) {
+        $query += 'WHERE ApplicationName LIKE @DisplayName'
+        $sqlParams.DisplayName = $DisplayName.Replace('*', '%').Replace('?', '_')
+    }
+
+    $queryString = $query -join "`n"
+
+    $results = Invoke-SqliteQuery -DataSource $DbPath -Query $queryString -SqlParameters $sqlParams
+
+    if ($MinVersion -or $MaxVersion) {
+        $results = $results | Where-Object {
+            $rowVersion = $null
+
+            if (-not [version]::TryParse($_.ApplicationVersion, [ref]$rowVersion)) {
+                return $false
+            }
+
+            (-not $MinVersion -or $rowVersion -ge $MinVersion) -and
+            (-not $MaxVersion -or $rowVersion -le $MaxVersion)
+        }
+    }
+
+    $results
 }
 
 #endregion
@@ -4931,6 +5018,34 @@ function Hide-IntelExtensibleFrameworkUpdateRemediation {
 
     Write-Output "Hid $($matched.Count) update(s) matching Intel Extensible Framework 2.1.10103.24"
     exit 0
+}
+
+#endregion
+
+#region Invoke-MgGraphRequestAll.ps1
+function Invoke-MgGraphRequestAll {
+    [CmdletBinding()]
+    param (
+        # Uri
+        [Parameter(Mandatory)]
+        [string]$Uri
+    )
+
+    # $results = [System.Collections.Generic.List[object]]::new()
+
+    while ($Uri) {
+        $response = Invoke-MgGraphRequest `
+            -Method GET `
+            -Uri $Uri `
+            -OutputType Hashtable `
+            -ErrorAction Stop
+
+        foreach ($item in $response['value']) {
+            $item | Where-Object platform -eq 'windows' | Select-Object displayName
+        }
+
+        $Uri = $response['@odata.nextLink']
+    }
 }
 
 #endregion
@@ -5637,6 +5752,267 @@ function Update-AdobeAppsRemediation {
         Write-Log -Message "$_" -Level 'Error' -Path $logPath
     }
 }
+#endregion
+
+#region Update-IntuneAppInventoryDb.ps1
+function Update-IntuneAppInventoryDb {
+    Import-Module PSSQLite
+
+    $dbPath = 'C:\sources\sqlite\IntuneAppInstalledInventory.db'
+    $dbDir = Split-Path $dbPath -Parent
+    $exportJobsUri = 'https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs'
+    $workDir = Join-Path ([IO.Path]::GetTempPath()) ([guid]::NewGuid().ToString('N'))
+    $buildDb = Join-Path $dbDir ("inventory-{0}.db" -f [guid]::NewGuid().ToString('N'))
+
+    if (-not (Get-MgContext)) {
+        throw 'Connect to Microsoft Graph before running the refresh.'
+    }
+
+    New-Item -ItemType Directory -Path $dbDir -Force | Out-Null
+    New-Item -ItemType Directory -Path $workDir | Out-Null
+
+    try {
+        # 1. Request a complete inventory export
+        $body = @{
+            reportName = 'AppInvRawData'
+            format = 'csv'
+        } | ConvertTo-Json -Depth 5
+
+        $jobGraphRequestArgs = @{
+            Method      = 'POST'
+            Uri         = $exportJobsUri
+            Body        = $body
+            ContentType = 'application/json'
+            OutputType  = 'Hashtable'
+        }
+        $job = Invoke-MgGraphRequest @jobGraphRequestArgs
+
+        if (-not $job['id']) {
+            throw 'Graph did not return an export job ID.'
+        }
+
+        $jobUri = "$exportJobsUri/$([uri]::EscapeDataString($job['id']))"
+        $deadline = (Get-Date).AddMinutes(20)
+
+        # 2. Poll until the report is ready
+        do {
+            Start-Sleep -Seconds 15
+
+            $job = Invoke-MgGraphRequest -Method GET -Uri $jobUri -OutputType Hashtable
+
+            if ($job['status'] -eq 'failed') {
+                throw 'Intune report export failed.'
+            }
+
+            if ((Get-Date) -ge $deadline) {
+                throw 'Timed out waiting for Intune export.'
+            }
+        } until ($job['status'] -eq 'completed')
+
+        if (-not $job['url']) {
+            throw 'Export completed without a download URL.'
+        }
+
+        # 3. Download and extract
+        $zipPath = Join-Path $workDir 'inventory.zip'
+        $csvDir = Join-Path $workDir 'csv'
+
+        curl.exe -L -o $zipPath $job['url']
+        Expand-Archive -LiteralPath $zipPath -DestinationPath $csvDir
+
+        $csvFiles = @(Get-ChildItem -LiteralPath $csvDir -Filter '*.csv' -File -Recurse)
+
+        if ($csvFiles.Count -eq 0) {
+            throw 'No CSV files were found in the export.'
+        }
+
+        # 4. Create a fresh SQLite database
+        $connection = New-SQLiteConnection -DataSource $buildDb
+
+        try {
+            $schema = $connection.CreateCommand()
+            $schema.CommandText = @(
+                'CREATE TABLE installations ('
+                    'ApplicationKey TEXT,'
+                    'ApplicationId TEXT,'
+                    'ApplicationName TEXT NOT NULL,'
+                    'ApplicationPublisher TEXT,'
+                    'ApplicationShortVersion TEXT,'
+                    'ApplicationVersion TEXT,'
+                    'DeviceId TEXT,'
+                    'DeviceName TEXT,'
+                    'OSDescription TEXT,'
+                    'OSVersion TEXT,'
+                    'Platform TEXT,'
+                    'UserId TEXT,'
+                    'EmailAddress TEXT,'
+                    'UserName TEXT'
+                ');'
+                'CREATE TABLE cache_info ('
+                    'RefreshedUtc TEXT,'
+                    'RowCount INTEGER'
+                ');'
+            ) -join "`n"
+            [void]$schema.ExecuteNonQuery()
+            $schema.Dispose()
+
+            # 5. Bulk import using a single transaction
+            $transaction = $connection.BeginTransaction()
+            $count = 0
+
+            try {
+                $insert = $connection.CreateCommand()
+                $insert.Transaction = $transaction
+                $insert.CommandText = @(
+                    'INSERT INTO installations'
+                    '('
+                        'ApplicationKey,'
+                        'ApplicationId,'
+                        'ApplicationName,'
+                        'ApplicationPublisher,'
+                        'ApplicationShortVersion,'
+                        'ApplicationVersion,'
+                        'DeviceId,'
+                        'DeviceName,'
+                        'OSDescription,'
+                        'OSVersion,'
+                        'Platform,'
+                        'UserId,'
+                        'EmailAddress,'
+                        'UserName'
+                    ')'
+                    'VALUES'
+                    '('
+                        '@ApplicationKey,'
+                        '@ApplicationId,'
+                        '@ApplicationName,'
+                        '@ApplicationPublisher,'
+                        '@ApplicationShortVersion,'
+                        '@ApplicationVersion,'
+                        '@DeviceId,'
+                        '@DeviceName,'
+                        '@OSDescription,'
+                        '@OSVersion,'
+                        '@Platform,'
+                        '@UserId,'
+                        '@EmailAddress,'
+                        '@UserName'
+                    ');'
+                ) -join "`n"
+
+                $columns = @(
+                    "ApplicationKey",
+                    "ApplicationId",
+                    "ApplicationName",
+                    "ApplicationPublisher",
+                    "ApplicationShortVersion",
+                    "ApplicationVersion",
+                    "DeviceId",
+                    "DeviceName",
+                    "OSDescription",
+                    "OSVersion",
+                    "Platform",
+                    "UserId",
+                    "EmailAddress",
+                    "UserName"
+                )
+
+                foreach ($column in $columns) {
+                    [void]$insert.Parameters.AddWithValue("@$column", '')
+                }
+
+                $insert.Prepare()
+
+                foreach ($csvFile in $csvFiles) {
+                    # Validate the exported schema
+                    $firstRow = Import-Csv -LiteralPath $csvFile.FullName | Select-Object -First 1
+
+                    if ($null -eq $firstRow) {
+                        throw "Empty CSV: $($csvFile.Name)"
+                    }
+
+                    foreach ($column in $columns) {
+                        if ($column -notin $firstRow.PSObject.Properties.Name) {
+                            throw "Missing CSV column: $column"
+                        }
+                    }
+
+                    Import-Csv -LiteralPath $csvFile.FullName |
+                        ForEach-Object {
+                            $row = $_
+
+                            foreach ($column in $columns) {
+                                $insert.Parameters["@$column"].Value = $row.$column
+                            }
+
+                            [void]$insert.ExecuteNonQuery()
+                            $count++
+                        }
+                }
+
+                if ($count -eq 0) {
+                    throw 'Inventory contained no records.'
+                }
+
+                $insert.Dispose()
+
+                # 6. Build indexes after the import
+                $index = $connection.CreateCommand()
+                $index.Transaction = $transaction
+                $index.CommandText = @(
+                    'CREATE INDEX idx_app_version'
+                    'ON installations(ApplicationName COLLATE NOCASE, ApplicationVersion);'
+                    'CREATE INDEX idx_device_name'
+                    'ON installations(DeviceName COLLATE NOCASE);'
+                ) -join "`n"
+                [void]$index.ExecuteNonQuery()
+                $index.Dispose()
+
+                # Store refresh metadata
+                $meta = $connection.CreateCommand()
+                $meta.Transaction = $transaction
+                $meta.CommandText = @(
+                    'INSERT INTO cache_info (RefreshedUtc, RowCount)'
+                    'VALUES (@RefreshedUtc, @RowCount);'
+                ) -join "`n"
+                [void]$meta.Parameters.AddWithValue(
+                    '@RefreshedUtc', [DateTime]::UtcNow.ToString('o')
+                )
+                [void]$meta.Parameters.AddWithValue('@RowCount', $count)
+                [void]$meta.ExecuteNonQuery()
+                $meta.Dispose()
+
+                $transaction.Commit()
+            } catch {
+                $transaction.Rollback()
+                throw
+            } finally {
+                $transaction.Dispose()
+            }
+        } finally {
+            $connection.Close()
+            $connection.Dispose()
+        }
+
+        # 7. Publish only after a successful import
+        if (Test-Path -LiteralPath $dbPath) {
+            [IO.File]::Replace($buildDb, $dbPath, $null)
+        } else {
+            [IO.File]::Move($buildDb, $dbPath)
+        }
+
+        Write-Output "Imported $count application records to $dbPath"
+    } finally {
+        if (Test-Path -LiteralPath $workDir) {
+            Remove-Item -LiteralPath $workDir -Recurse -Force
+        }
+
+        if (Test-Path -LiteralPath $buildDb) {
+            Remove-Item -LiteralPath $buildDb -Force
+        }
+    }
+}
+
 #endregion
 
 #region Add-MITLicence.ps1
@@ -6531,7 +6907,7 @@ function Get-WindowsUpdateDiagnosticReport {
             $PendingFileRename = $true
         }
     } catch {
-        throw $_
+        Write-Verbose "Unable to read PendingFileRenameOperations: $($_.Exception.Message)"
     }
 
     $ConfigMgrRebootPending = $null
@@ -6545,7 +6921,8 @@ function Get-WindowsUpdateDiagnosticReport {
 
         $ConfigMgrRebootPending = $CCMReboot.RebootPending
     } catch {
-        throw $_
+        # Expected on machines without the ConfigMgr client
+        Write-Verbose "ConfigMgr reboot state unavailable: $($_.Exception.Message)"
     }
 
     $PendingReboot = [PSCustomObject]@{
@@ -6572,12 +6949,10 @@ function Get-WindowsUpdateDiagnosticReport {
     try {
         $Session = New-Object -ComObject Microsoft.Update.Session
         $Searcher = $Session.CreateUpdateSearcher()
-
         $HistoryCount = $Searcher.GetTotalHistoryCount()
 
         if ($HistoryCount -gt 0) {
             $QueryCount = [Math]::Min($HistoryCount, 300)
-
             $RawHistory = $Searcher.QueryHistory(0, $QueryCount)
 
             $ResultCodes = @{
@@ -6597,7 +6972,6 @@ function Get-WindowsUpdateDiagnosticReport {
 
             $UpdateHistory = @(
                 foreach ($Entry in $RawHistory) {
-
                     if ($Entry.Date -lt $since) {
                         continue
                     }
@@ -6615,7 +6989,7 @@ function Get-WindowsUpdateDiagnosticReport {
             )
         }
     } catch {
-        throw $_
+        $UpdateHistoryError = $_.Exception.Message
     }
 
     # -------------------------------------------------------------------------
@@ -6641,9 +7015,7 @@ function Get-WindowsUpdateDiagnosticReport {
 
             $PendingUpdates = @(
                 for ($i = 0; $i -lt $SearchResult.Updates.Count; $i++) {
-
                     $Update = $SearchResult.Updates.Item($i)
-
                     $Categories = @()
 
                     for (
@@ -6651,9 +7023,7 @@ function Get-WindowsUpdateDiagnosticReport {
                         $CategoryIndex -lt $Update.Categories.Count;
                         $CategoryIndex++
                     ) {
-                        $Categories += $Update.Categories.Item(
-                            $CategoryIndex
-                        ).Name
+                        $Categories += $Update.Categories.Item($CategoryIndex).Name
                     }
 
                     $KBs = @()
@@ -6673,7 +7043,7 @@ function Get-WindowsUpdateDiagnosticReport {
                 }
             )
         } catch {
-            throw $_
+            $UpdateSearchError = $_.Exception.Message
         }
     }
 
@@ -6691,18 +7061,20 @@ function Get-WindowsUpdateDiagnosticReport {
                 StartTime = $since
                 Level     = 2, 3
             } -ErrorAction Stop |
-                Select-Object -First $EventCount |
-                ForEach-Object {
-                    [PSCustomObject]@{
-                        TimeCreated = $_.TimeCreated
-                        EventID     = $_.Id
-                        Level       = $_.LevelDisplayName
-                        Message     = $_.Message
-                    }
+            Select-Object -First $EventCount |
+            ForEach-Object {
+                [PSCustomObject]@{
+                    TimeCreated = $_.TimeCreated
+                    EventID     = $_.Id
+                    Level       = $_.LevelDisplayName
+                    Message     = $_.Message
                 }
+            }
         )
     } catch {
-        throw $_
+        if ($_.FullyQualifiedErrorId -notlike 'NoMatchingEventsFound*') {
+            $WindowsUpdateEventError = $_.Exception.Message
+        }
     }
 
     # -------------------------------------------------------------------------
@@ -6722,35 +7094,7 @@ function Get-WindowsUpdateDiagnosticReport {
                 InstalledOn
         )
     } catch {
-        throw $_
-    }
-
-    # -------------------------------------------------------------------------
-    # ConfigMgr
-    # -------------------------------------------------------------------------
-
-    $CCMExec = Get-Service CcmExec -ErrorAction SilentlyContinue
-
-    $CCMLogRoot = Join-Path $env:windir 'CCM\Logs'
-
-    $ConfigMgr = [PSCustomObject]@{
-        ClientInstalled = [bool]$CCMExec
-        ClientState     = if ($CCMExec) { $CCMExec.Status } else { $null }
-
-        WUAHandlerErrors = @(
-            Get-ConfigMgrLogErrors `
-                (Join-Path $CCMLogRoot 'WUAHandler.log')
-        )
-
-        UpdatesDeploymentErrors = @(
-            Get-ConfigMgrLogErrors `
-                (Join-Path $CCMLogRoot 'UpdatesDeployment.log')
-        )
-
-        UpdatesHandlerErrors = @(
-            Get-ConfigMgrLogErrors `
-                (Join-Path $CCMLogRoot 'UpdatesHandler.log')
-        )
+        Write-Warning "Unable to query installed hotfixes: $($_.Exception.Message)"
     }
 
     # -------------------------------------------------------------------------
@@ -6769,9 +7113,9 @@ function Get-WindowsUpdateDiagnosticReport {
                 -TaskPath '\Microsoft\Windows\WindowsUpdate\' `
                 -ErrorAction SilentlyContinue
         ) |
-            Select-Object TaskName, TaskPath, State
+        Select-Object TaskName, TaskPath, State
     } catch {
-        throw $_
+        Write-Warning "Unable to query update scheduled tasks: $($_.Exception.Message)"
     }
 
     # -------------------------------------------------------------------------
@@ -6784,7 +7128,7 @@ function Get-WindowsUpdateDiagnosticReport {
                 Out-String
         ).Trim()
     } catch {
-        throw $_
+        $WinHTTPProxy = "Unable to query WinHTTP proxy: $($_.Exception.Message)"
     }
 
     try {
@@ -6793,7 +7137,7 @@ function Get-WindowsUpdateDiagnosticReport {
                 Out-String
         ).Trim()
     } catch {
-        throw $_
+        $TimeStatus = "Unable to query time service: $($_.Exception.Message)"
     }
 
     # -------------------------------------------------------------------------
@@ -6823,35 +7167,23 @@ function Get-WindowsUpdateDiagnosticReport {
         $LikelyIssues += 'The machine has a pending reboot.'
     }
 
-
     # Windows Update disabled
-    $NoAutoUpdate = Get-SnapshotValue `
-        $AUConfiguredPolicy `
-        'NoAutoUpdate'
+    $NoAutoUpdate = Get-RegistrySnapshotValue -Snapshot $AUConfiguredPolicy -Name 'NoAutoUpdate'
 
     if ($NoAutoUpdate -eq 1) {
         $LikelyIssues += 'NoAutoUpdate policy is enabled.'
     }
 
-
     # Windows Update UI/access disabled
-    $DisableWUAccess = Get-SnapshotValue `
-        $WUConfiguredPolicy `
-        'DisableWindowsUpdateAccess'
+    $DisableWUAccess = Get-RegistrySnapshotValue -Snapshot $WUConfiguredPolicy -Name 'DisableWindowsUpdateAccess'
 
     if ($DisableWUAccess -eq 1) {
         $LikelyIssues += 'DisableWindowsUpdateAccess policy is enabled.'
     }
 
-
     # Quality update pause
-    $PausedQualityStatus = Get-SnapshotValue `
-        $UpdatePolicyStatus `
-        'PausedQualityStatus'
-
-    $ConfiguredQualityPause = Get-SnapshotValue `
-        $WUConfiguredPolicy `
-        'PauseQualityUpdates'
+    $PausedQualityStatus = Get-RegistrySnapshotValue -Snapshot $UpdatePolicyStatus -Name 'PausedQualityStatus'
+    $ConfiguredQualityPause = Get-RegistrySnapshotValue -Snapshot $WUConfiguredPolicy -Name 'PauseQualityUpdates'
 
     if (
         ($PausedQualityStatus -eq 1) -or
@@ -6860,53 +7192,41 @@ function Get-WindowsUpdateDiagnosticReport {
         $LikelyIssues += 'Quality updates appear to be paused.'
     }
 
-
     # Quality update deferral
-    $QualityDeferral = Get-SnapshotValue `
-        $WUConfiguredPolicy `
-        'DeferQualityUpdatesPeriodInDays'
-
+    $QualityDeferral = Get-RegistrySnapshotValue -Snapshot $WUConfiguredPolicy -Name 'DeferQualityUpdatesPeriodInDays'
+    if (-not($QualityDeferral -is [int])) { $QualityDeferral = 0 }
     if ($QualityDeferral -gt 0) {
         $LikelyIssues += "Quality updates are configured to be deferred by $QualityDeferral day(s)."
     }
 
-
     # WSUS / SUP configuration
-    $UseWUServer = Get-SnapshotValue `
-        $AUConfiguredPolicy `
-        'UseWUServer'
-
-    $WUServer = Get-SnapshotValue `
-        $WUConfiguredPolicy `
-        'WUServer'
+    $UseWUServer = Get-RegistrySnapshotValue -Snapshot $AUConfiguredPolicy -Name 'UseWUServer'
+    $WUServer = Get-RegistrySnapshotValue -Snapshot $WUConfiguredPolicy -Name 'WUServer'
 
     if (($UseWUServer -eq 1) -and (-not $WUServer)) {
         $LikelyIssues += 'UseWUServer is enabled but no WUServer value was found.'
     }
-
 
     # WUA search failure
     if ($UpdateSearchError) {
         $LikelyIssues += "Windows Update Agent search failed: $UpdateSearchError"
     }
 
-
     # Recent update installation failures
     $RecentFailures = @(
         $UpdateHistory |
-            Where-Object {
-                $_.Result -in @(
-                    'Failed',
-                    'Aborted',
-                    'SucceededWithErrors'
-                )
-            }
+        Where-Object {
+            $_.Result -in @(
+                'Failed',
+                'Aborted',
+                'SucceededWithErrors'
+            )
+        }
     )
 
     if ($RecentFailures.Count -gt 0) {
         $LikelyIssues += "$($RecentFailures.Count) unsuccessful or partially successful Windows Update history entries were found in the last $Days days."
     }
-
 
     # No recent successful installs
     $LatestSuccessfulUpdate = $UpdateHistory |
@@ -6924,15 +7244,6 @@ function Get-WindowsUpdateDiagnosticReport {
     # Event log problems
     if ($WindowsUpdateEvents.Count -gt 0) {
         $LikelyIssues += "$($WindowsUpdateEvents.Count) Windows Update warning/error event(s) were found in the last $Days days."
-    }
-
-    # ConfigMgr errors
-    if (
-        $ConfigMgr.WUAHandlerErrors.Count -gt 0 -or
-        $ConfigMgr.UpdatesDeploymentErrors.Count -gt 0 -or
-        $ConfigMgr.UpdatesHandlerErrors.Count -gt 0
-    ) {
-        $LikelyIssues += 'ConfigMgr software update logs contain recent error/failure entries.'
     }
 
     # -------------------------------------------------------------------------
@@ -6956,35 +7267,22 @@ function Get-WindowsUpdateDiagnosticReport {
         }
 
         LikelyIssues              = $LikelyIssues
-
         Computer                  = $BasicInfo
-
-        services                  = $services
-
+        Services                  = $services
         PendingReboot             = $PendingReboot
-
         Policies                  = $Policies
-
         PendingUpdates            = $PendingUpdates
         UpdateSearchError         = $UpdateSearchError
-
         UpdateHistory             = $UpdateHistory
         UpdateHistoryError        = $UpdateHistoryError
-
         WindowsUpdateEvents       = $WindowsUpdateEvents
         WindowsUpdateEventError   = $WindowsUpdateEventError
-
         RecentHotFixes            = $RecentHotFixes
-
         ConfigMgr                 = $ConfigMgr
-
         UpdateScheduledTasks      = $UpdateScheduledTasks
-
         WinHTTPProxy              = $WinHTTPProxy
-
         TimeService               = $TimeStatus
     }
-
 
     # -------------------------------------------------------------------------
     # Optional JSON export
@@ -9853,7 +10151,7 @@ Export-ModuleMember -Function @(
     'Confirm-CCMSQLIssue'
     'Convert-WmiDateTime'
     'Copy-BypassAppsToSource'
-    'Copy-Dlls'
+    'Copy-DymoDlls'
     'Export-IconFromExe'
     'Find-HostName'
     'Format-AaronLockerHashRule'
@@ -9907,12 +10205,14 @@ Export-ModuleMember -Function @(
     'Convert-Base64'
     'Convert-SCCMAppToIntune'
     'Copy-InstallScripts'
+    'Get-CompanyPortalAppStatus'
     'Get-CompanyPortalStatus'
     'Get-DeviceEntraGroups'
     'Get-EntraGroups'
     'Get-IntuneApp'
     'Get-IntuneAppFailures'
     'Get-IntuneAppFailuresPostToURL'
+    'Get-IntuneAppInstallations'
     'Get-IntuneDevice'
     'Get-IntuneGroup'
     'Get-IntuneGroupMembers'
@@ -9924,6 +10224,7 @@ Export-ModuleMember -Function @(
     'Hide-IntelExtensibleFrameworkUpdate'
     'Hide-IntelExtensibleFrameworkUpdateDetection'
     'Hide-IntelExtensibleFrameworkUpdateRemediation'
+    'Invoke-MgGraphRequestAll'
     'New-IntuneAppControlPolicy'
     'New-IntuneGroup'
     'New-IntuneWinPackage'
@@ -9935,6 +10236,7 @@ Export-ModuleMember -Function @(
     'Show-IntelExtensibleFrameworkUpdate'
     'Update-AdobeAppsDetection'
     'Update-AdobeAppsRemediation'
+    'Update-IntuneAppInventoryDb'
     'Add-MITLicence'
     'Add-RemoteLocalGroupMember'
     'ConvertTo-HexHResult'
