@@ -1,7 +1,7 @@
 # ============================================================================
 # GENERATED FILE - DO NOT EDIT
 # Run .\build.ps1 to regenerate this file from .\src
-# This file was built on 19-Oct-2026 08:41:15
+# This file was built on 19-Oct-2026 11:52:54
 # ============================================================================
 
 #region Add-CompToADGroup.ps1
@@ -4355,7 +4355,7 @@ function Get-IntuneDevice {
 
     # only get the basic fields
     if (-not $AllProperties) {
-        $uri += '?$select=id,deviceName,model'
+        $uri += '?$select=id,deviceName,model,userPrincipalName,userDisplayName'
     }
 
     $results = [System.Collections.Generic.List[PSCustomObject]]::new()
@@ -4372,9 +4372,11 @@ function Get-IntuneDevice {
                 $results.Add([PSCustomObject]$device)
             } else {
                 $results.Add([PSCustomObject]@{
-                    ID              = $device.id
-                    DeviceName      = $device.deviceName
-                    Model           = $device.model
+                    ID                  = $device.id
+                    DeviceName          = $device.deviceName
+                    Model               = $device.model
+                    UserPrincipalName   = $device.userPrincipalName
+                    UserDisplayName     = $device.userDisplayName
                 })
             }
         }
@@ -4526,6 +4528,78 @@ function Get-IntuneUser {
     }
 
     $results
+}
+
+#endregion
+
+#region Get-IntuneUsersDevices.ps1
+function Get-IntuneUsersDevices {
+    [CmdletBinding()]
+    param (
+        # UserName
+        [Parameter(Mandatory)]
+        [string]$UserName
+    )
+
+    # retrieve user
+    $baseUri = 'https://graph.microsoft.com/v1.0'
+
+    $property = if ($UserName -match '@') {
+        'userPrincipalName'
+    } else {
+        'displayName'
+    }
+
+    $value = $UserName.TrimEnd('*').Replace("'", "''")
+
+    if ($UserName.EndsWith('*')) {
+        $filter = "startswith($property, '$value')"
+    } else {
+        $filter = "$property eq '$value'"
+    }
+
+    $uri = "$baseUri/users?`$filter=$([uri]::EscapeDataString($filter))&`$select=id,displayName,userPrincipalName"
+
+    $response = Invoke-MgGraphRequest -Method GET -Uri $uri
+
+    $users = $response.value
+
+    if ($users.Count -lt 1) {
+        Write-Warning "User '$UserName' not found."
+        return
+    }
+
+    # retrieve devices associated with user
+    foreach ($user in $users) {
+        $uri = "$baseUri/users/$($user.id)/managedDevices?`$select=id,deviceName,lastSyncDateTime,operatingSystem,osVersion,complianceState,azureADDeviceId"
+
+        while ($uri) {
+            try {
+                $response = Invoke-MgGraphRequest -Method GET -Uri $uri
+            } catch {
+                $statusCode = $_.Exception.Response.StatusCode
+                if ($statusCode -eq [Net.HttpStatusCode]::NotFound) {
+                    Write-Warning "Managed devices not found for user '$($user.displayName)' ($($user.id))."
+                    break
+                }
+            }
+
+            foreach ($device in $response.value) {
+                [PSCustomObject]@{
+                    UserName        = $User.displayName
+                    DeviceName      = $Device.deviceName
+                    OperatingSystem = $Device.operatingSystem
+                    OSVersion       = $Device.osVersion
+                    ComplianceState = $Device.complianceState
+                    LastSync        = $Device.lastSyncDateTime
+                    IntuneDeviceId  = $Device.id
+                    EntraDeviceId   = $Device.azureADDeviceId
+                }
+            }
+
+            $uri = $response.'@odata.nextLink'
+        }
+    }
 }
 
 #endregion
@@ -5816,6 +5890,9 @@ function Update-IntuneAppInventoryDb {
         # 3. Download and extract
         $zipPath = Join-Path $workDir 'inventory.zip'
         $csvDir = Join-Path $workDir 'csv'
+        if (-not (Test-Path $csvDir)) {
+            $null = New-Item -Path $csvDir -ItemType Directory
+        }
 
         curl.exe -L -o $zipPath $job['url']
         Expand-Archive -LiteralPath $zipPath -DestinationPath $csvDir
@@ -5992,11 +6069,14 @@ function Update-IntuneAppInventoryDb {
         } finally {
             $connection.Close()
             $connection.Dispose()
+            [System.Data.SQLite.SQLiteConnection]::ClearAllPools()
+            [GC]::Collect()
+            [GC]::WaitForPendingFinalizers()
         }
 
         # 7. Publish only after a successful import
         if (Test-Path -LiteralPath $dbPath) {
-            [IO.File]::Replace($buildDb, $dbPath, $null)
+            [IO.File]::Replace($buildDb, $dbPath, [NullString]::Value)
         } else {
             [IO.File]::Move($buildDb, $dbPath)
         }
@@ -10217,6 +10297,7 @@ Export-ModuleMember -Function @(
     'Get-IntuneGroup'
     'Get-IntuneGroupMembers'
     'Get-IntuneUser'
+    'Get-IntuneUsersDevices'
     'Get-RemediationScript'
     'Get-RemediationScriptAssignment'
     'Get-RequiredAssignmentsForGroup'
