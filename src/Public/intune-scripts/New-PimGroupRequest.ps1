@@ -1,5 +1,5 @@
 ﻿function New-PimGroupRequest {
-    [CmdletBinding()]
+    [CmdletBinding(SupportsShouldProcess)]
     param (
         [Parameter(Mandatory)]
         [string]$GroupNameOrId,
@@ -57,8 +57,10 @@
         }
     }
 
-    Invoke-MgGraphRequest -Method POST `
-        -Uri "$baseUri/identityGovernance/privilegedAccess/group/assignmentScheduleRequests" `
-        -Body $body `
-        -ErrorAction Stop
+    if ($PSCmdlet.ShouldProcess($groupId, 'Request PIM group assignment')) {
+        Invoke-MgGraphRequest -Method POST `
+            -Uri "$baseUri/identityGovernance/privilegedAccess/group/assignmentScheduleRequests" `
+            -Body $body `
+            -ErrorAction Stop
+    }
 }
