@@ -1,7 +1,7 @@
 # ============================================================================
 # GENERATED FILE - DO NOT EDIT
 # Run .\build.ps1 to regenerate this file from .\src
-# This file was built on 19-Oct-2026 11:52:54
+# This file was built on 20-Oct-2026 13:14:29
 # ============================================================================
 
 #region Add-CompToADGroup.ps1
@@ -3608,6 +3608,98 @@ function Copy-InstallScripts {
 
 #endregion
 
+#region Disable-PimGroupAssignment.ps1
+
+function Disable-PIMGroupAssignment {
+    [CmdletBinding(SupportsShouldProcess)]
+    param(
+        [Parameter(Mandatory)]
+        [string]$GroupNameOrId
+    )
+
+    $ErrorActionPreference = 'Stop'
+    $baseUri = 'https://graph.microsoft.com/v1.0'
+
+    # Resolve group name
+    $guidRegexPattern = '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+    if ($GroupNameOrId -match $guidRegexPattern) {
+        $groupId = $GroupNameOrId
+    } else {
+        $filter = [uri]::EscapeDataString("displayName eq '$GroupNameOrId'")
+    }
+
+    $groupNameUri = "$baseUri/groups?`$filter=$filter&`$select=id,displayName"
+    $response = Invoke-MgGraphRequest -Method GET -Uri $groupNameUri
+    $groups = $response.value
+
+    if ($groups.Count -ne 1) {
+        throw "Expected one group '$GroupNameOrId'; found $($groups.Count)."
+    }
+
+    $groupId = $groups[0].id
+
+    # Retrieve current user's active PIM group assignments
+    $currentPimGroupAssignmentsUri = "$baseUri/identityGovernance/privilegedAccess/group/assignmentScheduleInstances/filterByCurrentUser(on='principal')"
+
+    $assignments = [System.Collections.Generic.List[PSCustomObject]]::new()
+
+    do {
+        $response = Invoke-MgGraphRequest -Method GET -Uri $currentPimGroupAssignmentsUri
+        $assignments.Add($response.value)
+        $currentPimGroupAssignmentsUri = $response.'@odata.nextLink'
+    } while ($currentPimGroupAssignmentsUri)
+
+    # Match group and access type
+    $assignmentMatches = $assignments | Where-Object {
+        ($_.groupId -eq $groupId) -and
+        ($_.accessId -eq 'member') -and
+        ($_.assignmentType -eq 'activated')
+    }
+
+    if ($assignmentMatches.Count -eq 0) {
+        throw "No active PIM assignment found for '$groupName'."
+    }
+
+    if ($assignmentMatches.Count -gt 1) {
+        throw "Multiple active PIM assignments found for '$groupName'."
+    }
+
+    $assignment = $assignmentMatches[0]
+
+    # Submit self-deactivation
+    $body = @{
+        action      = 'selfDeactivate'
+        groupId     = $groupId
+        principalId = $assignment.principalId
+        accessId    = 'member'
+        scheduleInfo = @{
+            startDateTime = (Get-Date).ToUniversalTime().ToString('o')
+            expiration = @{
+                type = 'NoExpiration'
+            }
+        }
+    }
+
+    if ($PSCmdlet.ShouldProcess($groupName, 'Deactivate PIM group assignment')) {
+        $pimGroupRequestUri = "$baseUri/identityGovernance/privilegedAccess/group/assignmentScheduleRequests"
+
+        $result = Invoke-MgGraphRequest `
+            -Method POST `
+            -Uri $pimGroupRequestUri `
+            -Body ($body | ConvertTo-Json -Depth 10) `
+            -ContentType 'application/json'
+
+        [PSCustomObject]@{
+            GroupName = $groupName
+            AccessId  = $result.accessId
+            RequestId = $result.id
+            Status    = $result.status
+        }
+    }
+}
+
+#endregion
+
 #region Get-CompanyPortalAppStatus.ps1
 function Get-CompanyPortalAppStatus {
     [CmdletBinding()]
@@ -5329,29 +5421,46 @@ function New-IntuneWinPackage {
 
 #endregion
 
-#region New-PimRequest.ps1
-function New-PimRequest {
-    [CmdletBinding()]
+#region New-PimGroupRequest.ps1
+function New-PimGroupRequest {
+    [CmdletBinding(SupportsShouldProcess)]
     param (
+        [Parameter(Mandatory)]
+        [string]$GroupNameOrId,
+
         [Parameter(Mandatory)]
         [string]$TicketNumber,
 
         [Parameter(Mandatory)]
-        [string]$Description
+        [string]$Description,
+
+        [Parameter(Mandatory=$false)]
+        [ValidateRange(1,8)]
+        [int]$DurationHours = 8
     )
 
-    $tenantId     = '9a2a4ae5-8ac1-460b-90f0-bb3c8516df35'
-    $groupId      = 'c385f88e-372b-4a3a-98d4-0d98cabb0916'
-    $ticketSystem = 'TopDesk'
-    $duration     = 'PT8H'
-    $scopes       = 'Group.Read.All'
+    $baseUri = 'https://graph.microsoft.com/v1.0'
 
-    $ctx = Get-MgContext
-    if (-not $ctx -or $ctx.TenantId -ne $tenantId -or ($scopes | Where-Object { $_ -notin $ctx.Scopes })) {
-        Connect-MgGraph -TenantId $tenantId -Scopes $scopes -ContextScope Process -NoWelcome -ErrorAction Stop
+    # Resolve group name
+    $groupId = $null
+    $guidRegexPattern = '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+    if ($GroupNameOrId -match $guidRegexPattern) {
+        $groupId = $GroupNameOrId
+    } else {
+        $filter = [uri]::EscapeDataString("displayName eq '$GroupNameOrId'")
+        $groupNameUri = "$baseUri/groups?`$filter=$filter&`$select=id,displayName"
+        $response = Invoke-MgGraphRequest -Method GET -Uri $groupNameUri
+        $groups = $response.value
+        if ($groups.Count -ne 1) {
+            throw "Expected one group '$GroupNameOrId'; found $($groups.Count)."
+        }
+        $groupId = $groups[0].id
     }
 
-    $user = Invoke-MgGraphRequest -Method GET -Uri 'v1.0/me?$select=id' -ErrorAction Stop
+    $ticketSystem = 'TopDesk'
+    $duration     = [Xml.XmlConvert]::ToString([TimeSpan]::FromHours($DurationHours))
+
+    $user = Invoke-MgGraphRequest -Method GET -Uri "$baseUri/me?`$select=id" -ErrorAction Stop
 
     $body = @{
         action        = 'selfActivate'
@@ -5372,9 +5481,12 @@ function New-PimRequest {
         }
     }
 
-    Invoke-MgGraphRequest -Method POST `
-        -Uri 'v1.0/identityGovernance/privilegedAccess/group/assignmentScheduleRequests' `
-        -Body $body -ErrorAction Stop
+    if ($PSCmdlet.ShouldProcess($groupId, 'Request PIM group assignment')) {
+        Invoke-MgGraphRequest -Method POST `
+            -Uri "$baseUri/identityGovernance/privilegedAccess/group/assignmentScheduleRequests" `
+            -Body $body `
+            -ErrorAction Stop
+    }
 }
 
 #endregion
@@ -10285,6 +10397,7 @@ Export-ModuleMember -Function @(
     'Convert-Base64'
     'Convert-SCCMAppToIntune'
     'Copy-InstallScripts'
+    'Disable-PimGroupAssignment'
     'Get-CompanyPortalAppStatus'
     'Get-CompanyPortalStatus'
     'Get-DeviceEntraGroups'
@@ -10309,7 +10422,7 @@ Export-ModuleMember -Function @(
     'New-IntuneAppControlPolicy'
     'New-IntuneGroup'
     'New-IntuneWinPackage'
-    'New-PimRequest'
+    'New-PimGroupRequest'
     'New-RemediationScript'
     'Remove-RemediationScriptAssignment'
     'Restart-IntuneService'
