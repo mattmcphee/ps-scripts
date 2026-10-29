@@ -1,7 +1,7 @@
 # ============================================================================
 # GENERATED FILE - DO NOT EDIT
 # Run .\build.ps1 to regenerate this file from .\src
-# This file was built on 30-Oct-2026 08:26:44
+# This file was built on 30-Oct-2026 08:32:19
 # ============================================================================
 
 #region Add-CompToADGroup.ps1
@@ -5645,7 +5645,7 @@ function New-PimGroupRequest {
     $baseUri = 'https://graph.microsoft.com/v1.0'
 
     # Resolve group and current user in a single round trip
-    if ([guid]::TryParse($GroupNameOrId, [ref]$null)) {
+    if ([guid]::TryParse($GroupNameOrId, [ref][guid]::Empty)) {
         $groupUrl = "/groups/$GroupNameOrId`?`$select=id,displayName"
     } else {
         $filter   = [uri]::EscapeDataString("displayName eq '$($GroupNameOrId.Replace("'", "''"))'")

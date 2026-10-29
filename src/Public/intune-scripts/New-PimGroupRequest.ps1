@@ -37,7 +37,7 @@
     $baseUri = 'https://graph.microsoft.com/v1.0'
 
     # Resolve group and current user in a single round trip
-    if ([guid]::TryParse($GroupNameOrId, [ref]$null)) {
+    if ([guid]::TryParse($GroupNameOrId, [ref][guid]::Empty)) {
         $groupUrl = "/groups/$GroupNameOrId`?`$select=id,displayName"
     } else {
         $filter   = [uri]::EscapeDataString("displayName eq '$($GroupNameOrId.Replace("'", "''"))'")
