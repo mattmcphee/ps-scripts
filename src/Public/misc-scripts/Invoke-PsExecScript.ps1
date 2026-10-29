@@ -34,9 +34,9 @@
         $fileNameNoExt = [System.IO.Path]::GetFileNameWithoutExtension($scriptPath)
         $fileName = '{0}_{1}.ps1' -f $fileNameNoExt, [guid]::NewGuid().ToString('N')
 
-        $remoteDirectory = "\\$Computer\C$\ProgramData\BMD\PsExec"
+        $remoteDirectory = "\\$Computer\C$\Program Files\BMD\PsExec"
         $remoteUNCPath   = Join-Path $remoteDirectory $fileName
-        $remoteLocalPath = "C:\ProgramData\BMD\PsExec\$fileName"
+        $remoteLocalPath = "C:\Program Files\BMD\PsExec\$fileName"
 
         try {
             # Create temporary directory on remote machine
@@ -67,6 +67,9 @@
             $psExecArgs += @(
                 'powershell.exe'
                 '-NoProfile'
+                '-NonInteractive'
+                '-InputFormat'
+                'None'
                 '-ExecutionPolicy'
                 'Bypass'
                 '-File'
@@ -79,15 +82,24 @@
 
             Write-Verbose "Running $Path on $Computer"
 
-            & $PsExecPath @psExecArgs
-
+            $output = & {
+                $ErrorActionPreference = 'Continue'
+                & $PsExecPath @psExecArgs 2>&1
+            }
             $exitCode = $LASTEXITCODE
 
+            $stdOut = @($output | Where-Object { $_ -isnot [System.Management.Automation.ErrorRecord] } | ForEach-Object { "$_" })
+            $stdErr = @($output | Where-Object { $_ -is [System.Management.Automation.ErrorRecord] } | ForEach-Object { $_.ToString() })
+
+            $stdOut | ForEach-Object { Write-Verbose "[$Computer] $_" }
+
             [pscustomobject]@{
-                ComputerName = $Computer
-                Script       = $scriptPath
-                exitCode     = $exitCode
-                Success      = ($exitCode -eq 0)
+                ComputerName    = $Computer
+                Script          = $scriptPath
+                exitCode        = $exitCode
+                Success         = ($exitCode -eq 0)
+                Output          = $stdOut
+                ErrorOutput     = $stdErr
             }
         } catch {
             Write-Error "Failed to run script on $Computer : $_"

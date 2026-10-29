@@ -1,7 +1,7 @@
 # ============================================================================
 # GENERATED FILE - DO NOT EDIT
 # Run .\build.ps1 to regenerate this file from .\src
-# This file was built on 20-Oct-2026 13:14:29
+# This file was built on 30-Oct-2026 08:26:44
 # ============================================================================
 
 #region Add-CompToADGroup.ps1
@@ -297,6 +297,177 @@ function Get-ADUserMembership {
     } catch {
         throw $_
     }
+}
+
+#endregion
+
+#region Get-DefenderDeviceVulns.ps1
+function Get-DefenderDeviceVulns {
+    [CmdletBinding()]
+    param (
+        [Parameter(Mandatory = $true)]
+        [string]$ComputerName
+    )
+
+    $sanitizedName = $ComputerName -replace '\\', '\\' -replace "'", "\'"
+
+    $uri = "https://graph.microsoft.com/beta/security/runHuntingQuery"
+
+    # Defender DeviceName is often the FQDN, so match the short name or any domain suffix
+    $query = @(
+        "let vulns = DeviceTvmSoftwareVulnerabilities"
+        "   | where VulnerabilitySeverityLevel in ('Critical', 'High')"
+        "   | where DeviceName =~ '$sanitizedName' or DeviceName startswith '$sanitizedName.'"
+        "   | summarize CveIds = make_set(CveId),"
+        "               CveCount = dcount(CveId),"
+        "               HighestSeverity = max(case(VulnerabilitySeverityLevel == 'Critical', 4, VulnerabilitySeverityLevel == 'High', 3, VulnerabilitySeverityLevel == 'Medium', 2, 1))"
+        "     by DeviceId, DeviceName, SoftwareVendor, SoftwareName, SoftwareVersion;"
+        "vulns"
+        "| join kind=leftouter (DeviceTvmSoftwareEvidenceBeta | where DeviceId in ((vulns | distinct DeviceId))) on DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion"
+        "| extend HighestSeverity = case(HighestSeverity == 4, 'Critical', HighestSeverity == 3, 'High', HighestSeverity == 2, 'Medium', 'Low')"
+        "| project DeviceName, DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, HighestSeverity, CveCount, CveIds, DiskPaths, RegistryPaths, LastSeenTime"
+        "| order by CveCount desc"
+    ) -join "`n"
+
+    $body = @{
+        Query = $query
+    } | ConvertTo-Json
+
+    $reqArgs = @{
+        Method      = "POST"
+        Uri         = $uri
+        Body        = $body
+        ContentType = "application/json"
+    }
+    $response = Invoke-MgGraphRequest @reqArgs
+
+    foreach ($row in $response.results) {
+        $obj = [ordered]@{ PSTypeName = 'Defender.DeviceVulnerability' }
+
+        foreach ($column in $response.schema) {
+            $value = $row[$column.Name]
+
+            switch ($column.Type) {
+                'DateTime' {
+                    if ($value) { $value = [datetime]$value }
+                }
+                'Dynamic' {
+                    if ($value -is [string] -and $value) {
+                        try {
+                            $value = $value | ConvertFrom-Json
+                        } catch {
+                            Write-Warning "Could not convert $value to json format."
+                        }
+                    }
+                }
+            }
+
+            $obj[$column.Name] = $value
+        }
+
+        [PSCustomObject]$obj
+    }
+}
+
+#endregion
+
+#region Get-DefenderSoftwareEvidence.ps1
+function Get-DefenderSoftwareEvidence {
+    [CmdletBinding()]
+    param(
+        # SoftwareName
+        [Parameter(Mandatory=$false)]
+        [string]$SoftwareName,
+
+        # CsvPath - exports results to this CSV file (array values are joined with '; ') instead of outputting objects
+        [Parameter(Mandatory=$false)]
+        [string]$CsvPath
+    )
+
+    $softwareFilter = if ($SoftwareName) {
+        $sanitizedSoftwareName = $SoftwareName -replace "'", "\'"
+        "| where SoftwareName contains '$sanitizedSoftwareName'"
+    } else {
+        ''
+    }
+
+    $uri = "https://graph.microsoft.com/beta/security/runHuntingQuery"
+
+    $query = @(
+        "let vulns = DeviceTvmSoftwareVulnerabilities"
+        "    $softwareFilter"
+        "    | where VulnerabilitySeverityLevel in ('Critical', 'High')"
+        "    | summarize CveIds = make_set(CveId),"
+        "                CveCount = dcount(CveId),"
+        "                HighestSeverity = max(case(VulnerabilitySeverityLevel == 'Critical', 4, VulnerabilitySeverityLevel == 'High', 3, VulnerabilitySeverityLevel == 'Medium', 2, 1))"
+        "      by DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion;"
+        "DeviceTvmSoftwareEvidenceBeta"
+        $softwareFilter
+        "| join kind=inner vulns on DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion"
+        "| join kind=leftouter (DeviceInfo | summarize arg_max(Timestamp, DeviceName) by DeviceId) on DeviceId"
+        "| extend HighestSeverity = case(HighestSeverity == 4, 'Critical', HighestSeverity == 3, 'High', HighestSeverity == 2, 'Medium', 'Low')"
+        "| project DeviceName, DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, HighestSeverity, CveCount, CveIds, DiskPaths, RegistryPaths, LastSeenTime"
+        "| order by CveCount desc"
+    ) -join "`n"
+
+    $body = @{
+        Query = $query
+    } | ConvertTo-Json
+
+    $reqArgs = @{
+        Method      = "POST"
+        Uri         = $uri
+        Body        = $body
+        ContentType = "application/json"
+    }
+    $response = Invoke-MgGraphRequest @reqArgs
+
+    $results = foreach ($row in $response.results) {
+        $obj = [ordered]@{ PSTypeName = 'Defender.SoftwareEvidence' }
+
+        foreach ($column in $response.schema) {
+            $value = $row[$column.Name]
+
+            switch ($column.Type) {
+                'DateTime' {
+                    if ($value) { $value = [datetime]$value }
+                }
+                'Dynamic' {
+                    if ($value -is [string] -and $value) {
+                        try {
+                            $value = $value | ConvertFrom-Json
+                        } catch {
+                            Write-Warning "Could not convert $value to json format."
+                        }
+                    }
+                }
+            }
+
+            $obj[$column.Name] = $value
+        }
+
+        [PSCustomObject]$obj
+    }
+
+    if (-not $CsvPath) {
+        return $results
+    }
+
+    $results | ForEach-Object {
+        $flat = [ordered]@{}
+        foreach ($property in $_.PSObject.Properties) {
+            $value = $property.Value
+            if ($value -is [System.Collections.IEnumerable] -and $value -isnot [string]) {
+                $value = @($value | ForEach-Object {
+                    if ($_ -is [string] -or $_ -is [ValueType]) { $_ } else { $_ | ConvertTo-Json -Compress -Depth 5 }
+                }) -join '; '
+            }
+            $flat[$property.Name] = $value
+        }
+        [PSCustomObject]$flat
+    } | Export-Csv -Path $CsvPath -NoTypeInformation -Encoding UTF8
+
+    Write-Verbose "Exported $(@($results).Count) rows to $CsvPath"
 }
 
 #endregion
@@ -4438,46 +4609,59 @@ function Get-IntuneDevice {
         # DeviceName - filter results by device name; supports wildcards (* and ?)
         [Parameter(Mandatory=$false)]
         [string]$DeviceName,
+
         # AllProperties - will add every device property to the returned objects
         [Parameter(Mandatory=$false)]
         [switch]$AllProperties
     )
 
-    $uri = "https://graph.microsoft.com/v1.0/deviceManagement/managedDevices"
+    $query = @('$top=1000')
 
     # only get the basic fields
     if (-not $AllProperties) {
-        $uri += '?$select=id,deviceName,model,userPrincipalName,userDisplayName'
+        $query += '$select=id,deviceName,model,userPrincipalName,userDisplayName'
     }
 
-    $results = [System.Collections.Generic.List[PSCustomObject]]::new()
+    $needsClientFilter = $false
+
+    if ($DeviceName) {
+        $wildcardIndex = $DeviceName.IndexOfAny([char[]]'*?')
+        if ($wildcardIndex -lt 0) {
+            $query += "`$filter=deviceName eq '$($DeviceName.Replace("'", "''"))'"
+        } elseif ($wildcardIndex -gt 0) {
+            $prefix = $DeviceName.Substring(0, $wildcardIndex).Replace("'", "''")
+            $query += "`$filter=startswith(deviceName,'$prefix')"
+            # Only "PREFIX*" is fully handled by Graph; anything else needs a -like check
+            $needsClientFilter = $DeviceName -ne ($DeviceName.Substring(0, $wildcardIndex) + '*')
+        } else {
+            $needsClientFilter = $true  # leading wildcard: Graph can't filter this
+        }
+    }
+
+    $uri = 'https://graph.microsoft.com/v1.0/deviceManagement/managedDevices?' + ($query -join '&')
 
     while ($uri) {
         $response = Invoke-MgGraphRequest -Method GET -Uri $uri
 
         foreach ($device in $response.value) {
-            if ($DeviceName -and $device.deviceName -notlike $DeviceName) {
-                continue
-            }
+            if ($needsClientFilter -and $device.deviceName -notlike $DeviceName) { continue }
 
             if ($AllProperties) {
-                $results.Add([PSCustomObject]$device)
+                [PSCustomObject]$device
             } else {
-                $results.Add([PSCustomObject]@{
+                [PSCustomObject]@{
                     ID                  = $device.id
                     DeviceName          = $device.deviceName
                     Model               = $device.model
                     UserPrincipalName   = $device.userPrincipalName
                     UserDisplayName     = $device.userDisplayName
-                })
+                }
             }
         }
 
         # Move to next page if results exceed the default page size
         $uri = $response.'@odata.nextLink'
     }
-
-    $results
 }
 
 #endregion
@@ -5425,15 +5609,34 @@ function New-IntuneWinPackage {
 function New-PimGroupRequest {
     [CmdletBinding(SupportsShouldProcess)]
     param (
+        # GroupNameOrId - name or id of the pim group you're requesting membership for
         [Parameter(Mandatory)]
+        [ArgumentCompleter({
+            $wordToComplete = $args[2] # third arg is the word to complete for ArgumentCompleter
+
+            'rbac_Intune_ApplicationManager_EndpointGroups_PIM',
+            'rbac_Intune_EndpointPrivilegeManager_EndpointGroups_PIM',
+            'rbac_Intune_EndpointPrivilegeReader_EndpointGroups_PIM',
+            'rbac_Intune_EndpointSecurityManager_EndpointGroups_PIM',
+            'rbac_Intune_HelpdeskLevel1_Directory',
+            'rbac_Intune_HelpdeskLevel1_EndpointGroups_PIM',
+            'rbac_Intune_HelpDeskOperator_EndpointGroups_PIM',
+            'rbac_Intune_IntuneRoleAdministrator_EndpointGroups_PIM',
+            'rbac_Intune_PolicyandProfileManager_EndpointGroups_PIM' |
+            Where-Object { $_ -like "$wordToComplete*" } |
+            ForEach-Object { [System.Management.Automation.CompletionResult]::new("'$_'", $_, 'ParameterValue', $_) }
+        })]
         [string]$GroupNameOrId,
 
+        # TicketNumber - topdesk ticket number
         [Parameter(Mandatory)]
         [string]$TicketNumber,
 
+        # Description - justification for request
         [Parameter(Mandatory)]
         [string]$Description,
 
+        # DurationHours - duration to request role for (defaults to 8 hours)
         [Parameter(Mandatory=$false)]
         [ValidateRange(1,8)]
         [int]$DurationHours = 8
@@ -5441,26 +5644,43 @@ function New-PimGroupRequest {
 
     $baseUri = 'https://graph.microsoft.com/v1.0'
 
-    # Resolve group name
-    $groupId = $null
-    $guidRegexPattern = '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
-    if ($GroupNameOrId -match $guidRegexPattern) {
-        $groupId = $GroupNameOrId
+    # Resolve group and current user in a single round trip
+    if ([guid]::TryParse($GroupNameOrId, [ref]$null)) {
+        $groupUrl = "/groups/$GroupNameOrId`?`$select=id,displayName"
     } else {
-        $filter = [uri]::EscapeDataString("displayName eq '$GroupNameOrId'")
-        $groupNameUri = "$baseUri/groups?`$filter=$filter&`$select=id,displayName"
-        $response = Invoke-MgGraphRequest -Method GET -Uri $groupNameUri
-        $groups = $response.value
-        if ($groups.Count -ne 1) {
-            throw "Expected one group '$GroupNameOrId'; found $($groups.Count)."
-        }
-        $groupId = $groups[0].id
+        $filter   = [uri]::EscapeDataString("displayName eq '$($GroupNameOrId.Replace("'", "''"))'")
+        $groupUrl = "/groups?`$filter=$filter&`$select=id,displayName"
     }
+
+    $batchBody = @{
+        requests = @(
+            @{ id = 'me';    method = 'GET'; url = '/me?$select=id' }
+            @{ id = 'group'; method = 'GET'; url = $groupUrl }
+        )
+    }
+    $batchResponse = Invoke-MgGraphRequest -Method POST -Uri "$baseUri/`$batch" -Body $batchBody -ErrorAction Stop
+
+    # Sub-requests don't raise errors on their own, so check each status
+    $results = @{}
+    foreach ($item in $batchResponse.responses) {
+        if ($item.status -ge 400) {
+            throw "Batch request '$($item.id)' failed ($($item.status)): $($item.body.error.message)"
+        }
+        $results[$item.id] = $item.body
+    }
+
+    $user = $results['me']
+
+    # GUID lookup returns the group itself; name lookup returns a collection
+    $groups = if ($results['group'].value -is [array]) { $results['group'].value } else { @($results['group']) }
+    if ($groups.Count -ne 1) {
+        throw "Expected one group '$GroupNameOrId'; found $($groups.Count)."
+    }
+    $groupId   = $groups[0].id
+    $groupName = $groups[0].displayName
 
     $ticketSystem = 'TopDesk'
     $duration     = [Xml.XmlConvert]::ToString([TimeSpan]::FromHours($DurationHours))
-
-    $user = Invoke-MgGraphRequest -Method GET -Uri "$baseUri/me?`$select=id" -ErrorAction Stop
 
     $body = @{
         action        = 'selfActivate'
@@ -5481,7 +5701,7 @@ function New-PimGroupRequest {
         }
     }
 
-    if ($PSCmdlet.ShouldProcess($groupId, 'Request PIM group assignment')) {
+    if ($PSCmdlet.ShouldProcess("$groupId ($groupName)", 'Request PIM group assignment')) {
         Invoke-MgGraphRequest -Method POST `
             -Uri "$baseUri/identityGovernance/privilegedAccess/group/assignmentScheduleRequests" `
             -Body $body `
@@ -5886,6 +6106,49 @@ function Show-IntelExtensibleFrameworkUpdate {
     }
 
     exit 0
+}
+
+#endregion
+
+#region Sync-IntuneDevice.ps1
+function Sync-IntuneDevice {
+    [CmdletBinding()]
+    param (
+        # ComputeerName
+        [Parameter(Mandatory)]
+        [string[]]$ComputerName
+    )
+
+    foreach ($computer in $ComputerName) {
+        try {
+            $name = $computer.Replace("'", "''")
+
+            $intuneDevice = Get-IntuneDevice -DeviceName $name
+
+            if ($intuneDevice.Count -lt 1) {
+                Write-Warning "Could not find device with name '$name'."
+                continue
+            } elseif ($intuneDevice.Count -gt 1) {
+                Write-Warning "Found more than 1 device when searching for '$name'. Skipping..."
+                continue
+            }
+
+            $deviceId = $intuneDevice[0].id
+
+            $uri = "https://graph.microsoft.com/v1.0/deviceManagement/managedDevices/$deviceId/syncDevice"
+
+            Invoke-MgGraphRequest -Method POST -Uri $uri -ErrorAction Stop | Out-Null
+
+            [PSCustomObject]@{
+                ComputerName = $name
+                DeviceId     = $deviceId
+                Status       = 'Sync requested'
+            }
+        }
+        catch {
+            Write-Error "Failed to sync ${computer}: $($_.Exception.Message)"
+        }
+    }
 }
 
 #endregion
@@ -7639,9 +7902,9 @@ function Invoke-PsExecScript {
         $fileNameNoExt = [System.IO.Path]::GetFileNameWithoutExtension($scriptPath)
         $fileName = '{0}_{1}.ps1' -f $fileNameNoExt, [guid]::NewGuid().ToString('N')
 
-        $remoteDirectory = "\\$Computer\C$\ProgramData\BMD\PsExec"
+        $remoteDirectory = "\\$Computer\C$\Program Files\BMD\PsExec"
         $remoteUNCPath   = Join-Path $remoteDirectory $fileName
-        $remoteLocalPath = "C:\ProgramData\BMD\PsExec\$fileName"
+        $remoteLocalPath = "C:\Program Files\BMD\PsExec\$fileName"
 
         try {
             # Create temporary directory on remote machine
@@ -7672,6 +7935,9 @@ function Invoke-PsExecScript {
             $psExecArgs += @(
                 'powershell.exe'
                 '-NoProfile'
+                '-NonInteractive'
+                '-InputFormat'
+                'None'
                 '-ExecutionPolicy'
                 'Bypass'
                 '-File'
@@ -7684,15 +7950,24 @@ function Invoke-PsExecScript {
 
             Write-Verbose "Running $Path on $Computer"
 
-            & $PsExecPath @psExecArgs
-
+            $output = & {
+                $ErrorActionPreference = 'Continue'
+                & $PsExecPath @psExecArgs 2>&1
+            }
             $exitCode = $LASTEXITCODE
 
+            $stdOut = @($output | Where-Object { $_ -isnot [System.Management.Automation.ErrorRecord] } | ForEach-Object { "$_" })
+            $stdErr = @($output | Where-Object { $_ -is [System.Management.Automation.ErrorRecord] } | ForEach-Object { $_.ToString() })
+
+            $stdOut | ForEach-Object { Write-Verbose "[$Computer] $_" }
+
             [pscustomobject]@{
-                ComputerName = $Computer
-                Script       = $scriptPath
-                exitCode     = $exitCode
-                Success      = ($exitCode -eq 0)
+                ComputerName    = $Computer
+                Script          = $scriptPath
+                exitCode        = $exitCode
+                Success         = ($exitCode -eq 0)
+                Output          = $stdOut
+                ErrorOutput     = $stdErr
             }
         } catch {
             Write-Error "Failed to run script on $Computer : $_"
@@ -10335,6 +10610,8 @@ Export-ModuleMember -Function @(
     'Get-ADComputerMembership'
     'Get-ADGroupMemberInfo'
     'Get-ADUserMembership'
+    'Get-DefenderDeviceVulns'
+    'Get-DefenderSoftwareEvidence'
     'Add-CodeSignature'
     'Backup-ADBitlocker'
     'Clear-SoftwareDistributionFolder'
@@ -10428,6 +10705,7 @@ Export-ModuleMember -Function @(
     'Restart-IntuneService'
     'Send-GraphEmail'
     'Show-IntelExtensibleFrameworkUpdate'
+    'Sync-IntuneDevice'
     'Update-AdobeAppsDetection'
     'Update-AdobeAppsRemediation'
     'Update-IntuneAppInventoryDb'
