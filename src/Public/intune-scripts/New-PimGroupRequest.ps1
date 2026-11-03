@@ -64,10 +64,18 @@
     $user = $results['me']
 
     # GUID lookup returns the group itself; name lookup returns a collection
-    $groups = if ($results['group'].value -is [array]) { $results['group'].value } else { @($results['group']) }
+    $groups = @(
+        if ($results['group'].ContainsKey('value')) {
+            $results['group'].value
+        } else {
+            $results['group']
+        }
+    )
+
     if ($groups.Count -ne 1) {
         throw "Expected one group '$GroupNameOrId'; found $($groups.Count)."
     }
+
     $groupId   = $groups[0].id
     $groupName = $groups[0].displayName
 

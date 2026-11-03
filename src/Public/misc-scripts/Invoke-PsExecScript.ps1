@@ -88,18 +88,12 @@
             }
             $exitCode = $LASTEXITCODE
 
-            $stdOut = @($output | Where-Object { $_ -isnot [System.Management.Automation.ErrorRecord] } | ForEach-Object { "$_" })
-            $stdErr = @($output | Where-Object { $_ -is [System.Management.Automation.ErrorRecord] } | ForEach-Object { $_.ToString() })
-
-            $stdOut | ForEach-Object { Write-Verbose "[$Computer] $_" }
-
             [pscustomobject]@{
                 ComputerName    = $Computer
                 Script          = $scriptPath
                 exitCode        = $exitCode
                 Success         = ($exitCode -eq 0)
-                Output          = $stdOut
-                ErrorOutput     = $stdErr
+                Output          = $output
             }
         } catch {
             Write-Error "Failed to run script on $Computer : $_"
