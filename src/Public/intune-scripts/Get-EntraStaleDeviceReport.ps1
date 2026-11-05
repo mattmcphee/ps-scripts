@@ -3,13 +3,10 @@ function Get-EntraStaleDeviceReport {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
-        [int]$StaleDays = 90,
-
-        [Parameter(Mandatory=$false)]
         [string]$ExportPath
     )
 
-    $uri = 'https://graph.microsoft.com/v1.0/devices?$select=id,deviceId,displayName,operatingSystem,approximateLastSignInDateTime,trustType,accountEnabled,isManaged&$filter=operatingSystem%20eq%20%27Windows%27&$top=999'
+    $uri = 'https://graph.microsoft.com/v1.0/devices?$select=id,deviceId,displayName,operatingSystem,approximateLastSignInDateTime,trustType,accountEnabled,isManaged&$top=999'
 
     $devices = [System.Collections.Generic.List[object]]::new()
 
@@ -41,6 +38,7 @@ function Get-EntraStaleDeviceReport {
 
             [PSCustomObject]@{
                 DeviceName     = $device.displayName
+                OperatingSystem = $device.operatingSystem
                 EntraObjectId  = $device.id
                 EntraDeviceId  = $device.deviceId
                 TrustType      = $device.trustType
@@ -48,7 +46,12 @@ function Get-EntraStaleDeviceReport {
                 IsManaged      = $device.isManaged
                 LastSignIn     = $lastSignIn
                 InactiveDays   = $inactiveDays
-                IsStale        = ($null -eq $lastSignIn -or $inactiveDays -ge $StaleDays)
+                Inactive30Days  = ($null -ne $lastSignIn -and $inactiveDays -ge 30)
+                Inactive60Days  = ($null -ne $lastSignIn -and $inactiveDays -ge 60)
+                Inactive90Days  = ($null -ne $lastSignIn -and $inactiveDays -ge 90)
+                Inactive120Days = ($null -ne $lastSignIn -and $inactiveDays -ge 120)
+                Inactive180Days = ($null -ne $lastSignIn -and $inactiveDays -ge 180)
+                Inactive270Days = ($null -ne $lastSignIn -and $inactiveDays -ge 270)
             }
         }
     )
@@ -78,11 +81,8 @@ function Get-EntraStaleDeviceReport {
         $null -eq $_.inactiveDays
     }).Count
 
-    $stale = $report.Where({ $_.IsStale })
-
-    Write-Host "Total Windows Entra devices: $total"
+    Write-Host "Total Entra devices: $total"
     Write-Host "Missing last sign-in: $missingSignIn"
-    Write-Host "Stale at $StaleDays days (including missing sign-in): $($stale.Count)"
 
     if ($ExportPath) {
         $report |
@@ -91,6 +91,4 @@ function Get-EntraStaleDeviceReport {
 
         Write-Host "Exported to: $ExportPath"
     }
-
-    return $stale
 }
