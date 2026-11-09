@@ -94,17 +94,6 @@ function Get-IntuneAppAssignments {
         $assignments = $assignmentsByApp[$app.id]
 
         if (-not $assignments) {
-            [PSCustomObject]@{
-                AppDisplayName = $app.displayName
-                AppId          = $app.id
-                AppType        = $appType
-                Intent         = $null
-                GroupName      = $null
-                GroupId        = $null
-                FilterName     = $null
-                FilterId       = $null
-                FilterType     = $null
-            }
             continue
         }
 

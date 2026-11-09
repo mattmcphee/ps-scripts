@@ -1,7 +1,7 @@
 # ============================================================================
 # GENERATED FILE - DO NOT EDIT
 # Run .\build.ps1 to regenerate this file from .\src
-# This file was built on 05-Nov-2026 10:29:29
+# This file was built on 10-Nov-2026 07:30:07
 # ============================================================================
 
 #region Add-CompToADGroup.ps1
@@ -301,6 +301,44 @@ function Get-ADUserMembership {
 
 #endregion
 
+#region Get-DefenderAsrBlocks.ps1
+function Get-DefenderAsrBlocks {
+    [CmdletBinding()]
+    param (
+        # Timespan - 1 hour, 1 day, 7 days or 30 days
+        [Parameter()]
+        [ValidateSet('PT1H', 'P1D', 'P7D', 'P30D')]
+        [string]$Timespan
+    )
+
+    $uri = 'https://graph.microsoft.com/v1.0/security/runHuntingQuery'
+
+    $query = @(
+        'DeviceEvents'
+        '| where ActionType startswith "AsrUntrusted"'
+        '| where ActionType endswith "Blocked"'
+        '| project Timestamp, DeviceName, FileName, FolderPath, InitiatingProcessFileName, InitiatingProcessFolderPath, InitiatingProcessCommandLine, InitiatingProcessCreationTime, InitiatingProcessAccountName, InitiatingProcessParentFileName'
+    ) -join "`n"
+
+    $body = @{
+        Query    = $Query
+        Timespan = $Timespan
+    } | ConvertTo-Json -Compress
+
+    $requestArgs = @{
+        Method      = 'POST'
+        Uri         = $uri
+        Body        = $body
+        ContentType = 'application/json; charset=utf-8'
+        ErrorAction = 'Stop'
+        OutputType  = 'PSObject'
+    }
+
+    (Invoke-MgGraphRequest @requestArgs).results
+}
+
+#endregion
+
 #region Get-DefenderDeviceVulns.ps1
 function Get-DefenderDeviceVulns {
     [CmdletBinding()]
@@ -367,6 +405,40 @@ function Get-DefenderDeviceVulns {
 
         [PSCustomObject]$obj
     }
+}
+
+#endregion
+
+#region Get-DefenderQueryResults.ps1
+
+function Get-DefenderQueryResults {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory, Position = 0)]
+        [string]$Query,
+
+        [Parameter()]
+        [ValidateSet('PT1H', 'P1D', 'P7D', 'P30D')]
+        [string]$Timespan = 'P30D'
+    )
+
+    $uri = 'https://graph.microsoft.com/v1.0/security/runHuntingQuery'
+
+    $body = @{
+        Query    = $Query
+        Timespan = $Timespan
+    } | ConvertTo-Json -Compress
+
+    $requestArgs = @{
+        Method      = 'POST'
+        Uri         = $uri
+        Body        = $body
+        ContentType = 'application/json; charset=utf-8'
+        ErrorAction = 'Stop'
+        OutputType  = 'PSObject'
+    }
+
+    (Invoke-MgGraphRequest @requestArgs).results
 }
 
 #endregion
@@ -4029,6 +4101,264 @@ function Get-EntraStaleDeviceReport {
 
 #endregion
 
+#region Get-EntraStaleMobileDeviceReport.ps1
+function Get-EntraStaleMobileDeviceReport {
+    [CmdletBinding()]
+    param (
+        # ExportPath
+        [Parameter(Mandatory=$false)]
+        [string]$ExportPath
+    )
+
+    $cutoff = (Get-Date).AddDays(-180)
+
+    $entraUri = 'https://graph.microsoft.com/v1.0/devices?'
+    $entraUriQuery = @(
+        '$select=id'
+        'deviceId'
+        'displayName'
+        'operatingSystem'
+        'registrationDateTime'
+        'approximateLastSignInDateTime'
+        'accountEnabled'
+        'createdDateTime'
+        'isManaged'
+        'trustType'
+    ) -join ","
+
+    $uri = $entraUri + $entraUriQuery
+
+    $entraDevices = while ($uri) {
+        $response = Invoke-MgGraphRequest -Method 'GET' -Uri $uri
+
+        foreach ($device in $response.value) {
+            if ($device.operatingSystem -match '^(Android|iOS|iPadOS)') {
+                $device
+            }
+        }
+
+        # Move to next page if results exceed the default page size
+        $uri = $response.'@odata.nextLink'
+    }
+
+    $intuneUri = 'https://graph.microsoft.com/v1.0/deviceManagement/managedDevices'
+
+    $intuneDevices = while ($intuneUri) {
+        $response = Invoke-MgGraphRequest -Method 'GET' -Uri $intuneUri
+
+        $response.value
+
+        $intuneUri = $response.'@odata.nextLink'
+    }
+
+    # index intune devices by entra device id
+    $intuneByDeviceId = @{}
+
+    foreach ($device in $intuneDevices) {
+        if ($device.azureAdDeviceId) {
+            $key = $device.azureAdDeviceId.ToLowerInvariant()
+            $intuneByDeviceId[$key] = $device
+        }
+    }
+
+    $report = foreach ($device in $entraDevices) {
+        $key = $device.deviceId.ToLowerInvariant()
+        $managed = $intuneByDeviceId[$key]
+
+        $entraStale = $device.approximateLastSignInDateTime -and ($device.approximateLastSignInDateTime -lt $cutoff)
+        $intuneStale = $managed -and $managed.LastSyncDateTime -and ($managed.LastSyncDateTime -lt $cutoff)
+
+        $classification = if ($managed -and $entraStale -and $intuneStale) {
+            'Matching Intune record found. Entra and Intune last contact was over 180 days ago.'
+        } elseif (-not $managed -and $entraStale) {
+            'No matching Intune record found. Entra last contact was over 180 days ago.'
+        } elseif ($managed -and $intuneStale) {
+            'Matching Intune record found. Intune last contact was over 180 days ago.'
+        } elseif (-not $device.approximateLastSignInDateTime) {
+            'No Entra activity.'
+        } else {
+            'No signs of staleness.'
+        }
+
+        [PSCustomObject]@{
+            DeviceName      = $device.DisplayName
+            SerialNumber    = $managed.serialNumber
+            OS              = $device.OperatingSystem
+            EntraDeviceId   = $device.DeviceId
+            EntraLastSignIn = $device.ApproximateLastSignInDateTime
+            IntuneLastSync  = $managed.LastSyncDateTime
+            IntunePresent   = [bool]$managed
+            Ownership       = $managed.ManagedDeviceOwnerType
+            EntraManaged    = $device.IsManaged
+            AccountEnabled  = $device.AccountEnabled
+            Classification  = $classification
+        }
+    }
+
+    if ($ExportPath) {
+        $report | Export-Csv $ExportPath -NoTypeInformation -Force
+    }
+
+    $report | Group-Object Classification | Select-Object Name, Count
+}
+
+#endregion
+
+#region Get-EntraStaleWindowsDeviceReport.ps1
+function Get-EntraStaleWindowsDeviceReport {
+    <#
+    .SYNOPSIS
+        Reports Windows devices in Entra ID that are stale (180+ days inactive),
+        including matching Intune and Active Directory records.
+    .DESCRIPTION
+        Intune devices are matched on azureAdDeviceId. AD computers are matched on
+        objectGUID (equal to the Entra deviceId for hybrid joined devices), falling
+        back to computer name. A device is considered stale when Entra has had no
+        activity for 180+ days and any matching Intune/AD record is also inactive
+        for 180+ days.
+        Requires Connect-MgGraph (Device.Read.All, DeviceManagementManagedDevices.Read.All)
+        and the ActiveDirectory module.
+    .EXAMPLE
+        Get-EntraStaleWindowsDevice -ExportPath C:\temp\StaleWindowsDevices.csv
+    #>
+    [CmdletBinding()]
+    param (
+        # ExportPath
+        [Parameter(Mandatory=$false)]
+        [string]$ExportPath
+    )
+
+    $cutoff = (Get-Date).AddDays(-180)
+
+    $entraUri = 'https://graph.microsoft.com/v1.0/devices?$top=999&'
+    $entraUriQuery = @(
+        '$select=id'
+        'deviceId'
+        'displayName'
+        'operatingSystem'
+        'operatingSystemVersion'
+        'approximateLastSignInDateTime'
+        'accountEnabled'
+        'isManaged'
+        'trustType'
+    ) -join ","
+
+    $uri = $entraUri + $entraUriQuery
+
+    $entraDevices = while ($uri) {
+        $response = Invoke-MgGraphRequest -Method 'GET' -Uri $uri
+
+        foreach ($device in $response.value) {
+            if ($device.operatingSystem -match '^Windows') {
+                $device
+            }
+        }
+
+        $uri = $response.'@odata.nextLink'
+    }
+
+    $intuneUri = 'https://graph.microsoft.com/v1.0/deviceManagement/managedDevices'
+
+    $intuneDevices = while ($intuneUri) {
+        $response = Invoke-MgGraphRequest -Method 'GET' -Uri $intuneUri
+
+        $response.value
+
+        $intuneUri = $response.'@odata.nextLink'
+    }
+
+    # index intune devices by entra device id
+    $intuneByDeviceId = @{}
+
+    foreach ($device in $intuneDevices) {
+        if ($device.azureAdDeviceId) {
+            $intuneByDeviceId[$device.azureAdDeviceId.ToLowerInvariant()] = $device
+        }
+    }
+
+    $adComputers = Get-ADComputer -Filter "OperatingSystem -like 'Windows*'" -Properties LastLogonDate, OperatingSystem
+
+    # index AD computers by objectGUID and name
+    $adByGuid = @{}
+    $adByName = @{}
+
+    foreach ($computer in $adComputers) {
+        $adByGuid[$computer.ObjectGUID.ToString().ToLowerInvariant()] = $computer
+        $adByName[$computer.Name.ToUpperInvariant()] = $computer
+    }
+
+    $report = foreach ($device in $entraDevices) {
+        $key = $device.deviceId.ToLowerInvariant()
+        $managed = $intuneByDeviceId[$key]
+
+        $adMatchType = $null
+        $ad = $adByGuid[$key]
+        if ($ad) {
+            $adMatchType = 'ObjectGUID'
+        } elseif ($device.displayName) {
+            $ad = $adByName[$device.displayName.ToUpperInvariant()]
+            if ($ad) { $adMatchType = 'Name' }
+        }
+
+        $entraLastSignIn = $device.approximateLastSignInDateTime
+        $hasEntraLastSignIn = [bool]$device.approximateLastSignInDateTime
+        $entraStale = -not $entraLastSignIn -or ($entraLastSignIn -lt $cutoff)
+        $intuneStale = $managed -and (-not $managed.lastSyncDateTime -or ($managed.lastSyncDateTime -lt $cutoff))
+        $adStale = $ad -and (-not $ad.LastLogonDate -or ($ad.LastLogonDate -lt $cutoff))
+
+        $stale = $entraStale -and (-not $managed -or $intuneStale) -and (-not $ad -or $adStale)
+
+        $classification = if (-not $hasEntraLastSignIn) {
+            'No last sign in found.'
+        } elseif (-not $entraStale) {
+            'Entra active within 180 days.'
+        } elseif ($managed -and -not $intuneStale) {
+            'Entra stale, but Intune active within 180 days.'
+        } elseif ($ad -and -not $adStale) {
+            'Entra stale, but AD active within 180 days.'
+        } elseif ($managed -and $ad) {
+            'Stale. Entra, Intune and AD all inactive over 180 days.'
+        } elseif ($managed) {
+            'Stale. Entra and Intune inactive over 180 days. No AD record.'
+        } elseif ($ad) {
+            'Stale. Entra and AD inactive over 180 days. No Intune record.'
+        } else {
+            'Stale. Entra inactive over 180 days. No Intune or AD record.'
+        }
+
+        [PSCustomObject]@{
+            DeviceName          = $device.displayName
+            OS                  = $device.operatingSystem
+            OSVersion           = $device.operatingSystemVersion
+            TrustType           = $device.trustType
+            EntraObjectId       = $device.id
+            EntraDeviceId       = $device.deviceId
+            EntraAccountEnabled = $device.accountEnabled
+            EntraManaged        = $device.isManaged
+            EntraLastSignIn     = $entraLastSignIn
+            IntunePresent       = [bool]$managed
+            IntuneLastSync      = $managed.lastSyncDateTime
+            SerialNumber        = $managed.serialNumber
+            Ownership           = $managed.managedDeviceOwnerType
+            ADPresent           = [bool]$ad
+            ADMatchType         = $adMatchType
+            ADEnabled           = $ad.Enabled
+            ADLastLogon         = $ad.LastLogonDate
+            ADDistinguishedName = $ad.DistinguishedName
+            Stale               = [bool]$stale
+            Classification      = $classification
+        }
+    }
+
+    if ($ExportPath) {
+        $report | Export-Csv $ExportPath -NoTypeInformation -Force
+    }
+
+    $report | Group-Object Classification | Select-Object Name, Count
+}
+
+#endregion
+
 #region Get-IntuneApp.ps1
 function Get-IntuneApp {
     param(
@@ -4199,17 +4529,6 @@ function Get-IntuneAppAssignments {
         $assignments = $assignmentsByApp[$app.id]
 
         if (-not $assignments) {
-            [PSCustomObject]@{
-                AppDisplayName = $app.displayName
-                AppId          = $app.id
-                AppType        = $appType
-                Intent         = $null
-                GroupName      = $null
-                GroupId        = $null
-                FilterName     = $null
-                FilterId       = $null
-                FilterType     = $null
-            }
             continue
         }
 
@@ -11172,7 +11491,9 @@ Export-ModuleMember -Function @(
     'Get-ADComputerMembership'
     'Get-ADGroupMemberInfo'
     'Get-ADUserMembership'
+    'Get-DefenderAsrBlocks'
     'Get-DefenderDeviceVulns'
+    'Get-DefenderQueryResults'
     'Get-DefenderSoftwareEvidence'
     'Add-CodeSignature'
     'Backup-ADBitlocker'
@@ -11239,6 +11560,8 @@ Export-ModuleMember -Function @(
     'Get-DeviceEntraGroups'
     'Get-EntraGroups'
     'Get-EntraStaleDeviceReport'
+    'Get-EntraStaleMobileDeviceReport'
+    'Get-EntraStaleWindowsDeviceReport'
     'Get-IntuneApp'
     'Get-IntuneAppAssignments'
     'Get-IntuneAppFailures'
