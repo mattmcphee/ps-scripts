@@ -1,6 +1,28 @@
 ﻿
 function Get-BOMRadarGif {
+    <#
+    .SYNOPSIS
+        Creates an animated GIF from the latest BOM Mt Stapylton rain radar images.
+    .DESCRIPTION
+        Downloads radar frames and map layers from BOM's anonymous FTP service.
+        Requires ImageMagick 7 (magick) on PATH and access to FTP, including passive data connections.
+    .PARAMETER ProductId
+        Radar range: IDR661 (512 km), IDR662 (256 km), IDR663 (128 km), or IDR664 (64 km).
+    .PARAMETER FrameCount
+        Maximum number of recent frames to include, oldest first. At least two must be available.
+    .PARAMETER DelayMs
+        Delay between frames in milliseconds, rounded to the nearest 10 milliseconds for GIF.
+    .PARAMETER OutputFolder
+        Destination folder, created if needed. Defaults to the current directory.
+        The filename is yyyyMMdd_HHmmss_bomradar.gif. An existing file with the same
+        name is replaced only after GIF encoding succeeds.
+    .EXAMPLE
+        Get-BOMRadarGif -ProductId IDR663 -FrameCount 10 -OutputFolder .\radar
+    .OUTPUTS
+        System.IO.FileInfo
+    #>
     [CmdletBinding()]
+    [OutputType([IO.FileInfo])]
     param(
         [Parameter()]
         [ValidateSet('IDR663', 'IDR664', 'IDR662', 'IDR661')]
@@ -15,22 +37,28 @@ function Get-BOMRadarGif {
         [int]$DelayMs = 500,
 
         [Parameter()]
-        [string]$OutputPath = "C:\sources\bomradar\$(Get-Date -Format 'yyyyMMdd_HHmmss')_bomradar.gif"
+        [ValidateNotNullOrEmpty()]
+        [string]$OutputFolder = '.'
     )
 
     $ErrorActionPreference = 'Stop'
 
-    $Magick = (Get-Command magick -ErrorAction Stop).Source
+    $ProductId = $ProductId.ToUpperInvariant()
+    $OutputFolder = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($OutputFolder)
+    $OutputPath = Join-Path $OutputFolder "$(Get-Date -Format 'yyyyMMdd_HHmmss')_bomradar.gif"
+
+    $Magick = (Get-Command magick -CommandType Application -ErrorAction Stop).Source
     $RadarUrl = 'ftp://ftp.bom.gov.au/anon/gen/radar/'
     $OverlayUrl = 'ftp://ftp.bom.gov.au/anon/gen/radar_transparencies/'
     $TempPath = Join-Path ([IO.Path]::GetTempPath()) ([guid]::NewGuid().ToString())
 
-    New-Item -Path $TempPath -ItemType Directory -Force | Out-Null
-
-    $Client = [System.Net.WebClient]::new()
-    $Client.Credentials = [System.Net.NetworkCredential]::new('anonymous', 'anonymous@example.com')
+    $Client = $null
 
     try {
+        New-Item -Path $TempPath -ItemType Directory -Force | Out-Null
+        $Client = [System.Net.WebClient]::new()
+        $Client.Credentials = [System.Net.NetworkCredential]::new('anonymous', 'anonymous@example.com')
+
         # List available radar images.
         $Request = [System.Net.FtpWebRequest]::Create($RadarUrl)
         $Request.Method = [System.Net.WebRequestMethods+Ftp]::ListDirectory
@@ -66,7 +94,11 @@ function Get-BOMRadarGif {
         )
 
         if ($Files.Count -lt 2) {
-            throw "Not enough radar frames found for $ProductId."
+            throw "Not enough radar frames found for $ProductId (found $($Files.Count); need at least 2)."
+        }
+
+        if ($Files.Count -lt $FrameCount) {
+            Write-Warning "Only $($Files.Count) radar frames are available for $ProductId; requested $FrameCount."
         }
 
         # Download static map layers.
@@ -114,21 +146,22 @@ function Get-BOMRadarGif {
         # Generate looping animated GIF.
         $Delay = [math]::Max(1, [int][math]::Round($DelayMs / 10))
 
-        $OutputPath = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($OutputPath)
+        New-Item -Path $OutputFolder -ItemType Directory -Force | Out-Null
 
-        $Parent = Split-Path $OutputPath -Parent
-        New-Item -Path $Parent -ItemType Directory -Force | Out-Null
-
-        & $Magick -delay $Delay -loop 0 @FramePaths $OutputPath
+        $GifPath = Join-Path $TempPath 'radar.gif'
+        & $Magick -delay $Delay -loop 0 @FramePaths $GifPath
 
         if ($LASTEXITCODE -ne 0) {
             throw 'ImageMagick failed to generate the GIF.'
         }
 
-        Get-Item $OutputPath
+        Move-Item -LiteralPath $GifPath -Destination $OutputPath -Force
+        Get-Item -LiteralPath $OutputPath
     }
     finally {
-        $Client.Dispose()
-        Remove-Item $TempPath -Recurse -Force -ErrorAction SilentlyContinue
+        if ($null -ne $Client) {
+            $Client.Dispose()
+        }
+        Remove-Item -LiteralPath $TempPath -Recurse -Force -ErrorAction SilentlyContinue
     }
 }
