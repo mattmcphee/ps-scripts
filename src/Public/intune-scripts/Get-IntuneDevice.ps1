@@ -13,7 +13,7 @@
 
     # only get the basic fields
     if (-not $AllProperties) {
-        $query += '$select=id,deviceName,model,userPrincipalName,userDisplayName'
+        $query += '$select=id,deviceName,model,userPrincipalName,userDisplayName,osVersion'
     }
 
     $needsClientFilter = $false
@@ -49,6 +49,7 @@
                     Model               = $device.model
                     UserPrincipalName   = $device.userPrincipalName
                     UserDisplayName     = $device.userDisplayName
+                    OsVersion           = $device.OsVersion
                 }
             }
         }

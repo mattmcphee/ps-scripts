@@ -1,7 +1,7 @@
 # ============================================================================
 # GENERATED FILE - DO NOT EDIT
 # Run .\build.ps1 to regenerate this file from .\src
-# This file was built on 13-Nov-2026 08:45:32
+# This file was built on 17-Nov-2026 10:55:36
 # ============================================================================
 
 #region Add-CompToADGroup.ps1
@@ -4944,7 +4944,7 @@ function Get-IntuneDevice {
 
     # only get the basic fields
     if (-not $AllProperties) {
-        $query += '$select=id,deviceName,model,userPrincipalName,userDisplayName'
+        $query += '$select=id,deviceName,model,userPrincipalName,userDisplayName,osVersion'
     }
 
     $needsClientFilter = $false
@@ -4980,6 +4980,7 @@ function Get-IntuneDevice {
                     Model               = $device.model
                     UserPrincipalName   = $device.userPrincipalName
                     UserDisplayName     = $device.userDisplayName
+                    OsVersion           = $device.OsVersion
                 }
             }
         }
@@ -5136,10 +5137,48 @@ function Get-IntuneGroupMembers {
 
 #endregion
 
+#region Get-IntunePrimaryUser.ps1
+function Get-IntunePrimaryUser {
+    [CmdletBinding()]
+    param (
+        # ComputerName
+        [Parameter(Mandatory)]
+        [string]$ComputerName
+    )
+
+    $intuneDevice = @(Get-IntuneDevice -DeviceName $ComputerName)
+
+    if ($intuneDevice.Count -lt 1) {
+        Write-Warning "Could not find device with name '$ComputerName'."
+        return
+    } elseif ($intuneDevice.Count -gt 1) {
+        Write-Warning "Found more than 1 device when searching for '$ComputerName'. Skipping..."
+        return
+    }
+
+    $deviceId = $intuneDevice[0].ID
+
+    $uri = "https://graph.microsoft.com/v1.0/deviceManagement/managedDevices/$deviceId/users"
+
+    $result = (Invoke-MgGraphRequest -Method GET -Uri $uri).value
+
+    [PSCustomObject]@{
+        DeviceID                    = $deviceId
+        ComputerName                = $ComputerName
+        PrimaryUserID                      = $result.id
+        PrimaryUserPrincipalName    = $result.userPrincipalName
+        PrimaryUserDisplayName      = $result.displayName
+        PrimaryUserEmailAddress     = $result.mail
+        PrimaryUserJobTitle         = $result.jobTitle
+    }
+}
+
+#endregion
+
 #region Get-IntuneUser.ps1
 function Get-IntuneUser {
     param(
-        # UserPrincipalName
+        # UserPrincipalName - filter results by UPN; supports wildcards (* and ?)
         [Parameter(Mandatory=$false)]
         [string]$UserPrincipalName,
 
@@ -5148,40 +5187,60 @@ function Get-IntuneUser {
         [switch]$AllProperties
     )
 
-    $uri = "https://graph.microsoft.com/v1.0/users"
+    # 999 is the max page size for /users (default is 100)
+    $query = @('$top=999')
 
     # only get the basic fields
     if (-not $AllProperties) {
-        $uri += '?$select=id,displayName,userPrincipalName,jobTitle'
+        $query += '$select=id,displayName,userPrincipalName,jobTitle'
     }
 
-    $results = [System.Collections.Generic.List[PSCustomObject]]::new()
+    $needsClientFilter = $false
+
+    if ($UserPrincipalName) {
+        $wildcardIndex = $UserPrincipalName.IndexOfAny([char[]]'*?')
+        $filter = $null
+        if ($wildcardIndex -lt 0) {
+            $filter = "userPrincipalName eq '$($UserPrincipalName.Replace("'", "''"))'"
+        } elseif ($wildcardIndex -gt 0) {
+            $prefix = $UserPrincipalName.Substring(0, $wildcardIndex).Replace("'", "''")
+            $filter = "startswith(userPrincipalName,'$prefix')"
+            # Only "PREFIX*" is fully handled by Graph; anything else needs a -like check
+            $needsClientFilter = $UserPrincipalName -ne ($UserPrincipalName.Substring(0, $wildcardIndex) + '*')
+        } else {
+            $needsClientFilter = $true  # leading wildcard: Graph can't filter this
+        }
+        if ($filter) {
+            # Encode so characters like '#' in guest UPNs (#EXT#) aren't treated as a URI fragment
+            $query += '$filter=' + [uri]::EscapeDataString($filter)
+        }
+    }
+
+    $uri = 'https://graph.microsoft.com/v1.0/users?' + ($query -join '&')
 
     while ($uri) {
         $response = Invoke-MgGraphRequest -Method GET -Uri $uri
 
         foreach ($user in $response.value) {
-            if ($UserPrincipalName -and $user.userPrincipalName -notlike $UserPrincipalName) {
+            if ($needsClientFilter -and $user.userPrincipalName -notlike $UserPrincipalName) {
                 continue
             }
 
             if ($AllProperties) {
-                $results.Add([PSCustomObject]$user)
+                [PSCustomObject]$user
             } else {
-                $results.Add([PSCustomObject]@{
+                [PSCustomObject]@{
                     ID                  = $user.id
                     UserPrincipalName   = $user.userPrincipalName
                     DisplayName         = $user.displayName
                     JobTitle            = $user.jobTitle
-                })
+                }
             }
         }
 
         # Move to next page if results exceed the default page size
         $uri = $response.'@odata.nextLink'
     }
-
-    $results
 }
 
 #endregion
@@ -6454,6 +6513,80 @@ function Send-GraphEmail {
 
 #endregion
 
+#region Set-IntunePrimaryUser.ps1
+function Set-IntunePrimaryUser {
+    [CmdletBinding(SupportsShouldProcess)]
+    param(
+        # ComputerName
+        [Parameter(Mandatory)]
+        [string]$ComputerName,
+
+        # PrimaryUserName
+        [Parameter(Mandatory)]
+        [string]$PrimaryUserName
+    )
+
+    # Get-IntuneDevice/Get-IntuneUser treat these as wildcards, which could silently match the wrong object
+    foreach ($value in $ComputerName, $PrimaryUserName) {
+        if ([WildcardPattern]::ContainsWildcardCharacters($value)) {
+            Write-Error "Wildcard characters are not allowed: '$value'."
+            return
+        }
+    }
+
+    try {
+        $intuneDevice = @(Get-IntuneDevice -DeviceName $ComputerName)
+
+        if ($intuneDevice.Count -lt 1) {
+            Write-Warning "Could not find device with name '$ComputerName'."
+            return
+        } elseif ($intuneDevice.Count -gt 1) {
+            Write-Warning "Found more than 1 device when searching for '$ComputerName'. Skipping..."
+            return
+        }
+
+        $deviceId = $intuneDevice[0].ID
+
+        $user = @(Get-IntuneUser -UserPrincipalName $PrimaryUserName)
+
+        if ($user.Count -lt 1) {
+            Write-Warning "Could not find user with name '$PrimaryUserName'."
+            return
+        } elseif ($user.Count -gt 1) {
+            Write-Warning "Found more than 1 user when searching for '$PrimaryUserName'. Skipping..."
+            return
+        }
+
+        $userId = $user[0].id
+
+        # Primary user is only exposed on the beta endpoint
+        $usersUri = "https://graph.microsoft.com/beta/deviceManagement/managedDevices/$deviceId/users"
+        $previousUser = @((Invoke-MgGraphRequest -Method GET -Uri $usersUri -ErrorAction Stop).value)[0].userPrincipalName
+
+        $action = "Set primary user to '$($user[0].userPrincipalName)' (current: '$previousUser')"
+        if (-not $PSCmdlet.ShouldProcess($intuneDevice[0].DeviceName, $action)) {
+            return
+        }
+
+        $uri = "$usersUri/`$ref"
+        $body = @{ '@odata.id' = "https://graph.microsoft.com/beta/users/$userId" }
+
+        Invoke-MgGraphRequest -Method POST -Uri $uri -Body $body -ErrorAction Stop | Out-Null
+
+        [PSCustomObject]@{
+            ComputerName      = $intuneDevice[0].DeviceName
+            DeviceId          = $deviceId
+            PreviousUser      = $previousUser
+            NewPrimaryUser    = $user.userPrincipalName
+            Status            = 'Primary user updated'
+        }
+    } catch {
+        Write-Error "Failed to set primary user on ${ComputerName}: $($_.Exception.Message)"
+    }
+}
+
+#endregion
+
 #region Show-IntelExtensibleFrameworkUpdate.ps1
 function Show-IntelExtensibleFrameworkUpdate {
     $titlePattern = "*Intel*Extension*2.1.10103.24*"
@@ -7421,7 +7554,29 @@ function Get-BlockLetters {
 #region Get-BOMRadarGif.ps1
 
 function Get-BOMRadarGif {
+    <#
+    .SYNOPSIS
+        Creates an animated GIF from the latest BOM Mt Stapylton rain radar images.
+    .DESCRIPTION
+        Downloads radar frames and map layers from BOM's anonymous FTP service.
+        Requires ImageMagick 7 (magick) on PATH and access to FTP, including passive data connections.
+    .PARAMETER ProductId
+        Radar range: IDR661 (512 km), IDR662 (256 km), IDR663 (128 km), or IDR664 (64 km).
+    .PARAMETER FrameCount
+        Maximum number of recent frames to include, oldest first. At least two must be available.
+    .PARAMETER DelayMs
+        Delay between frames in milliseconds, rounded to the nearest 10 milliseconds for GIF.
+    .PARAMETER OutputFolder
+        Destination folder, created if needed. Defaults to the current directory.
+        The filename is yyyyMMdd_HHmmss_bomradar.gif. An existing file with the same
+        name is replaced only after GIF encoding succeeds.
+    .EXAMPLE
+        Get-BOMRadarGif -ProductId IDR663 -FrameCount 10 -OutputFolder .\radar
+    .OUTPUTS
+        System.IO.FileInfo
+    #>
     [CmdletBinding()]
+    [OutputType([IO.FileInfo])]
     param(
         [Parameter()]
         [ValidateSet('IDR663', 'IDR664', 'IDR662', 'IDR661')]
@@ -7436,22 +7591,28 @@ function Get-BOMRadarGif {
         [int]$DelayMs = 500,
 
         [Parameter()]
-        [string]$OutputPath = "C:\sources\bomradar\$(Get-Date -Format 'yyyyMMdd_HHmmss')_bomradar.gif"
+        [ValidateNotNullOrEmpty()]
+        [string]$OutputFolder = '.'
     )
 
     $ErrorActionPreference = 'Stop'
 
-    $Magick = (Get-Command magick -ErrorAction Stop).Source
+    $ProductId = $ProductId.ToUpperInvariant()
+    $OutputFolder = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($OutputFolder)
+    $OutputPath = Join-Path $OutputFolder "$(Get-Date -Format 'yyyyMMdd_HHmmss')_bomradar.gif"
+
+    $Magick = (Get-Command magick -CommandType Application -ErrorAction Stop).Source
     $RadarUrl = 'ftp://ftp.bom.gov.au/anon/gen/radar/'
     $OverlayUrl = 'ftp://ftp.bom.gov.au/anon/gen/radar_transparencies/'
     $TempPath = Join-Path ([IO.Path]::GetTempPath()) ([guid]::NewGuid().ToString())
 
-    New-Item -Path $TempPath -ItemType Directory -Force | Out-Null
-
-    $Client = [System.Net.WebClient]::new()
-    $Client.Credentials = [System.Net.NetworkCredential]::new('anonymous', 'anonymous@example.com')
+    $Client = $null
 
     try {
+        New-Item -Path $TempPath -ItemType Directory -Force | Out-Null
+        $Client = [System.Net.WebClient]::new()
+        $Client.Credentials = [System.Net.NetworkCredential]::new('anonymous', 'anonymous@example.com')
+
         # List available radar images.
         $Request = [System.Net.FtpWebRequest]::Create($RadarUrl)
         $Request.Method = [System.Net.WebRequestMethods+Ftp]::ListDirectory
@@ -7487,7 +7648,11 @@ function Get-BOMRadarGif {
         )
 
         if ($Files.Count -lt 2) {
-            throw "Not enough radar frames found for $ProductId."
+            throw "Not enough radar frames found for $ProductId (found $($Files.Count); need at least 2)."
+        }
+
+        if ($Files.Count -lt $FrameCount) {
+            Write-Warning "Only $($Files.Count) radar frames are available for $ProductId; requested $FrameCount."
         }
 
         # Download static map layers.
@@ -7535,22 +7700,23 @@ function Get-BOMRadarGif {
         # Generate looping animated GIF.
         $Delay = [math]::Max(1, [int][math]::Round($DelayMs / 10))
 
-        $OutputPath = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($OutputPath)
+        New-Item -Path $OutputFolder -ItemType Directory -Force | Out-Null
 
-        $Parent = Split-Path $OutputPath -Parent
-        New-Item -Path $Parent -ItemType Directory -Force | Out-Null
-
-        & $Magick -delay $Delay -loop 0 @FramePaths $OutputPath
+        $GifPath = Join-Path $TempPath 'radar.gif'
+        & $Magick -delay $Delay -loop 0 @FramePaths $GifPath
 
         if ($LASTEXITCODE -ne 0) {
             throw 'ImageMagick failed to generate the GIF.'
         }
 
-        Get-Item $OutputPath
+        Move-Item -LiteralPath $GifPath -Destination $OutputPath -Force
+        Get-Item -LiteralPath $OutputPath
     }
     finally {
-        $Client.Dispose()
-        Remove-Item $TempPath -Recurse -Force -ErrorAction SilentlyContinue
+        if ($null -ne $Client) {
+            $Client.Dispose()
+        }
+        Remove-Item -LiteralPath $TempPath -Recurse -Force -ErrorAction SilentlyContinue
     }
 }
 
@@ -11570,6 +11736,7 @@ Export-ModuleMember -Function @(
     'Get-IntuneFilter'
     'Get-IntuneGroup'
     'Get-IntuneGroupMembers'
+    'Get-IntunePrimaryUser'
     'Get-IntuneUser'
     'Get-IntuneUsersDevices'
     'Get-PmpInventory'
@@ -11589,6 +11756,7 @@ Export-ModuleMember -Function @(
     'Remove-RemediationScriptAssignment'
     'Restart-IntuneService'
     'Send-GraphEmail'
+    'Set-IntunePrimaryUser'
     'Show-IntelExtensibleFrameworkUpdate'
     'Sync-IntuneDevice'
     'Update-AdobeAppsDetection'
