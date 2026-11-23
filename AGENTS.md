@@ -67,6 +67,13 @@ For multi-step tasks, state a brief plan:
 
 Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
 
+## 5. Golden Rules
+- Identify assumptions that could invalidate the solution.
+- Highlight requirements that are ambiguous.
+- Distinguish documented behaviour from inferred behaviour.
+- Identify failure modes and unintended consequences.
+- Recommend a simpler solution if one exists.
+
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.

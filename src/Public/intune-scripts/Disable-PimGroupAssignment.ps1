@@ -13,37 +13,42 @@ function Disable-PIMGroupAssignment {
     $guidRegexPattern = '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
     if ($GroupNameOrId -match $guidRegexPattern) {
         $groupId = $GroupNameOrId
+        $groupName = $GroupNameOrId
     } else {
-        $filter = [uri]::EscapeDataString("displayName eq '$GroupNameOrId'")
+        # OData escapes a single quote by doubling it.
+        $filter = [uri]::EscapeDataString("displayName eq '$($GroupNameOrId -replace "'", "''")'")
+
+        $groupNameUri = "$baseUri/groups?`$filter=$filter&`$select=id,displayName"
+        $response = Invoke-MgGraphRequest -Method GET -Uri $groupNameUri
+        $groups = $response.value
+
+        if ($groups.Count -ne 1) {
+            throw "Expected one group '$GroupNameOrId'; found $($groups.Count)."
+        }
+
+        $groupId = $groups[0].id
+        $groupName = $groups[0].displayName
     }
-
-    $groupNameUri = "$baseUri/groups?`$filter=$filter&`$select=id,displayName"
-    $response = Invoke-MgGraphRequest -Method GET -Uri $groupNameUri
-    $groups = $response.value
-
-    if ($groups.Count -ne 1) {
-        throw "Expected one group '$GroupNameOrId'; found $($groups.Count)."
-    }
-
-    $groupId = $groups[0].id
 
     # Retrieve current user's active PIM group assignments
     $currentPimGroupAssignmentsUri = "$baseUri/identityGovernance/privilegedAccess/group/assignmentScheduleInstances/filterByCurrentUser(on='principal')"
 
-    $assignments = [System.Collections.Generic.List[PSCustomObject]]::new()
+    $assignments = [System.Collections.Generic.List[object]]::new()
 
     do {
         $response = Invoke-MgGraphRequest -Method GET -Uri $currentPimGroupAssignmentsUri
-        $assignments.Add($response.value)
+        foreach ($item in $response.value) {
+            $assignments.Add($item)
+        }
         $currentPimGroupAssignmentsUri = $response.'@odata.nextLink'
     } while ($currentPimGroupAssignmentsUri)
 
-    # Match group and access type
-    $assignmentMatches = $assignments | Where-Object {
+    # Match group and access type. @() so a single hashtable result isn't indexed/counted by its keys.
+    $assignmentMatches = @($assignments | Where-Object {
         ($_.groupId -eq $groupId) -and
         ($_.accessId -eq 'member') -and
         ($_.assignmentType -eq 'activated')
-    }
+    })
 
     if ($assignmentMatches.Count -eq 0) {
         throw "No active PIM assignment found for '$groupName'."
@@ -61,12 +66,6 @@ function Disable-PIMGroupAssignment {
         groupId     = $groupId
         principalId = $assignment.principalId
         accessId    = 'member'
-        scheduleInfo = @{
-            startDateTime = (Get-Date).ToUniversalTime().ToString('o')
-            expiration = @{
-                type = 'NoExpiration'
-            }
-        }
     }
 
     if ($PSCmdlet.ShouldProcess($groupName, 'Deactivate PIM group assignment')) {
