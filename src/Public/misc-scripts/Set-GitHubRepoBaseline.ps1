@@ -1,4 +1,45 @@
 ﻿function Set-GitHubRepoBaseline {
+    <#
+    .SYNOPSIS
+        Applies baseline settings and branch protection to a GitHub repository.
+    .DESCRIPTION
+        Configures the repository's merge options and creates or updates an active
+        branch ruleset for the repository's default branch. The baseline disables
+        merge commits and rebase merges, enables squash merges, enables deletion of
+        head branches after merge, blocks branch deletion and force-pushes, and
+        requires pull requests before changes can be pushed to the default branch.
+        Pull request approval threads must be resolved before merging.
+
+        If a ruleset named "Baseline: protect default branch" already exists, this
+        function updates that ruleset. Other rulesets are left unchanged.
+    .PARAMETER Repository
+        The GitHub repository to update. Accepts a repository name or the
+        owner/repository format.
+    .PARAMETER RequiredApprovals
+        The number of approving reviews required for pull requests targeting the
+        default branch. Valid values range from 0 through 6. The default is 0.
+    .EXAMPLE
+        Set-GitHubRepoBaseline -Repository "contoso/sample"
+
+        Applies the baseline to the contoso/sample repository without requiring
+        pull request approvals.
+    .EXAMPLE
+        Set-GitHubRepoBaseline -Repository "contoso/sample" -RequiredApprovals 2
+
+        Applies the baseline and requires two approving reviews on pull requests
+        targeting the default branch.
+    .EXAMPLE
+        Set-GitHubRepoBaseline -Repository "contoso/sample" -WhatIf
+
+        Displays whether the repository baseline would be applied without making
+        changes.
+    .NOTES
+        Requires the GitHub CLI (gh) to be installed and authenticated. The
+        authenticated account must have permission to administer repository
+        settings and rulesets.
+    .OUTPUTS
+        None.
+    #>
     [CmdletBinding(SupportsShouldProcess)]
     param(
         [Parameter(Mandatory)]
